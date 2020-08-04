@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  {% block title %}
+  <title>trackspotter</title>
+  {% endblock %}
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- We'll load React dependencies on all pages for this app. -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.js" crossorigin></script>
+  <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/redux/4.0.5/redux.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react-redux/7.2.1/react-redux.js"></script>
+
+  <link href="/static/css/site.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Include the page's content with this block. -->
+  {% block body %}
+  {% endblock %}
+
+  <!-- Include any page-specific Javascript using this block. -->
+  {% block js %}
+  <script src="/static/js/sharkwords-redux.jsx" type="text/jsx"></script>
+  {% endblock %}
+</body>
+
+</html>
