@@ -1,8 +1,8 @@
 const { Provider, useSelector, useDispatch } = ReactRedux;
 
 const initialState = {
-  useer: '',
-  queries: [],
+  user: '',
+  saved_searches: [],
   playlists: [],
 };
 
