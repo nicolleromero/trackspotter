@@ -1,4 +1,4 @@
-div.card {
+/* div.card {
 	border-radius: 3px;
 	border: 3px solid black;
 	width: 11em;
@@ -9,9 +9,20 @@ div.card {
 }
 
 body {
-	font-family: "Trebuchet MS", Helvetica, sans-serif
+	font-family: Circular,Helvetica,Arial,sans-serif;
 }
 
 img {
 	height: 7em;
+} */
+
+.box {
+  display: flex;
+  align-items: center;
+	justify-content: center;
+}
+
+.box div {
+  width: 100px;
+  height: 100px;
 }
