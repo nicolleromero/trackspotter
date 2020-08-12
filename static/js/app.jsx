@@ -1,7 +1,7 @@
 const { Component } = React;
 const { render } = ReactDOM;
 const { Provider, useSelector, useDispatch } = ReactRedux;
-const { Button, Col, Container, Form, FormControl, ListGroup, Navbar, Row, Table } = ReactBootstrap;
+const { Badge, Button, Col, Container, Form, FormControl, ListGroup, Navbar, Row, Table } = ReactBootstrap;
 
 const initialState = {
   user: '',
@@ -55,21 +55,53 @@ function App() {
       </Navbar>
 
       <Container>
-        <Row className="box">
-          <Col></Col>
-          <Col><Form inline>
+        <Row className="box align-content-center">
+          <Col className="align-content-center offset-1"><Form>
+            <Form.Label>Search Term:</Form.Label>
             <FormControl type="text" placeholder="Enter a search term" className="mr-sm-2" />
-            <Button variant="outline-success">Search</Button>
           </Form></Col>
-          <Col></Col>
+          <Col className="align-content-center"><Form>
+            <Form.Label>Genre:</Form.Label>
+            <FormControl type="text" placeholder="Enter a genre" className="mr-sm-2" />
+          </Form></Col>
+          <Col className="align-content-center"><Form>
+            <Form.Label>Release Date:</Form.Label>
+            <FormControl type="text" placeholder="Enter a year or span" className="mr-sm-2" />
+          </Form></Col>
+          {/* <Col><Form>
+            <Form.Label>Popularity</Form.Label>
+            <Form.Control type="range" id="slider" />
+          </Form></Col> */}
+          <Col className="align-content-center offset-1"><Form>
+            <Form.Label>...and go!</Form.Label><br />
+            <Button variant="outline-secondary">Search</Button>
+          </Form></Col>
         </Row>
-      </Container>
+      </Container >
 
       <Container>
         <Row>
+          <Col md={4}></Col>
+          <Col className="align-content-right" md={{ span: 4, offset: 4 }}>
+            <h5>
+              <Badge pill variant="dark">Coldplay</Badge>
+             |
+              <Badge pill variant="dark">Pop</Badge>
+             |
+              <Badge pill variant="dark">2008-2010</Badge>
+             |
+              <Badge pill variant="dark">Popular</Badge>
+            </h5>
+          </Col>
+        </Row>
+      </Container>
+
+      <Container className="tracks">
+        <Row className="align-content-center">
           <Table hover>
             <thead>
-              <tr>
+              <tr align="center">
+                <th></th>
                 <th>TRACK</th>
                 <th>TITLE</th>
                 <th>ARTIST</th>
@@ -85,7 +117,8 @@ function App() {
                 let to_play = "https://open.spotify.com/embed/track/" + item.id
 
                 return (
-                  <tr>
+                  <tr align="center">
+                    <td></td>
                     <td>{order}</td>
                     <td>{item.name}</td>
                     <td>{item.album.artists[0].name}</td>
@@ -116,9 +149,8 @@ function App() {
           <Button variant="outline-dark offset-10">Save Playlist</Button>
         </Row>
       </Container>
-    </React.Fragment>
+    </React.Fragment >
   );
 }
 
-// ReactDOM.render(<App />, document.getElementById('#root'));
 ReactDOM.render(<App />, document.querySelector('#root'));
