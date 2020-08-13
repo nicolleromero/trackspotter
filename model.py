@@ -39,8 +39,11 @@ class User(db.Model):
     access_token = db.Column(db.String)
     refresh_token = db.Column(db.String)
 
+    searches = db.relationship('Search')
+    playlists = db.relationship('Playlist')
+
     def __repr__(self):
-        return f'<User user_id={self.user_id} access_token={self.access_token} refresh_token={self.refresh_token}>'
+        return f'<User user_id={self.user_id} spotify_id={self.spotify_id} spotify_display_name={self.spotify_display_name}>'
 
 
 class Search(db.Model):
@@ -52,10 +55,13 @@ class Search(db.Model):
                           primary_key=True,
                           autoincrement=True,
                           )
-    created_at = db.Column(db.DateTime,)
+    created_at = db.Column(db.DateTime)
     query = db.Column(db.String)
+    user_id = db.Column(db.Integer, db.ForeignKey('users.user_id'))
+    playlist_id = db.Column(db.Integer, db.ForeignKey('playlists.playlist_id'))
 
-    user = db.relationship('User', backref='searches')
+    user = db.relationship('User')
+    playlist = db.relationship('Playlist')
 
     def __repr__(self):
         return f'<Search search_id={self.search_id} query={self.query}>'
@@ -75,8 +81,13 @@ class Track(db.Model):
     artist = db.Column(db.String)
     album = db.Column(db.String)
     release_date = db.Column(db.DateTime)
+    playtime = db.Column(db.Integer)
+    preview = db.Column(db.String)
     genre = db.Column(db.String)
     popularity = db.Column(db.Integer)
+    album_art = db.Column(db.String)
+
+    playlist_tracks = db.relationship('PlaylistTrack')
 
     def __repr__(self):
         return f'<Track track_id={self.track_id} uid={self.uid} title={self.title} artist={self.artist} album={self.album}>'
@@ -95,8 +106,10 @@ class Playlist(db.Model):
     last_updated_at = db.Column(db.DateTime)
     playlist_title = db.Column(db.String)
     shares = db.Column(db.Integer)
+    user_id = db.Column(db.Integer, db.ForeignKey('users.user_id'))
 
-    user = db.relationship('User', backref='playlists')
+    user = db.relationship('User')
+    playlist_tracks = db.relationship('PlaylistTrack')
 
     def __repr__(self):
         return f'<Playlist playlist_id={self.playlist_id} created_at={self.created_at} updated_at={self.updated_at} playlist_title={self.playlist_title} shares={self.shares}>'
@@ -112,9 +125,11 @@ class PlaylistTrack(db.Model):
                                   autoincrement=True,
                                   )
     track_order = db.Column(db.Integer)
+    track_id = db.Column(db.Integer, db.ForeignKey('tracks.track_id'))
+    playlist_id = db.Column(db.Integer, db.ForeignKey('playlists.playlist_id'))
 
-    track = db.relationship('Track', backref='playlist_tracks')
-    playlist = db.relationship('Playlist', backref='playlists')
+    tracks = db.relationship('Track')
+    playlists = db.relationship('Playlist')
 
     def __repr__(self):
         return f'<Playlist-track playlist_track_id={self.playlist_track_id} track_order={self.track_order} track={self.track} playlist={self.playlist}>'
@@ -130,9 +145,11 @@ class PlaylistLike(db.Model):
                                  autoincrement=True,
                                  )
     created_at = db.Column(db.DateTime)
+    user_id = db.Column(db.Integer, db.ForeignKey('users.user_id'))
+    playlist_id = db.Column(db.Integer, db.ForeignKey('playlists.playlist_id'))
 
-    user = db.relationship('User', backref='playlist_likes')
-    playlist = db.relationship('Playlist', backref='playlist_likes')
+    user = db.relationship('User')
+    playlist = db.relationship('Playlist')
 
     def __repr__(self):
         return f'<Playlist-track playlist_track_id={self.playlist_track_id} track_order={self.track_order} track={self.track} playlist={self.playlist}>'

@@ -1,7 +1,7 @@
 from flask import Flask, render_template
 
 from pprint import pprint, pformat
-# from genres_python import GENRES
+from genres_python import GENRES
 import json
 import os
 import requests
@@ -13,12 +13,11 @@ app.secret_key = 'SECRETSECRETSECRET'
 app.config['PRESERVE_CONTEXT_ON_EXCEPTION'] = True
 
 
-API_KEY = 'BQCMiGj-wncrZP-GLDY--NNAWFZONJxIFTPSyeaQUkl6nJu8ef3Aizdkfkf7bygcYO3dvSl3iUc4RUAvBOzKt2SNuqKfGlAou19tyJDzG2KyYUzcB5SxxRVsiUhwusrsBNIbKhSWxQVf7dkp'
-
-GENRES = ['Acid Jazz']
+API_KEY = 'BQDrhuRuigIoULg0CqczzV_nXcE5YzsdP5Dylvhlb7uVftFlCua-thvkGcIhp9tIt4mhMunV-a8ySURydqRyy90MU1Ph4y6ra9gZ2t2NyxQNdVMX_nU-pZFUxYNn_ccM5Zmz5DFj-YoQDUro'
 
 for genre in GENRES:
-    filename = f'genres/{genre}.json'
+    escaped_genre = genre.replace('/', '-')
+    filename = f'genres/{escaped_genre}.json'
 
     if os.path.exists(filename):
         continue
@@ -31,9 +30,15 @@ for genre in GENRES:
                        headers=headers,
                        params=params)
 
+    if res.status_code != 200:
+        print(f'Failed genre: {genre} ({res.status_code})')
+        break
+
     genre_tracks = res.json()
 
-    print(res)
+    if len(genre_tracks['tracks']['items']) == 0:
+        print(f'Empty genre: {genre}')
+        continue
 
     with open(filename, 'w') as json_file:
         json.dump(genre_tracks, json_file, indent=2, sort_keys=True)

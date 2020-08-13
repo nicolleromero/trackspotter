@@ -31,11 +31,11 @@ def get_user_by_id(user_id):
 
 
 def create_search(user_id, created_at, query):
-    """Create and return a new movie"""
+    """Create a new search"""
 
-    movie = Movie(user_id=user_id,
-                  created_at=created_at,
-                  query=query)
+    search = Search(user_id=user_id,
+                    created_at=created_at,
+                    query=query)
 
     db.session.add(search)
     db.session.commit()
@@ -55,38 +55,46 @@ def get_search_by_id(search_id):
     return Search.query.get(search_id)
 
 
-def create_track(user_id, movie, score):
+def create_track(uid, title, artist, album, release_date, playtime, genre, popularity, album_art):
     """Create a new track"""
 
     track = Track(uid=uid, title=title, artist=artist, album=album,
-                  release_date=release_date, genre=genre, popularity=popularity)
+                  release_date=release_date, playtime=playtime, genre=genre, popularity=popularity, album_art=album_art)
 
     db.session.add(track)
     db.session.commit()
 
-    return rating
+    return track
 
 
-def create_rating(user_id, movie, score):
+def create_playlist(user_id, search_id, created_at, last_updated, playlist_title, shares):
     """Create a new rating"""
 
-    rating = Rating(user_id=user_id, movie=movie, score=score)
+    playlist = Playlist(user_id=user_id, search_id=search_id, created_at=created_at,
+                        last_updated=last_updated, playlist_title=playlist_title, shares=shares)
 
-    db.session.add(rating)
+    db.session.add(playlist)
     db.session.commit()
 
-    return rating
+    return playlist
 
 
-def create_rating(user_id, movie, score):
-    """Create a new rating"""
+def create_playlist_track(track, playlist, track_order):
+    """Create a new playlist_track """
 
-    rating = Rating(user_id=user_id, movie=movie, score=score)
+    playlist_track = PlaylistTrack(
+        track_id=track_id, playlist_id=playlist_id, track_order=track_order)
 
-    db.session.add(rating)
+    db.session.add(playlist_track)
     db.session.commit()
 
-    return rating
+    return playlist_track
+
+
+def get_playlist_by_playlist_title(playlist_title):
+    """Return details for a specific playlist"""
+
+    return Playlist.query.get(playlist_title)
 
 
 if __name__ == '__main__':
