@@ -79,6 +79,12 @@ def create_playlist(user_id, search_id, created_at, last_updated_at, playlist_ti
     return playlist
 
 
+def get_playlists():
+    """Return all playlists."""
+
+    return Playlist.query.all()
+
+
 def create_playlist_track(track_id, playlist_id, track_order):
     """Create a new playlist_track """
 
@@ -95,6 +101,18 @@ def get_playlist_by_playlist_title(playlist_title):
     """Return details for a specific playlist"""
 
     return Playlist.query.get(playlist_title)
+
+
+def create_playlist_like(user_id, playlist_id, created_at):
+    """Create a new playlist like """
+
+    playlist_like = PlaylistLike(
+        user_id=user_id, playlist_id=playlist_id, created_at=created_at)
+
+    db.session.add(playlist_like)
+    db.session.commit()
+
+    return playlist_like
 
 
 if __name__ == '__main__':

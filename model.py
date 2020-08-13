@@ -111,7 +111,7 @@ class Playlist(db.Model):
     search = db.relationship('Search')
 
     def __repr__(self):
-        return f'<Playlist playlist_id={self.playlist_id} created_at={self.created_at} updated_at={self.updated_at} playlist_title={self.playlist_title}>'
+        return f'<Playlist playlist_id={self.playlist_id} created_at={self.created_at} last_updated_at={self.last_updated_at} playlist_title={self.playlist_title}>'
 
 
 class PlaylistTrack(db.Model):
@@ -151,7 +151,7 @@ class PlaylistLike(db.Model):
     playlist = db.relationship('Playlist')
 
     def __repr__(self):
-        return f'<Playlist-track playlist_track_id={self.playlist_track_id} track_order={self.track_order} track={self.track} playlist={self.playlist}>'
+        return f'<Playlist_like playlist_like_id={self.playlist_like_id} playlist={self.playlist}>'
 
 
 if __name__ == '__main__':

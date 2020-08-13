@@ -89,7 +89,7 @@ def create_search(genre, user):
 
 
 def create_playlist(genre, search, user, tracks_in_genre):
-    # Create playlists and assign to random users
+    """Create playlists and assign to random user"""
 
     created_at = datetime.now()
     last_updated_at = datetime.now()
@@ -102,6 +102,17 @@ def create_playlist(genre, search, user, tracks_in_genre):
         crud.create_playlist_track(
             track.track_id, playlist.playlist_id, track_order)
 
+    return playlist
+
+
+def create_playlist_like(user, playlist):
+    """Create playlist like and assign to random user"""
+
+    created_at = datetime.now()
+
+    return crud.create_playlist_like(user.user_id,
+                                     playlist.playlist_id, created_at)
+
 
 def seed():
 
@@ -113,8 +124,9 @@ def seed():
 
     users_in_db = create_users()
 
+    playlists_in_db = []
+
     for genre in GENRES:
-        # for genre in ['Beach', 'Bop']:
 
         escaped_genre = genre.replace('/', '-')
         filename = f'genres/{escaped_genre}.json'
@@ -129,9 +141,13 @@ def seed():
         user = choice(users_in_db)  # Select a random user to assign search to
         search = create_search(genre, user)
 
-        create_playlist(genre, search, user, tracks_in_genre)
+        playlist = create_playlist(genre, search, user, tracks_in_genre)
+        playlists_in_db.append(playlist)
 
-        print(genre)
+    for _ in range(1000):
+        user = choice(users_in_db)
+        playlist = choice(playlists_in_db)
+        create_playlist_like(user, playlist)
 
 
 seed()
