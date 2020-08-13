@@ -13,7 +13,7 @@ app.secret_key = 'SECRETSECRETSECRET'
 app.config['PRESERVE_CONTEXT_ON_EXCEPTION'] = True
 
 
-API_KEY = 'BQDrhuRuigIoULg0CqczzV_nXcE5YzsdP5Dylvhlb7uVftFlCua-thvkGcIhp9tIt4mhMunV-a8ySURydqRyy90MU1Ph4y6ra9gZ2t2NyxQNdVMX_nU-pZFUxYNn_ccM5Zmz5DFj-YoQDUro'
+API_KEY = 'BQAbUjrHZclp288Ec8ysIzjLQHtaQtKVGsUAqDUi3DsKgoUnSI-abXmD05xMnAcPHrVKCgYpUZn503nPj8xM9Qg3DP8XZwHouzpQ38lOoCZ6yum25ZKVI0xWP3H49izsakrfJ98Mt9qSPmkx'
 
 for genre in GENRES:
     escaped_genre = genre.replace('/', '-')

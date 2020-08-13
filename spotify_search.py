@@ -36,11 +36,6 @@ def test():
 
 def names():
 
-    NAMES = ['Jonathan Gulgowski', 'Velda Bergstrom', 'Tyra Stehr', 'Karolann Zulauf',
-             'Augustus Bednar', 'Lenore Crooks', 'Cody Carter', 'Pedro Reilly', 'Gino Nikolaus',
-             'Van Boehm', 'Abraham Gaylord', 'Abagail Haag', 'Cleora Stracke', 'Earline Hansen',
-             'Clemens Emmerich', 'Karelle Green', 'Derick Cruickshank', 'Kaley Schaden', 'Vesta Taylor', 'Lisa Gordon']
-
     users_in_db = []
 
     for i, name in enumerate(NAMES):
@@ -50,3 +45,18 @@ def names():
             datetime.now())
 
     print(users_in_db)
+
+
+NAMES = ['Jonathan Gulgowski', 'Velda Bergstrom', 'Tyra Stehr', 'Karolann Zulauf',
+         'Augustus Bednar', 'Lenore Crooks', 'Cody Carter', 'Pedro Reilly', 'Gino Nikolaus',
+         'Van Boehm', 'Abraham Gaylord', 'Abagail Haag', 'Cleora Stracke', 'Earline Hansen',
+         'Clemens Emmerich', 'Karelle Green', 'Derick Cruickshank', 'Kaley Schaden', 'Vesta Taylor', 'Lisa Gordon',
+         'Pauline Little', 'Barrett Hamill', 'Jamaal Hilll', 'Lexi Waelchi', 'Chauncey Rosenbaum', 'Marshall Cole',
+         'Mabel Nicolas', 'Verdie Lueilwitz', 'Augustine Bosco', 'Sunny Okuneva', 'Kirstin Balistreri',
+         'Wade Franecki', 'Lucinda Klein', 'Vanessa Hoeger', 'Stephanie Smith', 'Oma Muller', 'Herta Towne',
+         'Retha Schowalter', 'Nikita Mraz', 'Antonina Wintheiser',
+         'Willis Flatley', 'Wyman Cartwright', 'Wade Fahey', 'Stacey Nikolaus', 'Chance Vandervort', 'Demarcus Schowalter', 'Christina Ruecker',
+         'Willis Predovic', 'Zoila Stokes', 'Hobart Herman', 'Pinkie Friesen', 'Wyatt Miller',
+         'Zackary Russel', 'Wallace Smith', 'Juwan Hirthe', 'Madonna Adams', 'Devon Schuppe', 'Veronica Mueller',
+         'Alia Hoeger', 'Andreane Block', 'Adrianna Torp', 'Ari Haley', 'Grady Stanton', 'Floyd Kuvalis',
+         'Leslie Streich', 'Breana Little', 'Geovany Kunde', 'Paolo Donnelly', 'Harley Fay', 'Kellie Block']
