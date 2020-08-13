@@ -55,11 +55,11 @@ def get_search_by_id(search_id):
     return Search.query.get(search_id)
 
 
-def create_track(uid, title, artist, album, release_date, playtime, genre, popularity, album_art):
+def create_track(uid, title, artist, album, release_date, playtime, genre, preview, popularity, album_art):
     """Create a new track"""
 
     track = Track(uid=uid, title=title, artist=artist, album=album,
-                  release_date=release_date, playtime=playtime, genre=genre, popularity=popularity, album_art=album_art)
+                  release_date=release_date, playtime=playtime, genre=genre, preview=preview, popularity=popularity, album_art=album_art)
 
     db.session.add(track)
     db.session.commit()
@@ -67,11 +67,11 @@ def create_track(uid, title, artist, album, release_date, playtime, genre, popul
     return track
 
 
-def create_playlist(user_id, search_id, created_at, last_updated, playlist_title, shares):
+def create_playlist(user_id, search_id, created_at, last_updated_at, playlist_title):
     """Create a new rating"""
 
     playlist = Playlist(user_id=user_id, search_id=search_id, created_at=created_at,
-                        last_updated=last_updated, playlist_title=playlist_title, shares=shares)
+                        last_updated_at=last_updated_at, playlist_title=playlist_title)
 
     db.session.add(playlist)
     db.session.commit()
@@ -79,7 +79,7 @@ def create_playlist(user_id, search_id, created_at, last_updated, playlist_title
     return playlist
 
 
-def create_playlist_track(track, playlist, track_order):
+def create_playlist_track(track_id, playlist_id, track_order):
     """Create a new playlist_track """
 
     playlist_track = PlaylistTrack(

@@ -58,10 +58,8 @@ class Search(db.Model):
     created_at = db.Column(db.DateTime)
     query = db.Column(db.String)
     user_id = db.Column(db.Integer, db.ForeignKey('users.user_id'))
-    playlist_id = db.Column(db.Integer, db.ForeignKey('playlists.playlist_id'))
 
     user = db.relationship('User')
-    playlist = db.relationship('Playlist')
 
     def __repr__(self):
         return f'<Search search_id={self.search_id} query={self.query}>'
@@ -80,7 +78,7 @@ class Track(db.Model):
     title = db.Column(db.String)
     artist = db.Column(db.String)
     album = db.Column(db.String)
-    release_date = db.Column(db.DateTime)
+    release_date = db.Column(db.String)
     playtime = db.Column(db.Integer)
     preview = db.Column(db.String)
     genre = db.Column(db.String)
@@ -105,14 +103,15 @@ class Playlist(db.Model):
     created_at = db.Column(db.DateTime)
     last_updated_at = db.Column(db.DateTime)
     playlist_title = db.Column(db.String)
-    shares = db.Column(db.Integer)
     user_id = db.Column(db.Integer, db.ForeignKey('users.user_id'))
+    search_id = db.Column(db.Integer, db.ForeignKey('searches.search_id'))
 
     user = db.relationship('User')
-    playlist_tracks = db.relationship('PlaylistTrack')
+    # playlist_tracks = db.relationship('PlaylistTrack')
+    search = db.relationship('Search')
 
     def __repr__(self):
-        return f'<Playlist playlist_id={self.playlist_id} created_at={self.created_at} updated_at={self.updated_at} playlist_title={self.playlist_title} shares={self.shares}>'
+        return f'<Playlist playlist_id={self.playlist_id} created_at={self.created_at} updated_at={self.updated_at} playlist_title={self.playlist_title}>'
 
 
 class PlaylistTrack(db.Model):
