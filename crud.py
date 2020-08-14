@@ -115,6 +115,13 @@ def create_playlist_like(user_id, playlist_id, created_at):
     return playlist_like
 
 
+def playlist_likes_by_playlist_title():
+
+    q = db.session.query(Playlist, PlaylistLike).join(PlaylistLike).all()
+
+    return q.group_by(Playlist.playlist_id).count(PlaylistLike.playlist_id).all()
+
+
 if __name__ == '__main__':
     from server import app
     connect_to_db(app)

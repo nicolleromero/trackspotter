@@ -7,6 +7,7 @@ from sys import argv
 import json
 import requests
 
+
 app = Flask(__name__)
 app.secret_key = 'SECRETSECRETSECRET'
 
@@ -15,7 +16,7 @@ app.secret_key = 'SECRETSECRETSECRET'
 app.config['PRESERVE_CONTEXT_ON_EXCEPTION'] = True
 
 
-# API_KEY = os.environ['SPOTIFY_KEY']
+SPOTIFY_KEY = os.environ['SPOTIFY_KEY']
 
 
 @app.route("/")
@@ -25,37 +26,27 @@ def show_homepage():
     return render_template("homepage.html")
 
 
-# @app.route('/afterparty/search')
-# def find_afterparties():
-#     """Search for afterparties on Eventbrite"""
+@app.route("/api/search")
+def search():
+    """Search for tracks with Spotify endpoint"""
 
-#     keyword = request.args.get('keyword', '')
-#     postalcode = request.args.get('zipcode', '')
-#     radius = request.args.get('radius', '')
-#     unit = request.args.get('unit', '')
-#     sort = request.args.get('sort', '')
+    query = request.args.get('query', '').strip()
 
-#     parameters = [keyword, postalcode, radius, unit, sort]
+    if not query:
+        return jsonify([])
 
-#     # url = 'https://app.ticketmaster.com/discovery/v2/events?'
-#     url = '	https://api.spotify.com/v1/search?'
-#     payload = {'apikey': API_KEY,
-#                'keyword': keyword,
-#                }
+    params = {'q': f'{query}', 'type': 'track'}
 
-#     # for parameter in parameters:
-#     #     if parameter:
-#     #         payload[parameter] = str(parameter)
+    headers = {'Authorization': f'Bearer {SPOTIFY_KEY}'}
 
-#     # res = requests.get(url, params=payload)
-#     data = res.json()
-#     events = data['_embedded']['events']
-#     print(payload)
+    res = requests.get('https://api.spotify.com/v1/search?',
+                       headers=headers,
+                       params=params)
 
-#     return render_template('search-results.html',
-#                            pformat=pformat,
-#                            data=data,
-#                            results=events)
+    data = res.json()
+    items = data['tracks']['items']
+
+    return jsonify(items)
 
 
 if __name__ == "__main__":
