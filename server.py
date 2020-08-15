@@ -49,6 +49,17 @@ def search():
     return jsonify(items)
 
 
+@app.route("/playlists")
+def display_playlists():
+    """ Display a list of playlists for a user"""
+
+    user = session['user']
+
+    playlists = Playlist.query.filter(playlist.user_id == user.user_id).all()
+
+    return playlists
+
+
 if __name__ == "__main__":
     # connect_to_db(app)
     app.run(debug=True, host='0.0.0.0')

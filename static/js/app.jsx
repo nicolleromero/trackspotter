@@ -2,7 +2,7 @@ const { Component } = React;
 const { render } = ReactDOM;
 const { Provider, useSelector, useDispatch } = ReactRedux;
 const { Badge, Button, Col, Container, Dropdown, DropdownButton, Form, FormControl, InputGroup, ListGroup, Navbar, Row, Table } = ReactBootstrap;
-const Board, { moveCard } = "@lourenci/react-kanban";
+
 
 const Router = ReactRouterDOM.BrowserRouter;
 const Route = ReactRouterDOM.Route;
@@ -13,7 +13,7 @@ const Redirect = ReactRouterDOM.Redirect;
 
 
 let query = ''
-
+let queries = []
 
 function App() {
   let [items, setTracks] = React.useState([]);
@@ -31,16 +31,21 @@ function App() {
     function handleSearch(event) {
       event.preventDefault();
 
-      query = query + ' ' + prepend + ' ' + param
+      query = (query + ' ' + prepend + ' ' + param);
 
+      queries.push(prepend + ' ' + param);
 
       fetch(`/api/search?query=${encodeURIComponent(query)}`)
         .then(response => response.json())
         .then(items => setTracks(items));
     }
 
+    function handleReset() {
+      setTracks(items => []);
+      queries = [];
+      query = '';
 
-
+    };
 
     return (
       <Container>
@@ -58,6 +63,7 @@ function App() {
                   <option value="artist: ">artist</option>
                   <option value="album: ">album</option>
                   <option value="year: ">year</option>
+                  <option value="NOT">NOT</option>
                 </Form.Control>
               </Form.Group>
             </Col>
@@ -83,9 +89,10 @@ function App() {
               >
                 Search
               </Button>
-               ||
+               |  |
               <Button
                 variant="outline-secondary inline"
+                onClick={handleReset}
               >
                 Clear
               </Button>
@@ -102,7 +109,6 @@ function App() {
     return minutes + ":" + (seconds < 10 ? '0' : '') + seconds;
   }
 
-
   //   fetch(`/api/playlists`)
   //     .then(response => response.json())
   //     .then(playlists => setPlaylists(playlists));
@@ -117,19 +123,23 @@ function App() {
 
       <Container>
         <Row>
-          <Col md={4}></Col>
-          <Col className="align-content-right" md={{ span: 4, offset: 4 }}>
+          <Col className="align-content-left" md={{ span: 2, offset: 10 }}>
             <h5>
-              {/* {queries.map((query) => {
-                return ( */}
-              <Badge pill variant="dark">{query}</Badge>
-              {/* )
-              })} */}
+              {queries.map((query) => {
+                return (
+                  <Badge pill variant="dark">{query}</Badge>
+                )
+              })}
             </h5>
           </Col>
+          {items.length > 0 && (
+            <Col id="need-space" className="align-content-right">
+              <Button variant="outline-dark offset-10">Save Playlist</Button>
+              <br />
+            </Col>
+          )}
         </Row>
       </Container>
-
       <Container className="tracks">
         <Row className="align-content-center">
           <Table hover>
@@ -146,6 +156,7 @@ function App() {
               </tr>
             </thead>
             <tbody>
+
               {items.map((item, i) => {
                 let order = i + 1;
                 let song = 'song' + String(i + 1)
@@ -185,15 +196,7 @@ function App() {
           </Table>
         </Row>
       </Container>
-    </React.Fragment >
-
-    // <Container>
-    //   <Row>
-    //     <Button variant="outline-dark offset-10">Save Playlist</Button>
-    //   </Row>
-    // </Container>
-    // //
-
+    </React.Fragment>
     // <Switch>
     //   <Route path="/">
     //     <AdvSearch />
