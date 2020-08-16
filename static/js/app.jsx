@@ -38,11 +38,7 @@ function Login() {
     return (
       <Container>
         <Row className="box align-content-left inline">
-<<<<<<< HEAD
           <Col className="offset-1">
-=======
-          <Col offset-1>
->>>>>>> 0782425b1b0b1c145fc964666896aa2d8691c0c3
             <p>Logged in as: {name}</p>
           </Col>
         </Row>
@@ -82,11 +78,7 @@ function Login() {
 }
 
 
-<<<<<<< HEAD
-function AdvSearch(prop) {
-=======
 function AdvSearch() {
->>>>>>> 0782425b1b0b1c145fc964666896aa2d8691c0c3
   let [prepend, setPrepend] = React.useState('');
   let [title, setTitle] = React.useState('')
   let [param, setQuery] = React.useState('');
@@ -123,10 +115,7 @@ function AdvSearch() {
 
   function handleDelete(target) {
     items = items.filter((t) => t.id !== target);
-<<<<<<< HEAD
-=======
     console.log(items[0], items[0].id, target)
->>>>>>> 0782425b1b0b1c145fc964666896aa2d8691c0c3
     setTracks(items);
   }
 
@@ -279,7 +268,6 @@ function TopPlaylists() {
       .then(response => response.json())
       .then((top_playlists) => {
         setTopPlaylists(top_playlists);
-        console.log(response, top_playlists)
       })
   }, [])
 
@@ -334,17 +322,10 @@ function App() {
               <Link to="/">Home</Link>
             </li>
             <li>
-<<<<<<< HEAD
-              <Link to="/top-playlists">Browse Playlists</Link>
-            </li>
-            <li>
-              <Link to="/user-playlists">User Playlists</Link>
-=======
               <Link to="/user-playlists">User Playlists</Link>
             </li>
             <li>
               <Link to="/top-playlists">Browse Playlists</Link>
->>>>>>> 0782425b1b0b1c145fc964666896aa2d8691c0c3
             </li>
           </ul>
         </nav>
@@ -355,20 +336,12 @@ function App() {
             <Login />
             <AdvSearch />
           </Route>
-<<<<<<< HEAD
-          <Route path="/top-playlists">
-            <Topbar bg="light" variant="light" />
-            <Login />
-            {/* <TopPlaylists /> */}
-          </Route >
-          <Route path="/user-playlists">
-=======
           <Route path="/user-playlists">
             <Topbar bg="light" variant="light" />
             <Login />
+            <TopPlaylists />
           </Route >
           <Route path="/top-playlists">
->>>>>>> 0782425b1b0b1c145fc964666896aa2d8691c0c3
             <Topbar bg="light" variant="light" />
             <Login />
           </Route >
