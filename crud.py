@@ -1,6 +1,8 @@
 """CRUD operations."""
 
 from model import db, User, Search, Playlist, PlaylistTrack, PlaylistLike, Track, connect_to_db
+from flask_sqlalchemy import SQLAlchemy
+from sqlalchemy import desc
 
 
 def create_user(spotify_id, spotify_display_name, created_at, access_token, refresh_token):
@@ -27,7 +29,9 @@ def get_users():
 def get_user_by_id(user_id):
     """Return details for a specific user"""
 
-    return User.query.get(user_id)
+    user = User.query.get(user_id)
+
+    return {'user_id': user.user_id, 'spotify_id': user.spotify_id, 'spotify_display_name': user.spotify_display_name}
 
 
 def create_search(user_id, created_at, query):
@@ -101,6 +105,20 @@ def get_playlist_by_playlist_title(playlist_title):
     """Return details for a specific playlist"""
 
     return Playlist.query.get(playlist_title)
+
+
+def get_playlist_by_user_id(target_id):
+    """Return a user's playlista"""
+
+    return db.session.query(Playlist).filter(Playlist.user_id == target_id).all()
+
+
+def playlist_ordered_by_likes():
+    """Return a list of the top 20 playlists ordered by most likes """
+
+    # SELECT playlist_id, COUNT(*) AS total_num FROM playlist_likes GROUP BY playlist_id ORDER BY total_num DESC;
+
+    return db.session.query(Playlist, db.func.count(PlaylistLike.playlist_id).label('total')).join(PlaylistLike).group_by(Playlist).order_by(desc('total')).limit(20).all()
 
 
 def create_playlist_like(user_id, playlist_id, created_at):

@@ -15,39 +15,101 @@ const Redirect = ReactRouterDOM.Redirect;
 let query = ''
 let queries = []
 
-function App() {
+
+function Login() {
+  // Allows me to assign the session to a seeded user
+  const [user_id, setUserId] = React.useState('');
+  const [user, setUser] = React.useState({});
+  const [name, setName] = React.useState('')
+
+  function handleSetUser(event) {
+    event.preventDefault();
+
+    fetch(`/api/handle-login?query=${encodeURIComponent(user_id)}`)
+      .then(response => response.json())
+      .then((data) => {
+        setUser(data);
+        // user = data;
+        setUserId(data.user_id);
+        // name = data.spotify_display_name;
+        setName(data.spotify_display_name);
+        console.log(data, name, user)
+      });
+  }
+  if (name) {
+    return (
+      <h5>Logged in as: {name}</h5>
+    );
+  } else {
+    return (
+      <Container>
+        <Row className="box align-content-left inline">
+          <Col>
+            <Form onSubmit={handleSetUser}>
+              <Form.Label>User_id:</Form.Label>
+              <FormControl
+                type="text"
+                value={user_id}
+                placeholder="Enter user_id"
+                onChange={(e) => setUserId(e.target.value)}
+                className="mr-sm-2 inline"
+              />
+              <Button
+                variant="outline-secondary inline"
+                type="submit"
+              >
+                Log in
+              </Button>
+            </Form>
+          </Col>
+        </Row>
+      </Container>
+    );
+  }
+}
+
+
+
+function AdvSearch(props) {
+  const [prepend, setPrepend] = React.useState('');
+  const [title, setTitle] = React.useState('')
+  const [param, setQuery] = React.useState('');
   let [items, setTracks] = React.useState([]);
-  const [playlists, setPlaylists] = React.useState([]);
+
+  function handleSearch(event) {
+    event.preventDefault();
+
+    query = (query + ' ' + prepend + ' ' + param);
+    queries.push(prepend + ' ' + param);
+
+    fetch(`/api/search?query=${encodeURIComponent(query)}`)
+      .then(response => response.json())
+      .then(items => {
+        setTracks(items);
+        setTitle('')
+        setPrepend('')
+
+      });
+  }
+
+  function handleReset() {
+    setTracks(items => []);
+    queries = [];
+    query = '';
+  };
+
+  function millisToTime(milliseconds) {
+    var minutes = Math.floor(milliseconds / 60000);
+    var seconds = ((milliseconds % 60000) / 1000).toFixed(0);
+    return minutes + ":" + (seconds < 10 ? '0' : '') + seconds;
+  }
 
   function handleDelete(itemId) {
     items = items.filter((c) => c.id !== itemId);
-  };
+  }
 
-  const AdvSearch = (props) => {
-    const [prepend, setPrepend] = React.useState('');
-    const [title, setTitle] = React.useState('')
-    const [param, setQuery] = React.useState('');
-
-    function handleSearch(event) {
-      event.preventDefault();
-
-      query = (query + ' ' + prepend + ' ' + param);
-
-      queries.push(prepend + ' ' + param);
-
-      fetch(`/api/search?query=${encodeURIComponent(query)}`)
-        .then(response => response.json())
-        .then(items => setTracks(items));
-    }
-
-    function handleReset() {
-      setTracks(items => []);
-      queries = [];
-      query = '';
-
-    };
-
-    return (
+  return (
+    <React.Fragment>
       <Container>
         <Row className="box align-content-center inline">
           <Form onSubmit={handleSearch}>
@@ -62,6 +124,7 @@ function App() {
                   <option value="">keyword</option>
                   <option value="artist: ">artist</option>
                   <option value="album: ">album</option>
+                  <option value="genre: ">genre</option>
                   <option value="year: ">year</option>
                   <option value="NOT">NOT</option>
                 </Form.Control>
@@ -77,6 +140,7 @@ function App() {
                 className="mr-sm-2 inline"
               />
             </Col>
+            {/* <CountrySelect /> */}
             {/* <Col>
               <Form.Label>Popularity</Form.Label>
               <Form.Control type="range" id="slider" />
@@ -100,35 +164,16 @@ function App() {
           </Form>
         </Row>
       </Container>
-    );
-  }
-
-  function millisToTime(milliseconds) {
-    var minutes = Math.floor(milliseconds / 60000);
-    var seconds = ((milliseconds % 60000) / 1000).toFixed(0);
-    return minutes + ":" + (seconds < 10 ? '0' : '') + seconds;
-  }
-
-  //   fetch(`/api/playlists`)
-  //     .then(response => response.json())
-  //     .then(playlists => setPlaylists(playlists));
-  // }
-
-
-  return (
-    // <Router>
-    <React.Fragment>
-      <Topbar bg="light" variant="light" />
-      <AdvSearch />
-
       <Container>
         <Row>
           <Col className="align-content-left" md={{ span: 2, offset: 10 }}>
             <h5>
               {queries.map((query) => {
-                return (
-                  <Badge pill variant="dark">{query}</Badge>
-                )
+                if (query) {
+                  return (
+                    <Badge pill variant="dark">{query}</Badge>
+                  )
+                }
               })}
             </h5>
           </Col>
@@ -173,13 +218,13 @@ function App() {
                     <td>{track_time}</td>
                     <td><img src={item.album.images[2].url}></img></td>
                     {/* <td><iframe
-                      src={to_play}
-                      width="80"
-                      height="80"
-                      frameborder="0"
-                      allowtransparency="true"
-                      allow="encrypted-media"
-                    > */}
+                    src={to_play}
+                    width="80"
+                    height="80"
+                    frameborder="0"
+                    allowtransparency="true"
+                    allow="encrypted-media"
+                  > */}
                     {/* </iframe> */}
                     <td><button
                       className="btn btn-sm delete-button"
@@ -187,7 +232,7 @@ function App() {
                       onMouseDown={(e) => e.preventDefault()}
                     >
                       X
-                      </button>
+                    </button>
                     </td>
                   </tr>
                 )
@@ -196,6 +241,24 @@ function App() {
           </Table>
         </Row>
       </Container>
+    </React.Fragment>
+  );
+}
+
+
+//   fetch(`/api/playlists`)
+//     .then(response => response.json())
+//     .then(playlists => setPlaylists(playlists));
+// }
+
+function App() {
+  return (
+    // <Router>
+    <React.Fragment>
+      <Topbar bg="light" variant="light" />
+      <Login />
+      <AdvSearch />
+
     </React.Fragment>
     // <Switch>
     //   <Route path="/">
