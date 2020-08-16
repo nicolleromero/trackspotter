@@ -8,6 +8,7 @@ from sys import argv
 import json
 import requests
 import crud
+import top_playlists
 
 
 app = Flask(__name__)
@@ -47,11 +48,9 @@ def handle_login():
 def get_top_playlists():
     """Get the top playlists to display """
 
-    top_playlists = crud.playlist_ordered_by_likes()
+    data = top_playlists.main()
 
-    result = {'data': top_playlists}
-
-    return jsonify(result)
+    return data
 
 
 @app.route("/api/save-playlist", methods=["POST"])

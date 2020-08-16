@@ -3,6 +3,7 @@
 from model import db, User, Search, Playlist, PlaylistTrack, PlaylistLike, Track, connect_to_db
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import desc
+import json
 
 
 def create_user(spotify_id, spotify_display_name, created_at, access_token, refresh_token):
@@ -118,8 +119,19 @@ def playlist_ordered_by_likes():
 
     # SELECT playlist_id, COUNT(*) AS total_num FROM playlist_likes GROUP BY playlist_id ORDER BY total_num DESC;
 
-    return db.session.query(Playlist, db.func.count(PlaylistLike.playlist_id).label(
+    return db.session.query(Playlist.playlist_title, db.func.count(PlaylistLike.playlist_id).label(
         'total')).join(PlaylistLike).group_by(Playlist).order_by(desc('total')).limit(20).all()
+
+
+def playlist_ordered_by_likes_json():
+    """Return a list of the top 20 playlists ordered by most likes as JSON """
+
+    # SELECT playlist_id, COUNT(*) AS total_num FROM playlist_likes GROUP BY playlist_id ORDER BY total_num DESC;
+
+    res = db.session.query(Playlist.playlist_title, db.func.count(PlaylistLike.playlist_id).label(
+        'total')).join(PlaylistLike).group_by(Playlist).order_by(desc('total')).limit(20).all()
+
+    return res
 
 
 def create_playlist_like(user_id, playlist_id, created_at):

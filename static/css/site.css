@@ -22,6 +22,10 @@ h5 {
 	padding-bottom: 25px;
 }
 
+#log-in {
+	max-width: 200px;
+}
+
 /* .tracks {
 	margin: 0px;
 	padding: 0px;

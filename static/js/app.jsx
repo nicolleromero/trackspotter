@@ -38,7 +38,7 @@ function Login() {
     return (
       <Container>
         <Row className="box align-content-left inline">
-          <Col offset-1>
+          <Col className="offset-1">
             <p>Logged in as: {name}</p>
           </Col>
         </Row>
@@ -52,19 +52,23 @@ function Login() {
           <Col>
             <Form onSubmit={handleSetUser}>
               <Form.Label>User_id:</Form.Label>
-              <FormControl
-                type="text"
-                value={user_id}
-                placeholder="Enter user_id"
-                onChange={(e) => setUserId(e.target.value)}
-                className="mr-sm-2 inline"
-              />
-              <Button
-                variant="outline-secondary inline"
-                type="submit"
-              >
-                Log in
+              <Form.Row>
+                <FormControl
+                  type="text"
+                  value={user_id}
+                  placeholder="Enter user_id"
+                  onChange={(e) => setUserId(e.target.value)}
+                  className="lg-1 inline"
+                  id="log-in"
+                />
+                <Button
+                  variant="outline-secondary inline"
+                  type="submit"
+                  className="inline"
+                >
+                  Log in
               </Button>
+              </Form.Row>
             </Form>
           </Col>
         </Row>
@@ -74,7 +78,7 @@ function Login() {
 }
 
 
-function AdvSearch() {
+function AdvSearch(prop) {
   let [prepend, setPrepend] = React.useState('');
   let [title, setTitle] = React.useState('')
   let [param, setQuery] = React.useState('');
@@ -256,8 +260,8 @@ function AdvSearch() {
 function TopPlaylists() {
   const [top_playlists, setTopPlaylists] = React.useState([]);
 
-  function handlePlaylists() {
-    event.preventDefault();
+
+  React.useEffect(() => {
 
     fetch(`/api/top-playlists`)
       .then(response => response.json())
@@ -265,16 +269,15 @@ function TopPlaylists() {
         setTopPlaylists(top_playlists);
         console.log(response, top_playlists)
       })
-  }
+  }, [])
 
   return (
     <Container >
       <Row className="align-content-center">
-        <button onClick={handlePlaylists}>Click Me</button>
         <Table hover>
           <thead>
             <tr align="center">
-              <th></th>
+              <th>RESULTS</th>
               <th>PLAYLIST TITLE</th>
               <th>LIKES</th>
               <th></th>
@@ -282,20 +285,17 @@ function TopPlaylists() {
           </thead>
           <tbody>
 
-            {top_playlists.map((tuple, i) => {
+            {Object.keys(top_playlists).map((title, i) => {
               let order = i + 1;
-              // (<Playlist playlist_id=21 created_at=2020-08-13 15:41:35.370985 last_updated_at=2020-08-13 15:41:35.370990 playlist_title=Ambient Techno Playlist>, 7)
 
               return (
-
-                <tr align="center" scope="row" key={tuple[i][0].playlist_id}>
-                  <td></td>
+                <tr align="center" scope="row" key={title}>
                   <td>{order}</td>
-                  <td>{tuple[i][0].playlist_title}</td>
-                  <td>{tuple[i][1]}</td>
+                  <td>{title}</td>
+                  <td>{top_playlists[title]}</td>
                   <td><button
                     className="btn btn-sm delete-button"
-                  // onClick={() => handleOpenPlaylist(tuple[0].playlist_id)}
+                  // onClick={() => handleOpenPlaylist()}
                   >
                     Play
                     </button>
@@ -309,7 +309,6 @@ function TopPlaylists() {
     </Container>
   )
 }
-
 
 
 
@@ -336,12 +335,11 @@ function App() {
             <Topbar bg="light" variant="light" />
             <Login />
             <AdvSearch />
-            <TopPlaylists />
           </Route>
           <Route path="/top-playlists">
             <Topbar bg="light" variant="light" />
             <Login />
-            <TopPlaylists />
+            {/* <TopPlaylists /> */}
           </Route >
           <Route path="/user-playlists">
             <Topbar bg="light" variant="light" />
