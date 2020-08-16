@@ -3,7 +3,6 @@ const { render } = ReactDOM;
 const { Provider, useSelector, useDispatch } = ReactRedux;
 const { Badge, Button, Col, Container, Dropdown, DropdownButton, Form, FormControl, InputGroup, ListGroup, Navbar, Row, Table } = ReactBootstrap;
 
-
 const Router = ReactRouterDOM.BrowserRouter;
 const Route = ReactRouterDOM.Route;
 const Link = ReactRouterDOM.Link;
@@ -15,9 +14,9 @@ const Redirect = ReactRouterDOM.Redirect;
 let query = ''
 let queries = []
 
-
 function Login() {
-  // Allows me to assign the session to a seeded user
+  // Allows for assigning a seeded user during dev; remove for prod
+
   const [user_id, setUserId] = React.useState('');
   const [user, setUser] = React.useState({});
   const [name, setName] = React.useState('')
@@ -29,17 +28,23 @@ function Login() {
       .then(response => response.json())
       .then((data) => {
         setUser(data);
-        // user = data;
         setUserId(data.user_id);
-        // name = data.spotify_display_name;
         setName(data.spotify_display_name);
         console.log(data, name, user)
       });
   }
+
   if (name) {
     return (
-      <h5>Logged in as: {name}</h5>
+      <Container>
+        <Row className="box align-content-left inline">
+          <Col offset-1>
+            <p>Logged in as: {name}</p>
+          </Col>
+        </Row>
+      </Container>
     );
+
   } else {
     return (
       <Container>
@@ -69,31 +74,30 @@ function Login() {
 }
 
 
-
-function AdvSearch(props) {
-  const [prepend, setPrepend] = React.useState('');
-  const [title, setTitle] = React.useState('')
-  const [param, setQuery] = React.useState('');
+function AdvSearch() {
+  let [prepend, setPrepend] = React.useState('');
+  let [title, setTitle] = React.useState('')
+  let [param, setQuery] = React.useState('');
   let [items, setTracks] = React.useState([]);
 
   function handleSearch(event) {
     event.preventDefault();
 
-    query = (query + ' ' + prepend + ' ' + param);
+    query = (query + ' ' + prepend + '' + param);
     queries.push(prepend + ' ' + param);
 
     fetch(`/api/search?query=${encodeURIComponent(query)}`)
       .then(response => response.json())
       .then(items => {
         setTracks(items);
-        setTitle('')
-        setPrepend('')
-
+        setQuery('');
+        setPrepend('');
+        setTitle(''); // Come back to this => not sure why it's not working
       });
   }
 
   function handleReset() {
-    setTracks(items => []);
+    setTracks([]);
     queries = [];
     query = '';
   };
@@ -104,8 +108,10 @@ function AdvSearch(props) {
     return minutes + ":" + (seconds < 10 ? '0' : '') + seconds;
   }
 
-  function handleDelete(itemId) {
-    items = items.filter((c) => c.id !== itemId);
+  function handleDelete(target) {
+    items = items.filter((t) => t.id !== target);
+    console.log(items[0], items[0].id, target)
+    setTracks(items);
   }
 
   return (
@@ -140,6 +146,7 @@ function AdvSearch(props) {
                 className="mr-sm-2 inline"
               />
             </Col>
+            {/* Come back to this: Trying out autocomplete */}
             {/* <CountrySelect /> */}
             {/* <Col>
               <Form.Label>Popularity</Form.Label>
@@ -204,12 +211,11 @@ function AdvSearch(props) {
 
               {items.map((item, i) => {
                 let order = i + 1;
-                let song = 'song' + String(i + 1)
                 let track_time = millisToTime(item.duration_ms);
-                // let to_play = "https://open.spotify.com/embed/track/" + item.id
+                // let to_play = "https://open.spotify.com/embed/track/" + item.id // Handles the player
 
                 return (
-                  <tr align="center" id={item.uid}>
+                  <tr align="center" scope="row" key={item.id}>
                     <td></td>
                     <td>{order}</td>
                     <td>{item.name}</td>
@@ -228,8 +234,9 @@ function AdvSearch(props) {
                     {/* </iframe> */}
                     <td><button
                       className="btn btn-sm delete-button"
-                      onClick={() => handleDelete(items.id)}
-                      onMouseDown={(e) => e.preventDefault()}
+                      onClick={() => handleDelete(item.id)}
+                    // onClick={(e) => console.log(e.target.value)}
+                    // onMouseDown={(e) => e.preventDefault()}
                     >
                       X
                     </button>
@@ -241,7 +248,7 @@ function AdvSearch(props) {
           </Table>
         </Row>
       </Container>
-    </React.Fragment>
+    </React.Fragment >
   );
 }
 
@@ -253,22 +260,39 @@ function AdvSearch(props) {
 
 function App() {
   return (
-    // <Router>
-    <React.Fragment>
-      <Topbar bg="light" variant="light" />
-      <Login />
-      <AdvSearch />
+    <Router>
+      <div>
+        <nav>
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/user-playlists">User Playlists</Link>
+            </li>
+            <li>
+              <Link to="/top-playlists">Browse Playlists</Link>
+            </li>
+          </ul>
+        </nav>
 
-    </React.Fragment>
-    // <Switch>
-    //   <Route path="/">
-    //     <AdvSearch />
-    //   </Route>
-    //   <Route path="/playlists">
-    //     <Playlists />
-    //   </Route>
-    // </Switch>
-    // // </Router>
+        <Switch>
+          <Route path="/">
+            <Topbar bg="light" variant="light" />
+            <Login />
+            <AdvSearch />
+          </Route>
+          <Route path="/user-playlists">
+            <Topbar bg="light" variant="light" />
+            <Login />
+          </Route >
+          <Route path="/top-playlists">
+            <Topbar bg="light" variant="light" />
+            <Login />
+          </Route >
+        </Switch>
+      </div>
+    </Router>
   );
 }
 

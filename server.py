@@ -44,7 +44,7 @@ def handle_login():
     return jsonify(data)
 
 
-@app.route("/top-playlists")
+@app.route("/api/top-playlists")
 def get_top_playlists():
     """Get the top playlists to display """
 
@@ -109,7 +109,7 @@ def search():
     return jsonify(items)
 
 
-@app.route("/playlists")
+@app.route("/api/playlists")
 def display_playlists():
     """ Display a list of playlists for a user"""
 
