@@ -3,3 +3,5 @@ node_modules/
 secrets.sh
 __pycache__
 genres/
+static/js/autocomplete.jsx
+static/js/sandbox.jsx
