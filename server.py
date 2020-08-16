@@ -35,7 +35,6 @@ def handle_login():
     user_id = int(request.args.get('query', '').strip())
     print("Something important:", user_id)
 
-    # user_id = int(request.args.get('user_id', '').strip())
     data = crud.get_user_by_id(user_id)
     print(data)
 
@@ -44,13 +43,15 @@ def handle_login():
     return jsonify(data)
 
 
-@app.route("/top-playlists")
+@app.route("/api/top-playlists")
 def get_top_playlists():
     """Get the top playlists to display """
 
     top_playlists = crud.playlist_ordered_by_likes()
 
-    return jsonify(top_playlists)
+    result = {'data': top_playlists}
+
+    return jsonify(result)
 
 
 @app.route("/api/save-playlist", methods=["POST"])
@@ -109,7 +110,7 @@ def search():
     return jsonify(items)
 
 
-@app.route("/playlists")
+@app.route("/api/playlists")
 def display_playlists():
     """ Display a list of playlists for a user"""
 

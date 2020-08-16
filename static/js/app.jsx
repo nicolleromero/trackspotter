@@ -3,7 +3,6 @@ const { render } = ReactDOM;
 const { Provider, useSelector, useDispatch } = ReactRedux;
 const { Badge, Button, Col, Container, Dropdown, DropdownButton, Form, FormControl, InputGroup, ListGroup, Navbar, Row, Table } = ReactBootstrap;
 
-
 const Router = ReactRouterDOM.BrowserRouter;
 const Route = ReactRouterDOM.Route;
 const Link = ReactRouterDOM.Link;
@@ -15,9 +14,9 @@ const Redirect = ReactRouterDOM.Redirect;
 let query = ''
 let queries = []
 
-
 function Login() {
-  // Allows me to assign the session to a seeded user
+  // Allows for assigning a seeded user during dev; remove for prod
+
   const [user_id, setUserId] = React.useState('');
   const [user, setUser] = React.useState({});
   const [name, setName] = React.useState('')
@@ -29,17 +28,23 @@ function Login() {
       .then(response => response.json())
       .then((data) => {
         setUser(data);
-        // user = data;
         setUserId(data.user_id);
-        // name = data.spotify_display_name;
         setName(data.spotify_display_name);
         console.log(data, name, user)
       });
   }
+
   if (name) {
     return (
-      <h5>Logged in as: {name}</h5>
+      <Container>
+        <Row className="box align-content-left inline">
+          <Col offset-1>
+            <p>Logged in as: {name}</p>
+          </Col>
+        </Row>
+      </Container>
     );
+
   } else {
     return (
       <Container>
@@ -69,31 +74,31 @@ function Login() {
 }
 
 
-
-function AdvSearch(props) {
-  const [prepend, setPrepend] = React.useState('');
-  const [title, setTitle] = React.useState('')
-  const [param, setQuery] = React.useState('');
+function AdvSearch() {
+  let [prepend, setPrepend] = React.useState('');
+  let [title, setTitle] = React.useState('')
+  let [param, setQuery] = React.useState('');
   let [items, setTracks] = React.useState([]);
 
   function handleSearch(event) {
     event.preventDefault();
 
-    query = (query + ' ' + prepend + ' ' + param);
+    query = (query + ' ' + prepend + '' + param);
     queries.push(prepend + ' ' + param);
 
     fetch(`/api/search?query=${encodeURIComponent(query)}`)
       .then(response => response.json())
       .then(items => {
         setTracks(items);
-        setTitle('')
-        setPrepend('')
-
+        setQuery('');
+        setPrepend('');
+        setTitle(''); // Come back to this => not sure why it's not working
       });
+
   }
 
   function handleReset() {
-    setTracks(items => []);
+    setTracks([]);
     queries = [];
     query = '';
   };
@@ -104,8 +109,9 @@ function AdvSearch(props) {
     return minutes + ":" + (seconds < 10 ? '0' : '') + seconds;
   }
 
-  function handleDelete(itemId) {
-    items = items.filter((c) => c.id !== itemId);
+  function handleDelete(target) {
+    items = items.filter((t) => t.id !== target);
+    setTracks(items);
   }
 
   return (
@@ -140,6 +146,7 @@ function AdvSearch(props) {
                 className="mr-sm-2 inline"
               />
             </Col>
+            {/* Come back to this: Trying out autocomplete */}
             {/* <CountrySelect /> */}
             {/* <Col>
               <Form.Label>Popularity</Form.Label>
@@ -204,12 +211,11 @@ function AdvSearch(props) {
 
               {items.map((item, i) => {
                 let order = i + 1;
-                let song = 'song' + String(i + 1)
                 let track_time = millisToTime(item.duration_ms);
-                // let to_play = "https://open.spotify.com/embed/track/" + item.id
+                // let to_play = "https://open.spotify.com/embed/track/" + item.id // Handles the player
 
                 return (
-                  <tr align="center" id={item.uid}>
+                  <tr align="center" scope="row" key={item.id}>
                     <td></td>
                     <td>{order}</td>
                     <td>{item.name}</td>
@@ -228,8 +234,9 @@ function AdvSearch(props) {
                     {/* </iframe> */}
                     <td><button
                       className="btn btn-sm delete-button"
-                      onClick={() => handleDelete(items.id)}
-                      onMouseDown={(e) => e.preventDefault()}
+                      onClick={() => handleDelete(item.id)}
+                    // onClick={(e) => console.log(e.target.value)}
+                    // onMouseDown={(e) => e.preventDefault()}
                     >
                       X
                     </button>
@@ -241,34 +248,108 @@ function AdvSearch(props) {
           </Table>
         </Row>
       </Container>
-    </React.Fragment>
+    </React.Fragment >
   );
 }
 
 
-//   fetch(`/api/playlists`)
-//     .then(response => response.json())
-//     .then(playlists => setPlaylists(playlists));
-// }
+function TopPlaylists() {
+  const [top_playlists, setTopPlaylists] = React.useState([]);
+
+  function handlePlaylists() {
+    event.preventDefault();
+
+    fetch(`/api/top-playlists`)
+      .then(response => response.json())
+      .then((top_playlists) => {
+        setTopPlaylists(top_playlists);
+        console.log(response, top_playlists)
+      })
+  }
+
+  return (
+    <Container >
+      <Row className="align-content-center">
+        <button onClick={handlePlaylists}>Click Me</button>
+        <Table hover>
+          <thead>
+            <tr align="center">
+              <th></th>
+              <th>PLAYLIST TITLE</th>
+              <th>LIKES</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+
+            {top_playlists.map((tuple, i) => {
+              let order = i + 1;
+              // (<Playlist playlist_id=21 created_at=2020-08-13 15:41:35.370985 last_updated_at=2020-08-13 15:41:35.370990 playlist_title=Ambient Techno Playlist>, 7)
+
+              return (
+
+                <tr align="center" scope="row" key={tuple[i][0].playlist_id}>
+                  <td></td>
+                  <td>{order}</td>
+                  <td>{tuple[i][0].playlist_title}</td>
+                  <td>{tuple[i][1]}</td>
+                  <td><button
+                    className="btn btn-sm delete-button"
+                  // onClick={() => handleOpenPlaylist(tuple[0].playlist_id)}
+                  >
+                    Play
+                    </button>
+                  </td>
+                </tr>
+              )
+            })}
+          </tbody>
+        </Table>
+      </Row>
+    </Container>
+  )
+}
+
+
+
 
 function App() {
   return (
-    // <Router>
-    <React.Fragment>
-      <Topbar bg="light" variant="light" />
-      <Login />
-      <AdvSearch />
+    <Router>
+      <div>
+        <nav>
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/top-playlists">Browse Playlists</Link>
+            </li>
+            <li>
+              <Link to="/user-playlists">User Playlists</Link>
+            </li>
+          </ul>
+        </nav>
 
-    </React.Fragment>
-    // <Switch>
-    //   <Route path="/">
-    //     <AdvSearch />
-    //   </Route>
-    //   <Route path="/playlists">
-    //     <Playlists />
-    //   </Route>
-    // </Switch>
-    // // </Router>
+        <Switch>
+          <Route path="/">
+            <Topbar bg="light" variant="light" />
+            <Login />
+            <AdvSearch />
+            <TopPlaylists />
+          </Route>
+          <Route path="/top-playlists">
+            <Topbar bg="light" variant="light" />
+            <Login />
+            <TopPlaylists />
+          </Route >
+          <Route path="/user-playlists">
+            <Topbar bg="light" variant="light" />
+            <Login />
+          </Route >
+        </Switch>
+      </div>
+    </Router>
   );
 }
 

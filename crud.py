@@ -118,7 +118,8 @@ def playlist_ordered_by_likes():
 
     # SELECT playlist_id, COUNT(*) AS total_num FROM playlist_likes GROUP BY playlist_id ORDER BY total_num DESC;
 
-    return db.session.query(Playlist, db.func.count(PlaylistLike.playlist_id).label('total')).join(PlaylistLike).group_by(Playlist).order_by(desc('total')).limit(20).all()
+    return db.session.query(Playlist, db.func.count(PlaylistLike.playlist_id).label(
+        'total')).join(PlaylistLike).group_by(Playlist).order_by(desc('total')).limit(20).all()
 
 
 def create_playlist_like(user_id, playlist_id, created_at):

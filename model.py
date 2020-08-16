@@ -110,8 +110,8 @@ class Playlist(db.Model):
     # playlist_tracks = db.relationship('PlaylistTrack')
     search = db.relationship('Search')
 
-    def __repr__(self):
-        return f'<Playlist playlist_id={self.playlist_id} created_at={self.created_at} last_updated_at={self.last_updated_at} playlist_title={self.playlist_title}>'
+    # def __repr__(self):
+    #     return f'<Playlist playlist_id={self.playlist_id} created_at={self.created_at} last_updated_at={self.last_updated_at} playlist_title={self.playlist_title}>'
 
 
 class PlaylistTrack(db.Model):
