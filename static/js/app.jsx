@@ -14,69 +14,6 @@ const Redirect = ReactRouterDOM.Redirect;
 let query = ''
 let queries = []
 
-function Login() {
-  // Allows for assigning a seeded user during dev; remove for prod
-
-  const [user_id, setUserId] = React.useState('');
-  const [user, setUser] = React.useState({});
-  const [name, setName] = React.useState('')
-
-  function handleSetUser(event) {
-    event.preventDefault();
-
-    fetch(`/api/handle-login?query=${encodeURIComponent(user_id)}`)
-      .then(response => response.json())
-      .then((data) => {
-        setUser(data);
-        setUserId(data.user_id);
-        setName(data.spotify_display_name);
-        console.log(data, name, user)
-      });
-  }
-
-  if (name) {
-    return (
-      <Container>
-        <Row className="box align-content-left inline">
-          <Col className="offset-1">
-            <p>Logged in as: {name}</p>
-          </Col>
-        </Row>
-      </Container>
-    );
-
-  } else {
-    return (
-      <Container>
-        <Row className="box align-content-left inline">
-          <Col>
-            <Form onSubmit={handleSetUser}>
-              <Form.Label>User_id:</Form.Label>
-              <Form.Row>
-                <FormControl
-                  type="text"
-                  value={user_id}
-                  placeholder="Enter user_id"
-                  onChange={(e) => setUserId(e.target.value)}
-                  className="lg-1 inline"
-                  id="log-in"
-                />
-                <Button
-                  variant="outline-secondary inline"
-                  type="submit"
-                  className="inline"
-                >
-                  Log in
-              </Button>
-              </Form.Row>
-            </Form>
-          </Col>
-        </Row>
-      </Container>
-    );
-  }
-}
-
 
 function AdvSearch() {
   let [prepend, setPrepend] = React.useState('');
@@ -87,7 +24,7 @@ function AdvSearch() {
   function handleSearch(event) {
     event.preventDefault();
 
-    query = (query + ' ' + prepend + '' + param);
+    query = (query + ' ' + prepend + ' ' + param);
     queries.push(prepend + ' ' + param);
 
     fetch(`/api/search?query=${encodeURIComponent(query)}`)
@@ -257,6 +194,23 @@ function AdvSearch() {
   );
 }
 
+function PlaylistItem(props) {
+
+  return (
+    <tr align="center" scope="row" key={props.title}>
+      {/* <td>{order}</td> */}
+      <td>{props.title}</td>
+      <td>{props.likes}</td>
+      <td><button
+        className="btn btn-sm delete-button"
+      // onClick={() => handleOpenPlaylist()}
+      >
+        Play
+      </button>
+      </td>
+    </tr>
+  )
+}
 
 function TopPlaylists() {
   const [top_playlists, setTopPlaylists] = React.useState([]);
@@ -266,10 +220,18 @@ function TopPlaylists() {
 
     fetch(`/api/top-playlists`)
       .then(response => response.json())
-      .then((top_playlists) => {
-        setTopPlaylists(top_playlists);
+      .then((data) => {
+        const top_playlists_list = []
+        for (const key in data) {
+          console.log(key, data[key])
+          top_playlists_list.push(
+            <PlaylistItem title={key} likes={data[key]} />
+          )
+        }
+        setTopPlaylists(top_playlists_list);
       })
   }, [])
+
 
   return (
     <Container >
@@ -277,22 +239,22 @@ function TopPlaylists() {
         <Table hover>
           <thead>
             <tr align="center">
-              <th>RESULTS</th>
+              {/* <th>RESULTS</th> */}
               <th>PLAYLIST TITLE</th>
               <th>LIKES</th>
               <th></th>
             </tr>
           </thead>
           <tbody>
-
-            {Object.keys(top_playlists).map((title, i) => {
+            {top_playlists}
+            {/* {top_playlists_list.map((item, i) => {
               let order = i + 1;
 
               return (
                 <tr align="center" scope="row" key={title}>
                   <td>{order}</td>
                   <td>{title}</td>
-                  <td>{top_playlists[title]}</td>
+                  <td>{top_playlists_list[title]}</td>
                   <td><button
                     className="btn btn-sm delete-button"
                   // onClick={() => handleOpenPlaylist()}
@@ -302,7 +264,7 @@ function TopPlaylists() {
                   </td>
                 </tr>
               )
-            })}
+            })} */}
           </tbody>
         </Table>
       </Row>
@@ -310,6 +272,13 @@ function TopPlaylists() {
   )
 }
 
+function UserPlaylists() {
+  const [user_playlists, setUserPlaylists] = React.useState([]);
+
+  return (
+    <p>Placeholder</p>
+  )
+}
 
 
 function App() {
@@ -329,22 +298,12 @@ function App() {
             </li>
           </ul>
         </nav>
+        <Topbar />
 
         <Switch>
-          <Route path="/">
-            <Topbar bg="light" variant="light" />
-            <Login />
-            <AdvSearch />
-          </Route>
-          <Route path="/user-playlists">
-            <Topbar bg="light" variant="light" />
-            <Login />
-            <TopPlaylists />
-          </Route >
-          <Route path="/top-playlists">
-            <Topbar bg="light" variant="light" />
-            <Login />
-          </Route >
+          <Route exact path="/" component={AdvSearch} />
+          <Route exact path="/user-playlists" component={UserPlaylists} />
+          <Route exact path="/top-playlists" component={TopPlaylists} />
         </Switch>
       </div>
     </Router>

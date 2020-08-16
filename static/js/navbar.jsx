@@ -60,11 +60,12 @@ const Topbar = (props) => {
           onClick={() => SpotifyLogin()} />
       </Navbar.Brand>
       <Navbar.Toggle />
+      <Login />
       <Navbar.Collapse className="justify-content-end">
         <Button variant="outline-secondary inline" id="btn-login"
         // onClick={handleLogin()}
         >
-          <img src="/static/img/spot_icon_gr.png" width="30" height="30"></img>
+          <img src="/static/img/spot_icon_gr.png" width="30" height="30"></img>&nbsp;
         Log in to Spotify
     </Button>
         {props.user && (
@@ -75,4 +76,57 @@ const Topbar = (props) => {
       </Navbar.Collapse>
     </Navbar>
   );
+}
+
+function Login() {
+  // Allows for assigning a seeded user during dev; remove for prod
+
+  const [user_id, setUserId] = React.useState('');
+  const [user, setUser] = React.useState({});
+  const [name, setName] = React.useState('')
+
+  function handleSetUser(event) {
+    event.preventDefault();
+
+    fetch(`/api/handle-login?query=${encodeURIComponent(user_id)}`)
+      .then(response => response.json())
+      .then((data) => {
+        setUser(data);
+        setUserId(data.user_id);
+        setName(data.spotify_display_name);
+        console.log(data, name, user)
+      });
+  }
+
+  if (name) {
+    return (
+      <Navbar.Text>
+        Signed in as: <a href="#login">{name}</a>
+      </Navbar.Text>
+    );
+
+  } else {
+    return (
+
+      <Form inline onSubmit={handleSetUser}>
+        <Form.Row>
+          <FormControl
+            type="text"
+            value={user_id}
+            placeholder="Enter user_id"
+            onChange={(e) => setUserId(e.target.value)}
+            className="lg-1 inline"
+            id="log-in"
+          />&nbsp;&nbsp;
+          <Button
+            variant="outline-secondary"
+            type="submit"
+          >
+            Log in
+              </Button>
+        </Form.Row>
+      </Form>
+
+    );
+  }
 }

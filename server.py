@@ -44,6 +44,13 @@ def handle_login():
     return jsonify(data)
 
 
+@app.route('/', defaults={'path': ''})
+@app.route('/<path:path>')
+def catch_all(path):
+
+    return render_template('homepage.html')
+
+
 @app.route("/api/top-playlists")
 def get_top_playlists():
     """Get the top playlists to display """
