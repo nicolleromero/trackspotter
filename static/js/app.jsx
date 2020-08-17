@@ -179,7 +179,7 @@ function AdvSearch() {
                 <th>ARTIST</th>
                 <th>ALBUM</th>
                 <th>PLAYTIME</th>
-                <th>PREVIEW</th>
+                <th>PLAY</th>
                 <th>   </th>
               </tr>
             </thead>
@@ -188,7 +188,7 @@ function AdvSearch() {
               {items.map((item, i) => {
                 let order = i + 1;
                 let track_time = millisToTime(item.duration_ms);
-                // let to_play = "https://open.spotify.com/embed/track/" + item.id // Handles the player
+                let to_play = "https://open.spotify.com/embed/track/" + item.id // Handles the player
 
                 return (
                   <tr align="center" scope="row" key={item.id}>
@@ -198,21 +198,19 @@ function AdvSearch() {
                     <td>{item.album.artists[0].name}</td>
                     <td>{item.album.name}</td>
                     <td>{track_time}</td>
-                    <td><img src={item.album.images[2].url}></img></td>
-                    {/* <td><iframe
-                    src={to_play}
-                    width="80"
-                    height="80"
-                    frameborder="0"
-                    allowtransparency="true"
-                    allow="encrypted-media"
-                  > */}
-                    {/* </iframe> */}
+                    {/* <td><img src={item.album.images[2].url}></img></td> */}
+                    <td><iframe
+                      src={to_play}
+                      width="80"
+                      height="80"
+                      frameborder="0"
+                      allowtransparency="true"
+                      allow="encrypted-media"
+                    >
+                    </iframe></td>
                     <td><button
                       className="btn btn-sm delete-button"
                       onClick={() => handleDelete(item.id)}
-                    // onClick={(e) => console.log(e.target.value)}
-                    // onMouseDown={(e) => e.preventDefault()}
                     >
                       X
                     </button>
@@ -286,11 +284,18 @@ function TopPlaylists() {
         <Table id="playlist_table" hover>
           <thead>
             <tr align="center">
-              <th>SEARCH</th>
+              <th colSpan="4"><h3>
+                Popular Playlists
+              <small class="text-muted">&nbsp;🎧&nbsp;&nbsp; by genre</small>
+              </h3></th>
+            </tr>
+          </thead>
+          <thead id="playlist-thead">
+            <tr align="center">
+              <th>SEARCH TERMS</th>
               <th>PLAYLIST TITLE</th>
               <th>RATING</th>
               <th>PLAY</th>
-              <th></th>
             </tr>
           </thead>
           <tbody>
@@ -298,7 +303,7 @@ function TopPlaylists() {
           </tbody>
         </Table>
       </Row>
-    </Container>
+    </Container >
   )
 }
 
@@ -316,7 +321,7 @@ function App() {
     <Router>
       <div>
         <nav>
-          <ul>
+          <ul className="mr-auto">
             <li>
               <Link to="/">Home</Link>
             </li>

@@ -30,6 +30,11 @@ h5 {
 	margin: 50px;
 }
 
+#playlist-thead {
+	background-color: black;
+	color: whitesmoke;
+}
+
 /* .tracks {
 	margin: 0px;
 	padding: 0px;
