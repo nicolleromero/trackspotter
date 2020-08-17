@@ -1,4 +1,4 @@
-const { Component } = React;
+const { Component, useState, useCallback } = React;
 const { render } = ReactDOM;
 const { Provider, useSelector, useDispatch } = ReactRedux;
 const { Badge, Button, Col, Container, Dropdown, DropdownButton, Form, FormControl, InputGroup, ListGroup, Navbar, Row, Table } = ReactBootstrap;
@@ -10,15 +10,13 @@ const Prompt = ReactRouterDOM.Prompt;
 const Switch = ReactRouterDOM.Switch;
 const Redirect = ReactRouterDOM.Redirect;
 
-
-let query = ''
-let queries = []
-
+let query = '';
+let queries = [];
 
 function AdvSearch() {
   let [prepend, setPrepend] = React.useState('');
   let [title, setTitle] = React.useState('')
-  let [param, setQuery] = React.useState('');
+  let [param, setParam] = React.useState('');
   let [items, setTracks] = React.useState([]);
 
   function handleSearch(event) {
@@ -27,22 +25,17 @@ function AdvSearch() {
     query = (query + ' ' + prepend + ' ' + param);
     queries.push(prepend + ' ' + param);
 
+
     fetch(`/api/search?query=${encodeURIComponent(query)}`)
       .then(response => response.json())
       .then(items => {
         setTracks(items);
-        setQuery('');
+        setParam('');
         setPrepend('');
         setTitle(''); // Come back to this => not sure why it's not working
       });
 
   }
-
-  function handleReset() {
-    setTracks([]);
-    queries = [];
-    query = '';
-  };
 
   function millisToTime(milliseconds) {
     var minutes = Math.floor(milliseconds / 60000);
@@ -50,10 +43,40 @@ function AdvSearch() {
     return minutes + ":" + (seconds < 10 ? '0' : '') + seconds;
   }
 
+  function handleDeleteParam(target) {
+    queries = queries.filter((t) => t !== target);
+    console.log(`queries1: ${queries}`)
+    query = '';
+    for (let element of queries) {
+      query = (query + ' ' + element);
+      console.log(`query: ${query}`)
+    }
+    console.log(`queries2: ${queries}, query: ${query}`)
+    setParam('');
+    setPrepend('');
+
+    fetch(`/api/search?query=${encodeURIComponent(query)}`)
+      .then(response => response.json())
+      .then(items => {
+        setTracks(items);
+        setParam('');
+        setPrepend('');
+        setTitle(''); // Come back to this => not sure why it's not working
+      })
+  }
+
   function handleDelete(target) {
     items = items.filter((t) => t.id !== target);
-    console.log(items[0], items[0].id, target)
     setTracks(items);
+  }
+
+  function handleReset() {
+    setParam('');
+    setPrepend('');
+    setTitle('');
+    setTracks([]);
+    queries = [];
+    query = '';
   }
 
   return (
@@ -84,7 +107,7 @@ function AdvSearch() {
                 type="text"
                 value={param}
                 placeholder="Enter a term"
-                onChange={(e) => setQuery(e.target.value)}
+                onChange={(e) => setParam(e.target.value)}
                 className="mr-sm-2 inline"
               />
             </Col>
@@ -102,7 +125,7 @@ function AdvSearch() {
               >
                 Search
               </Button>
-               |  |
+              &nbsp;&nbsp;&nbsp;&nbsp;
               <Button
                 variant="outline-secondary inline"
                 onClick={handleReset}
@@ -114,13 +137,24 @@ function AdvSearch() {
         </Row>
       </Container>
       <Container>
-        <Row>
-          <Col className="align-content-left" md={{ span: 2, offset: 10 }}>
+        <Row className="align-content-left">
+          <Col className="align-content-left">
             <h5>
               {queries.map((query) => {
                 if (query) {
                   return (
-                    <Badge pill variant="dark">{query}</Badge>
+                    <Badge
+                      pill
+                      variant="dark">
+                      <Button
+                        variant="dark"
+                        size="sm"
+                        key={query}
+                        value={query}
+                        onClick={(e) => handleDeleteParam(e.target.value)}
+                      >
+                        X {query}
+                      </Button></Badge>
                   )
                 }
               })}
@@ -128,7 +162,7 @@ function AdvSearch() {
           </Col>
           {items.length > 0 && (
             <Col id="need-space" className="align-content-right">
-              <Button variant="outline-dark offset-10">Save Playlist</Button>
+              <Button variant="outline-dark offset-9">Save Playlist</Button>
               <br />
             </Col>
           )}
@@ -195,17 +229,30 @@ function AdvSearch() {
 }
 
 function PlaylistItem(props) {
+  let queries = [props.title.toLowerCase().replace('playlist', '')];
 
   return (
     <tr align="center" scope="row" key={props.title}>
       {/* <td>{order}</td> */}
+      <td>{queries.map((query) => {
+        if (query) {    // Will need to be updated with query results
+          return (
+            <h5><Badge pill variant="dark">genre: {query}</Badge></h5>
+          )
+        }
+      })}</td>
       <td>{props.title}</td>
       <td>{props.likes}</td>
       <td><button
         className="btn btn-sm delete-button"
       // onClick={() => handleOpenPlaylist()}
       >
-        Play
+        <img
+          src="/static/img/transparent-play-button-icon-18.jpg"
+          width="30"
+          height="30"
+          className="d-inline-block align-top"
+        />
       </button>
       </td>
     </tr>
@@ -236,35 +283,18 @@ function TopPlaylists() {
   return (
     <Container >
       <Row className="align-content-center">
-        <Table hover>
+        <Table id="playlist_table" hover>
           <thead>
             <tr align="center">
-              {/* <th>RESULTS</th> */}
+              <th>SEARCH</th>
               <th>PLAYLIST TITLE</th>
-              <th>LIKES</th>
+              <th>RATING</th>
+              <th>PLAY</th>
               <th></th>
             </tr>
           </thead>
           <tbody>
             {top_playlists}
-            {/* {top_playlists_list.map((item, i) => {
-              let order = i + 1;
-
-              return (
-                <tr align="center" scope="row" key={title}>
-                  <td>{order}</td>
-                  <td>{title}</td>
-                  <td>{top_playlists_list[title]}</td>
-                  <td><button
-                    className="btn btn-sm delete-button"
-                  // onClick={() => handleOpenPlaylist()}
-                  >
-                    Play
-                    </button>
-                  </td>
-                </tr>
-              )
-            })} */}
           </tbody>
         </Table>
       </Row>

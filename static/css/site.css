@@ -19,11 +19,15 @@ h5 {
 }
 
 #need-space {
-	padding-bottom: 25px;
+	min-width: 50 px;;
 }
 
 #log-in {
 	max-width: 120px;
+}
+
+#playlist_table {
+	margin: 50px;
 }
 
 /* .tracks {

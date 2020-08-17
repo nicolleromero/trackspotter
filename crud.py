@@ -148,9 +148,14 @@ def create_playlist_like(user_id, playlist_id, created_at):
 
 def playlist_likes_by_playlist_title():
 
-    q = db.session.query(Playlist, PlaylistLike).join(PlaylistLike).all()
+    q = db.session.query(Playlist, PlaylistLike).join(PlaylistLike)
 
     return q.group_by(Playlist.playlist_id).count(PlaylistLike.playlist_id).all()
+
+
+def get_playlist_query():
+
+    return db.session.query(Playlist.playlist_title, Search.query).join(Search).all()
 
 
 if __name__ == '__main__':
