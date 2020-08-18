@@ -1,6 +1,7 @@
 from flask import (Flask, render_template, jsonify,
                    request, flash, session, redirect)
 from model import connect_to_db
+import tekore as tk
 
 from pprint import pformat
 import os
@@ -13,15 +14,26 @@ import crud
 app = Flask(__name__)
 app.secret_key = 'dev'
 
+# from OAuth code
+# def app_factory() -> Flask:
+#     app = Flask(__name__)
+#     app.config['SECRET_KEY'] = 'aliens'
+
 # This configuration option makes the Flask interactive debugger
 # more useful (you should remove this line in production though)
 app.config['PRESERVE_CONTEXT_ON_EXCEPTION'] = True
 
 
 SPOTIFY_KEY = os.environ['SPOTIFY_KEY']
-# client_id = os.environ['client_id']
-# client_secret = os.environ['client_secret']
-# redirect_uri = os.environ['redirect_uri']
+client_id = os.environ['client_id']
+client_secret = os.environ['client_secret']
+redirect_uri = os.environ['redirect_uri']
+
+client_id, client_secret, redirect_uri = tk.config_from_environment()
+conf = tk.config_from_environment()
+cred = tk.Credentials(*conf)
+spotify = tk.Spotify()
+tk.config_from_environment(return_refresh=True)
 
 
 @app.route("/")
@@ -46,11 +58,11 @@ def handle_login():
     return jsonify(user)
 
 
-@app.route('/', defaults={'path': ''})
-@app.route('/<path:path>')
-def catch_all(path):
+# @app.route('/', defaults={'path': ''})
+# @app.route('/<path:path>')
+# def catch_all(path):
 
-    return render_template('homepage.html')
+#     return render_template('homepage.html')
 
 
 @app.route("/api/top-playlists")
@@ -118,6 +130,24 @@ def search():
     return jsonify(items)
 
 
+# @app.route("/api/spotify-login")
+# def spotify_login():
+
+#     url = request.args.get('query', '').strip()
+
+#     response = requests.get(url)
+#     data = res.json()
+#     print(data)
+
+#     session['user'] = data
+
+#     # iterate over all headers
+#     for key, value in data:
+#         print(key, value)
+
+#     return jsonify(data)
+
+
 @app.route("/api/playlists")
 def display_playlists():
     """ Display a list of playlists for a user"""
@@ -126,6 +156,69 @@ def display_playlists():
     data = crud.get_playlist_by_user_id(user_id)
 
     return data
+
+
+# __________________OAuth__Routes___________________________________ #
+users = {}
+
+
+# @app.route('/spotify-login', methods=['GET'])
+# def spotify_login():
+
+#     user = session.get('user', None)
+#     in_link = '<a href="/login">login</a>'
+#     out_link = '<a href="/logout">logout</a>'
+#     page = f'User ID: {user}<br>You can {in_link} or {out_link}'
+
+#     if user is not None:
+#         token = users[user]
+
+#         if token.is_expiring:
+#             token = cred.refresh(token)
+#             users[user] = token
+
+#         try:
+#             with spotify.token_as(users[user]):
+#                 song = spotify.playback_currently_playing()
+
+#             page += f'<br>Now playing: {song.item.name}'
+#         except Exception:
+#             page += '<br>Error in retrieving now playing!'
+
+#     return page
+
+
+@app.route('/spotify-login', methods=['GET'])
+def login():
+    auth_url = cred.user_authorisation_url(
+        scope="user-read-private playlist-modify-public playlist-modify-private streaming")
+    return redirect(auth_url, 307)
+
+
+@app.route('/callback', methods=['GET'])
+def login_callback():
+    code = request.args.get('code', None)
+
+    token = cred.request_user_token(code)
+    with spotify.token_as(token):
+        info = spotify.current_user()
+
+    session['user'] = info.id
+    users[info.id] = token
+    print(session['user'])
+    print(token)
+
+    return jsonify(info)
+
+
+# @app.route('/logout', methods=['GET'])
+# def logout():
+#     uid = session.pop('user', None)
+#     if uid is not None:
+#         users.pop(uid, None)
+#     return redirect('/', 307)
+
+# return app
 
 
 if __name__ == "__main__":
