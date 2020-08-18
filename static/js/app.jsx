@@ -362,21 +362,22 @@ function UserPlaylists() {
 function App() {
   return (
     <Router>
+      <Topbar />
       <div>
-        <nav>
-          <ul className="mr-auto">
-            <li>
-              <Link to="/">Home</Link>
+        <nav className="navbar navbar-expand-lg">
+          <ul className="nav navbar-nav">
+            <li className="inline">
+              <Link to="/">Home</Link> |&nbsp;
             </li>
-            <li>
-              <Link to="/user-playlists">User Playlists</Link>
+            <li className="inline">
+              <Link to="/user-playlists"> User Playlists</Link>  |&nbsp;
             </li>
-            <li>
-              <Link to="/top-playlists">Browse Playlists</Link>
+            <li className="inline">
+              <Link to="/top-playlists"> Browse Playlists</Link>
             </li>
           </ul>
         </nav>
-        <Topbar />
+
 
         <Switch>
           <Route exact path="/" component={AdvSearch} />

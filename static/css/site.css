@@ -35,6 +35,10 @@ h5 {
 	color: whitesmoke;
 }
 
+.navbar-nav {
+	flex-direction: row;
+}
+
 /* .tracks {
 	margin: 0px;
 	padding: 0px;
