@@ -102,16 +102,24 @@ def create_playlist_track(track_id, playlist_id, track_order):
     return playlist_track
 
 
-def get_playlist_by_playlist_title(playlist_title):
-    """Return details for a specific playlist"""
+# def get_playlist_by_playlist_title(playlist_title):
+#     """Return all tracks for the designated playlist. """
 
-    return Playlist.query.get(playlist_title)
+#     playlist_id = db.session.query(Playlist.playlist_id)
+
+#     res = db.session.query(Playlist.playlist_title, db.func.count(PlaylistLike.playlist_id).label(
+#         'total')).join(PlaylistLike).group_by(Playlist).order_by(desc('total')).limit(20).all()
+
+#     return res
 
 
 def get_playlist_by_user_id(target_id):
-    """Return a user's playlista"""
+    """Return a user's playlists"""
 
-    return db.session.query(Playlist).filter(Playlist.user_id == target_id).all()
+    user_playlists = db.session.query(Playlist.playlist_title, db.func.count(PlaylistLike.playlist_id).label(
+        'total')).join(PlaylistLike).group_by(Playlist).filter(Playlist.user_id == target_id).order_by(desc('total')).limit(20).all()
+
+    return main(user_playlists)
 
 
 def playlist_ordered_by_likes():
@@ -128,10 +136,10 @@ def playlist_ordered_by_likes_json():
 
     # SELECT playlist_id, COUNT(*) AS total_num FROM playlist_likes GROUP BY playlist_id ORDER BY total_num DESC;
 
-    res = db.session.query(Playlist.playlist_title, db.func.count(PlaylistLike.playlist_id).label(
+    top_playlists = db.session.query(Playlist.playlist_title, db.func.count(PlaylistLike.playlist_id).label(
         'total')).join(PlaylistLike).group_by(Playlist).order_by(desc('total')).limit(20).all()
 
-    return res
+    return main(top_playlists)
 
 
 def create_playlist_like(user_id, playlist_id, created_at):
@@ -158,6 +166,22 @@ def get_playlist_query():
     return db.session.query(Playlist.playlist_title, Search.query).join(Search).all()
 
 
+def Convert(tup, di):
+    di = dict(tup)
+    return di
+
+
+def main(playlists_list):
+    dictionary = {}
+    result = (Convert(playlists_list, dictionary))
+
+    return json.dumps(result)
+
+
 if __name__ == '__main__':
     from server import app
     connect_to_db(app)
+
+
+[('Goth Rock Playlist', 5), ('Healing Playlist', 1), ('Memphis Blues Playlist', 3),
+ ('Neo - Prog Playlist', 1), ('Rai Playlist', 3), ('Sunshine Pop Playlist', 1), ('Techno Playlist', 4)]

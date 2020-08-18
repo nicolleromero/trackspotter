@@ -8,7 +8,6 @@ from sys import argv
 import json
 import requests
 import crud
-import top_playlists
 
 
 app = Flask(__name__)
@@ -20,6 +19,9 @@ app.config['PRESERVE_CONTEXT_ON_EXCEPTION'] = True
 
 
 SPOTIFY_KEY = os.environ['SPOTIFY_KEY']
+# client_id = os.environ['client_id']
+# client_secret = os.environ['client_secret']
+# redirect_uri = os.environ['redirect_uri']
 
 
 @app.route("/")
@@ -36,12 +38,12 @@ def handle_login():
     user_id = int(request.args.get('query', '').strip())
     print("Something important:", user_id)
 
-    data = crud.get_user_by_id(user_id)
-    print(data)
+    user = crud.get_user_by_id(user_id)
+    print(user)
 
-    # session['current_user'] = user.user_id
+    session['user_id'] = user_id
 
-    return jsonify(data)
+    return jsonify(user)
 
 
 @app.route('/', defaults={'path': ''})
@@ -55,7 +57,7 @@ def catch_all(path):
 def get_top_playlists():
     """Get the top playlists to display """
 
-    data = top_playlists.main()
+    data = crud.playlist_ordered_by_likes_json()
 
     return data
 
@@ -120,11 +122,10 @@ def search():
 def display_playlists():
     """ Display a list of playlists for a user"""
 
-    user = session['user']
+    user_id = session.get('user_id')
+    data = crud.get_playlist_by_user_id(user_id)
 
-    user_playlists = crud.get_playlist_by_user_id(user.user_id)
-
-    return jsonify(user_playlists)
+    return data
 
 
 if __name__ == "__main__":

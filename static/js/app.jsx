@@ -201,7 +201,7 @@ function AdvSearch() {
                     {/* <td><img src={item.album.images[2].url}></img></td> */}
                     <td><iframe
                       src={to_play}
-                      width="80"
+                      width="200"
                       height="80"
                       frameborder="0"
                       allowtransparency="true"
@@ -240,7 +240,7 @@ function PlaylistItem(props) {
         }
       })}</td>
       <td>{props.title}</td>
-      <td>{props.likes}</td>
+      <td><h4>{'♪'.repeat(props.likes)}</h4></td>
       <td><button
         className="btn btn-sm delete-button"
       // onClick={() => handleOpenPlaylist()}
@@ -310,8 +310,51 @@ function TopPlaylists() {
 function UserPlaylists() {
   const [user_playlists, setUserPlaylists] = React.useState([]);
 
+
+
+  React.useEffect(() => {
+
+    fetch(`/api/playlists`)
+      .then(response => response.json())
+      .then((data) => {
+        const user_playlists_list = []
+        for (const key in data) {
+          console.log(key, data[key])
+          user_playlists_list.push(
+            <PlaylistItem title={key} likes={data[key]} />
+          )
+        }
+        setUserPlaylists(user_playlists_list);
+      })
+  }, [])
+
+
   return (
-    <p>Placeholder</p>
+    <Container >
+      <Row className="align-content-center">
+        <Table id="playlist_table" hover>
+          <thead>
+            <tr align="center">
+              <th colSpan="4"><h3>
+                {user_name}'s Playlists
+              <small class="text-muted">&nbsp;🎧&nbsp;&nbsp; you're so amazing...</small>
+              </h3></th>
+            </tr>
+          </thead>
+          <thead id="playlist-thead">
+            <tr align="center">
+              <th>SEARCH TERMS</th>
+              <th>PLAYLIST TITLE</th>
+              <th>RATING</th>
+              <th>PLAY</th>
+            </tr>
+          </thead>
+          <tbody>
+            {user_playlists}
+          </tbody>
+        </Table>
+      </Row>
+    </Container >
   )
 }
 

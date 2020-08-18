@@ -46,8 +46,9 @@ function getUserData(accessToken) {
   });
 }
 
+let user_name = '';
+
 const Topbar = (props) => {
-  const [user, setUser] = React.useState('')
 
   return (
     <Navbar bg="light" variant="light">
@@ -97,6 +98,8 @@ function Login() {
         console.log(data, name, user)
       });
   }
+
+  user_name = name;
 
   if (name) {
     return (
