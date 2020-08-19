@@ -14,13 +14,6 @@ import crud
 app = Flask(__name__)
 app.secret_key = 'dev'
 
-# from OAuth code
-# def app_factory() -> Flask:
-#     app = Flask(__name__)
-#     app.config['SECRET_KEY'] = 'aliens'
-
-# This configuration option makes the Flask interactive debugger
-# more useful (you should remove this line in production though)
 app.config['PRESERVE_CONTEXT_ON_EXCEPTION'] = True
 
 
@@ -29,11 +22,11 @@ client_id = os.environ['client_id']
 client_secret = os.environ['client_secret']
 redirect_uri = os.environ['redirect_uri']
 
-client_id, client_secret, redirect_uri = tk.config_from_environment()
 conf = tk.config_from_environment()
 cred = tk.Credentials(*conf)
 spotify = tk.Spotify()
-tk.config_from_environment(return_refresh=True)
+
+users = {}
 
 
 @app.route("/")
@@ -58,13 +51,6 @@ def handle_login():
     return jsonify(user)
 
 
-# @app.route('/', defaults={'path': ''})
-# @app.route('/<path:path>')
-# def catch_all(path):
-
-#     return render_template('homepage.html')
-
-
 @app.route("/api/top-playlists")
 def get_top_playlists():
     """Get the top playlists to display """
@@ -76,9 +62,6 @@ def get_top_playlists():
 
 @app.route("/api/save-playlist", methods=["POST"])
 def save_playlist():
-
-    # im expecting this kind of object as JSON in the request
-    # {"post_title": "post 1", "post_body": "stuf stuf stuf"}
 
     data = request.get_json()
     user_id = data['search']['user_id']
@@ -116,9 +99,26 @@ def search():
     if not query:
         return jsonify([])
 
+    user = session.get('user', None)
+
+    if user is not None:
+        token = users[user]
+
+    if session.get('user') is not None:
+        token = cred.refresh(token)
+        spot_id = session['user']
+        spot_key = users[spot_id]
+
+        if token.is_expiring:
+            token = cred.refresh(token)
+            users[user] = token
+
+    else:
+        spot_key = SPOTIFY_KEY
+
     params = {'q': f'{query}', 'type': 'track'}
 
-    headers = {'Authorization': f'Bearer {SPOTIFY_KEY}'}
+    headers = {'Authorization': f'Bearer {spot_key}'}
 
     res = requests.get('https://api.spotify.com/v1/search?',
                        headers=headers,
@@ -130,24 +130,6 @@ def search():
     return jsonify(items)
 
 
-# @app.route("/api/spotify-login")
-# def spotify_login():
-
-#     url = request.args.get('query', '').strip()
-
-#     response = requests.get(url)
-#     data = res.json()
-#     print(data)
-
-#     session['user'] = data
-
-#     # iterate over all headers
-#     for key, value in data:
-#         print(key, value)
-
-#     return jsonify(data)
-
-
 @app.route("/api/playlists")
 def display_playlists():
     """ Display a list of playlists for a user"""
@@ -156,36 +138,6 @@ def display_playlists():
     data = crud.get_playlist_by_user_id(user_id)
 
     return data
-
-
-# __________________OAuth__Routes___________________________________ #
-users = {}
-
-
-# @app.route('/spotify-login', methods=['GET'])
-# def spotify_login():
-
-#     user = session.get('user', None)
-#     in_link = '<a href="/login">login</a>'
-#     out_link = '<a href="/logout">logout</a>'
-#     page = f'User ID: {user}<br>You can {in_link} or {out_link}'
-
-#     if user is not None:
-#         token = users[user]
-
-#         if token.is_expiring:
-#             token = cred.refresh(token)
-#             users[user] = token
-
-#         try:
-#             with spotify.token_as(users[user]):
-#                 song = spotify.playback_currently_playing()
-
-#             page += f'<br>Now playing: {song.item.name}'
-#         except Exception:
-#             page += '<br>Error in retrieving now playing!'
-
-#     return page
 
 
 @app.route('/spotify-login', methods=['GET'])
@@ -205,20 +157,20 @@ def login_callback():
 
     session['user'] = info.id
     users[info.id] = token
-    print(session['user'])
-    print(token)
+
+    if token.is_expiring:
+        token = cred.refresh(token)
+        users[user] = token
 
     return jsonify(info)
 
 
-# @app.route('/logout', methods=['GET'])
-# def logout():
-#     uid = session.pop('user', None)
-#     if uid is not None:
-#         users.pop(uid, None)
-#     return redirect('/', 307)
-
-# return app
+@app.route('/logout', methods=['GET'])
+def logout():
+    uid = session.pop('user', None)
+    if uid is not None:
+        users.pop(uid, None)
+    return redirect('/', 307)
 
 
 if __name__ == "__main__":

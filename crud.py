@@ -2,7 +2,7 @@
 
 from model import db, User, Search, Playlist, PlaylistTrack, PlaylistLike, Track, connect_to_db
 from flask_sqlalchemy import SQLAlchemy
-from sqlalchemy import desc
+from sqlalchemy import asc, desc
 import json
 
 
@@ -164,6 +164,15 @@ def playlist_likes_by_playlist_title():
 def get_playlist_query():
 
     return db.session.query(Playlist.playlist_title, Search.query).join(Search).all()
+
+
+def tracks_in_playlist_ordered(target_playlist_id):
+    """Return a list of the track in a playlist in order """
+
+    group = db.session.query(Track).join(PlaylistTrack).filter(
+        PlaylistTrack.track_id == Track.track_id, PlaylistTrack.playlist_id == target_playlist_id).order_by(asc(PlaylistTrack.track_order)).all()
+
+    return group
 
 
 def Convert(tup, di):

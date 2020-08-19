@@ -17,7 +17,6 @@ function Topbar() {
   const SCOPES = ["user-read-private", "playlist-modify-public", "playlist-modify-private", "streaming"];
 
   function handleSpotLogin() {
-    // event.preventDefault();
 
     function getLoginURL(scopes) {
       return 'https://accounts.spotify.com/authorize' + '?response_type=code' +
@@ -27,141 +26,137 @@ function Topbar() {
       // '&response_type=token';
     }
 
-    // app.get('/login', function(req, res) {
-    //   var scopes = 'user-read-private user-read-email';
-    //   res.redirect('https://accounts.spotify.com/authorize' +
-    //     '?response_type=code' +
-    //     '&client_id=' + my_client_id +
-    //     (scopes ? '&scope=' + encodeURIComponent(scopes) : '') +
-    //     '&redirect_uri=' + encodeURIComponent(redirect_uri));
-    //   });
-
     const url = getLoginURL(SCOPES);
 
-    fetch('/api/spotify-login?url')
-      .then(response => response.json())
-      .then(data => {
-        setUser(data);
-      });
+    // fetch('/api/spotify-login?url')
+    //   .then(response => response.json())
+    //   .then(data => {
+    //     setUser(data);
+    //     console.log(data); // this doesn't work right now
+    //   });
 
-    const width = 450,
-      height = 730,
-      left = (screen.width / 2) - (width / 2),
-      top = (screen.height / 2) - (height / 2);
+    // const width = 450,
+    //   height = 730,
+    //   left = (screen.width / 2) - (width / 2),
+    //   top = (screen.height / 2) - (height / 2);
 
-    window.addEventListener("message", function (event) {
-      const hash = JSON.parse(event.data);
-      if (hash.type == 'access_token') {
-        callback(hash.access_token);
-      }
-    }, false);
+    // window.addEventListener("message", (event) => {
+    //   const data = JSON.parse(event.data);
+    //   if (data.type == 'access_token') {
+    //     // callback(hash.access_token);
+    //     setAccessToken(data.access_token);
+    //     w.close(); // how do I close the window so user info doesn't appear there?
+    //   }
+    // }, false);
 
-    const w = window.open(url,
-      'Spotify',
-      'menubar=no,location=no,resizable=no,scrollbars=no,status=no, width=' + width + ', height=' + height + ', top=' + top + ', left=' + left
-    );
+    // const w = window.open(
+    //   url,
+    //   'Spotify',
+    //   'menubar=no,location=no,resizable=no,scrollbars=no,status=no, width=' + width + ', height=' + height + ', top=' + top + ', left=' + left
+    // );
 
-    fetch('/callback')
-      .then(response => response.json())
-      .then(data => {
-        setAccessToken(data);
-        console.log(data)
-      });
-
-    function getUserData(accessToken) {
-      return $.ajax({
-        url: 'https://api.spotify.com/v1/me',
-        headers: {
-          'Authorization': 'Bearer ' + accessToken
-        }
-      });
-    }
-
-    // user_data = getUserData(accessToken);
-    // console.log(user_data)
+    // fetch('/callback')
+    //   .then(response => response.json())
+    //   .then(data => {
+    //     setAccessToken(data);
+    //     console.log(data)
+    //   });
   }
 
 
-  return (
-    <Navbar bg="light" variant="light">
-      <Navbar.Brand href="#home">trackspotter
-      <img src="/static/img/spot_icon_bw.png"
-          width="30"
-          height="30"
-          className="d-inline-block align-top"
-          alt="Spotify logo" />
-      </Navbar.Brand>
-      <Navbar.Toggle />
-      <Login />
-      <Navbar.Collapse className="justify-content-end">
-        <Button variant="outline-secondary inline" id="btn-login"
-          onClick={handleSpotLogin}
-        >
-          <img src="/static/img/spot_icon_gr.png" width="30" height="30"></img>&nbsp;
-          Log in to Spotify
-      </Button>
-        {user_data && (
-          <Navbar.Text>
-            Signed in as: <a href="#login">Some User</a>
-          </Navbar.Text>
-        )}
-      </Navbar.Collapse>
-    </Navbar>
-  );
+  function handleSpotLogout() {
+    setUser('');
+    setAccessToken('');
 
-}
-
-function Login() {
-  // Allows for assigning a seeded user during dev; remove for prod
-
-  const [user_id, setUserId] = React.useState('');
-  const [user, setUser] = React.useState({});
-  const [name, setName] = React.useState('')
-
-  function handleSetUser(event) {
-    event.preventDefault();
-
-    fetch(`/api/handle-login?query=${encodeURIComponent(user_id)}`)
-      .then(response => response.json())
-      .then((data) => {
-        setUser(data);
-        setUserId(data.user_id);
-        setName(data.spotify_display_name);
-        console.log(data, name, user)
-      });
   }
 
-  user_name = name;
-
-  if (name) {
+  if (user_data) {
     return (
-      <Navbar.Text>
-        Signed in as: <a href="#login">{name}</a>
-      </Navbar.Text>
+      <Button variant="outline-secondary inline" id="btn-login"
+        onClick={handleSpotLogout}
+      >
+        <img src="/static/img/spot_icon_gr.png" width="30" height="30"></img>&nbsp;
+          Log Out
+      </Button>
     );
 
   } else {
     return (
-
-      <Form inline onSubmit={handleSetUser}>
-        <Form.Row>
-          <FormControl
-            type="text"
-            value={user_id}
-            placeholder="Enter user_id"
-            onChange={(e) => setUserId(e.target.value)}
-            className="lg-1 inline"
-            id="log-in"
-          />&nbsp;&nbsp;
-          <Button
-            variant="outline-secondary"
-            type="submit"
+      <Navbar bg="light" variant="light">
+        <Navbar.Brand href="#home">trackspotter
+      <img src="/static/img/spot_icon_bw.png"
+            width="30"
+            height="30"
+            className="d-inline-block align-top"
+            alt="Spotify logo" />
+        </Navbar.Brand>
+        <Navbar.Toggle />
+        <Login />
+        <Navbar.Collapse className="justify-content-end">
+          <Button variant="outline-secondary inline" id="btn-login"
+            onClick={handleSpotLogin}
           >
-            Log in
-              </Button>
-        </Form.Row>
-      </Form>
-
+            <img src="/static/img/spot_icon_gr.png" width="30" height="30"></img>&nbsp;
+          Log in to Spotify
+      </Button>
+        </Navbar.Collapse>
+      </Navbar>
     );
+
+  }
+
+  function Login() {
+    // Allows for assigning a seeded user during dev; remove for prod
+
+    const [user_id, setUserId] = React.useState('');
+    const [user, setUser] = React.useState({});
+    const [name, setName] = React.useState('')
+
+    function handleSetUser(event) {
+      event.preventDefault();
+
+      fetch(`/api/handle-login?query=${encodeURIComponent(user_id)}`)
+        .then(response => response.json())
+        .then((data) => {
+          setUser(data);
+          setUserId(data.user_id);
+          setName(data.spotify_display_name);
+          console.log(data, name, user)
+        });
+    }
+
+    user_name = name;
+
+    if (name) {
+      return (
+        <Navbar.Text>
+          Signed in as: <a href="#login">{name}</a>
+        </Navbar.Text>
+      );
+
+    } else {
+      return (
+
+        <Form inline onSubmit={handleSetUser}>
+          <Form.Row>
+            <FormControl
+              type="text"
+              value={user_id}
+              placeholder="Enter user_id"
+              onChange={(e) => setUserId(e.target.value)}
+              className="lg-1 inline"
+              id="log-in"
+            />&nbsp;&nbsp;
+          <Button
+              variant="outline-secondary"
+              type="submit"
+            >
+              Log in
+              </Button>
+          </Form.Row>
+        </Form>
+
+      );
+    }
   }
 }

@@ -88,7 +88,7 @@ class Track(db.Model):
     playlist_tracks = db.relationship('PlaylistTrack')
 
     def __repr__(self):
-        return f'<Track track_id={self.track_id} uid={self.uid} title={self.title} artist={self.artist} album={self.album}>'
+        return f'({self.track_id}, "{self.uid}", "{self.title}", "{self.artist}", "{self.album}", "{self.release_date}", {self.playtime}, "{self.preview}", "{self.genre}", {self.popularity}, "{self.album_art}")'
 
 
 class Playlist(db.Model):
