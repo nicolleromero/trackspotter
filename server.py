@@ -143,7 +143,7 @@ def display_playlists():
 @app.route('/spotify-login', methods=['GET'])
 def login():
     auth_url = cred.user_authorisation_url(
-        scope="user-read-private playlist-modify-public playlist-modify-private streaming")
+        scope="playlist-modify-public playlist-modify-private")
     return redirect(auth_url, 307)
 
 

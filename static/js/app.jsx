@@ -1,4 +1,4 @@
-const { Component, useState, useCallback } = React;
+const { Component, useEffect, useState, useCallback } = React;
 const { render } = ReactDOM;
 const { Provider, useSelector, useDispatch } = ReactRedux;
 const { Badge, Button, Col, Container, Dropdown, DropdownButton, Form, FormControl, InputGroup, ListGroup, Navbar, Row, Table } = ReactBootstrap;
@@ -10,100 +10,67 @@ const Prompt = ReactRouterDOM.Prompt;
 const Switch = ReactRouterDOM.Switch;
 const Redirect = ReactRouterDOM.Redirect;
 
-// let query = '';
-// let queries = [];
+function millisToTime(milliseconds) {
+  let minutes = Math.floor(milliseconds / 60000);
+  let seconds = ((milliseconds % 60000) / 1000).toFixed(0);
+  return minutes + ":" + (seconds < 10 ? '0' : '') + seconds;
+}
+
+function buildQuery(queries) {
+  return queries.join(' ');
+}
 
 function AdvSearch() {
   let [prepend, setPrepend] = React.useState('');
-  let [title, setTitle] = React.useState('')
   let [param, setParam] = React.useState('');
   let [items, setTracks] = React.useState([]);
-  let [query, setQuery] = React.useState('');
   let [queries, setQueries] = React.useState([]);
+  let query = buildQuery(queries);
+
+  React.useEffect(() => {
+    if (query) {
+      fetch(`/api/search?query=${encodeURIComponent(query)}`)
+        .then(response => response.json())
+        .then(items => {
+          setTracks(items);
+        });
+    } else {
+      setTracks([]);
+    }
+  }, [query]);
 
   function handleSearch(event) {
     event.preventDefault();
-    console.log(`queries: ${queries}, query: ${query}`);
 
-    if (queries.length === 0) {
-      if (prepend) {
-        query = (prepend + ' ' + param);
-      } else {
-        query = param;
-      }
-      setQueries = (queries.push(query));
-    } else {
-      if (prepend) {
-        query = (query + ' ' + prepend + ' ' + param);
-        setQueries = (queries.push(prepend + ' ' + param));
+    const newQueries = queries.slice();
+    newQueries.push(`${prepend}"${param}"`);
 
-      } else {
-        query = (query + ' ' + param);
-        setQueries = (queries.push(param));
-      }
-    }
-    setQuery(query);
-    console.log(`queries: ${queries}, query: ${query}`);
-
-    fetch(`/api/search?query=${encodeURIComponent(query)}`)
-      .then(response => response.json())
-      .then(items => {
-        setTracks(items);
-        setParam('');
-        setPrepend('');
-        setTitle(''); // Come back to this => not sure why it's not working
-      });
-  }
-
-  function handleDeleteParam(target) {
-    queries = queries.filter((t) => t !== target);
-    setQueries(queries);
-    query = '';
-    setQuery(query);
-    console.log(`queries after handoff: ${queries}, query: ${query}`)
-
-    for (let i = 0; i < queries.length; i++) {
-      if (i = 0) {
-        query = queries[i];
-        setQuery(query)
-      } else {
-        query = query + ' ' + queries[i];
-        setQuery(query)
-      }
-    }
+    setQueries(newQueries);
+    console.log(`queries: ${newQueries}, query: ${buildQuery(newQueries)}`);
 
     setParam('');
     setPrepend('');
-    console.log(`queries after delete: ${queries}, query: ${query}`)
+  }
 
+  function handleDeleteParam(target) {
+    console.log(`queries before delete: ${queries}, query: ${query}`)
 
-    fetch(`/api/search?query=${encodeURIComponent(query)}`)
-      .then(response => response.json())
-      .then(items => {
-        setTracks(items);
-        // setTitle(''); // Come back to this => not sure why it's not working
-      })
+    const newQueries = queries.filter((t) => t !== target);
+    setQueries(newQueries);
+    console.log(`queries after delete: ${newQueries}, query: ${buildQuery(newQueries)}`)
   }
 
   function handleDelete(target) {
-    items = items.filter((t) => t.id !== target);
-    setTracks(items);
-  }
-
-  function millisToTime(milliseconds) {
-    let minutes = Math.floor(milliseconds / 60000);
-    let seconds = ((milliseconds % 60000) / 1000).toFixed(0);
-    return minutes + ":" + (seconds < 10 ? '0' : '') + seconds;
+    const newItems = items.filter((t) => t.id !== target);
+    setTracks(newItems);
   }
 
   function handleReset() {
     setParam('');
     setPrepend('');
-    setTitle('');
     setTracks([]);
-    queries = [];
-    setQueries(queries);
-    setQuery(''); // how do I get the badges to rerender (now that list is empty)
+    setQueries([]);
+    // how do I get the badges to rerender (now that list is empty)
   }
 
   return (
@@ -113,18 +80,13 @@ function AdvSearch() {
           <Form onSubmit={handleSearch}>
             <Col className="align-content-center">
               <Form.Group controlId="exampleForm.SelectCustom">
-                <Form.Label
-                  onChange={(e) => setTitle(e.target.value)}
-                >
-                  {title}
-                </Form.Label>
                 <Form.Control as="select" custom onChange={(e) => setPrepend(e.target.value)}>
                   <option value="">keyword</option>
                   <option value="artist:">artist</option>
                   <option value="album:">album</option>
                   <option value="genre:">genre</option>
                   <option value="year:">year</option>
-                  <option value="NOT ">NOT</option>
+                  {/* <option value="NOT ">NOT</option> */}
                 </Form.Control>
               </Form.Group>
             </Col>
@@ -168,22 +130,19 @@ function AdvSearch() {
           <Col className="align-content-left">
             <h5>
               {queries.map((element) => {
-                if (element) {
-                  return (
-                    <Badge
-                      pill
-                      variant="dark">
-                      <Button
-                        variant="dark"
-                        size="sm"
-                        key={element}
-                        value={element}
-                        onClick={(e) => handleDeleteParam(e.target.value)}
-                      >
-                        X {element}
-                      </Button></Badge>
-                  )
-                }
+                return (
+                  <Badge
+                    pill
+                    variant="dark">
+                    <Button
+                      variant="dark"
+                      size="sm"
+                      key={element}
+                      onClick={() => handleDeleteParam(element)}
+                    >
+                      X {element}
+                    </Button></Badge>
+                )
               })}
             </h5>
           </Col>
