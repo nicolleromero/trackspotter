@@ -39,6 +39,13 @@ h5 {
 	flex-direction: row;
 }
 
+.btn-dark {
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: lighter;
+	padding: 5px;
+	margin: 2px;
+}
+
 /* .tracks {
 	margin: 0px;
 	padding: 0px;

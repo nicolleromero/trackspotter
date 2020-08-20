@@ -130,15 +130,14 @@ function AdvSearch() {
                 return (
                   <Badge
                     pill
-                    variant="dark">
-                    <Button
-                      variant="dark"
-                      size="sm"
-                      key={element}
-                      onClick={() => handleDeleteParam(element)}
-                    >
-                      X {element.replace(/"/g, '')}
-                    </Button></Badge>
+                    className="btn btn-dark"
+                    href="#"
+                    variant="dark"
+                    key={element}
+                    onClick={() => handleDeleteParam(element)}
+                  >
+                    X {element.replace(/"/g, '')}
+                  </Badge>
                 )
               })}
             </h5>
@@ -190,7 +189,7 @@ function AdvSearch() {
                       src={to_play}
                       width="80"
                       height="80"
-                      frameborder="0"
+                      frameBorder="0"
                       allowtransparency="true"
                       allow="encrypted-media"
                     >
@@ -371,9 +370,9 @@ function PlaylistTracks(props) {
   }, [playlist_id]);
 
 
-  function handleDelete(target) {
-    tracks = tracks.filter((t) => t.id !== target);
-    setTracks(tracks);
+  function handleDeleteTrack(target) {
+    const newTracks = tracks.filter((t) => t.uid !== target);
+    setTracks(newTracks);
   }
 
   return (
@@ -398,7 +397,7 @@ function PlaylistTracks(props) {
                 <Track
                   track={track}
                   index={i}
-                  handleDelete={handleDelete}
+                  handleDeleteTrack={handleDeleteTrack}
                 />
               ))}
             </tbody>

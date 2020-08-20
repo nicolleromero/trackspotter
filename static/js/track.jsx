@@ -4,7 +4,7 @@ const { Provider, useSelector, useDispatch } = ReactRedux;
 const { Badge, Button, Col, Container, Dropdown, DropdownButton, Form, FormControl, InputGroup, ListGroup, Navbar, Row, Table } = ReactBootstrap;
 
 
-// This component requires the following props: track, handleDelete
+// This component requires the following props: track, handleDeleteTrack
 // Map over a list of track objects
 
 function Track(props) {
@@ -27,7 +27,7 @@ function Track(props) {
   return (
     <React.Fragment>
       {console.log(to_play)}
-      <tr align="center" scope="row" key={props.track.track_id}>
+      <tr align="center" scope="row" key={props.track.track_id} value={props.track.track_id}>
         <td></td>
         <td>{order}</td>
         <td>{props.track.title}</td>
@@ -42,7 +42,7 @@ function Track(props) {
             src={to_play}
             width="80"
             height="80"
-            frameborder="0"
+            frameBorder="0"
             allowtransparency="true"
             allow="encrypted-media"
           >
@@ -51,7 +51,7 @@ function Track(props) {
         <td>
           <button
             className="btn btn-sm delete-button"
-            onClick={() => props.handleDelete(props.track.track_id)}
+            onClick={() => props.handleDeleteTrack(props.track.uid)}
           >
             X
           </button>

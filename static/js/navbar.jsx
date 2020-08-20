@@ -16,52 +16,52 @@ function Topbar() {
   const REDIRECT_URI = 'http://localhost:5000/callback';
   const SCOPES = ["user-read-private", "playlist-modify-public", "playlist-modify-private", "streaming"];
 
-  function handleSpotLogin() {
+  // // function handleSpotLogin() {
 
-    function getLoginURL(scopes) {
-      return 'https://accounts.spotify.com/authorize' + '?response_type=code' +
-        '&client_id=' + CLIENT_ID +
-        '&redirect_uri=' + encodeURIComponent(REDIRECT_URI) +
-        '&scope=' + encodeURIComponent(scopes.join(' '));
-      // '&response_type=token';
-    }
+  // //   function getLoginURL(scopes) {
+  // //     return 'https://accounts.spotify.com/authorize' + '?response_type=code' +
+  // //       '&client_id=' + CLIENT_ID +
+  // //       '&redirect_uri=' + encodeURIComponent(REDIRECT_URI) +
+  // //       '&scope=' + encodeURIComponent(scopes.join(' '));
+  // //     // '&response_type=token';
+  // //   }
 
-    const url = getLoginURL(SCOPES);
+  // //   const url = getLoginURL(SCOPES);
 
-    // fetch('/api/spotify-login?url')
-    //   .then(response => response.json())
-    //   .then(data => {
-    //     setUser(data);
-    //     console.log(data); // this doesn't work right now
-    //   });
+  //   // fetch('/api/spotify-login?url')
+  //   //   .then(response => response.json())
+  //   //   .then(data => {
+  //   //     setUser(data);
+  //   //     console.log(data); // this doesn't work right now
+  //   //   });
 
-    // const width = 450,
-    //   height = 730,
-    //   left = (screen.width / 2) - (width / 2),
-    //   top = (screen.height / 2) - (height / 2);
+  //   // const width = 450,
+  //   //   height = 730,
+  //   //   left = (screen.width / 2) - (width / 2),
+  //   //   top = (screen.height / 2) - (height / 2);
 
-    // window.addEventListener("message", (event) => {
-    //   const data = JSON.parse(event.data);
-    //   if (data.type == 'access_token') {
-    //     // callback(hash.access_token);
-    //     setAccessToken(data.access_token);
-    //     w.close(); // how do I close the window so user info doesn't appear there?
-    //   }
-    // }, false);
+  //   // window.addEventListener("message", (event) => {
+  //   //   const data = JSON.parse(event.data);
+  //   //   if (data.type == 'access_token') {
+  //   //     // callback(hash.access_token);
+  //   //     setAccessToken(data.access_token);
+  //   //     w.close(); // how do I close the window so user info doesn't appear there?
+  //   //   }
+  //   // }, false);
 
-    // const w = window.open(
-    //   url,
-    //   'Spotify',
-    //   'menubar=no,location=no,resizable=no,scrollbars=no,status=no, width=' + width + ', height=' + height + ', top=' + top + ', left=' + left
-    // );
+  //   // const w = window.open(
+  //   //   url,
+  //   //   'Spotify',
+  //   //   'menubar=no,location=no,resizable=no,scrollbars=no,status=no, width=' + width + ', height=' + height + ', top=' + top + ', left=' + left
+  //   // );
 
-    // fetch('/callback')
-    //   .then(response => response.json())
-    //   .then(data => {
-    //     setAccessToken(data);
-    //     console.log(data)
-    //   });
-  }
+  //   // fetch('/callback')
+  //   //   .then(response => response.json())
+  //   //   .then(data => {
+  //   //     setAccessToken(data);
+  //   //     console.log(data)
+  //   //   });
+  // }
 
 
   function handleSpotLogout() {
@@ -73,7 +73,7 @@ function Topbar() {
   if (user_data) {
     return (
       <Button variant="outline-secondary inline" id="btn-login"
-        onClick={handleSpotLogout}
+      // onClick={handleSpotLogout}
       >
         <img src="/static/img/spot_icon_gr.png" width="30" height="30"></img>&nbsp;
           Log Out
@@ -94,7 +94,7 @@ function Topbar() {
         <Login />
         <Navbar.Collapse className="justify-content-end">
           <Button variant="outline-secondary inline" id="btn-login"
-            onClick={handleSpotLogin}
+          // onClick={handleSpotLogin}
           >
             <img src="/static/img/spot_icon_gr.png" width="30" height="30"></img>&nbsp;
           Log in to Spotify

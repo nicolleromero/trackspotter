@@ -48,7 +48,7 @@ def handle_login():
     """Log user into application."""
 
     user_id = int(request.args.get('query', '').strip())
-    print("Something important:", user_id)
+    print("logged in user:", user_id)
 
     user = crud.get_user_by_id(user_id)
     print(user)
@@ -72,8 +72,6 @@ def save_playlist():
     search_id = search['search_id']
     last_updated_at = created_at
     playlist_title = data['playlist']['playlist_title']
-
-    # Should I save the tracks from the playlist before the playlist itself
 
     items = data.track_data['tracks']['items']  # this is a list
 
