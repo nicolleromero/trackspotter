@@ -1,6 +1,5 @@
 const { Component, useEffect, useState, useCallback } = React;
 const { render } = ReactDOM;
-const { Provider, useSelector, useDispatch } = ReactRedux;
 const { Badge, Button, Col, Container, Dropdown, DropdownButton, Form, FormControl, InputGroup, ListGroup, Navbar, Row, Table } = ReactBootstrap;
 
 const Router = ReactRouterDOM.BrowserRouter;
@@ -21,9 +20,9 @@ function buildQuery(queries) {
 }
 
 function AdvSearch() {
-  let [prepend, setPrepend] = React.useState('');
+  let [prefix, setPrefix] = React.useState('');
   let [param, setParam] = React.useState('');
-  let [items, setTracks] = React.useState([]);
+  let [tracks, setTracks] = React.useState([]);
   let [queries, setQueries] = React.useState([]);
   let query = buildQuery(queries);
 
@@ -31,8 +30,8 @@ function AdvSearch() {
     if (query) {
       fetch(`/api/search?query=${encodeURIComponent(query)}`)
         .then(response => response.json())
-        .then(items => {
-          setTracks(items);
+        .then(tracks => {
+          setTracks(tracks);
         });
     } else {
       setTracks([]);
@@ -43,13 +42,18 @@ function AdvSearch() {
     event.preventDefault();
 
     const newQueries = queries.slice();
-    newQueries.push(`${prepend}"${param}"`);
+    if (prefix === "year:") {
+      newQueries.push(`${prefix}${param}`);
+    } else {
+      newQueries.push(`${prefix}"${param}"`);
+    }
+
 
     setQueries(newQueries);
     console.log(`queries: ${newQueries}, query: ${buildQuery(newQueries)}`);
 
     setParam('');
-    setPrepend('');
+    setPrefix('');
   }
 
   function handleDeleteParam(target) {
@@ -61,16 +65,15 @@ function AdvSearch() {
   }
 
   function handleDelete(target) {
-    const newItems = items.filter((t) => t.id !== target);
-    setTracks(newItems);
+    const newTracks = tracks.filter((t) => t.id !== target);
+    setTracks(newTracks);
   }
 
   function handleReset() {
     setParam('');
-    setPrepend('');
+    setPrefix('');
     setTracks([]);
     setQueries([]);
-    // how do I get the badges to rerender (now that list is empty)
   }
 
   return (
@@ -80,7 +83,7 @@ function AdvSearch() {
           <Form onSubmit={handleSearch}>
             <Col className="align-content-center">
               <Form.Group controlId="exampleForm.SelectCustom">
-                <Form.Control as="select" custom onChange={(e) => setPrepend(e.target.value)}>
+                <Form.Control as="select" custom onChange={(e) => setPrefix(e.target.value)}>
                   <option value="">keyword</option>
                   <option value="artist:">artist</option>
                   <option value="album:">album</option>
@@ -100,12 +103,6 @@ function AdvSearch() {
                 className="mr-sm-2 inline"
               />
             </Col>
-            {/* Come back to this: Trying out autocomplete */}
-            {/* <CountrySelect /> */}
-            {/* <Col>
-              <Form.Label>Popularity</Form.Label>
-              <Form.Control type="range" id="slider" />
-            </Col> */}
             <Col className="align-content-center">
               <br />
               <Button
@@ -140,13 +137,13 @@ function AdvSearch() {
                       key={element}
                       onClick={() => handleDeleteParam(element)}
                     >
-                      X {element}
+                      X {element.replace(/"/g, '')}
                     </Button></Badge>
                 )
               })}
             </h5>
           </Col>
-          {items.length > 0 && (
+          {tracks.length > 0 && (
             <Col id="need-space" className="align-content-right">
               <Button variant="outline-dark offset-9">Save Playlist</Button>
               <br />
@@ -171,20 +168,24 @@ function AdvSearch() {
             </thead>
             <tbody>
 
-              {items.map((item, i) => {
+              {tracks.map((track, i) => {
                 let order = i + 1;
-                let track_time = millisToTime(item.duration_ms);
-                let to_play = "https://open.spotify.com/embed/track/" + item.id // Handles the player
+                let track_time = millisToTime(track.duration_ms);
+                let to_play = "https://open.spotify.com/embed/track/" + track.id // Handles the player
+                console.log(track.id)
 
                 return (
-                  <tr align="center" scope="row" key={item.id}>
+                  // <Track
+                  //   order={order}
+                  // />
+                  <tr align="center" scope="row" key={track.id}>
                     <td></td>
                     <td>{order}</td>
-                    <td>{item.name}</td>
-                    <td>{item.album.artists[0].name}</td>
-                    <td>{item.album.name}</td>
+                    <td>{track.name}</td>
+                    <td>{track.album.artists[0].name}</td>
+                    <td>{track.album.name}</td>
                     <td>{track_time}</td>
-                    {/* <td><img src={item.album.images[2].url}></img></td> */}
+                    {/* <td><img src={track.album.images[2].url}></img></td> */}
                     <td><iframe
                       src={to_play}
                       width="80"
@@ -196,7 +197,7 @@ function AdvSearch() {
                     </iframe></td>
                     <td><button
                       className="btn btn-sm delete-button"
-                      onClick={() => handleDelete(item.id)}
+                      onClick={() => handleDelete(track.id)}
                     >
                       X
                     </button>
@@ -215,39 +216,17 @@ function AdvSearch() {
 function TopPlaylists(props) {
   const [top_playlists, setTopPlaylists] = React.useState([]);
 
-  function handleIncrementRating(target) {
-    top_playlists.map((key) => {
-      console.log(key, target)
-      if (key === target) {
-        top_playlists[key] += 1;
-      }
-      console.log(top_playlists[key])
-      setTopPlaylists(top_playlists);
-    });
-  }
-
   React.useEffect(() => {
-
     fetch(`/api/top-playlists`)
       .then(response => response.json())
       .then((data) => {
-        const top_playlists_list = []
-        for (const key in data) {
-          console.log(key, data[key])
-          top_playlists_list.push(
-            <PlaylistItem
-              title={key}
-              likes={data[key]}
-              value={key}
-              onClick={handleIncrementRating}
-              onClick={props.handleOpenPlaylist}
-            />
-          )
-        }
-        setTopPlaylists(top_playlists_list);
+        console.log(data);
+        setTopPlaylists(data);
       })
-  }, [])
 
+
+  }, [])
+  console.log(top_playlists);
 
   return (
     <Container >
@@ -270,7 +249,17 @@ function TopPlaylists(props) {
             </tr>
           </thead>
           <tbody>
-            {top_playlists}
+            {top_playlists.map((playlist) => {
+              return (
+                <PlaylistRow
+                  playlist_id={playlist.playlist_id}
+                  title={playlist.playlist_title}
+                  likes={playlist.count}
+                  value={playlist.playlist_id}
+                  onClick={props.handleOpenPlaylist}
+                />
+              )
+            })}
           </tbody>
         </Table>
       </Row>
@@ -279,35 +268,24 @@ function TopPlaylists(props) {
 }
 
 function UserPlaylists(props) {
-  const [user_playlists, setUserPlaylists] = React.useState([]);
+  let [user_playlists, setUserPlaylists] = React.useState([]);
+
 
   React.useEffect(() => {
 
     fetch(`/api/playlists`)
       .then(response => response.json())
       .then((data) => {
-        const user_playlists_list = []
-        for (const key in data) {
-          console.log(key, data[key])
-          user_playlists_list.push(
-            <PlaylistItem
-              title={key}
-              likes={data[key]}
-              value={key}
-              onClick={props.handleIncrementRating}
-              onClick={props.handleIncrementRating}
-            />
-          )
-        }
-        setUserPlaylists(user_playlists_list);
+        console.log(data);
+        setUserPlaylists(data);
       })
   }, [])
 
-
+  // TODO: Conditionally render title
   return (
     <Container >
       <Row className="align-content-center">
-        <Table id="playlist_table" hover>
+        <Table id="playlist_table" hover><br />
           <thead>
             <tr align="center">
               <th colSpan="4"><h3>
@@ -325,7 +303,17 @@ function UserPlaylists(props) {
             </tr>
           </thead>
           <tbody>
-            {user_playlists}
+            {user_playlists.map((playlist) => {
+              return (
+                <PlaylistRow
+                  playlist_id={playlist.playlist_id}
+                  title={playlist.playlist_title}
+                  likes={playlist.count}
+                  value={playlist.playlist_id}
+                  onClick={props.handleOpenPlaylist}
+                />
+              )
+            })}
           </tbody>
         </Table>
       </Row>
@@ -333,9 +321,8 @@ function UserPlaylists(props) {
   )
 }
 
-let playlist_tracks = [[1, "3aQz0z86zrKjd1mcZlonxE", "Infinity 2008 - Klaas Vocal Edit", "Guru Josh Project", "Infinity 2008", "2008-05-07", 192294, "https://p.scdn.co/mp3-preview/9da076eb20507c0624c80954ee8d7788599f79df?cid=774b29d4f13844c495f206cafdad9c86", "Acid House", 73, "https://i.scdn.co/image/ab67616d0000485179bdd5b6d6fea02adcb017e9"], [2, "3ylER3O8efY7RdeZHZuexW", "I'll Take You There - Director's Cut Classic Signature Radio Version", "Frankie Knuckles", "I'll Take You There", "2019-08-23", 255259, "https://p.scdn.co/mp3-preview/415ae0917d23257434397607c062dea2e3cd3fc5?cid=774b29d4f13844c495f206cafdad9c86", "Acid House", 56, "https://i.scdn.co/image/ab67616d000048514aa9087b9d7afd60798496f9"], [3, "3YXIVMQLRRq2K7kxC7UYx6", "Move Your Body", "Marshall Jefferson", "Move Your Body", "2019-10-18", 196109, "https://p.scdn.co/mp3-preview/a0c079e12f2a6dbb5fe06460a6eb49350f4be8a6?cid=774b29d4f13844c495f206cafdad9c86", "Acid House", 64, "https://i.scdn.co/image/ab67616d000048514bbb5b8545f94dfec79544ae"], [4, "6ZTdvFWrzZc7CUEaVV0NmO", "Infinity - Klaas Vocal Mix", "Guru Josh Project", "Ultra Weekend 5 (Jason Nevins Presents)", "2009-06-30", 226480, "https://p.scdn.co/mp3-preview/77fd4f4c2d17058c6e71c2a858771c68678aad87?cid=774b29d4f13844c495f206cafdad9c86", "Acid House", 43, "https://i.scdn.co/image/ab67616d00004851c7ee6f97091e13165bb80a4f"]];
 
-function PlaylistItem(props) {
+function PlaylistRow(props) {
   let queries = [props.title.toLowerCase().replace('playlist', '')];
 
   return (
@@ -351,55 +338,42 @@ function PlaylistItem(props) {
       <td>{props.title}</td>
       <td>
         <h4>{'♪'.repeat(props.likes)}</h4>
-        <button
-          className="btn btn-sm"
-          onClick={props.handleIncrementRating}
-        >
-        </button>
       </td>
-      <td><button
-        className="btn btn-sm"
-        onClick={props.handleOpenPlaylist}
-      >
-        <img
-          src="/static/img/transparent-play-button-icon-18.jpg"
-          width="30"
-          height="30"
-          className="d-inline-block align-top"
-        />
-      </button>
+      <td>
+        <Link to={`/playlist/${props.playlist_id}`}>
+          <button
+            className="btn btn-sm"
+          >
+            <img
+              src="/static/img/transparent-play-button-icon-18.jpg"
+              width="30"
+              height="30"
+              className="d-inline-block align-top"
+            />
+          </button>
+        </Link>
       </td>
     </tr >
   )
 }
 
 
-const PlaylistTracks = ({ match }) => {
-  const {
-    params: { paylist_id },
-  } = match;
-  let [items, setTracks] = React.useState([]);
+function PlaylistTracks(props) {
+  let { playlist_id } = props.match.params;
+  let [tracks, setTracks] = React.useState([]);
 
-  function handleOpenPlaylist() {
+  React.useEffect(() => {
+    fetch(`/api/playlists/${playlist_id}`)
+      .then((response) => response.json())
+      .then((tracks) => {
+        setTracks(tracks);
+      })
+  }, [playlist_id]);
 
-    React.useEffect(() => {
-      fetch(`/api/playlists/${playlist_id}`, {})
-        .then((response) => response.json())
-        .then((items) => {
-          setTracks(items);
-        })
-    }, [playlist_id]);
-  }
 
   function handleDelete(target) {
-    items = items.filter((t) => t.id !== target);
-    setTracks(items);
-  }
-
-  function millisToTime(milliseconds) {
-    var minutes = Math.floor(milliseconds / 60000);
-    var seconds = ((milliseconds % 60000) / 1000).toFixed(0);
-    return minutes + ":" + (seconds < 10 ? '0' : '') + seconds;
+    tracks = tracks.filter((t) => t.id !== target);
+    setTracks(tracks);
   }
 
   return (
@@ -420,40 +394,13 @@ const PlaylistTracks = ({ match }) => {
               </tr>
             </thead>
             <tbody>
-
-              {items.map((item, i) => {
-                let order = i + 1;
-                let track_time = millisToTime(item.duration_ms);
-                // let to_play = "https://open.spotify.com/embed/track/" + item.id // Handles the player
-
-                return (
-                  <tr align="center" scope="row" key={item.id}>
-                    <td></td>
-                    <td>{order}</td>
-                    <td>{item.name}</td>
-                    <td>{item.album.artists[0].name}</td>
-                    <td>{item.album.name}</td>
-                    <td>{track_time}</td>
-                    <td><img src={item.album.images[2].url}></img></td>
-                    {/* <td><iframe
-                      src={to_play}
-                      width="80"
-                      height="80"
-                      frameborder="0"
-                      allowtransparency="true"
-                      allow="encrypted-media"
-                    >
-                    </iframe></td> */}
-                    <td><button
-                      className="btn btn-sm delete-button"
-                      onClick={() => handleDelete(item.id)}
-                    >
-                      X
-                    </button>
-                    </td>
-                  </tr>
-                )
-              })}
+              {tracks.map((track, i) => (
+                <Track
+                  track={track}
+                  index={i}
+                  handleDelete={handleDelete}
+                />
+              ))}
             </tbody>
           </Table>
         </Row>
@@ -479,9 +426,6 @@ function App() {
             <li className="inline">
               <Link to="/top-playlists"> Browse Playlists</Link>
             </li>
-            <li className="inline">
-              {/* <Link to={`/user-playlist/${playlist_id}`}>{playlist_title}</Link> */}
-            </li>
           </ul>
         </nav>
 
@@ -490,7 +434,7 @@ function App() {
           <Route exact path="/" component={AdvSearch} />
           <Route exact path="/user-playlists" component={UserPlaylists} />
           <Route exact path="/top-playlists" component={TopPlaylists} />
-          <Route path="/user-playlists/:playlist_id" component={PlaylistTracks} />
+          <Route exact path="/playlist/:playlist_id" component={PlaylistTracks} />
         </Switch>
       </div>
     </Router>

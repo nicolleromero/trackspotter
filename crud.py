@@ -72,6 +72,12 @@ def create_track(uid, title, artist, album, release_date, playtime, genre, previ
     return track
 
 
+def get_track_by_track_id(track_id):
+    """Return track obejct with that track_id """
+
+    return Track.query.get(track_id)
+
+
 def create_playlist(user_id, search_id, created_at, last_updated_at, playlist_title):
     """Create a new rating"""
 
@@ -116,10 +122,18 @@ def create_playlist_track(track_id, playlist_id, track_order):
 def get_playlist_by_user_id(target_id):
     """Return a user's playlists"""
 
-    user_playlists = db.session.query(Playlist.playlist_title, db.func.count(PlaylistLike.playlist_id).label(
+    results = db.session.query(Playlist, db.func.count(PlaylistLike.playlist_id).label(
         'total')).join(PlaylistLike).group_by(Playlist).filter(Playlist.user_id == target_id).order_by(desc('total')).limit(20).all()
 
-    return main(user_playlists)
+    user_playlists = []
+    data = {}
+
+    for playlist, count in results:
+        dictionary = playlist.as_dict()
+        dictionary['count'] = count
+        user_playlists.append(dictionary)
+
+    return user_playlists
 
 
 def playlist_ordered_by_likes():
@@ -127,8 +141,18 @@ def playlist_ordered_by_likes():
 
     # SELECT playlist_id, COUNT(*) AS total_num FROM playlist_likes GROUP BY playlist_id ORDER BY total_num DESC;
 
-    return db.session.query(Playlist.playlist_title, db.func.count(PlaylistLike.playlist_id).label(
+    results = db.session.query(Playlist, db.func.count(PlaylistLike.playlist_id).label(
         'total')).join(PlaylistLike).group_by(Playlist).order_by(desc('total')).limit(20).all()
+
+    playlists_by_likes = []
+
+    for playlist, count in results:
+        dictionary = playlist.as_dict()
+
+        dictionary['count'] = count
+        playlists_by_likes.append(dictionary)
+
+    return playlists_by_likes
 
 
 def playlist_ordered_by_likes_json():
@@ -167,22 +191,36 @@ def get_playlist_query():
 
 
 def tracks_in_playlist_ordered(target_playlist_id):
-    """Return a list of the track in a playlist in order """
+    """Return a list of the tracks in a playlist in order """
 
-    group = db.session.query(Track).join(PlaylistTrack).filter(
+    tracks = db.session.query(Track).join(PlaylistTrack).filter(
         PlaylistTrack.track_id == Track.track_id, PlaylistTrack.playlist_id == target_playlist_id).order_by(asc(PlaylistTrack.track_order)).all()
 
-    return group
+    return [track.as_dict() for track in tracks]
 
 
-def Convert(tup, di):
+def get_or_create(session, model, defaults=None, **kwargs):
+
+    instance = db.session.query(model).filter_by(**kwargs).first()
+    if instance:
+        return instance, False
+    else:
+        params = dict((k, v) for k, v in kwargs.iteritems()
+                      if not isinstance(v, ClauseElement))
+        params.update(defaults or {})
+        instance = model(**params)
+        session.add(instance)
+        return instance, True
+
+
+def convert(tup, di):
     di = dict(tup)
     return di
 
 
 def main(playlists_list):
     dictionary = {}
-    result = (Convert(playlists_list, dictionary))
+    result = (convert(playlists_list, dictionary))
 
     return json.dumps(result)
 

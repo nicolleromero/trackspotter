@@ -36,6 +36,13 @@ def show_homepage():
     return render_template("homepage.html")
 
 
+# @app.route('/', defaults={'path': ''})
+# @app.route('/<path:path>')
+# def catch_all(path):
+
+#     return render_template('homepage.html')
+
+
 @app.route('/api/handle-login')
 def handle_login():
     """Log user into application."""
@@ -49,15 +56,6 @@ def handle_login():
     session['user_id'] = user_id
 
     return jsonify(user)
-
-
-@app.route("/api/top-playlists")
-def get_top_playlists():
-    """Get the top playlists to display """
-
-    data = crud.playlist_ordered_by_likes_json()
-
-    return data
 
 
 @app.route("/api/save-playlist", methods=["POST"])
@@ -125,9 +123,51 @@ def search():
                        params=params)
 
     data = res.json()
-    items = data['tracks']['items']
+    tracks = data['tracks']['items']
 
-    return jsonify(items)
+    # tracks_in_search = []
+
+    # for track in tracks:
+
+    #     check = crud.get_track_by_track_id(track.track_id)
+
+    #     if check is not None:
+    #         continue
+
+    #         uid, title, artist, album, release_date, playtime, preview, popularity, album_art = (
+    #             track['id'],
+    #             track['name'],
+    #             track['artists'][0]['name'],
+    #             track['album']['name'],
+    #             track['album']['release_date'],
+    #             track['duration_ms'],
+    #             track['preview_url'],
+    #             track['popularity'],
+    #             track['album']['images'][2]["url"])
+
+    #         db_track = crud.create_track(uid,
+    #                                      title,
+    #                                      artist,
+    #                                      album,
+    #                                      release_date,
+    #                                      playtime,
+    #                                      preview,
+    #                                      popularity,
+    #                                      album_art)
+
+    #         tracks_in_search.append(db_track)
+
+    #     else:
+    #         continue
+
+    #     tracks_to_return = []
+
+    #     for track in tracks_in_search:
+    #         data = crud.get_track_by_track_id(track.track_id)
+
+    #         tracks_to_return.append(data)
+
+    return jsonify(tracks)
 
 
 @app.route("/api/playlists")
@@ -137,7 +177,25 @@ def display_playlists():
     user_id = session.get('user_id')
     data = crud.get_playlist_by_user_id(user_id)
 
-    return data
+    return jsonify(data)
+
+
+@app.route("/api/top-playlists")
+def get_top_playlists():
+    """Get the top playlists to display """
+
+    data = crud.playlist_ordered_by_likes()
+
+    return jsonify(data)
+
+
+@app.route("/api/playlists/<playlist_id>")
+def display_playlist_tracks(playlist_id):
+    """ Display a list of playlist tracks for a specific playlist"""
+
+    tracks = crud.tracks_in_playlist_ordered(playlist_id)
+
+    return jsonify(tracks)
 
 
 @app.route('/spotify-login', methods=['GET'])

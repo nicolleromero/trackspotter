@@ -90,6 +90,20 @@ class Track(db.Model):
     def __repr__(self):
         return f'({self.track_id}, "{self.uid}", "{self.title}", "{self.artist}", "{self.album}", "{self.release_date}", {self.playtime}, "{self.preview}", "{self.genre}", {self.popularity}, "{self.album_art}")'
 
+    def as_dict(self):
+        return {
+            'uid': self.uid,
+            'title': self.title,
+            'artist': self.artist,
+            'album': self.album,
+            'release_date': self.release_date,
+            'playtime': self.playtime,
+            'preview': self.preview,
+            'genre': self.genre,
+            'popularity': self.popularity,
+            'album_art': self.album_art,
+        }
+
 
 class Playlist(db.Model):
     """A saved playlist"""
@@ -110,8 +124,16 @@ class Playlist(db.Model):
     # playlist_tracks = db.relationship('PlaylistTrack')
     search = db.relationship('Search')
 
-    # def __repr__(self):
-    #     return f'<Playlist playlist_id={self.playlist_id} created_at={self.created_at} last_updated_at={self.last_updated_at} playlist_title={self.playlist_title}>'
+    def __repr__(self):
+        return f'<Playlist playlist_id={self.playlist_id} created_at={self.created_at} last_updated_at={self.last_updated_at} playlist_title={self.playlist_title}>'
+
+    def as_dict(self):
+        return {
+            'playlist_id': self.playlist_id,
+            'playlist_title': self.playlist_title,
+            'user_id': self.user_id,
+            'search_id': self.search_id,
+        }
 
 
 class PlaylistTrack(db.Model):
