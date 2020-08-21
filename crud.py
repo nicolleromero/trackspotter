@@ -4,6 +4,7 @@ from model import db, User, Search, Playlist, PlaylistTrack, PlaylistLike, Track
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import asc, desc
 import json
+from datetime import datetime
 
 
 def create_user(spotify_id, spotify_display_name, created_at, access_token, refresh_token):
@@ -72,7 +73,25 @@ def create_track(uid, title, artist, album, release_date, playtime, genre, previ
     return track
 
 
+def create_track_return_as_dict(uid, title, artist, album, release_date, playtime, genre, preview, popularity, album_art):
+    """Create a new track"""
+
+    track = Track(uid=uid, title=title, artist=artist, album=album,
+                  release_date=release_date, playtime=playtime, genre=genre, preview=preview, popularity=popularity, album_art=album_art)
+
+    db.session.add(track)
+    db.session.commit()
+
+    return track.as_dict()
+
+
 def get_track_by_track_id(track_id):
+    """Return track obejct with that track_id """
+
+    return Track.query.get(track_id)
+
+
+def get_track_by_track_uid(track_uid):
     """Return track obejct with that track_id """
 
     return Track.query.get(track_id)
@@ -88,6 +107,18 @@ def create_playlist(user_id, search_id, created_at, last_updated_at, playlist_ti
     db.session.commit()
 
     return playlist
+
+
+def create_playlist_return_as_dict(user_id, search_id, created_at, last_updated_at, playlist_title):
+    """Create a new rating"""
+
+    playlist = Playlist(user_id=user_id, search_id=search_id, created_at=created_at,
+                        last_updated_at=last_updated_at, playlist_title=playlist_title)
+
+    db.session.add(playlist)
+    db.session.commit()
+
+    return playlist.as_dict()
 
 
 def get_playlists():
@@ -213,6 +244,67 @@ def get_or_create(session, model, defaults=None, **kwargs):
         return instance, True
 
 
+def create_tracks_and_playlist_tracks_for_playlist(tracks_in_playlist, playlist_id):
+    """On clicking "Save Playlist"  """
+
+    # data = res.json()
+    # tracks = data['tracks']['items']
+    # tracks = data['tracks']['items']
+    tracks = tracks_in_playlist
+
+    for track in tracks:
+        # track.id on client == track.uid in db
+        check = get_track_by_track_uid(track.uid)
+
+        if check is None:
+
+            create_track(uid, title, artist, album, release_date,
+                         playtime, genre, preview, popularity, album_art)
+
+        # {
+        #     'uid': self.uid,
+        #     'title': self.title,
+        #     'artist': self.artist,
+        #     'album': self.album,
+        #     'release_date': self.release_date,
+        #     'playtime': self.playtime,
+        #     'preview': self.preview,
+        #     'genre': self.genre,
+        #     'popularity': self.popularity,
+        #     'album_art': self.album_art,
+        # }
+
+            uid, title, artist, album, release_date, playtime, preview, popularity, album_art = (
+                track['id'],
+                track['name'],
+                track['artists'][0]['name'],
+                track['album']['name'],
+                track['album']['release_date'],
+                track['duration_ms'],
+                track['preview_url'],
+                track['popularity'],
+                track['album']['images'][2]["url"])
+
+            db_track = create_track(uid,
+                                    title,
+                                    artist,
+                                    album,
+                                    release_date,
+                                    playtime,
+                                    preview,
+                                    popularity,
+                                    album_art)
+
+            tracks_in_playlist.append(db_track)
+
+    for track_order, track in enumerate(tracks_in_playlist):
+
+        create_playlist_track(
+            track.track_id, playlist.playlist_id, track_order)
+
+    return tracks_in_playlist
+
+
 def convert(tup, di):
     di = dict(tup)
     return di
@@ -230,5 +322,5 @@ if __name__ == '__main__':
     connect_to_db(app)
 
 
-[('Goth Rock Playlist', 5), ('Healing Playlist', 1), ('Memphis Blues Playlist', 3),
- ('Neo - Prog Playlist', 1), ('Rai Playlist', 3), ('Sunshine Pop Playlist', 1), ('Techno Playlist', 4)]
+# [('Goth Rock Playlist', 5), ('Healing Playlist', 1), ('Memphis Blues Playlist', 3),
+#  ('Neo - Prog Playlist', 1), ('Rai Playlist', 3), ('Sunshine Pop Playlist', 1), ('Techno Playlist', 4)]

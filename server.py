@@ -61,29 +61,33 @@ def handle_login():
 @app.route("/api/save-playlist", methods=["POST"])
 def save_playlist():
 
-    data = request.get_json()
-    user_id = data['search']['user_id']
-    created_at = data['search']['created_at']
-    query = data['search']['query']
+    # What I need from the client:
+    # be logged in for user_id
+    # playlist_title (from form field)
+    # final query from final search
+    # list of tracks
 
-    # create the search object first
+    user_id = session.get('user_id')
+    query = session.get('query')
+    search_tracks = session.get('search_tracks')
+    playlist_title = request.args.get('playlist_title')
+    # tracks = pass in from client
+
+    created_at = datetime.now()
+    last_updated_at = datetime.now()
+
+    # create the search and save to db
     search = crud.create_search(user_id, created_at, query)
 
-    search_id = search['search_id']
-    last_updated_at = created_at
-    playlist_title = data['playlist']['playlist_title']
+    # create playlist and save to db
+    playlist = crud.create_playlist(user_id, search.search_id, created_at,
+                                    last_updated_at, playlist_title)
 
-    items = data.track_data['tracks']['items']  # this is a list
+    # create tracks, playlist_tracks and save to db
+    crud.create_tracks_and_playlist_tracks_for_playlist(search_tracks)
 
-    # create the playlist object
-    crud.create_playlist(user_id, search_id, created_at,
-                         last_updated_at, playlist_title)
-
-    for track_order, track in enumerate(tracks_in_genre):
-        crud.create_playlist_track(
-            track.track_id, playlist.playlist_id, track_order)
-
-    # need to save the playlist-track associations too
+    # return tracks as list of dicts to render on playlist tracks screen
+    return tracks_in_playlist_ordered(playlist.playlist_id)
 
 
 @app.route("/api/search")
@@ -91,6 +95,9 @@ def search():
     """Search for tracks with Spotify endpoint"""
 
     query = request.args.get('query', '').strip()
+    session['query'] = query
+
+    search = crud.create_search(user_id, created_at, query)
 
     if not query:
         return jsonify([])
@@ -121,51 +128,10 @@ def search():
                        params=params)
 
     data = res.json()
-    tracks = data['tracks']['items']
+    search_tracks = data['tracks']['items']
+    session['search_tracks'] = search_tracks
 
-    # tracks_in_search = []
-
-    # for track in tracks:
-
-    #     check = crud.get_track_by_track_id(track.track_id)
-
-    #     if check is not None:
-    #         continue
-
-    #         uid, title, artist, album, release_date, playtime, preview, popularity, album_art = (
-    #             track['id'],
-    #             track['name'],
-    #             track['artists'][0]['name'],
-    #             track['album']['name'],
-    #             track['album']['release_date'],
-    #             track['duration_ms'],
-    #             track['preview_url'],
-    #             track['popularity'],
-    #             track['album']['images'][2]["url"])
-
-    #         db_track = crud.create_track(uid,
-    #                                      title,
-    #                                      artist,
-    #                                      album,
-    #                                      release_date,
-    #                                      playtime,
-    #                                      preview,
-    #                                      popularity,
-    #                                      album_art)
-
-    #         tracks_in_search.append(db_track)
-
-    #     else:
-    #         continue
-
-    #     tracks_to_return = []
-
-    #     for track in tracks_in_search:
-    #         data = crud.get_track_by_track_id(track.track_id)
-
-    #         tracks_to_return.append(data)
-
-    return jsonify(tracks)
+    return jsonify(search_tracks)
 
 
 @app.route("/api/playlists")

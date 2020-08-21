@@ -92,6 +92,7 @@ class Track(db.Model):
 
     def as_dict(self):
         return {
+            'track_id': self.track_id,
             'uid': self.uid,
             'title': self.title,
             'artist': self.artist,

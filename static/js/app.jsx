@@ -69,6 +69,10 @@ function AdvSearch() {
     setTracks(newTracks);
   }
 
+  function handleSaveSearch() {
+    // More to Come
+  }
+
   function handleReset() {
     setParam('');
     setPrefix('');
@@ -144,7 +148,10 @@ function AdvSearch() {
           </Col>
           {tracks.length > 0 && (
             <Col id="need-space" className="align-content-right">
-              <Button variant="outline-dark offset-9">Save Playlist</Button>
+              <Button
+                variant="outline-dark offset-9"
+              >
+                Save Playlist</Button>
               <br />
             </Col>
           )}
@@ -208,7 +215,7 @@ function AdvSearch() {
           </Table>
         </Row>
       </Container>
-    </React.Fragment >
+    </React.Fragment>
   );
 }
 
@@ -328,7 +335,7 @@ function PlaylistRow(props) {
     <tr align="center" scope="row" key={props.title}>
       {/* <td>{order}</td> */}
       <td>{queries.map((query) => {
-        if (query) {    // Will need to be updated with query results
+        if (query) {
           return (
             <h5><Badge pill variant="dark">genre: {query}</Badge></h5>
           )
