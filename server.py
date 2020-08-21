@@ -62,16 +62,21 @@ def handle_login():
 @app.route("/api/save-playlist", methods=["POST"])
 def save_playlist():
 
-    # What I need from the client:
+    # What's needed from the client:
     # be logged in for user_id
     # playlist_title (from form field)
     # final query from final search
     # list of tracks
 
     user_id = session.get('user_id')
-    query = session.get('query')
-    search_tracks = session.get('search_tracks')
-    playlist_title = request.args.get('playlist_title')
+
+    data = request.get_json()
+    query = data["query"]
+    search_tracks = data["playlist_tracks"]
+    playlist_title = data["playlist_title"]
+
+    print(playlist_title)
+
     # tracks = pass in from client
 
     created_at = datetime.now()
@@ -85,10 +90,13 @@ def save_playlist():
                                     last_updated_at, playlist_title)
 
     # create tracks, playlist_tracks and save to db
-    crud.create_tracks_and_playlist_tracks_for_playlist(search_tracks)
+    tracks = crud.create_tracks_and_playlist_tracks_for_playlist(
+        search_tracks, playlist.playlist_id)
 
     # return tracks as list of dicts to render on playlist tracks screen
-    return tracks_in_playlist_ordered(playlist.playlist_id)
+    return jsonify({
+        'playlist_id': playlist.playlist_id,
+    })
 
 
 @app.route("/api/search")
@@ -161,9 +169,12 @@ def get_top_playlists():
 def display_playlist_tracks(playlist_id):
     """ Display a list of playlist tracks for a specific playlist"""
 
-    tracks = crud.tracks_in_playlist_ordered(playlist_id)
+    playlist = crud.get_playlist_by_id(playlist_id)
+    playlist_dict = playlist.as_dict()
 
-    return jsonify(tracks)
+    playlist_dict['tracks'] = crud.tracks_in_playlist_ordered(playlist_id)
+
+    return jsonify(playlist_dict)
 
 
 @app.route('/spotify-login', methods=['GET'])

@@ -86,7 +86,7 @@ def create_track_return_as_dict(uid, title, artist, album, release_date, playtim
 
 
 def get_track_by_track_id(track_id):
-    """Return track obejct with that track_id """
+    """Return track object with that track_id """
 
     return Track.query.get(track_id)
 
@@ -94,7 +94,7 @@ def get_track_by_track_id(track_id):
 def get_track_by_track_uid(uid):
     """Return track obejct with that track_uid """
 
-    return Track.query.filter(Track.uid == uid).one_or_none()
+    return Track.query.filter(Track.uid == uid).first()
 
 
 def create_playlist(user_id, search_id, created_at, last_updated_at, playlist_title):
@@ -125,6 +125,12 @@ def get_playlists():
     """Return all playlists."""
 
     return Playlist.query.all()
+
+
+def get_playlist_by_id(playlist_id):
+    """Return playlist object by playlist_id """
+
+    return Playlist.query.get(playlist_id)
 
 
 def create_playlist_track(track_id, playlist_id, track_order):

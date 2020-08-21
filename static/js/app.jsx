@@ -1,6 +1,6 @@
 const { Component, useEffect, useState, useCallback } = React;
 const { render } = ReactDOM;
-const { Badge, Button, Col, Container, Dropdown, DropdownButton, Form, FormControl, InputGroup, ListGroup, Navbar, Row, Table } = ReactBootstrap;
+const { Badge, Button, Col, Container, Dropdown, DropdownButton, Form, FormControl, FormGroup, InputGroup, ListGroup, Navbar, Row, Table } = ReactBootstrap;
 
 const Router = ReactRouterDOM.BrowserRouter;
 const Route = ReactRouterDOM.Route;
@@ -8,6 +8,7 @@ const Link = ReactRouterDOM.Link;
 const Prompt = ReactRouterDOM.Prompt;
 const Switch = ReactRouterDOM.Switch;
 const Redirect = ReactRouterDOM.Redirect;
+const useHistory = ReactRouterDOM.useHistory;
 
 function millisToTime(milliseconds) {
   let minutes = Math.floor(milliseconds / 60000);
@@ -25,6 +26,9 @@ function AdvSearch() {
   let [tracks, setTracks] = React.useState([]);
   let [queries, setQueries] = React.useState([]);
   let query = buildQuery(queries);
+  let [playlist_title, setPlaylistTitle] = React.useState('');
+  let history = useHistory();
+
 
   React.useEffect(() => {
     if (query) {
@@ -48,13 +52,13 @@ function AdvSearch() {
       newQueries.push(`${prefix}"${param}"`);
     }
 
-
     setQueries(newQueries);
     console.log(`queries: ${newQueries}, query: ${buildQuery(newQueries)}`);
 
     setParam('');
     setPrefix('');
   }
+
 
   function handleDeleteParam(target) {
     console.log(`queries before delete: ${queries}, query: ${query}`)
@@ -64,13 +68,38 @@ function AdvSearch() {
     console.log(`queries after delete: ${newQueries}, query: ${buildQuery(newQueries)}`)
   }
 
+
   function handleDelete(target) {
     const newTracks = tracks.filter((t) => t.id !== target);
     setTracks(newTracks);
   }
 
-  function handleSaveSearch() {
-    // More to Come
+
+  const handleSavePlaylist = (event) => {
+    event.preventDefault();
+
+    const target_playlist = {
+      "playlist_title": playlist_title,
+      "playlist_tracks": tracks,
+      "query": query,
+    }
+    fetch('/api/save-playlist', {
+      method: 'POST',
+      body: JSON.stringify(target_playlist),
+      headers: {
+        'Content-Type': 'application/json'
+      },
+    })
+      .then(response => response.json())
+      .then(data => {
+        history.push(`/playlist/${data.playlist_id}`);
+      });
+
+    setParam('');
+    setPrefix('');
+    setQueries([]);
+    setTracks([]);
+    setPlaylistTitle('');
   }
 
   function handleReset() {
@@ -78,6 +107,7 @@ function AdvSearch() {
     setPrefix('');
     setTracks([]);
     setQueries([]);
+    setPlaylistTitle('');
   }
 
   return (
@@ -127,8 +157,8 @@ function AdvSearch() {
         </Row>
       </Container>
       <Container>
-        <Row className="align-content-left">
-          <Col className="align-content-left">
+        <Row inline>
+          <Col xs="auto" className="align-content-left">
             <h5>
               {queries.map((element) => {
                 return (
@@ -147,13 +177,32 @@ function AdvSearch() {
             </h5>
           </Col>
           {tracks.length > 0 && (
-            <Col id="need-space" className="align-content-right">
-              <Button
-                variant="outline-dark offset-9"
-              >
-                Save Playlist</Button>
-              <br />
-            </Col>
+            <Form
+              inline
+              className="float-right offset-6"
+              onSubmit={handleSavePlaylist}
+            >
+              <Form.Row inline className="float-right">
+                <Col xs="auto" >
+                  <FormControl
+                    type="text"
+                    value={playlist_title}
+                    placeholder="Playlist Title"
+                    onChange={(e) => setPlaylistTitle(e.target.value)}
+                    className="mr-sm-2 inline"
+                  />
+                </Col>
+                <Col xs="auto">
+                  <Button
+                    // variant="outline-dark offset-9"
+                    variant="outline-secondary"
+                    type="submit"
+                  >
+                    Save Playlist</Button>
+                  <br />
+                </Col>
+              </Form.Row>
+            </Form>
           )}
         </Row>
       </Container>
@@ -371,12 +420,14 @@ function PlaylistRow(props) {
 function PlaylistTracks(props) {
   let { playlist_id } = props.match.params;
   let [tracks, setTracks] = React.useState([]);
+  let [playlistTitle, setPlaylistTitle] = React.useState('')
 
   React.useEffect(() => {
     fetch(`/api/playlists/${playlist_id}`)
       .then((response) => response.json())
-      .then((tracks) => {
-        setTracks(tracks);
+      .then((playlist) => {
+        setTracks(playlist.tracks);
+        setPlaylistTitle(playlist.playlist_title)
       })
   }, [playlist_id]);
 
