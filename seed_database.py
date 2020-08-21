@@ -5,6 +5,7 @@ import json
 from random import choice, randint
 from datetime import datetime
 from genres_python import GENRES
+from model import db, User, Search, Playlist, PlaylistTrack, PlaylistLike, Track, connect_to_db
 
 import crud
 import model
@@ -110,8 +111,21 @@ def create_playlist_like(user, playlist):
 
     created_at = datetime.now()
 
-    return crud.create_playlist_like(user.user_id,
-                                     playlist.playlist_id, created_at)
+    playlist_like = PlaylistLike(
+        user_id=user.user_id, playlist_id=playlist.playlist_id, created_at=created_at)
+
+    db.session.add(playlist_like)
+    db.session.commit()
+
+    return playlist_like
+
+# def create_playlist_like(user, playlist):
+#     """Create playlist like and assign to random user"""
+
+#     created_at = datetime.now()
+
+#     return crud.create_playlist_like(user.user_id,
+#                                      playlist.playlist_id, created_at)
 
 
 def seed():

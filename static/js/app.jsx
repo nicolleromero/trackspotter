@@ -262,6 +262,7 @@ function TopPlaylists(props) {
                   title={playlist.playlist_title}
                   likes={playlist.count}
                   value={playlist.playlist_id}
+                  query={playlist.query}
                   onClick={props.handleOpenPlaylist}
                 />
               )
@@ -316,6 +317,7 @@ function UserPlaylists(props) {
                   title={playlist.playlist_title}
                   likes={playlist.count}
                   value={playlist.playlist_id}
+                  query={playlist.query}
                   onClick={props.handleOpenPlaylist}
                 />
               )
@@ -329,15 +331,17 @@ function UserPlaylists(props) {
 
 
 function PlaylistRow(props) {
-  let queries = [props.title.toLowerCase().replace('playlist', '')];
+  // let queries = [props.title.toLowerCase().replace('playlist', '')];
+  let queries = [props.query]
+  console.log(`props.query: ${props.query}`)
+  console.log(`queries: ${queries}`)
 
   return (
     <tr align="center" scope="row" key={props.title}>
-      {/* <td>{order}</td> */}
       <td>{queries.map((query) => {
         if (query) {
           return (
-            <h5><Badge pill variant="dark">genre: {query}</Badge></h5>
+            <h5><Badge pill variant="dark">{query}</Badge></h5>
           )
         }
       })}</td>

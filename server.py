@@ -9,6 +9,7 @@ from sys import argv
 import json
 import requests
 import crud
+from datetime import datetime
 
 
 app = Flask(__name__)
@@ -96,8 +97,11 @@ def search():
 
     query = request.args.get('query', '').strip()
     session['query'] = query
+    user_id = session.get('user_id')
+    user = crud.get_user_by_id(user_id)
+    created_at = datetime.now()
 
-    search = crud.create_search(user_id, created_at, query)
+    # search = crud.create_search(user, created_at, query)
 
     if not query:
         return jsonify([])

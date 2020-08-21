@@ -91,10 +91,10 @@ def get_track_by_track_id(track_id):
     return Track.query.get(track_id)
 
 
-def get_track_by_track_uid(track_uid):
-    """Return track obejct with that track_id """
+def get_track_by_track_uid(uid):
+    """Return track obejct with that track_uid """
 
-    return Track.query.get(track_id)
+    return Track.query.filter(Track.uid == uid).one_or_none()
 
 
 def create_playlist(user_id, search_id, created_at, last_updated_at, playlist_title):
@@ -154,14 +154,15 @@ def get_playlist_by_user_id(target_id):
     """Return a user's playlists"""
 
     results = db.session.query(Playlist, db.func.count(PlaylistLike.playlist_id).label(
-        'total')).join(PlaylistLike).group_by(Playlist).filter(Playlist.user_id == target_id).order_by(desc('total')).limit(20).all()
+        'total')).join(Playlist.search).outerjoin(PlaylistLike).group_by(Playlist).filter(Playlist.user_id == target_id).order_by(desc('total')).limit(20).all()
 
     user_playlists = []
-    data = {}
 
     for playlist, count in results:
         dictionary = playlist.as_dict()
         dictionary['count'] = count
+        dictionary['query'] = playlist.search.query
+
         user_playlists.append(dictionary)
 
     return user_playlists
@@ -173,14 +174,15 @@ def playlist_ordered_by_likes():
     # SELECT playlist_id, COUNT(*) AS total_num FROM playlist_likes GROUP BY playlist_id ORDER BY total_num DESC;
 
     results = db.session.query(Playlist, db.func.count(PlaylistLike.playlist_id).label(
-        'total')).join(PlaylistLike).group_by(Playlist).order_by(desc('total')).limit(20).all()
+        'total')).join(Playlist.search).outerjoin(PlaylistLike).group_by(Playlist).order_by(desc('total')).limit(20).all()
 
     playlists_by_likes = []
 
     for playlist, count in results:
         dictionary = playlist.as_dict()
-
         dictionary['count'] = count
+        dictionary['query'] = playlist.search.query
+
         playlists_by_likes.append(dictionary)
 
     return playlists_by_likes
@@ -197,8 +199,10 @@ def playlist_ordered_by_likes_json():
     return main(top_playlists)
 
 
-def create_playlist_like(user_id, playlist_id, created_at):
+def create_playlist_like(user_id, playlist_id):
     """Create a new playlist like """
+
+    created_at = datetime.now()
 
     playlist_like = PlaylistLike(
         user_id=user_id, playlist_id=playlist_id, created_at=created_at)
@@ -251,28 +255,29 @@ def create_tracks_and_playlist_tracks_for_playlist(tracks_in_playlist, playlist_
     # tracks = data['tracks']['items']
     # tracks = data['tracks']['items']
     tracks = tracks_in_playlist
+    created_tracks = []
 
     for track in tracks:
-        # track.id on client == track.uid in db
-        check = get_track_by_track_uid(track.uid)
+        # track.id from client == track.uid in db
+        uid = track['id']
+        db_track = get_track_by_track_uid(uid)
+        print("***************", db_track is not None)
 
-        if check is None:
+        # not db.session.query(db.session.query(Track).filter_by(uid=uid).exists()).scalar():
+        if db_track is None:
 
-            create_track(uid, title, artist, album, release_date,
-                         playtime, genre, preview, popularity, album_art)
-
-        # {
-        #     'uid': self.uid,
-        #     'title': self.title,
-        #     'artist': self.artist,
-        #     'album': self.album,
-        #     'release_date': self.release_date,
-        #     'playtime': self.playtime,
-        #     'preview': self.preview,
-        #     'genre': self.genre,
-        #     'popularity': self.popularity,
-        #     'album_art': self.album_art,
-        # }
+            # {
+            #     'uid': self.uid,
+            #     'title': self.title,
+            #     'artist': self.artist,
+            #     'album': self.album,
+            #     'release_date': self.release_date,
+            #     'playtime': self.playtime,
+            #     'preview': self.preview,
+            #     'genre': self.genre,
+            #     'popularity': self.popularity,
+            #     'album_art': self.album_art,
+            # }
 
             uid, title, artist, album, release_date, playtime, preview, popularity, album_art = (
                 track['id'],
@@ -285,24 +290,26 @@ def create_tracks_and_playlist_tracks_for_playlist(tracks_in_playlist, playlist_
                 track['popularity'],
                 track['album']['images'][2]["url"])
 
-            db_track = create_track(uid,
-                                    title,
-                                    artist,
-                                    album,
-                                    release_date,
-                                    playtime,
-                                    preview,
-                                    popularity,
-                                    album_art)
+            db_track = create_track(uid=uid,
+                                    title=title,
+                                    artist=artist,
+                                    album=album,
+                                    release_date=release_date,
+                                    playtime=playtime,
+                                    preview=preview,
+                                    popularity=popularity,
+                                    album_art=album_art,
+                                    genre=None)
 
-            tracks_in_playlist.append(db_track)
+        created_tracks.append(db_track)
+        print("***************dbtrack", db_track)
 
-    for track_order, track in enumerate(tracks_in_playlist):
+    for track_order, track in enumerate(created_tracks, start=1):
 
         create_playlist_track(
-            track.track_id, playlist.playlist_id, track_order)
+            track_id=track.track_id, playlist_id=playlist_id, track_order=track_order)
 
-    return tracks_in_playlist
+    return created_tracks
 
 
 def convert(tup, di):
@@ -324,3 +331,22 @@ if __name__ == '__main__':
 
 # [('Goth Rock Playlist', 5), ('Healing Playlist', 1), ('Memphis Blues Playlist', 3),
 #  ('Neo - Prog Playlist', 1), ('Rai Playlist', 3), ('Sunshine Pop Playlist', 1), ('Techno Playlist', 4)]
+
+# Test Script
+def test_script():
+    user_id = 1
+    playlist_title = "Best of Dido"
+    created_at = datetime.now()
+    last_updated_at = datetime.now()
+    search = create_search(user_id, created_at, query="dido")
+    playlist = create_playlist(user_id, search.search_id,
+                               created_at, last_updated_at, playlist_title)
+    sample = json.load(open("dido_data.json"))
+    tracks_in_playlist = sample['tracks']['items']
+
+    result = create_tracks_and_playlist_tracks_for_playlist(
+        tracks_in_playlist, playlist.playlist_id)
+
+    print(result)
+
+    return result
