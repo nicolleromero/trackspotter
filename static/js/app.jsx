@@ -385,6 +385,7 @@ function PlaylistRow(props) {
   console.log(`props.query: ${props.query}`)
   console.log(`queries: ${queries}`)
 
+
   return (
     <tr align="center" scope="row" key={props.title}>
       <td>{queries.map((query) => {
@@ -437,6 +438,15 @@ function PlaylistTracks(props) {
     setTracks(newTracks);
   }
 
+  function handleDeletePlaylist(playlist_id) {
+    // TODO: handle logic and API route to delete a playlist
+
+  }
+
+  function handleSaveEditedPlaylist(playlist_id) {
+    // TODO: handle logic and API to save changes to a playlist
+  }
+
   return (
     <React.Fragment>
       <Container className="tracks">
@@ -459,11 +469,27 @@ function PlaylistTracks(props) {
                 <Track
                   track={track}
                   index={i}
-                  handleDeleteTrack={handleDeleteTrack}
+                  onDeleteTrack={handleDeleteTrack}
                 />
               ))}
             </tbody>
           </Table>
+        </Row>
+      </Container >
+      <Container>
+        <Row className="float-right offset-4 inline">
+          <Button
+            variant="dark"
+            // className="float-right offset-6 inline"
+            onDeletePlaylist={handleDeletePlaylist}
+          > Delete Playlist
+          </Button>{' '}
+          <Button
+            variant="outline-secondary inline"
+            // className="float-right offset-6 inline"
+            onSaveEditedPlaylist={handleSaveEditedPlaylist}
+          > Save Playlist
+        </Button>
         </Row>
       </Container>
     </React.Fragment >
