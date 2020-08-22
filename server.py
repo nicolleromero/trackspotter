@@ -175,51 +175,51 @@ def display_playlist_tracks(playlist_id):
     return jsonify(playlist_dict)
 
 
-@app.route('/spotify-login', methods=['GET'])
-def login():
+# @app.route('/spotify-login', methods=['GET'])
+# def login():
 
-    user = session.get('user', None)
+#     user = session.get('user', None)
 
-    if user is not None:
-        token = users[user]
+#     if user is not None:
+#         token = users[user]
 
-        if token.is_expiring:
-            token = cred.refresh(token)
-            users[user] = token
+#         if token.is_expiring:
+#             token = cred.refresh(token)
+#             users[user] = token
 
-    auth_url = cred.user_authorisation_url(
-        scope="playlist-modify-public playlist-modify-private")
+#     auth_url = cred.user_authorisation_url(
+#         scope="playlist-modify-public playlist-modify-private")
 
-    return redirect(auth_url, 307)
-
-
-@app.route('/callback', methods=['GET'])
-def login_callback():
-    code = request.args.get('code', None)
-
-    token = cred.request_user_token(code)
-    with spotify.token_as(token):
-        info = spotify.current_user()
-
-    session['user'] = info.id
-    users[info.id] = token
-
-    if token.is_expiring:
-        token = cred.refresh(token)
-        users[user] = token
-
-    return jsonify(info)
+#     return redirect(auth_url, 307)
 
 
-@app.route('/logout', methods=['GET'])
-def logout():
+# @app.route('/callback', methods=['GET'])
+# def login_callback():
+#     code = request.args.get('code', None)
 
-    uid = session.pop('user', None)
+#     token = cred.request_user_token(code)
+#     with spotify.token_as(token):
+#         info = spotify.current_user()
 
-    if uid is not None:
-        users.pop(uid, None)
+#     session['user'] = info.id
+#     users[info.id] = token
 
-    return redirect('/', 307)
+#     if token.is_expiring:
+#         token = cred.refresh(token)
+#         users[user] = token
+
+#     return jsonify(info)
+
+
+# @app.route('/logout', methods=['GET'])
+# def logout():
+
+#     uid = session.pop('user', None)
+
+#     if uid is not None:
+#         users.pop(uid, None)
+
+#     return redirect('/', 307)
 
 
 if __name__ == "__main__":

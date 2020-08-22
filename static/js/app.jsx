@@ -345,8 +345,8 @@ function UserPlaylists(props) {
           <thead>
             <tr align="center">
               <th colSpan="4"><h3>
-                {user_name}'s Playlists
-              <small class="text-muted">&nbsp;🎧&nbsp;&nbsp; you're so amazing...</small>
+                {/* {props.user.spotify_display_name}'s Playlists */}
+                <small class="text-muted">&nbsp;🎧&nbsp;&nbsp; you're so amazing...</small>
               </h3></th>
             </tr>
           </thead>
@@ -471,19 +471,34 @@ function PlaylistTracks(props) {
 }
 
 
-function App() {
+function App(props) {
+  const [user, setUser] = React.useState(null);
+
+  function handleLogin(user) {
+    setUser(user)
+  }
+
+  function handleLogout() {
+    setUser(null);
+  }
+
   return (
     <Router>
-      <Topbar />
+      <Topbar
+        user={user}
+        onLogin={handleLogin}
+        onLogout={handleLogout} />
       <div>
         <nav className="navbar navbar-expand-lg">
           <ul className="nav navbar-nav">
             <li className="inline">
               <Link to="/">Home</Link> |&nbsp;
             </li>
-            <li className="inline">
-              <Link to="/user-playlists"> User Playlists</Link>  |&nbsp;
-            </li>
+            {user && (
+              <li className="inline">
+                <Link to="/user-playlists"> User Playlists</Link>  |&nbsp;
+              </li>
+            )}
             <li className="inline">
               <Link to="/top-playlists"> Browse Playlists</Link>
             </li>

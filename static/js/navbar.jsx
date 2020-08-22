@@ -6,7 +6,7 @@ const { Badge, Button, Col, Container, Form, FormControl, ListGroup, Navbar, Row
 let user_name = '';
 let user_data = '';
 
-function Topbar() {
+function Topbar(props) {
   const [user_id, setUserId] = React.useState('');
   const [user, setUser] = React.useState({});
   const [name, setName] = React.useState('')
@@ -90,7 +90,10 @@ function Topbar() {
             alt="Spotify logo" />
         </Navbar.Brand>
         <Navbar.Toggle />
-        <Login />
+        <Login
+          user={props.user}
+          onLogin={props.onLogin}
+          onLogout={props.onLogout} />
         <Navbar.Collapse className="justify-content-end">
           <Button variant="outline-secondary inline" id="btn-login"
           // onClick={handleSpotLogin}
@@ -104,45 +107,33 @@ function Topbar() {
 
   }
 
-  function Login() {
+  function Login(props) {
     // Allows for assigning a seeded user during dev; remove for prod
-
     const [user_id, setUserId] = React.useState('');
-    const [user, setSiteUser] = React.useState({});
-    const [name, setName] = React.useState('')
 
     function handleSetUser(event) {
       event.preventDefault();
 
       fetch(`/api/handle-login?query=${encodeURIComponent(user_id)}`)
         .then(response => response.json())
-        .then((data) => {
-          setSiteUser(data);
-          setUserId(data.user_id);
-          setName(data.spotify_display_name);
-          console.log(data, name, user)
+        .then((user) => {
+          console.log(user.name, user.user_id)
+          props.onLogin(user)
         });
+
     }
 
-    function handleLogOut() {
-      setUser('');
-      setUserId('');
-      setName('');
-    }
-
-    user_name = name;
-
-    if (name) {
+    if (props.user) {
       return (
         <React.Fragment>
           <Navbar.Text>
-            Signed in as: <a href="#login">{name}</a>
+            Signed in as: <a href="#login">{props.user.spotify_display_name}</a>
           </Navbar.Text>
           <Col>
             <Button
               variant="outline-secondary"
               type="submit"
-              onClick={handleLogOut}
+              onClick={props.onLogout}
             >
               Log Out
             </Button>
