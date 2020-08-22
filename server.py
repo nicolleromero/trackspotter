@@ -21,6 +21,7 @@ app.config['PRESERVE_CONTEXT_ON_EXCEPTION'] = True
 SPOTIFY_KEY = os.environ['SPOTIFY_KEY']
 client_id = os.environ['client_id']
 client_secret = os.environ['client_secret']
+app_token = tk.request_client_token(client_id, client_secret)
 redirect_uri = os.environ['redirect_uri']
 
 conf = tk.config_from_environment()
@@ -179,8 +180,19 @@ def display_playlist_tracks(playlist_id):
 
 @app.route('/spotify-login', methods=['GET'])
 def login():
+
+    user = session.get('user', None)
+
+    if user is not None:
+        token = users[user]
+
+        if token.is_expiring:
+            token = cred.refresh(token)
+            users[user] = token
+
     auth_url = cred.user_authorisation_url(
         scope="playlist-modify-public playlist-modify-private")
+
     return redirect(auth_url, 307)
 
 
@@ -204,9 +216,12 @@ def login_callback():
 
 @app.route('/logout', methods=['GET'])
 def logout():
+
     uid = session.pop('user', None)
+
     if uid is not None:
         users.pop(uid, None)
+
     return redirect('/', 307)
 
 
