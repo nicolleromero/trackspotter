@@ -345,7 +345,7 @@ function UserPlaylists(props) {
           <thead>
             <tr align="center">
               <th colSpan="4"><h3>
-                {/* {props.user.spotify_display_name}'s Playlists */}
+                {props.user.spotify_display_name}'s Playlists
                 <small class="text-muted">&nbsp;🎧&nbsp;&nbsp; you're so amazing...</small>
               </h3></th>
             </tr>
@@ -508,7 +508,7 @@ function App(props) {
 
         <Switch>
           <Route exact path="/" component={AdvSearch} />
-          <Route exact path="/user-playlists" component={UserPlaylists} />
+          <Route exact path="/user-playlists" render={(props) => <UserPlaylists {...props} user={user} />} />
           <Route exact path="/top-playlists" component={TopPlaylists} />
           <Route exact path="/playlist/:playlist_id" component={PlaylistTracks} />
         </Switch>
