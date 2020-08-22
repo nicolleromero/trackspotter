@@ -28,12 +28,19 @@ function Topbar() {
 
   // //   const url = getLoginURL(SCOPES);
 
-  //   // fetch('/api/spotify-login?url')
-  //   //   .then(response => response.json())
-  //   //   .then(data => {
-  //   //     setUser(data);
-  //   //     console.log(data); // this doesn't work right now
-  //   //   });
+  fetch('/api/spotify-login?url')
+    .then(response => response.json())
+    .then(data => {
+      setUser(data);
+      console.log(data);
+    });
+
+  fetch('/callback')
+    .then(response => response.json())
+    .then(data => {
+      setAccessToken(data);
+      console.log(data)
+    });
 
   //   // const width = 450,
   //   //   height = 730,
@@ -55,14 +62,6 @@ function Topbar() {
   //   //   'menubar=no,location=no,resizable=no,scrollbars=no,status=no, width=' + width + ', height=' + height + ', top=' + top + ', left=' + left
   //   // );
 
-  //   // fetch('/callback')
-  //   //   .then(response => response.json())
-  //   //   .then(data => {
-  //   //     setAccessToken(data);
-  //   //     console.log(data)
-  //   //   });
-  // }
-
 
   function handleSpotLogout() {
     setUser('');
@@ -73,7 +72,7 @@ function Topbar() {
   if (user_data) {
     return (
       <Button variant="outline-secondary inline" id="btn-login"
-      // onClick={handleSpotLogout}
+        onClick={handleSpotLogout}
       >
         <img src="/static/img/spot_icon_gr.png" width="30" height="30"></img>&nbsp;
           Log Out
@@ -109,7 +108,7 @@ function Topbar() {
     // Allows for assigning a seeded user during dev; remove for prod
 
     const [user_id, setUserId] = React.useState('');
-    const [user, setUser] = React.useState({});
+    const [user, setSiteUser] = React.useState({});
     const [name, setName] = React.useState('')
 
     function handleSetUser(event) {
@@ -118,20 +117,37 @@ function Topbar() {
       fetch(`/api/handle-login?query=${encodeURIComponent(user_id)}`)
         .then(response => response.json())
         .then((data) => {
-          setUser(data);
+          setSiteUser(data);
           setUserId(data.user_id);
           setName(data.spotify_display_name);
           console.log(data, name, user)
         });
     }
 
+    function handleLogOut() {
+      setUser('');
+      setUserId('');
+      setName('');
+    }
+
     user_name = name;
 
     if (name) {
       return (
-        <Navbar.Text>
-          Signed in as: <a href="#login">{name}</a>
-        </Navbar.Text>
+        <React.Fragment>
+          <Navbar.Text>
+            Signed in as: <a href="#login">{name}</a>
+          </Navbar.Text>
+          <Col>
+            <Button
+              variant="outline-secondary"
+              type="submit"
+              onClick={handleLogOut}
+            >
+              Log Out
+            </Button>
+          </Col>
+        </React.Fragment>
       );
 
     } else {
@@ -151,8 +167,8 @@ function Topbar() {
               variant="outline-secondary"
               type="submit"
             >
-              Log in
-              </Button>
+              Log In
+            </Button>
           </Form.Row>
         </Form>
 

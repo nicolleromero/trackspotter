@@ -52,12 +52,12 @@ def handle_login():
     user_id = int(request.args.get('query', '').strip())
     print("logged in user:", user_id)
 
-    user = crud.get_user_by_id(user_id)
-    print(user)
+    site_user = crud.get_user_by_id(user_id)
+    print(site_user)
 
     session['user_id'] = user_id
 
-    return jsonify(user)
+    return jsonify(site_user)
 
 
 @app.route("/api/save-playlist", methods=["POST"])
@@ -65,18 +65,15 @@ def save_playlist():
 
     # What's needed from the client:
     # be logged in for user_id
-    # playlist_title (from form field)
+    # playlist_title
     # final query from final search
     # list of tracks
 
     user_id = session.get('user_id')
-
     data = request.get_json()
     query = data["query"]
     search_tracks = data["playlist_tracks"]
     playlist_title = data["playlist_title"]
-
-    print(playlist_title)
 
     # tracks = pass in from client
 
