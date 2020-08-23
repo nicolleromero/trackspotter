@@ -318,6 +318,31 @@ def create_tracks_and_playlist_tracks_for_playlist(tracks_in_playlist, playlist_
     return created_tracks
 
 
+def get_user_or_add_user(spotify_id, display_name, token=None):
+
+    user = User.query.filter(User.spotify_id == spotify_id).first()
+
+    if user is None:
+
+        spotify_id = spotify_id
+        spotify_display_name = display_name
+        created_at = datetime.now()
+        access_token = None
+        refresh_token = token.refresh_token if token else None
+
+        user = create_user(
+            spotify_id, spotify_display_name, created_at, access_token, refresh_token)
+
+    elif token:
+        user.refresh_token = token.refresh_token
+
+        db.session.add(user)
+        # TODO update user
+        db.session.commit()
+
+    return user
+
+
 def convert(tup, di):
     di = dict(tup)
     return di

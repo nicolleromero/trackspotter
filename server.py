@@ -3,8 +3,9 @@ from flask import (Flask, render_template, jsonify,
 from model import connect_to_db
 import tekore as tk
 
-from pprint import pformat
+from pprint import pprint, pformat
 import os
+from urllib.parse import urlencode
 from sys import argv
 import json
 import requests
@@ -19,9 +20,6 @@ app.config['PRESERVE_CONTEXT_ON_EXCEPTION'] = True
 
 
 SPOTIFY_KEY = os.environ['SPOTIFY_KEY']
-client_id = os.environ['client_id']
-client_secret = os.environ['client_secret']
-redirect_uri = os.environ['redirect_uri']
 
 conf = tk.config_from_environment()
 cred = tk.Credentials(*conf)
@@ -111,22 +109,25 @@ def search():
     if not query:
         return jsonify([])
 
-    user = session.get('user', None)
+    # user = session.get('user', None)
 
-    if user is not None:
-        token = users[user]
+    # if user is not None:
+    #     token = users[user]
 
-    if session.get('user') is not None:
-        token = cred.refresh(token)
-        spot_id = session['user']
-        spot_key = users[spot_id]
+    # if session.get('user') is not None:
+    #     token = cred.refresh(token)
+    #     spot_id = session['user']
+    #     spot_key = users[spot_id]
 
-        if token.is_expiring:
-            token = cred.refresh(token)
-            users[user] = token
+    #     if token.is_expiring:
+    #         token = cred.refresh(token)
+    #         users[user] = token
 
-    else:
-        spot_key = SPOTIFY_KEY
+    # else:
+    #     spot_key = SPOTIFY_KEY
+
+    spot_key = SPOTIFY_KEY
+    # TODO: try cred.request_client_token()
 
     params = {'q': f'{query}', 'type': 'track'}
 
@@ -174,63 +175,58 @@ def display_playlist_tracks(playlist_id):
     return jsonify(playlist_dict)
 
 
-@app.route('/spotify-login', methods=['GET'])
+@app.route('/api/spotify-login', methods=['GET'])
 def login():
+    scope = tk.scope.user_read_email
+    auth_url = cred.user_authorisation_url(scope=scope)
 
-    user = session.get('user', None)
-    scope = "playlist-modify-public playlist-modify-private"
-
-    if user is None:
-        app_token = tk.request_client_token(client_id, client_secret)
-        spotify = tk.Spotify(app_token)
-
-    else:
-        token = users[user]
-
-        if token.is_expiring:
-            token = cred.refresh(token)
-            users[user] = token
-
-    user_token = tk.prompt_for_user_token(
-        client_id,
-        client_secret,
-        redirect_uri,
-        scope=scope
-    )
-
-    auth_url = cred.user_authorisation_url(
-        scope="playlist-modify-public playlist-modify-private")
-
-    return redirect(auth_url, 307)
+    return redirect(auth_url)
 
 
 @app.route('/callback', methods=['GET'])
 def login_callback():
+
     code = request.args.get('code', None)
 
     token = cred.request_user_token(code)
     with spotify.token_as(token):
         info = spotify.current_user()
 
-    session['user'] = info
-    # users[info.id] = token
+    print("************user info.display_name", info.display_name)
+    print("************user info.id", info.id)
+    print("************user info.images", info.images)
+    print("************user token", token)
 
-    # if token.is_expiring:
-    #     token = cred.refresh(token)
-    #     users[user] = token
+    display_name = info.display_name
+    spotify_id = info.id
 
-    return jsonify(info)
+    # user = crud.get_user_or_add_user(spotify_id, display_name)
+    # session['user'] = user
+
+    # TODO check if user exists, save user_id to session, commit all user info to db
+
+    # access_token = crud method to get access token from user...
+
+    # if access_token is None:
+    #     app_token = tk.request_client_token(client_id, client_secret)
+    #     spotify = tk.Spotify(app_token)
+
+    # else:
+    #     token = users[user]
+
+    #     if token.is_expiring:
+    #         token = cred.refresh(token)
+    #         users[user] = token
+
+    return redirect('/')
 
 
 @app.route('/logout', methods=['GET'])
 def logout():
 
-    uid = session.pop('user', None)
+    session.clear()
 
-    if uid is not None:
-        users.pop(uid, None)
-
-    return redirect('/', 307)
+    return redirect('/')
 
 
 if __name__ == "__main__":

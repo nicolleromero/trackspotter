@@ -11,53 +11,39 @@ function Topbar(props) {
 
   const CLIENT_ID = '626611d169544e0983c9fe2344cd84fc';
   const REDIRECT_URI = 'http://localhost:5000/callback';
-  const SCOPES = ["playlist-modify-public", "playlist-modify-private"];
+  const SCOPES = ["user-read-email"];
 
   function handleSpotLogin() {
 
-    // function getLoginURL(scopes) {
+    // const url = getLoginURL(SCOPES);
+    // function getLoginURL(SCOPES) {
     //   return 'https://accounts.spotify.com/authorize' + '?response_type=code' +
     //     '&client_id=' + CLIENT_ID +
     //     '&redirect_uri=' + encodeURIComponent(REDIRECT_URI) +
-    //     '&scope=' + encodeURIComponent(scopes.join(' '));
-    //   // '&response_type=token';
+    //     '&scope=' + encodeURIComponent(SCOPES.join(' '));
+    //   // '&response_type=token');
     // }
 
-    const url = getLoginURL(SCOPES);
+    // const width = 450,
+    //   height = 730,
+    //   left = (screen.width / 2) - (width / 2),
+    //   top = (screen.height / 2) - (height / 2);
 
-    fetch('/api/spotify-login?url')
-      .then(response => response.json())
-      .then(data => {
-        setUser(data);
-        console.log(data);
-      });
+    // window.addEventListener("message", (event) => {
+    //   const data = JSON.parse(event.data);
+    //   if (data.type == 'access_token') {
+    //     w.close();
+    //     setAccessToken(data.access_token);
+    //     props.setUser(data);
+    //     console.log(data, data.access_token)
+    //   }
+    // }, false);
 
-    fetch('/callback')
-      .then(response => response.json())
-      .then(data => {
-        setAccessToken(data);
-        console.log(data)
-      });
-
-    //   // const width = 450,
-    //   //   height = 730,
-    //   //   left = (screen.width / 2) - (width / 2),
-    //   //   top = (screen.height / 2) - (height / 2);
-
-    //   // window.addEventListener("message", (event) => {
-    //   //   const data = JSON.parse(event.data);
-    //   //   if (data.type == 'access_token') {
-    //   //     // callback(hash.access_token);
-    //   //     setAccessToken(data.access_token);
-    //   //     w.close(); // how do I close the window so user info doesn't appear there?
-    //   //   }
-    //   // }, false);
-
-    //   // const w = window.open(
-    //   //   url,
-    //   //   'Spotify',
-    //   //   'menubar=no,location=no,resizable=no,scrollbars=no,status=no, width=' + width + ', height=' + height + ', top=' + top + ', left=' + left
-    //   // );
+    // const w = window.open(
+    //   url,
+    //   'Spotify',
+    //   'menubar=no,location=no,resizable=no,scrollbars=no,status=no, width=' + width + ', height=' + height + ', top=' + top + ', left=' + left
+    // );
 
 
     function handleSpotLogout() {
@@ -91,10 +77,16 @@ function Topbar(props) {
           </Button>
         )}
         {!props.user && (
-          <Button variant="outline-secondary inline" id="btn-login"
-            onClick={handleSpotLogin}
+          <Button
+            href="/api/spotify-login"
+            variant="outline-secondary inline"
+            id="btn-login"
           >
-            <img src="/static/img/spot_icon_gr.png" width="30" height="30"></img>&nbsp;
+            <img
+              src="/static/img/spot_icon_gr.png"
+              width="30"
+              height="30">
+            </img>&nbsp;
             Log in to Spotify
           </Button>
         )}
