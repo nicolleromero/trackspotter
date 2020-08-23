@@ -21,7 +21,6 @@ app.config['PRESERVE_CONTEXT_ON_EXCEPTION'] = True
 SPOTIFY_KEY = os.environ['SPOTIFY_KEY']
 client_id = os.environ['client_id']
 client_secret = os.environ['client_secret']
-app_token = tk.request_client_token(client_id, client_secret)
 redirect_uri = os.environ['redirect_uri']
 
 conf = tk.config_from_environment()
@@ -175,51 +174,63 @@ def display_playlist_tracks(playlist_id):
     return jsonify(playlist_dict)
 
 
-# @app.route('/spotify-login', methods=['GET'])
-# def login():
+@app.route('/spotify-login', methods=['GET'])
+def login():
 
-#     user = session.get('user', None)
+    user = session.get('user', None)
+    scope = "playlist-modify-public playlist-modify-private"
 
-#     if user is not None:
-#         token = users[user]
+    if user is None:
+        app_token = tk.request_client_token(client_id, client_secret)
+        spotify = tk.Spotify(app_token)
 
-#         if token.is_expiring:
-#             token = cred.refresh(token)
-#             users[user] = token
+    else:
+        token = users[user]
 
-#     auth_url = cred.user_authorisation_url(
-#         scope="playlist-modify-public playlist-modify-private")
+        if token.is_expiring:
+            token = cred.refresh(token)
+            users[user] = token
 
-#     return redirect(auth_url, 307)
+    user_token = tk.prompt_for_user_token(
+        client_id,
+        client_secret,
+        redirect_uri,
+        scope=scope
+    )
 
+    auth_url = cred.user_authorisation_url(
+        scope="playlist-modify-public playlist-modify-private")
 
-# @app.route('/callback', methods=['GET'])
-# def login_callback():
-#     code = request.args.get('code', None)
-
-#     token = cred.request_user_token(code)
-#     with spotify.token_as(token):
-#         info = spotify.current_user()
-
-#     session['user'] = info.id
-#     users[info.id] = token
-
-#     if token.is_expiring:
-#         token = cred.refresh(token)
-#         users[user] = token
-
-#     return jsonify(info)
+    return redirect(auth_url, 307)
 
 
-# @app.route('/logout', methods=['GET'])
-# def logout():
+@app.route('/callback', methods=['GET'])
+def login_callback():
+    code = request.args.get('code', None)
 
-#     uid = session.pop('user', None)
+    token = cred.request_user_token(code)
+    with spotify.token_as(token):
+        info = spotify.current_user()
 
-#     if uid is not None:
-#         users.pop(uid, None)
+    session['user'] = info
+    # users[info.id] = token
 
-#     return redirect('/', 307)
+    # if token.is_expiring:
+    #     token = cred.refresh(token)
+    #     users[user] = token
+
+    return jsonify(info)
+
+
+@app.route('/logout', methods=['GET'])
+def logout():
+
+    uid = session.pop('user', None)
+
+    if uid is not None:
+        users.pop(uid, None)
+
+    return redirect('/', 307)
 
 
 if __name__ == "__main__":

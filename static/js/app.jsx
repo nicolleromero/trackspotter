@@ -29,7 +29,6 @@ function AdvSearch() {
   let [playlist_title, setPlaylistTitle] = React.useState('');
   let history = useHistory();
 
-
   React.useEffect(() => {
     if (query) {
       fetch(`/api/search?query=${encodeURIComponent(query)}`)
@@ -61,11 +60,8 @@ function AdvSearch() {
 
 
   function handleDeleteParam(target) {
-    console.log(`queries before delete: ${queries}, query: ${query}`)
-
     const newQueries = queries.filter((t) => t !== target);
     setQueries(newQueries);
-    console.log(`queries after delete: ${newQueries}, query: ${buildQuery(newQueries)}`)
   }
 
 
@@ -95,11 +91,7 @@ function AdvSearch() {
         history.push(`/playlist/${data.playlist_id}`);
       });
 
-    setParam('');
-    setPrefix('');
-    setQueries([]);
-    setTracks([]);
-    setPlaylistTitle('');
+    handleReset();
   }
 
   function handleReset() {
@@ -230,9 +222,6 @@ function AdvSearch() {
                 console.log(track.id)
 
                 return (
-                  // <Track
-                  //   order={order}
-                  // />
                   <tr align="center" scope="row" key={track.id}>
                     <td></td>
                     <td>{order}</td>
@@ -278,10 +267,7 @@ function TopPlaylists(props) {
         console.log(data);
         setTopPlaylists(data);
       })
-
-
   }, [])
-  console.log(top_playlists);
 
   return (
     <Container >
@@ -337,7 +323,6 @@ function UserPlaylists(props) {
       })
   }, [])
 
-  // TODO: Conditionally render title
   return (
     <Container >
       <Row className="align-content-center">
@@ -380,11 +365,7 @@ function UserPlaylists(props) {
 
 
 function PlaylistRow(props) {
-  // let queries = [props.title.toLowerCase().replace('playlist', '')];
-  let queries = [props.query]
-  console.log(`props.query: ${props.query}`)
-  console.log(`queries: ${queries}`)
-
+  let queries = [props.query];
 
   return (
     <tr align="center" scope="row" key={props.title}>
@@ -449,10 +430,33 @@ function PlaylistTracks(props) {
 
   return (
     <React.Fragment>
-      <Container className="tracks">
+      <Container >
         <Row className="align-content-center">
-          <Table hover>
+          <Table id="playlist_table" hover><br />
             <thead>
+              <tr align="center">
+                <th colSpan="12"><h3>
+                  {playlistTitle}
+                </h3></th>
+              </tr>
+              <tr align="right">
+                <th colSpan="12">
+                  <Button
+                    variant="dark inline"
+                    onDeletePlaylist={handleDeletePlaylist}
+                  > Delete Playlist
+                </Button>{' '}
+                  <Button
+                    variant="outline-secondary inline"
+                    onSaveEditedPlaylist={handleSaveEditedPlaylist}
+                  > Save Playlist
+                </Button>
+                </th>
+              </tr>
+            </thead>
+            {/* </Table>
+          <Table id="playlist_table" hover><br /> */}
+            <thead id="playlist-thead">
               <tr align="center">
                 <th>   </th>
                 <th>TRACK</th>
@@ -476,22 +480,6 @@ function PlaylistTracks(props) {
           </Table>
         </Row>
       </Container >
-      <Container>
-        <Row className="float-right offset-4 inline">
-          <Button
-            variant="dark"
-            // className="float-right offset-6 inline"
-            onDeletePlaylist={handleDeletePlaylist}
-          > Delete Playlist
-          </Button>{' '}
-          <Button
-            variant="outline-secondary inline"
-            // className="float-right offset-6 inline"
-            onSaveEditedPlaylist={handleSaveEditedPlaylist}
-          > Save Playlist
-        </Button>
-        </Row>
-      </Container>
     </React.Fragment >
   );
 }
@@ -530,7 +518,6 @@ function App(props) {
             </li>
           </ul>
         </nav>
-
 
         <Switch>
           <Route exact path="/" component={AdvSearch} />
