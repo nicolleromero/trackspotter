@@ -22,6 +22,7 @@ app.config['PRESERVE_CONTEXT_ON_EXCEPTION'] = True
 SPOTIFY_KEY = os.environ['SPOTIFY_KEY']
 
 conf = tk.config_from_environment()
+client_id, client_secret, redirect_uri = conf
 cred = tk.Credentials(*conf)
 spotify = tk.Spotify()
 
@@ -32,7 +33,14 @@ users = {}
 def show_homepage():
     """Show the application's homepage."""
 
-    return render_template("homepage.html")
+    user_id = session.get('user_id')
+
+    if user_id:
+        user_dict = crud.get_user_by_id(user_id)
+    else:
+        user_dict = None
+
+    return render_template("homepage.html", user_json=json.dumps(user_dict))
 
 
 # @app.route('/', defaults={'path': ''})
@@ -137,23 +145,6 @@ def search():
     if not query:
         return jsonify([])
 
-    # user = session.get('user', None)
-
-    # if user is not None:
-    #     token = users[user]
-
-    # if session.get('user') is not None:
-    #     token = cred.refresh(token)
-    #     spot_id = session['user']
-    #     spot_key = users[spot_id]
-
-    #     if token.is_expiring:
-    #         token = cred.refresh(token)
-    #         users[user] = token
-
-    # else:
-    #     spot_key = SPOTIFY_KEY
-
     spot_key = SPOTIFY_KEY
     # TODO: try cred.request_client_token()
 
@@ -203,7 +194,7 @@ def display_playlist_tracks(playlist_id):
     return jsonify(playlist_dict)
 
 
-@app.route('/api/spotify-login', methods=['GET'])
+@app.route('/login', methods=['GET'])
 def login():
     scope = tk.scope.user_read_email
     auth_url = cred.user_authorisation_url(scope=scope)
@@ -228,23 +219,10 @@ def login_callback():
     display_name = info.display_name
     spotify_id = info.id
 
-    # user = crud.get_user_or_add_user(spotify_id, display_name)
-    # session['user'] = user
+    user = crud.get_user_or_add_user(spotify_id, display_name)
+    session['user_id'] = user.user_id
 
     # TODO check if user exists, save user_id to session, commit all user info to db
-
-    # access_token = crud method to get access token from user...
-
-    # if access_token is None:
-    #     app_token = tk.request_client_token(client_id, client_secret)
-    #     spotify = tk.Spotify(app_token)
-
-    # else:
-    #     token = users[user]
-
-    #     if token.is_expiring:
-    #         token = cred.refresh(token)
-    #         users[user] = token
 
     return redirect('/')
 

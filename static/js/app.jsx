@@ -460,7 +460,7 @@ function PlaylistTracks(props) {
 
   return (
     <React.Fragment>
-      <Container >
+      <Container>
         <Row className="align-content-center">
           <Table id="playlist_table" hover><br />
             <thead>
@@ -509,29 +509,24 @@ function PlaylistTracks(props) {
             </tbody>
           </Table>
         </Row>
-      </Container >
-    </React.Fragment >
+      </Container>
+    </React.Fragment>
   );
 }
 
 
 function App(props) {
-  const [user, setUser] = React.useState(null);
+  const [user, setUser] = React.useState(USER);
 
   function handleLogin(user) {
     setUser(user)
-  }
-
-  function handleLogout() {
-    setUser(null);
   }
 
   return (
     <Router>
       <Topbar
         user={user}
-        onLogin={handleLogin}
-        onLogout={handleLogout} />
+        onLogin={handleLogin} />
       <div>
         <nav className="navbar navbar-expand-lg">
           <ul className="nav navbar-nav">

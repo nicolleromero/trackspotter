@@ -381,7 +381,15 @@ def get_user_or_add_user(spotify_id, display_name, token=None):
         user.refresh_token = token.refresh_token
         db.session.commit()
 
-    return user.as_dict()
+    return user
+
+
+def get_access_token_for_user(user_id):
+
+    access_token = db.session.query(User.access_token).filter(
+        User.user_id == user_id).first()
+
+    return access_token
 
 
 def convert(tup, di):
