@@ -45,6 +45,16 @@ class User(db.Model):
     def __repr__(self):
         return f'<User user_id={self.user_id} spotify_id={self.spotify_id} spotify_display_name={self.spotify_display_name}>'
 
+    def as_dict(self):
+        return {
+            'user_id': self.user_id,
+            'spotify_id': self.spotify_id,
+            'spotify_display_name': self.spotify_display_name,
+            'created_at': self.created_at,
+            'access_token': self.access_token,
+            'refresh_token': self.refresh_token,
+        }
+
 
 class Search(db.Model):
     """A saved search query"""
@@ -63,6 +73,14 @@ class Search(db.Model):
 
     def __repr__(self):
         return f'<Search search_id={self.search_id} query={self.query}>'
+
+    def as_dict(self):
+        return {
+            'search_id': self.search_id,
+            'created_at': self.created_at,
+            'query': self.query,
+            'user_id': self.user_id,
+        }
 
 
 class Track(db.Model):
@@ -155,6 +173,14 @@ class PlaylistTrack(db.Model):
 
     def __repr__(self):
         return f'<Playlist-track playlist_track_id={self.playlist_track_id} track_order={self.track_order} track={self.track} playlist={self.playlist}>'
+
+    def as_dict(self):
+        return {
+            'playlist_track_id': self.playlist_track_id,
+            'track_order': self.track_order,
+            'track_id': self.track_id,
+            'playlist_id': self.playlist_id,
+        }
 
 
 class PlaylistLike(db.Model):

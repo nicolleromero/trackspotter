@@ -411,11 +411,10 @@ function PlaylistTracks(props) {
         setTracks(playlist.tracks);
         setPlaylistTitle(playlist.playlist_title)
       })
-  }, [playlist_id]);
-
+  }, []);
 
   function handleDeleteTrack(target) {
-    const newTracks = tracks.filter((t) => t.uid !== target);
+    const newTracks = tracks.filter((t) => t.track_id !== target);
     setTracks(newTracks);
   }
 
@@ -424,9 +423,30 @@ function PlaylistTracks(props) {
 
   }
 
-  function handleSaveEditedPlaylist(playlist_id) {
-    // TODO: handle logic and API to save changes to a playlist
+  function handleSaveEditedPlaylist() {
+    const target_playlist = {
+      "playlist_id": playlist_id,
+      "playlist_title": playlistTitle,
+      "playlist_tracks": tracks,
+    }
+    fetch('/api/update-playlist', {
+      method: 'POST',
+      body: JSON.stringify(target_playlist),
+      headers: {
+        'Content-Type': 'application/json'
+      },
+    })
+      .then(response => response.json())
+      .then(data => {
+        console.log('update-playlist response', data);
+        // TODO: maybe do something here?
+        // history.push(`/playlist/${data.playlist_id}`);
+        // setTracks(playlist.tracks);
+        // setPlaylistTitle(playlist.playlist_title)
+      });
   }
+
+
 
   return (
     <React.Fragment>
@@ -443,12 +463,12 @@ function PlaylistTracks(props) {
                 <th colSpan="12">
                   <Button
                     variant="dark inline"
-                    onDeletePlaylist={handleDeletePlaylist}
+                    onClick={handleDeletePlaylist}
                   > Delete Playlist
                 </Button>{' '}
                   <Button
                     variant="outline-secondary inline"
-                    onSaveEditedPlaylist={handleSaveEditedPlaylist}
+                    onClick={handleSaveEditedPlaylist}
                   > Save Playlist
                 </Button>
                 </th>
@@ -473,7 +493,7 @@ function PlaylistTracks(props) {
                 <Track
                   track={track}
                   index={i}
-                  onDeleteTrack={handleDeleteTrack}
+                  handleDeleteTrack={handleDeleteTrack}
                 />
               ))}
             </tbody>

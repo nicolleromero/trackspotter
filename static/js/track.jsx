@@ -51,7 +51,7 @@ function Track(props) {
         <td>
           <button
             className="btn btn-sm delete-button"
-            onClick={() => props.handleDeleteTrack(props.track.uid)}
+            onClick={() => props.handleDeleteTrack(props.track.track_id)}
           >
             X
           </button>

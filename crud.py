@@ -127,6 +127,16 @@ def get_playlists():
     return Playlist.query.all()
 
 
+def get_playlist_tracks():
+
+    playlist_tracks = PlaylistTrack.query.all()
+
+    for playlist_track in playlist_tracks:
+        print(playlist_track.as_dict())
+
+    return playlist_tracks
+
+
 def get_playlist_by_id(playlist_id):
     """Return playlist object by playlist_id """
 
@@ -231,6 +241,16 @@ def get_playlist_query():
     return db.session.query(Playlist.playlist_title, Search.query).join(Search).all()
 
 
+def delete_track_from_playlist(playlist_id, track_id):
+
+    playlist_track = db.session.query(PlaylistTrack).filter(
+        PlaylistTrack.track_id == track_id, PlaylistTrack.playlist_id == playlist_id).delete()
+
+    db.session.commit()
+
+    return ("deleted")
+
+
 def tracks_in_playlist_ordered(target_playlist_id):
     """Return a list of the tracks in a playlist in order """
 
@@ -238,20 +258,6 @@ def tracks_in_playlist_ordered(target_playlist_id):
         PlaylistTrack.track_id == Track.track_id, PlaylistTrack.playlist_id == target_playlist_id).order_by(asc(PlaylistTrack.track_order)).all()
 
     return [track.as_dict() for track in tracks]
-
-
-def get_or_create(session, model, defaults=None, **kwargs):
-
-    instance = db.session.query(model).filter_by(**kwargs).first()
-    if instance:
-        return instance, False
-    else:
-        params = dict((k, v) for k, v in kwargs.iteritems()
-                      if not isinstance(v, ClauseElement))
-        params.update(defaults or {})
-        instance = model(**params)
-        session.add(instance)
-        return instance, True
 
 
 def create_tracks_and_playlist_tracks_for_playlist(tracks_in_playlist, playlist_id):
@@ -318,6 +324,28 @@ def create_tracks_and_playlist_tracks_for_playlist(tracks_in_playlist, playlist_
     return created_tracks
 
 
+def update_edited_playlist(playlist_id, playlist_title, playlist_tracks):
+
+    playlist = get_playlist_by_id(playlist_id)
+
+    # update playlist title and updated_at
+    playlist.playlist_title = playlist_title
+    playlist.last_updated_at = datetime.now()
+
+    # delete all existing playlist_track associations
+    db.session.query(PlaylistTrack).filter(
+        PlaylistTrack.playlist_id == playlist_id).delete()
+
+    # remake the playlist_track associations
+    for track_order, track in enumerate(playlist_tracks, start=1):
+        create_playlist_track(
+            track_id=track['track_id'], playlist_id=playlist_id, track_order=track_order)
+
+    db.session.commit()
+
+    return playlist
+
+
 def get_user_or_add_user(spotify_id, display_name, token=None):
 
     user = User.query.filter(User.spotify_id == spotify_id).first()
@@ -335,12 +363,9 @@ def get_user_or_add_user(spotify_id, display_name, token=None):
 
     elif token:
         user.refresh_token = token.refresh_token
-
-        db.session.add(user)
-        # TODO update user
         db.session.commit()
 
-    return user
+    return user.as_dict()
 
 
 def convert(tup, di):

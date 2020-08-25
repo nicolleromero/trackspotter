@@ -94,6 +94,21 @@ def save_playlist():
     })
 
 
+@app.route("/api/update-playlist", methods=["POST"])
+def save_edited_playlist():
+    """Update db for an edited playlist"""
+
+    data = request.get_json()
+    playlist_tracks = data["playlist_tracks"]
+    playlist_title = data["playlist_title"]
+    playlist_id = data["playlist_id"]
+
+    playlist = crud.update_edited_playlist(
+        playlist_id=playlist_id, playlist_tracks=playlist_tracks, playlist_title=playlist_title)
+
+    return jsonify({})
+
+
 @app.route("/api/search")
 def search():
     """Search for tracks with Spotify endpoint"""
@@ -165,7 +180,7 @@ def get_top_playlists():
 
 @app.route("/api/playlists/<playlist_id>")
 def display_playlist_tracks(playlist_id):
-    """ Display a list of playlist tracks for a specific playlist"""
+    """Display a list of playlist tracks for a specific playlist"""
 
     playlist = crud.get_playlist_by_id(playlist_id)
     playlist_dict = playlist.as_dict()
