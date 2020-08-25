@@ -109,6 +109,19 @@ def save_edited_playlist():
     return jsonify({})
 
 
+@app.route("/api/delete-playlist", methods=["POST"])
+def delete_playlist():
+    """Update db to delete a playlist"""
+
+    data = request.get_json()
+    playlist_id = data["playlist_id"]
+
+    crud.delete_playlist(
+        playlist_id=playlist_id)
+
+    return jsonify({})
+
+
 @app.route("/api/search")
 def search():
     """Search for tracks with Spotify endpoint"""

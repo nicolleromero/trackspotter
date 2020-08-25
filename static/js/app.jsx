@@ -418,9 +418,22 @@ function PlaylistTracks(props) {
     setTracks(newTracks);
   }
 
-  function handleDeletePlaylist(playlist_id) {
-    // TODO: handle logic and API route to delete a playlist
-
+  function handleDeletePlaylist() {
+    const target_playlist = {
+      "playlist_id": playlist_id,
+    }
+    fetch('/api/delete-playlist', {
+      method: 'POST',
+      body: JSON.stringify(target_playlist),
+      headers: {
+        'Content-Type': 'application/json'
+      },
+    })
+      .then(response => response.json())
+      .then(data => {
+        console.log('deleted-playlist response', data);
+        // TODO: maybe do something here?
+      });
   }
 
   function handleSaveEditedPlaylist() {
@@ -440,9 +453,6 @@ function PlaylistTracks(props) {
       .then(data => {
         console.log('update-playlist response', data);
         // TODO: maybe do something here?
-        // history.push(`/playlist/${data.playlist_id}`);
-        // setTracks(playlist.tracks);
-        // setPlaylistTitle(playlist.playlist_title)
       });
   }
 

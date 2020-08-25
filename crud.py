@@ -346,6 +346,22 @@ def update_edited_playlist(playlist_id, playlist_title, playlist_tracks):
     return playlist
 
 
+def delete_playlist(playlist_id):
+
+    playlist = get_playlist_by_id(playlist_id)
+
+    # delete all existing playlist_track associations
+    # db.session.query(PlaylistTrack).filter(
+    #     PlaylistTrack.playlist_id == playlist_id).delete()
+
+    # remove association to user
+    playlist.user_id = None
+
+    db.session.commit()
+
+    return None
+
+
 def get_user_or_add_user(spotify_id, display_name, token=None):
 
     user = User.query.filter(User.spotify_id == spotify_id).first()
