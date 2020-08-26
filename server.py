@@ -43,11 +43,18 @@ def show_homepage():
     return render_template("homepage.html", user_json=json.dumps(user_dict))
 
 
-# @app.route('/', defaults={'path': ''})
-# @app.route('/<path:path>')
-# def catch_all(path):
+@app.route('/', defaults={'path': ''})
+@app.route('/<path:path>')
+def catch_all(path):
 
-#     return render_template('homepage.html')
+    user_id = session.get('user_id')
+
+    if user_id:
+        user_dict = crud.get_user_by_id(user_id)
+    else:
+        user_dict = None
+
+    return render_template("homepage.html", user_json=json.dumps(user_dict))
 
 
 @app.route('/api/handle-login')
