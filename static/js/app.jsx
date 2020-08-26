@@ -413,7 +413,8 @@ function PlaylistRow(props) {
 function PlaylistTracks(props) {
   let { playlist_id } = props.match.params;
   let [tracks, setTracks] = React.useState([]);
-  let [playlistTitle, setPlaylistTitle] = React.useState('')
+  let [playlistTitle, setPlaylistTitle] = React.useState('');
+  let [playlistLike, setPlaylistLike] = React.useState(false);
 
   React.useEffect(() => {
     fetch(`/api/playlists/${playlist_id}`)
@@ -421,8 +422,32 @@ function PlaylistTracks(props) {
       .then((playlist) => {
         setTracks(playlist.tracks);
         setPlaylistTitle(playlist.playlist_title)
+        setPlaylistLike(playlist.playlist_like)
+        console.log('playlist like', playlist.playlist_like)
       })
   }, []);
+
+  function handlePlaylistLike() {
+    setPlaylistLike(!playlistLike);
+
+    const target_playlist = {
+      "playlist_id": playlist_id,
+    }
+    fetch('/api/update-playlist-like', {
+      method: 'POST',
+      body: JSON.stringify(target_playlist),
+      headers: {
+        'Content-Type': 'application/json'
+      },
+    })
+      .then(response => response.json())
+      .then(data => {
+        console.log('playlist like response', data);
+        // TODO: maybe do something here?
+      });
+  }
+  // TODO create route to update playlist like for playlist
+
 
   function handleDeleteTrack(target) {
     const newTracks = tracks.filter((t) => t.track_id !== target);
@@ -488,7 +513,7 @@ function PlaylistTracks(props) {
     <React.Fragment>
       <Container>
         <Row>
-          <Col className="float-left offset-1">
+          <Col className="float-left offset-1 inline">
             <h3>
               {playlistTitle}
             </h3>
@@ -520,7 +545,23 @@ function PlaylistTracks(props) {
                 variant="outline-secondary inline"
                 type="submit"
               > Save Playlist
-                </Button>
+              </Button>
+              {!playlistLike && (
+                <span inline className="float-right"><button
+                  className="btn btn-sm inline"
+                  onClick={handlePlaylistLike}
+                >
+                  <h4>♡</h4>
+                </button></span>
+              )}
+              {playlistLike && (
+                <span inline className="float-right"><button
+                  className="btn btn-sm inline"
+                  onClick={handlePlaylistLike}
+                >
+                  <h3>♥︎</h3>
+                </button></span>
+              )}
             </Col>
           </Form.Row>
         </Form>

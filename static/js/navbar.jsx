@@ -70,15 +70,6 @@ function Topbar(props) {
           <Navbar.Text>
             Signed in as: <a href="#login">{props.user.spotify_display_name}</a>
           </Navbar.Text>
-          <Col>
-            <Button
-              variant="outline-secondary"
-              type="submit"
-              onClick={props.onLogout}
-            >
-              Log Out
-            </Button>
-          </Col>
         </React.Fragment>
       );
 
@@ -99,7 +90,7 @@ function Topbar(props) {
               variant="outline-secondary"
               type="submit"
             >
-              Log In
+              Prod Log In
             </Button>
           </Form.Row>
         </Form>

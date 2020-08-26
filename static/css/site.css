@@ -46,6 +46,12 @@ h5 {
 	margin: 2px;
 }
 
+span {
+  max-height: 50px;
+  display: inline-flex;
+  align-items: center;
+}
+
 /* .tracks {
 	margin: 0px;
 	padding: 0px;

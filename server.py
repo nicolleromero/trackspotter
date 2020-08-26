@@ -81,6 +81,7 @@ def save_playlist():
     # final query from final search
     # list of tracks
 
+    # TODO prompt to log in to Spotify, then send request to save playlist to user's Spotify account
     user_id = session.get('user_id')
     data = request.get_json()
     query = data["query"]
@@ -124,6 +125,19 @@ def save_edited_playlist():
     return jsonify({})
 
 
+@app.route("/api/update-playlist-like", methods=["POST"])
+def update_playlist_like():
+
+    data = request.get_json()
+    user_id = session.get('user_id')
+    playlist_id = data["playlist_id"]
+
+    status = crud.update_playlist_like(
+        user_id=user_id, playlist_id=playlist_id)
+
+    return jsonify({"status": status})
+
+
 @app.route("/api/delete-playlist", methods=["POST"])
 def delete_playlist():
     """Update db to delete a playlist"""
@@ -152,8 +166,10 @@ def search():
     if not query:
         return jsonify([])
 
-    spot_key = SPOTIFY_KEY
-    # TODO: try cred.request_client_token()
+    # spot_key = SPOTIFY_KEY
+    token = cred.request_client_token()
+
+    spot_key = token.access_token
 
     params = {'q': f'{query}', 'type': 'track'}
 
@@ -195,8 +211,17 @@ def display_playlist_tracks(playlist_id):
 
     playlist = crud.get_playlist_by_id(playlist_id)
     playlist_dict = playlist.as_dict()
+    user_id = session.get('user_id')
 
     playlist_dict['tracks'] = crud.tracks_in_playlist_ordered(playlist_id)
+
+    playlist_like = crud.get_playlist_like_by_user(
+        user_id, playlist_id)
+
+    if playlist_like is None:
+        playlist_dict['playlist_like'] = False
+    else:
+        playlist_dict['playlist_like'] = True
 
     return jsonify(playlist_dict)
 

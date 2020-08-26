@@ -229,11 +229,36 @@ def create_playlist_like(user_id, playlist_id):
     return playlist_like
 
 
+def update_playlist_like(user_id, playlist_id):
+
+    playlist_like = db.session.query(PlaylistLike).filter(
+        PlaylistLike.user_id == user_id, PlaylistLike.playlist_id == playlist_id).first()
+
+    if playlist_like is None:
+        create_playlist_like(user_id, playlist_id)
+        result = "playlist like created"
+
+    else:
+        db.session.query(PlaylistLike).filter(
+            PlaylistLike.user_id == user_id, PlaylistLike.playlist_id == playlist_id).delete()
+        result = "deleted"
+
+    db.session.commit()
+
+    return result
+
+
 def playlist_likes_by_playlist_title():
 
     q = db.session.query(Playlist, PlaylistLike).join(PlaylistLike)
 
     return q.group_by(Playlist.playlist_id).count(PlaylistLike.playlist_id).all()
+
+
+def get_playlist_like_by_user(user_id, playlist_id):
+
+    return db.session.query(PlaylistLike).filter(
+        PlaylistLike.user_id == user_id, PlaylistLike.playlist_id == playlist_id).first()
 
 
 def get_playlist_query():
