@@ -23,40 +23,38 @@ function Track(props) {
 
   // Handles the player
   let to_play = "https://open.spotify.com/embed/track/" + props.track.uid;
+  console.log(to_play)
 
   return (
     <React.Fragment>
-      {console.log(to_play)}
-      <tr align="center" scope="row" key={props.track.track_id} value={props.track.track_id}>
-        <td></td>
-        <td>{order}</td>
-        <td>{props.track.title}</td>
-        <td>{props.track.artist}</td>
-        <td>{props.track.album}</td>
-        <td>{millisToTime(props.track.playtime)}</td>
-        {/* <td>
+      <td></td>
+      <td>{order}</td>
+      <td>{props.track.title}</td>
+      <td>{props.track.artist}</td>
+      <td>{props.track.album}</td>
+      <td>{millisToTime(props.track.playtime)}</td>
+      {/* <td>
           <img src={props.track.album_art}></img>
         </td> */}
-        <td>
-          <iframe
-            src={to_play}
-            width="80"
-            height="80"
-            frameBorder="0"
-            allowtransparency="true"
-            allow="encrypted-media"
-          >
-          </iframe>
-        </td>
-        <td>
-          <button
-            className="btn btn-sm delete-button"
-            onClick={() => props.handleDeleteTrack(props.track.track_id)}
-          >
-            X
-          </button>
-        </td>
-      </tr>
+      <td>
+        <iframe
+          src={to_play}
+          width="80"
+          height="80"
+          frameBorder="0"
+          allowtransparency="true"
+          allow="encrypted-media"
+        >
+        </iframe>
+      </td>
+      <td>
+        <button
+          className="btn btn-sm delete-button"
+          onClick={() => props.onDeleteTrack(props.track.track_id)}
+        >
+          X
+        </button>
+      </td>
     </React.Fragment>
   );
 }

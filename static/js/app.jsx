@@ -1,7 +1,8 @@
-const { Component, useEffect, useState, useCallback } = React;
+const { Component, useEffect, useState, useCallback, useMemo } = React;
 const { render } = ReactDOM;
 const { Badge, Button, Col, Container, Dropdown, DropdownButton, Form, FormControl, FormGroup, InputGroup, ListGroup, Navbar, Row, Table } = ReactBootstrap;
 
+const { DragDropContext, Droppable, Draggable } = ReactBeautifulDnd;
 const Router = ReactRouterDOM.BrowserRouter;
 const Route = ReactRouterDOM.Route;
 const Link = ReactRouterDOM.Link;
@@ -18,6 +19,14 @@ function millisToTime(milliseconds) {
 
 function buildQuery(queries) {
   return queries.join(' ');
+}
+
+function reorder(list, startIndex, endIndex) {
+  const result = Array.from(list);
+  const [removed] = result.splice(startIndex, 1);
+  result.splice(endIndex, 0, removed);
+
+  return result;
 }
 
 function AdvSearch() {
@@ -270,42 +279,44 @@ function TopPlaylists(props) {
   }, [])
 
   return (
-    <Container >
-      <Row className="align-content-center">
-        <Table id="playlist_table" hover>
-          <thead>
-            <tr align="center">
-              <th colSpan="4"><h3>
-                Popular Playlists
+    <React.Fragment>
+      <Container >
+        <Row className="align-content-center">
+          <Table id="playlist_table" hover>
+            <thead>
+              <tr align="center">
+                <th colSpan="4"><h3>
+                  Popular Playlists
               <small class="text-muted">&nbsp;🎧&nbsp;&nbsp; by genre</small>
-              </h3></th>
-            </tr>
-          </thead>
-          <thead id="playlist-thead">
-            <tr align="center">
-              <th>SEARCH TERMS</th>
-              <th>PLAYLIST TITLE</th>
-              <th>RATING</th>
-              <th>PLAY</th>
-            </tr>
-          </thead>
-          <tbody>
-            {top_playlists.map((playlist) => {
-              return (
-                <PlaylistRow
-                  playlist_id={playlist.playlist_id}
-                  title={playlist.playlist_title}
-                  likes={playlist.count}
-                  value={playlist.playlist_id}
-                  query={playlist.query}
-                  onClick={props.handleOpenPlaylist}
-                />
-              )
-            })}
-          </tbody>
-        </Table>
-      </Row>
-    </Container >
+                </h3></th>
+              </tr>
+            </thead>
+            <thead id="playlist-thead">
+              <tr align="center">
+                <th>SEARCH TERMS</th>
+                <th>PLAYLIST TITLE</th>
+                <th>RATING</th>
+                <th>PLAY</th>
+              </tr>
+            </thead>
+            <tbody>
+              {top_playlists.map((playlist) => {
+                return (
+                  <PlaylistRow
+                    playlist_id={playlist.playlist_id}
+                    title={playlist.playlist_title}
+                    likes={playlist.count}
+                    value={playlist.playlist_id}
+                    query={playlist.query}
+                    onClick={props.handleOpenPlaylist}
+                  />
+                )
+              })}
+            </tbody>
+          </Table>
+        </Row>
+      </Container >
+    </React.Fragment>
   )
 }
 
@@ -436,7 +447,9 @@ function PlaylistTracks(props) {
       });
   }
 
-  function handleSaveEditedPlaylist() {
+  const handleSaveEditedPlaylist = (event) => {
+    event.preventDefault();
+
     const target_playlist = {
       "playlist_id": playlist_id,
       "playlist_title": playlistTitle,
@@ -456,59 +469,106 @@ function PlaylistTracks(props) {
       });
   }
 
+  const handleDragEnd = (result) => {
+    // dropped outside the list
+    if (!result.destination) {
+      return;
+    }
 
+    const newTracks = reorder(
+      tracks,
+      result.source.index,
+      result.destination.index
+    );
+
+    setTracks(newTracks);
+  };
 
   return (
     <React.Fragment>
       <Container>
-        <Row className="align-content-center">
-          <Table id="playlist_table" hover><br />
-            <thead>
-              <tr align="center">
-                <th colSpan="12"><h3>
-                  {playlistTitle}
-                </h3></th>
-              </tr>
-              <tr align="right">
-                <th colSpan="12">
-                  <Button
-                    variant="dark inline"
-                    onClick={handleDeletePlaylist}
-                  > Delete Playlist
-                </Button>{' '}
-                  <Button
-                    variant="outline-secondary inline"
-                    onClick={handleSaveEditedPlaylist}
-                  > Save Playlist
-                </Button>
-                </th>
-              </tr>
-            </thead>
-            {/* </Table>
-          <Table id="playlist_table" hover><br /> */}
-            <thead id="playlist-thead">
-              <tr align="center">
-                <th>   </th>
-                <th>TRACK</th>
-                <th>TITLE</th>
-                <th>ARTIST</th>
-                <th>ALBUM</th>
-                <th>PLAYTIME</th>
-                <th>PLAY</th>
-                <th>   </th>
-              </tr>
-            </thead>
-            <tbody>
-              {tracks.map((track, i) => (
-                <Track
-                  track={track}
-                  index={i}
-                  handleDeleteTrack={handleDeleteTrack}
-                />
-              ))}
-            </tbody>
-          </Table>
+        <Row>
+          <Col className="float-left offset-1">
+            <h3>
+              {playlistTitle}
+            </h3>
+          </Col>
         </Row>
+        <Form
+          inline
+          className="float-right offset-6"
+          onClick={handleSaveEditedPlaylist}
+        >
+
+          <Form.Row inline className="float-right">
+            <Col xs="auto" >
+              <FormControl
+                type="text"
+                value={playlistTitle}
+                placeholder="Playlist Title"
+                onChange={(e) => setPlaylistTitle(e.target.value)}
+                className="mr-sm-2 inline"
+              />
+            </Col>
+            <Col xs="auto" >
+              <Button
+                variant="dark inline"
+                onClick={handleDeletePlaylist}
+              > Delete Playlist
+                </Button>{' '}
+              <Button
+                variant="outline-secondary inline"
+                type="submit"
+              > Save Playlist
+                </Button>
+            </Col>
+          </Form.Row>
+        </Form>
+      </Container>
+      <Container>
+        <Table id="playlist_table" hover><br />
+          <thead id="playlist-thead">
+            <tr align="center">
+              <th>   </th>
+              <th>TRACK</th>
+              <th>TITLE</th>
+              <th>ARTIST</th>
+              <th>ALBUM</th>
+              <th>PLAYTIME</th>
+              <th>PLAY</th>
+              <th>   </th>
+            </tr>
+          </thead>
+          <DragDropContext onDragEnd={handleDragEnd}>
+            <Droppable droppableId="droppable">
+              {(provided, snapshot) => (
+                <tbody
+                  {...provided.droppableProps}
+                  ref={provided.innerRef}
+                >
+                  {tracks.map((track, index) => (
+                    <Draggable key={track.uid} draggableId={track.uid} index={index}>
+                      {(provided, snapshot) => (
+                        <tr ref={provided.innerRef}
+                          {...provided.draggableProps}
+                          {...provided.dragHandleProps}
+                          align="center"
+                          scope="row">
+                          <Track
+                            track={track}
+                            index={index}
+                            onDeleteTrack={handleDeleteTrack}
+                          />
+                        </tr>
+                      )}
+                    </Draggable>
+                  ))}
+                  {provided.placeholder}
+                </tbody>
+              )}
+            </Droppable>
+          </DragDropContext>
+        </Table>
       </Container>
     </React.Fragment>
   );
