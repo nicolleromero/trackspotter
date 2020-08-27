@@ -157,10 +157,10 @@ def search():
 
     query = request.args.get('query', '').strip()
     session['query'] = query
-    user_id = session.get('user_id')
-    user = crud.get_user_by_id(user_id)
-    created_at = datetime.now()
 
+    # user_id = session.get('user_id')
+    # user = crud.get_user_by_id(user_id)
+    # created_at = datetime.now()
     # search = crud.create_search(user, created_at, query)
 
     if not query:
@@ -224,6 +224,34 @@ def display_playlist_tracks(playlist_id):
         playlist_dict['playlist_like'] = True
 
     return jsonify(playlist_dict)
+
+
+@app.route('/api/save_playlist_to_spotify', methods=['POST'])
+def save_playlist_spotify():
+
+    # curl -X POST "https://api.spotify.com/v1/users/thelinmichael/playlists"
+    # -H "Authorization: Bearer {your access token}" -H "Content-Type: application/json"
+    # --data "{\"name\":\"A New Playlist\", \"public\":false}"
+
+    token = cred.request_user_token(code)
+
+    with spotify.token_as(token):
+        info = spotify.current_user()
+
+    user_id = session.get('user_id')
+    data = request.get_json()
+    search_tracks = data["playlist_tracks"]
+    name = data["playlist_title"]
+    public = True  # or False
+    description = ''
+
+    Spotify.playlist_create(user_id, name, public=public,
+                            description=description)
+
+    # Required scope: playlist-modify-public
+    # Optional scope: playlist-modify-private
+
+    return(redirect("/"))
 
 
 @app.route('/login', methods=['GET'])
