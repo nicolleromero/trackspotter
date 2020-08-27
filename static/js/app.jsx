@@ -50,6 +50,7 @@ function AdvSearch() {
     }
   }, [query]);
 
+
   function handleSearch(event) {
     event.preventDefault();
 
@@ -102,6 +103,21 @@ function AdvSearch() {
 
     handleReset();
   }
+
+  const handleDragEnd = (result) => {
+    // dropped outside the list
+    if (!result.destination) {
+      return;
+    }
+
+    const newTracks = reorder(
+      tracks,
+      result.source.index,
+      result.destination.index
+    );
+
+    setTracks(newTracks);
+  };
 
   function handleReset() {
     setParam('');
@@ -222,49 +238,68 @@ function AdvSearch() {
                 <th>   </th>
               </tr>
             </thead>
-            <tbody>
-
-              {tracks.map((track, i) => {
-                let order = i + 1;
-                let track_time = millisToTime(track.duration_ms);
-                let to_play = "https://open.spotify.com/embed/track/" + track.id // Handles the player
-                console.log(track.id)
-
-                return (
-                  <tr align="center" scope="row" key={track.id}>
-                    <td></td>
-                    <td>{order}</td>
-                    <td>{track.name}</td>
-                    <td>{track.album.artists[0].name}</td>
-                    <td>{track.album.name}</td>
-                    <td>{track_time}</td>
-                    {/* <td><img src={track.album.images[2].url}></img></td> */}
-                    <td><iframe
-                      src={to_play}
-                      width="80"
-                      height="80"
-                      frameBorder="0"
-                      allowtransparency="true"
-                      allow="encrypted-media"
-                    >
-                    </iframe></td>
-                    <td><button
-                      className="btn btn-sm delete-button"
-                      onClick={() => handleDelete(track.id)}
-                    >
-                      X
-                    </button>
-                    </td>
-                  </tr>
-                )
-              })}
-            </tbody>
+            <DragDropContext onDragEnd={handleDragEnd}>
+              <Droppable droppableId="droppable">
+                {(provided, snapshot) => (
+                  <tbody
+                    {...provided.droppableProps}
+                    ref={provided.innerRef}
+                  >
+                    {tracks.map((track, index) => {
+                      let order = index + 1;
+                      let track_time = millisToTime(track.duration_ms);
+                      let to_play = "https://open.spotify.com/embed/track/" + track.id // Handles the player
+                      return (
+                        <Draggable key={track.id} draggableId={track.id} index={index}>
+                          {(provided, snapshot) => (
+                            <tr ref={provided.innerRef}
+                              {...provided.draggableProps}
+                              {...provided.dragHandleProps}
+                              align="center"
+                              scope="row">
+                              <td></td>
+                              <td>{order}</td>
+                              <td>{track.name}</td>
+                              <td>{track.album.artists[0].name}</td>
+                              <td>{track.album.name}</td>
+                              <td>{track_time}</td>
+                              {/* <td><img src={track.album.images[2].url}></img></td> */}
+                              <td><iframe
+                                src={to_play}
+                                width="80"
+                                height="80"
+                                frameBorder="0"
+                                allowtransparency="true"
+                                allow="encrypted-media"
+                              >
+                              </iframe></td>
+                              <td>
+                                <button
+                                  className="btn btn-sm delete-button"
+                                  onClick={() => handleDelete(track.id)}
+                                >
+                                  X
+                                </button>
+                              </td>
+                            </tr>
+                          )}
+                        </Draggable>
+                      )
+                    })}
+                    {provided.placeholder}
+                  </tbody>
+                )}
+              </Droppable>
+            </DragDropContext>
           </Table>
+
         </Row>
       </Container>
     </React.Fragment>
   );
 }
+
+
 
 function TopPlaylists(props) {
   const [top_playlists, setTopPlaylists] = React.useState([]);
