@@ -245,6 +245,22 @@ def save_edited_playlist():
     return jsonify({})
 
 
+@app.route("/api/copy-playlist", methods=["POST"])
+def copy_playlist():
+
+    user_id = session.get('user_id')
+    data = request.get_json()
+    original_playlist_id = data["playlist_id"]
+    playlist_tracks = data["playlist_tracks"]
+
+    playlist = crud.copy_playlist(
+        user_id, original_playlist_id, playlist_tracks)
+
+    return jsonify({
+        'playlist_id': playlist.playlist_id,
+    })
+
+
 @app.route("/api/update-playlist-like", methods=["POST"])
 def update_playlist_like():
 

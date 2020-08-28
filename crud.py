@@ -333,6 +333,27 @@ def update_edited_playlist(playlist_id, playlist_title, playlist_tracks):
     return playlist
 
 
+def copy_playlist(user_id, original_playlist_id, playlist_tracks):
+
+    original_playlist = get_playlist_by_id(original_playlist_id)
+
+    created_at = datetime.now()
+    last_updated_at = datetime.now()
+    playlist_title = "Copy of " + original_playlist.playlist_title
+
+    new_playlist = create_playlist(
+        user_id, original_playlist.search_id, created_at, last_updated_at, playlist_title)
+
+    # make new playlist_track associations
+    for track_order, track in enumerate(playlist_tracks, start=1):
+        create_playlist_track(
+            track_id=track['track_id'], playlist_id=new_playlist.playlist_id, track_order=track_order)
+
+    db.session.commit()
+
+    return new_playlist
+
+
 def delete_playlist(playlist_id):
     """Create a zombie playlist"""
 

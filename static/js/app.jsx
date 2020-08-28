@@ -130,6 +130,10 @@ function AdvSearch() {
   return (
     <React.Fragment>
       <Container>
+        <Row className="d-flex justify-content-left hyper">
+          <h1>trackspotter </h1>
+          <h3 className="hyper-search slant">HYPER SEARCH </h3><h4>&nbsp;➸</h4>
+        </Row>
         <Row className="d-flex justify-content-center inline">
           <Form onSubmit={handleSearch}>
             <Form.Row className="inline">
@@ -289,7 +293,7 @@ function AdvSearch() {
 
         </Row>
       </Container>
-    </React.Fragment>
+    </React.Fragment >
   );
 }
 
@@ -450,6 +454,9 @@ function PlaylistTracks(props) {
   let [playlistTitle, setPlaylistTitle] = React.useState('');
   let [playlistLike, setPlaylistLike] = React.useState(false);
   let [playlistUser, setPlaylistUser] = React.useState('');
+  let history = useHistory();
+  console.log("history", history)
+  console.log("playlist_id1", playlist_id)
 
   React.useEffect(() => {
     fetch(`/api/playlists/${playlist_id}`)
@@ -461,7 +468,7 @@ function PlaylistTracks(props) {
         setPlaylistUser(playlist.user_id)
         console.log('playlist like', playlist.playlist_like)
       })
-  }, []);
+  }, [playlist_id]);
 
   function handlePlaylistLike() {
     setPlaylistLike(!playlistLike);
@@ -530,6 +537,29 @@ function PlaylistTracks(props) {
       });
   }
 
+  const handleCopyPlaylist = (event) => {
+    event.preventDefault();
+
+    const target_playlist = {
+      "playlist_id": playlist_id,
+      "playlist_title": playlistTitle,
+      "playlist_tracks": tracks,
+    }
+    fetch('/api/copy-playlist', {
+      method: 'POST',
+      body: JSON.stringify(target_playlist),
+      headers: {
+        'Content-Type': 'application/json'
+      },
+    })
+      .then(response => response.json())
+      .then(data => {
+        console.log("history2", history)
+        console.log("playlist_id2", data.playlist_id)
+        history.push(`/playlist/${data.playlist_id}`);
+      });
+  }
+
   const handleDragEnd = (result) => {
     // dropped outside the list
     if (!result.destination) {
@@ -560,14 +590,16 @@ function PlaylistTracks(props) {
 
           <Form.Row inline className="float-right">
             <Col xs="auto" >
-              <FormControl
-                type="text"
-                value={playlistTitle}
-                placeholder="Playlist Title"
-                onChange={(e) => setPlaylistTitle(e.target.value)}
-                className="inline"
-                id="title-form"
-              />
+              {(USER != null && playlistUser === USER.user_id) && (
+                <FormControl
+                  type="text"
+                  value={playlistTitle}
+                  placeholder="Playlist Title"
+                  onChange={(e) => setPlaylistTitle(e.target.value)}
+                  className="inline"
+                  id="title-form"
+                />
+              )}
             </Col>
             <Col xs="auto" >
               {(USER != null && playlistUser === USER.user_id) && (
@@ -588,7 +620,7 @@ function PlaylistTracks(props) {
               {(USER == null || playlistUser !== USER.user_id) && (
                 <Button
                   variant="outline-secondary inline"
-                  type="submit"
+                  onClick={handleCopyPlaylist}
                 > Copy Playlist
                 </Button>
               )}
@@ -678,22 +710,6 @@ function App(props) {
         user={user}
         onLogin={handleLogin} />
       <div>
-        <nav className="navbar navbar-expand-lg">
-          <ul className="nav navbar-nav">
-            <li className="inline">
-              <Link to="/">Home</Link> |&nbsp;
-            </li>
-            {user && (
-              <li className="inline">
-                <Link to="/user-playlists"> User Playlists</Link>  |&nbsp;
-              </li>
-            )}
-            <li className="inline">
-              <Link to="/top-playlists"> Browse Playlists</Link>
-            </li>
-          </ul>
-        </nav>
-
         <Switch>
           <Route exact path="/" component={AdvSearch} />
           <Route exact path="/user-playlists" render={(props) => <UserPlaylists {...props} user={user} />} />

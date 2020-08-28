@@ -6,12 +6,6 @@
 	padding-bottom: 50px;
 }
 
-.btn-spotify {
-  border-radius: 80px;
-  background: transparent;
-  transition: all 0.3s ease 0s;
-}
-
 .btn-spotify:hover {
   color: #FFF;
 }
@@ -19,6 +13,34 @@
 h5 {
 	padding-bottom: 15px;
 	padding-top: 10px;
+}
+
+#topbar {
+  color: #F1F3F8;
+  /* background-color: #393B44; */
+}
+
+.hyper-search {
+  color: #393B44;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-style: italic;
+  font-size: 24px;
+  margin: 0 0 20px 6px;
+  line-height: 40px;
+  letter-spacing: .5px;
+
+}
+
+.hyper {
+  border-bottom: 1px solid #000;
+  line-height: 0.1em;
+  margin: 5px 0 40px;
+}
+
+.line {
+  border-bottom: 1px solid #000;
+  line-height: 0.1em;
+  margin: 10px 0 20px;
 }
 
 #slider {

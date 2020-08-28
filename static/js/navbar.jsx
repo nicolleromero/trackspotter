@@ -6,7 +6,7 @@ const { Badge, Button, Col, Container, Form, FormControl, ListGroup, Navbar, Row
 
 function Topbar(props) {
   return (
-    <Navbar bg="light" variant="light">
+    <Navbar id="topbar">
       <Navbar.Brand href="#home">trackspotter
       <img src="/static/img/spot_icon_bw.png"
           width="30"
@@ -20,11 +20,18 @@ function Topbar(props) {
         onLogin={props.onLogin} />
       <Navbar.Collapse className="justify-content-end">
         {props.user && (
-          <Button href="/logout" variant="outline-secondary inline" id="btn-login" className="btn-spotify"
-          >
-            <img src="/static/img/spot_icon_gr.png" width="30" height="30"></img>&nbsp;
+          <div>
+            <Navbar.Text>
+              Signed in as: <a href="#login">{props.user.spotify_display_name} </a>
+            </Navbar.Text>
+
+            <Button href="/logout" variant="outline-secondary inline" id="btn-login" className="btn-spotify"
+            >
+              <img src="/static/img/spot_icon_gr.png" width="30" height="30"></img>&nbsp;
               Log Out
           </Button>
+
+          </div>
         )}
         {!props.user && (
           <Button
@@ -53,9 +60,21 @@ function Login(props) {
   if (props.user) {
     return (
       <React.Fragment>
-        <Navbar.Text>
-          Signed in as: <a href="#login">{props.user.spotify_display_name}</a>
-        </Navbar.Text>
+        <nav className="navbar navbar-expand-lg">
+          <ul className="nav navbar-nav">
+            <li className="inline">
+              <Link to="/">Home</Link> |&nbsp;
+            </li>
+            {props.user && (
+              <li className="inline">
+                <Link to="/user-playlists"> User Playlists</Link>  |&nbsp;
+              </li>
+            )}
+            <li className="inline">
+              <Link to="/top-playlists"> Browse Playlists</Link>
+            </li>
+          </ul>
+        </nav>
       </React.Fragment>
     );
 
