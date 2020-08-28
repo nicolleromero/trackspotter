@@ -33,9 +33,8 @@ users = {}
 def show_homepage():
     """Show the homepage."""
 
-    user_id = session.get('user_id')
-
-    if user_id:
+    if 'user_id' in session:
+        user_id = session.get('user_id')
         user_dict = crud.get_user_by_id(user_id)
     else:
         user_dict = None
@@ -48,9 +47,8 @@ def show_homepage():
 def catch_all(path):
     """Catchall for all misdirects"""
 
-    user_id = session.get('user_id')
-
-    if user_id:
+    if 'user_id' in session:
+        user_id = session.get('user_id')
         user_dict = crud.get_user_by_id(user_id)
     else:
         user_dict = None
@@ -295,7 +293,7 @@ def save_playlist_spotify():
     description = ''
     # uris = [list of uris for tracks to be added]
 
-    playlist = Spotify.playlist_create(user_id, name, public=public,
+    playlist = Spotify.playlist_create(user_id=user_id, name=name, public=public,
                                        description=description)
 
     Spotify.playlist_add(playlist.playlist_id, uris, position=None)

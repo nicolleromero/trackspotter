@@ -20,7 +20,7 @@ function Topbar(props) {
         onLogin={props.onLogin} />
       <Navbar.Collapse className="justify-content-end">
         {props.user && (
-          <Button href="/logout" variant="outline-secondary inline" id="btn-login"
+          <Button href="/logout" variant="outline-secondary inline" id="btn-login" className="btn-spotify"
           >
             <img src="/static/img/spot_icon_gr.png" width="30" height="30"></img>&nbsp;
               Log Out
@@ -28,6 +28,7 @@ function Topbar(props) {
         )}
         {!props.user && (
           <Button
+            className="btn-spotify"
             href="/login"
             variant="outline-secondary inline"
             id="btn-login"

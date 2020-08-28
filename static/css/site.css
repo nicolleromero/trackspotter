@@ -6,6 +6,16 @@
 	padding-bottom: 50px;
 }
 
+.btn-spotify {
+  border-radius: 80px;
+  background: transparent;
+  transition: all 0.3s ease 0s;
+}
+
+.btn-spotify:hover {
+  color: #FFF;
+}
+
 h5 {
 	padding-bottom: 15px;
 	padding-top: 10px;
@@ -29,7 +39,8 @@ td {
 
 #playlist-thead {
 	color: #F1F3F8;
-	background-color: #393B44;
+  background-color: #393B44;
+  border-style: none !important;
 }
 
 .navbar-nav {
@@ -44,8 +55,8 @@ td {
 }
 
 .badge {
-	background-color: #F1F3F8;
-	color: #393B44;
+	color: #F1F3F8;
+	background-color: #393B44;
 	border-style: solid;
 	border-width: 1px;
 	border-color: #204051;
@@ -60,8 +71,8 @@ span {
 
 #tracks-header {
 	padding: 100 px !important;
-	margin-left: 90px !important;
-	margin-right: 90px !important;
+	margin-left: 20px !important;
+	margin-right: 20px !important;
 	margin-top: 80px !important;
 	margin-bottom: 10px !important;
 }

@@ -366,10 +366,10 @@ function UserPlaylists(props) {
   return (
     <Container >
       <Row className="align-content-center">
-        <Table id="playlist_table" hover><br />
+        <Table id="playlist_table" hover>
           <thead>
             <tr align="center">
-              <th colSpan="4"><h3>
+              <th colSpan="4" class="title"><h3>
                 {props.user.spotify_display_name}'s Playlists
                 <small class="text-muted">&nbsp;🎧&nbsp;&nbsp; you're so amazing...</small>
               </h3></th>
@@ -405,17 +405,17 @@ function UserPlaylists(props) {
 
 
 function PlaylistRow(props) {
-  let queries = [props.query];
+  let queries = props.query.replace(/" /g, ',').split(",");
 
   return (
     <tr align="center" scope="row" key={props.title}>
-      <td>{queries.map((query) => {
+      <td><h5>{queries.map((query) => {
         if (query) {
           return (
-            <h5><Badge pill className="btn-dark badge">{query}</Badge></h5>
+            <Badge pill className="btn-dark badge">{query.replace(/"/g, ' ')}</Badge>
           )
         }
-      })}</td>
+      })}</h5></td>
       <td>{props.title}</td>
       <td>
         {props.likes < 5 && (
@@ -546,7 +546,7 @@ function PlaylistTracks(props) {
   };
 
   return (
-    <React.Fragment>
+    <Container>
       <Row className="d-flex justify-content-between" id="tracks-header">
         <div className="float-left title">
           <h3>
@@ -577,11 +577,21 @@ function PlaylistTracks(props) {
                 > Delete Playlist
                 </Button>
               )}
-              {' '}<Button
-                variant="outline-secondary inline"
-                type="submit"
-              > Save Playlist
-              </Button>
+              {' '}
+              {(USER != null && playlistUser === USER.user_id) && (
+                <Button
+                  variant="outline-secondary inline"
+                  type="submit"
+                > Save Playlist
+                </Button>
+              )}
+              {(USER == null || playlistUser !== USER.user_id) && (
+                <Button
+                  variant="outline-secondary inline"
+                  type="submit"
+                > Copy Playlist
+                </Button>
+              )}
               {!playlistLike && (
                 <span inline className="float-right"><button
                   className="btn btn-sm inline"
@@ -612,8 +622,10 @@ function PlaylistTracks(props) {
               <th>ARTIST</th>
               <th>ALBUM</th>
               <th>PLAYTIME</th>
-              <th>PLAY</th>
-              <th>X</th>
+              <th>PLAY</th><th>
+                {USER != null && playlistUser === USER.user_id && (
+                  <span>X</span>
+                )}</th>
             </tr>
           </thead>
           <DragDropContext onDragEnd={handleDragEnd}>
@@ -624,7 +636,7 @@ function PlaylistTracks(props) {
                   ref={provided.innerRef}
                 >
                   {tracks.map((track, index) => (
-                    <Draggable key={track.uid} draggableId={track.uid} index={index}>
+                    <Draggable key={track.uid} draggableId={track.uid} index={index} isDragDisabled={(USER == null || playlistUser !== USER.user_id)}>
                       {(provided, snapshot) => (
                         <tr ref={provided.innerRef}
                           {...provided.draggableProps}
@@ -634,6 +646,7 @@ function PlaylistTracks(props) {
                           <Track
                             track={track}
                             index={index}
+                            playlistUser={playlistUser}
                             onDeleteTrack={handleDeleteTrack}
                           />
                         </tr>
@@ -647,7 +660,7 @@ function PlaylistTracks(props) {
           </DragDropContext>
         </Table>
       </Container>
-    </React.Fragment>
+    </Container>
   );
 }
 

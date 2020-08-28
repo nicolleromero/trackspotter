@@ -158,10 +158,8 @@ def create_playlist_track(track_id, playlist_id, track_order):
 def get_playlist_by_user_id(target_id):
     """Return a user's playlists"""
 
-    # TODO: add offset so user can get the next 20
-
     results = db.session.query(Playlist, db.func.count(PlaylistLike.playlist_id).label(
-        'total')).join(Playlist.search).outerjoin(PlaylistLike).group_by(Playlist).filter(Playlist.user_id == target_id).order_by(desc('total')).limit(20).all()
+        'total')).join(Playlist.search).outerjoin(PlaylistLike).group_by(Playlist).filter(Playlist.user_id == target_id).order_by(desc('total')).all()
 
     user_playlists = []
 

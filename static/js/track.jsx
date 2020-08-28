@@ -48,12 +48,14 @@ function Track(props) {
         </iframe>
       </td>
       <td>
-        <button
-          className="btn btn-sm delete-button"
-          onClick={() => props.onDeleteTrack(props.track.track_id)}
-        >
-          X
-        </button>
+        {USER != null && props.playlistUser === USER.user_id && (
+          <button
+            className="btn btn-sm delete-button"
+            onClick={() => props.onDeleteTrack(props.track.track_id)}
+          >
+            X
+          </button>
+        )}
       </td>
     </React.Fragment>
   );
