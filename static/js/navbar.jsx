@@ -5,8 +5,6 @@ const { Badge, Button, Col, Container, Form, FormControl, ListGroup, Navbar, Row
 
 
 function Topbar(props) {
-  const [user_id, setUserId] = React.useState('');
-
   return (
     <Navbar bg="light" variant="light">
       <Navbar.Brand href="#home">trackspotter
@@ -45,56 +43,39 @@ function Topbar(props) {
       </Navbar.Collapse>
     </Navbar>
   );
+}
 
+function Login(props) {
+  // Allows for assigning a seeded user during dev; remove for prod
+  const [userId, setUserId] = React.useState('');
 
+  if (props.user) {
+    return (
+      <React.Fragment>
+        <Navbar.Text>
+          Signed in as: <a href="#login">{props.user.spotify_display_name}</a>
+        </Navbar.Text>
+      </React.Fragment>
+    );
 
-  function Login(props) {
-    // Allows for assigning a seeded user during dev; remove for prod
-
-    function handleSetUser(event) {
-      event.preventDefault();
-
-      fetch(`/api/handle-login?query=${encodeURIComponent(user_id)}`)
-        .then(response => response.json())
-        .then((user) => {
-          console.log(user.name, user.user_id, Boolean(user))
-          props.onLogin(user)
-        });
-
-    }
-
-
-    if (props.user) {
-      return (
-        <React.Fragment>
-          <Navbar.Text>
-            Signed in as: <a href="#login">{props.user.spotify_display_name}</a>
-          </Navbar.Text>
-        </React.Fragment>
-      );
-
-    } else {
-      return (
-
-        <Form inline onSubmit={handleSetUser}>
-          <Form.Row>
-            <FormControl
-              type="text"
-              value={user_id}
-              placeholder="Enter user_id"
-              onChange={(e) => setUserId(e.target.value)}
-              className="lg-1 inline"
-              id="log-in"
-            />&nbsp;&nbsp;
-          <Button
-              variant="outline-secondary"
-              type="submit"
-            >
-              Prod Log In
-            </Button>
-          </Form.Row>
-        </Form>
-      );
-    }
+  } else {
+    return (
+      <Form.Row>
+        <FormControl
+          type="text"
+          value={userId}
+          placeholder="Enter user_id"
+          onChange={(e) => setUserId(e.target.value)}
+          className="lg-1 inline"
+          id="log-in"
+        />&nbsp;&nbsp;
+        <Button
+          variant="outline-secondary"
+          href={`/devlogin/${userId}`}
+        >
+          Dev Log In
+          </Button>
+      </Form.Row>
+    );
   }
 }

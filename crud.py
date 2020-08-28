@@ -155,19 +155,10 @@ def create_playlist_track(track_id, playlist_id, track_order):
     return playlist_track
 
 
-# def get_playlist_by_playlist_title(playlist_title):
-#     """Return all tracks for the designated playlist. """
-
-#     playlist_id = db.session.query(Playlist.playlist_id)
-
-#     res = db.session.query(Playlist.playlist_title, db.func.count(PlaylistLike.playlist_id).label(
-#         'total')).join(PlaylistLike).group_by(Playlist).order_by(desc('total')).limit(20).all()
-
-#     return res
-
-
 def get_playlist_by_user_id(target_id):
     """Return a user's playlists"""
+
+    # TODO: add offset so user can get the next 20
 
     results = db.session.query(Playlist, db.func.count(PlaylistLike.playlist_id).label(
         'total')).join(Playlist.search).outerjoin(PlaylistLike).group_by(Playlist).filter(Playlist.user_id == target_id).order_by(desc('total')).limit(20).all()
@@ -187,7 +178,7 @@ def get_playlist_by_user_id(target_id):
 def playlist_ordered_by_likes():
     """Return a list of the top 20 playlists ordered by most likes """
 
-    # SELECT playlist_id, COUNT(*) AS total_num FROM playlist_likes GROUP BY playlist_id ORDER BY total_num DESC;
+    # TODO: add offset so user can get the next 20
 
     results = db.session.query(Playlist, db.func.count(PlaylistLike.playlist_id).label(
         'total')).join(Playlist.search).outerjoin(PlaylistLike).group_by(Playlist).order_by(desc('total')).limit(20).all()
@@ -202,17 +193,6 @@ def playlist_ordered_by_likes():
         playlists_by_likes.append(dictionary)
 
     return playlists_by_likes
-
-
-def playlist_ordered_by_likes_json():
-    """Return a list of the top 20 playlists ordered by most likes as JSON """
-
-    # SELECT playlist_id, COUNT(*) AS total_num FROM playlist_likes GROUP BY playlist_id ORDER BY total_num DESC;
-
-    top_playlists = db.session.query(Playlist.playlist_title, db.func.count(PlaylistLike.playlist_id).label(
-        'total')).join(PlaylistLike).group_by(Playlist).order_by(desc('total')).limit(20).all()
-
-    return main(top_playlists)
 
 
 def create_playlist_like(user_id, playlist_id):
@@ -286,11 +266,8 @@ def tracks_in_playlist_ordered(target_playlist_id):
 
 
 def create_tracks_and_playlist_tracks_for_playlist(tracks_in_playlist, playlist_id):
-    """On clicking "Save Playlist"  """
+    """On clicking Save Playlist  """
 
-    # data = res.json()
-    # tracks = data['tracks']['items']
-    # tracks = data['tracks']['items']
     tracks = tracks_in_playlist
     created_tracks = []
 
@@ -302,19 +279,6 @@ def create_tracks_and_playlist_tracks_for_playlist(tracks_in_playlist, playlist_
 
         # not db.session.query(db.session.query(Track).filter_by(uid=uid).exists()).scalar():
         if db_track is None:
-
-            # {
-            #     'uid': self.uid,
-            #     'title': self.title,
-            #     'artist': self.artist,
-            #     'album': self.album,
-            #     'release_date': self.release_date,
-            #     'playtime': self.playtime,
-            #     'preview': self.preview,
-            #     'genre': self.genre,
-            #     'popularity': self.popularity,
-            #     'album_art': self.album_art,
-            # }
 
             uid, title, artist, album, release_date, playtime, preview, popularity, album_art = (
                 track['id'],
@@ -372,14 +336,10 @@ def update_edited_playlist(playlist_id, playlist_title, playlist_tracks):
 
 
 def delete_playlist(playlist_id):
+    """Create a zombie playlist"""
 
     playlist = get_playlist_by_id(playlist_id)
 
-    # delete all existing playlist_track associations
-    # db.session.query(PlaylistTrack).filter(
-    #     PlaylistTrack.playlist_id == playlist_id).delete()
-
-    # remove association to user
     playlist.user_id = None
 
     db.session.commit()
@@ -388,6 +348,7 @@ def delete_playlist(playlist_id):
 
 
 def get_user_or_add_user(spotify_id, display_name, token=None):
+    """Fetch an existing user or create a user"""
 
     user = User.query.filter(User.spotify_id == spotify_id).first()
 
@@ -417,25 +378,10 @@ def get_access_token_for_user(user_id):
     return access_token
 
 
-def convert(tup, di):
-    di = dict(tup)
-    return di
-
-
-def main(playlists_list):
-    dictionary = {}
-    result = (convert(playlists_list, dictionary))
-
-    return json.dumps(result)
-
-
 if __name__ == '__main__':
     from server import app
     connect_to_db(app)
 
-
-# [('Goth Rock Playlist', 5), ('Healing Playlist', 1), ('Memphis Blues Playlist', 3),
-#  ('Neo - Prog Playlist', 1), ('Rai Playlist', 3), ('Sunshine Pop Playlist', 1), ('Techno Playlist', 4)]
 
 # Test Script
 def test_script():

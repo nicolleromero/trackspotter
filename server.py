@@ -31,7 +31,7 @@ users = {}
 
 @app.route("/")
 def show_homepage():
-    """Show the application's homepage."""
+    """Show the homepage."""
 
     user_id = session.get('user_id')
 
@@ -46,6 +46,7 @@ def show_homepage():
 @app.route('/', defaults={'path': ''})
 @app.route('/<path:path>')
 def catch_all(path):
+    """Catchall for all misdirects"""
 
     user_id = session.get('user_id')
 
@@ -57,19 +58,140 @@ def catch_all(path):
     return render_template("homepage.html", user_json=json.dumps(user_dict))
 
 
-@app.route('/api/handle-login')
-def handle_login():
-    """Log user into application."""
+@app.route('/login', methods=['GET'])
+def login():
+    """Log in to Spotify"""
 
-    user_id = int(request.args.get('query', '').strip())
-    print("logged in user:", user_id)
+    scope = tk.scope.user_read_email
+    auth_url = cred.user_authorisation_url(scope=scope)
 
-    site_user = crud.get_user_by_id(user_id)
-    print(site_user)
+    return redirect(auth_url)
+
+
+@app.route('/devlogin/<user_id>', methods=['GET'])
+def devlogin(user_id):
+    """Log in to a dev user account"""
 
     session['user_id'] = user_id
 
-    return jsonify(site_user)
+    return redirect("/")
+
+
+@app.route('/callback', methods=['GET'])
+def login_callback():
+    """Callback for Spotify login"""
+
+    code = request.args.get('code', None)
+
+    token = cred.request_user_token(code)
+    with spotify.token_as(token):
+        info = spotify.current_user()
+
+    print("************user info.display_name", info.display_name)
+    print("************user info.id", info.id)
+    print("************user info.images", info.images)
+    print("************user token", token)
+
+    display_name = info.display_name
+    spotify_id = info.id
+
+    user = crud.get_user_or_add_user(spotify_id, display_name)
+    session['user_id'] = user.user_id
+
+    # TODO check if user exists, save user_id to session, commit all user info to db
+
+    return redirect('/')
+
+
+@app.route('/logout', methods=['GET'])
+def logout():
+    """Log out from Spotify or dev user"""
+
+    session.clear()
+
+    return redirect('/')
+
+
+@app.route("/api/search")
+def search():
+    """Search for tracks with Spotify endpoint"""
+
+    query = request.args.get('query', '').strip()
+    session['query'] = query
+
+    # user_id = session.get('user_id')
+    # user = crud.get_user_by_id(user_id)
+    # created_at = datetime.now()
+    # search = crud.create_search(user, created_at, query)
+
+    if not query:
+        return jsonify([])
+
+    # spot_key = SPOTIFY_KEY
+    token = cred.request_client_token()
+
+    spot_key = token.access_token
+
+    params = {'q': f'{query}', 'type': 'track'}
+
+    headers = {'Authorization': f'Bearer {spot_key}'}
+
+    res = requests.get('https://api.spotify.com/v1/search?',
+                       headers=headers,
+                       params=params)
+
+    data = res.json()
+    search_tracks = data['tracks']['items']
+    session['search_tracks'] = search_tracks
+
+    # TODO: return tracks from db (add tracks to db, then retrieve w/ crud method)
+
+    return jsonify(search_tracks)
+
+
+@app.route("/api/playlists")
+def display_playlists():
+    """ Display a list of playlists for a user"""
+
+    # TODO: set offset in db query and feed next 20 playlists to client
+
+    user_id = session.get('user_id')
+    data = crud.get_playlist_by_user_id(user_id)
+
+    return jsonify(data)
+
+
+@app.route("/api/top-playlists")
+def get_top_playlists():
+    """Get the top playlists to display """
+
+    # TODO: set offset in db query and feed next 20 playlists to client
+
+    data = crud.playlist_ordered_by_likes()
+
+    return jsonify(data)
+
+
+@app.route("/api/playlists/<playlist_id>")
+def display_playlist_tracks(playlist_id):
+    """Display a list of playlist tracks for a specific playlist"""
+
+    playlist = crud.get_playlist_by_id(playlist_id)
+    playlist_dict = playlist.as_dict()
+    user_id = session.get('user_id')
+
+    playlist_dict['tracks'] = crud.tracks_in_playlist_ordered(playlist_id)
+    playlist_dict['user_id'] = playlist.user_id
+
+    playlist_like = crud.get_playlist_like_by_user(
+        user_id, playlist_id)
+
+    if playlist_like is None:
+        playlist_dict['playlist_like'] = False
+    else:
+        playlist_dict['playlist_like'] = True
+
+    return jsonify(playlist_dict)
 
 
 @app.route("/api/save-playlist", methods=["POST"])
@@ -151,85 +273,12 @@ def delete_playlist():
     return jsonify({})
 
 
-@app.route("/api/search")
-def search():
-    """Search for tracks with Spotify endpoint"""
-
-    query = request.args.get('query', '').strip()
-    session['query'] = query
-
-    # user_id = session.get('user_id')
-    # user = crud.get_user_by_id(user_id)
-    # created_at = datetime.now()
-    # search = crud.create_search(user, created_at, query)
-
-    if not query:
-        return jsonify([])
-
-    # spot_key = SPOTIFY_KEY
-    token = cred.request_client_token()
-
-    spot_key = token.access_token
-
-    params = {'q': f'{query}', 'type': 'track'}
-
-    headers = {'Authorization': f'Bearer {spot_key}'}
-
-    res = requests.get('https://api.spotify.com/v1/search?',
-                       headers=headers,
-                       params=params)
-
-    data = res.json()
-    search_tracks = data['tracks']['items']
-    session['search_tracks'] = search_tracks
-
-    return jsonify(search_tracks)
-
-
-@app.route("/api/playlists")
-def display_playlists():
-    """ Display a list of playlists for a user"""
-
-    user_id = session.get('user_id')
-    data = crud.get_playlist_by_user_id(user_id)
-
-    return jsonify(data)
-
-
-@app.route("/api/top-playlists")
-def get_top_playlists():
-    """Get the top playlists to display """
-
-    data = crud.playlist_ordered_by_likes()
-
-    return jsonify(data)
-
-
-@app.route("/api/playlists/<playlist_id>")
-def display_playlist_tracks(playlist_id):
-    """Display a list of playlist tracks for a specific playlist"""
-
-    playlist = crud.get_playlist_by_id(playlist_id)
-    playlist_dict = playlist.as_dict()
-    user_id = session.get('user_id')
-
-    playlist_dict['tracks'] = crud.tracks_in_playlist_ordered(playlist_id)
-
-    playlist_like = crud.get_playlist_like_by_user(
-        user_id, playlist_id)
-
-    if playlist_like is None:
-        playlist_dict['playlist_like'] = False
-    else:
-        playlist_dict['playlist_like'] = True
-
-    return jsonify(playlist_dict)
-
-
 @app.route('/api/save_playlist_to_spotify', methods=['POST'])
 def save_playlist_spotify():
 
-    # curl -X POST "https://api.spotify.com/v1/users/thelinmichael/playlists"
+    # TODO set up client and back end to save playlist to user's Spotify account
+
+    # POST "https://api.spotify.com/v1/users/thelinmichael/playlists"
     # -H "Authorization: Bearer {your access token}" -H "Content-Type: application/json"
     # --data "{\"name\":\"A New Playlist\", \"public\":false}"
 
@@ -244,55 +293,17 @@ def save_playlist_spotify():
     name = data["playlist_title"]
     public = True  # or False
     description = ''
+    # uris = [list of uris for tracks to be added]
 
-    Spotify.playlist_create(user_id, name, public=public,
-                            description=description)
+    playlist = Spotify.playlist_create(user_id, name, public=public,
+                                       description=description)
+
+    Spotify.playlist_add(playlist.playlist_id, uris, position=None)
 
     # Required scope: playlist-modify-public
     # Optional scope: playlist-modify-private
 
     return(redirect("/"))
-
-
-@app.route('/login', methods=['GET'])
-def login():
-    scope = tk.scope.user_read_email
-    auth_url = cred.user_authorisation_url(scope=scope)
-
-    return redirect(auth_url)
-
-
-@app.route('/callback', methods=['GET'])
-def login_callback():
-
-    code = request.args.get('code', None)
-
-    token = cred.request_user_token(code)
-    with spotify.token_as(token):
-        info = spotify.current_user()
-
-    print("************user info.display_name", info.display_name)
-    print("************user info.id", info.id)
-    print("************user info.images", info.images)
-    print("************user token", token)
-
-    display_name = info.display_name
-    spotify_id = info.id
-
-    user = crud.get_user_or_add_user(spotify_id, display_name)
-    session['user_id'] = user.user_id
-
-    # TODO check if user exists, save user_id to session, commit all user info to db
-
-    return redirect('/')
-
-
-@app.route('/logout', methods=['GET'])
-def logout():
-
-    session.clear()
-
-    return redirect('/')
 
 
 if __name__ == "__main__":

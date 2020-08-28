@@ -130,9 +130,9 @@ function AdvSearch() {
   return (
     <React.Fragment>
       <Container>
-        <Row className="box align-content-center inline">
+        <Row className="d-flex justify-content-center inline">
           <Form onSubmit={handleSearch}>
-            <Col className="align-content-center">
+            <Form.Row className="inline">
               <Form.Group controlId="exampleForm.SelectCustom">
                 <Form.Control as="select" custom onChange={(e) => setPrefix(e.target.value)}>
                   <option value="">keyword</option>
@@ -143,9 +143,6 @@ function AdvSearch() {
                   {/* <option value="NOT ">NOT</option> */}
                 </Form.Control>
               </Form.Group>
-            </Col>
-            <Col className="align-content-center">
-              <Form.Label>Search Term:</Form.Label>
               <FormControl
                 type="text"
                 value={param}
@@ -153,9 +150,9 @@ function AdvSearch() {
                 onChange={(e) => setParam(e.target.value)}
                 className="mr-sm-2 inline"
               />
-            </Col>
-            <Col className="align-content-center">
               <br />
+            </Form.Row>
+            <Form.Row>
               <Button
                 variant="outline-secondary inline"
                 type="submit"
@@ -169,19 +166,19 @@ function AdvSearch() {
               >
                 Clear
               </Button>
-            </Col>
+            </Form.Row>
           </Form>
         </Row>
       </Container>
       <Container>
-        <Row inline>
-          <Col xs="auto" className="align-content-left">
+        <Row className="d-flex justify-content-between">
+          <div xs="auto" className="align-content-left">
             <h5>
               {queries.map((element) => {
                 return (
                   <Badge
                     pill
-                    className="btn btn-dark"
+                    className="btn-dark badge"
                     href="#"
                     variant="dark"
                     key={element}
@@ -192,32 +189,29 @@ function AdvSearch() {
                 )
               })}
             </h5>
-          </Col>
+          </div>
           {tracks.length > 0 && (
             <Form
               inline
-              className="float-right offset-6"
+              className="float-right"
               onSubmit={handleSavePlaylist}
             >
-              <Form.Row inline className="float-right">
-                <Col xs="auto" >
-                  <FormControl
-                    type="text"
-                    value={playlist_title}
-                    placeholder="Playlist Title"
-                    onChange={(e) => setPlaylistTitle(e.target.value)}
-                    className="mr-sm-2 inline"
-                  />
-                </Col>
-                <Col xs="auto">
-                  <Button
-                    // variant="outline-dark offset-9"
-                    variant="outline-secondary"
-                    type="submit"
-                  >
-                    Save Playlist</Button>
-                  <br />
-                </Col>
+              <Form.Row inline className="float-right inline save">
+                <FormControl
+                  type="text"
+                  value={playlist_title}
+                  placeholder="Playlist Title"
+                  onChange={(e) => setPlaylistTitle(e.target.value)}
+                  className="mr-sm-2 inline"
+                  id="title-form"
+                />
+                <Button
+                  // variant="outline-dark offset-9"
+                  variant="outline-secondary"
+                  type="submit"
+                >
+                  Save Playlist</Button>
+                <br />
               </Form.Row>
             </Form>
           )}
@@ -226,7 +220,7 @@ function AdvSearch() {
       <Container className="tracks">
         <Row className="align-content-center">
           <Table hover>
-            <thead>
+            <thead id="playlist-thead">
               <tr align="center">
                 <th>   </th>
                 <th>TRACK</th>
@@ -235,7 +229,7 @@ function AdvSearch() {
                 <th>ALBUM</th>
                 <th>PLAYTIME</th>
                 <th>PLAY</th>
-                <th>   </th>
+                <th>X</th>
               </tr>
             </thead>
             <DragDropContext onDragEnd={handleDragEnd}>
@@ -320,7 +314,7 @@ function TopPlaylists(props) {
           <Table id="playlist_table" hover>
             <thead>
               <tr align="center">
-                <th colSpan="4"><h3>
+                <th colSpan="4" class="title"><h3>
                   Popular Playlists
               <small class="text-muted">&nbsp;🎧&nbsp;&nbsp; by genre</small>
                 </h3></th>
@@ -418,13 +412,18 @@ function PlaylistRow(props) {
       <td>{queries.map((query) => {
         if (query) {
           return (
-            <h5><Badge pill variant="dark">{query}</Badge></h5>
+            <h5><Badge pill className="btn-dark badge">{query}</Badge></h5>
           )
         }
       })}</td>
       <td>{props.title}</td>
       <td>
-        <h4>{'♪'.repeat(props.likes)}</h4>
+        {props.likes < 5 && (
+          <p>{'★'.repeat(props.likes)}{'☆'.repeat(5 - props.likes)}</p>
+        )}
+        {props.likes > 4 && (
+          <p>{'★'.repeat(5)}</p>
+        )}
       </td>
       <td>
         <Link to={`/playlist/${props.playlist_id}`}>
@@ -450,6 +449,7 @@ function PlaylistTracks(props) {
   let [tracks, setTracks] = React.useState([]);
   let [playlistTitle, setPlaylistTitle] = React.useState('');
   let [playlistLike, setPlaylistLike] = React.useState(false);
+  let [playlistUser, setPlaylistUser] = React.useState('');
 
   React.useEffect(() => {
     fetch(`/api/playlists/${playlist_id}`)
@@ -458,6 +458,7 @@ function PlaylistTracks(props) {
         setTracks(playlist.tracks);
         setPlaylistTitle(playlist.playlist_title)
         setPlaylistLike(playlist.playlist_like)
+        setPlaylistUser(playlist.user_id)
         console.log('playlist like', playlist.playlist_like)
       })
   }, []);
@@ -546,17 +547,14 @@ function PlaylistTracks(props) {
 
   return (
     <React.Fragment>
-      <Container>
-        <Row>
-          <Col className="float-left offset-1 inline">
-            <h3>
-              {playlistTitle}
-            </h3>
-          </Col>
-        </Row>
+      <Row className="d-flex justify-content-between" id="tracks-header">
+        <div className="float-left title">
+          <h3>
+            {playlistTitle}
+          </h3>
+        </div>
         <Form
           inline
-          className="float-right offset-6"
           onClick={handleSaveEditedPlaylist}
         >
 
@@ -567,16 +565,19 @@ function PlaylistTracks(props) {
                 value={playlistTitle}
                 placeholder="Playlist Title"
                 onChange={(e) => setPlaylistTitle(e.target.value)}
-                className="mr-sm-2 inline"
+                className="inline"
+                id="title-form"
               />
             </Col>
             <Col xs="auto" >
-              <Button
-                variant="dark inline"
-                onClick={handleDeletePlaylist}
-              > Delete Playlist
-                </Button>{' '}
-              <Button
+              {(USER != null && playlistUser === USER.user_id) && (
+                <Button
+                  variant="dark inline"
+                  onClick={handleDeletePlaylist}
+                > Delete Playlist
+                </Button>
+              )}
+              {' '}<Button
                 variant="outline-secondary inline"
                 type="submit"
               > Save Playlist
@@ -586,7 +587,7 @@ function PlaylistTracks(props) {
                   className="btn btn-sm inline"
                   onClick={handlePlaylistLike}
                 >
-                  <h4>♡</h4>
+                  <h4>☆</h4>
                 </button></span>
               )}
               {playlistLike && (
@@ -594,13 +595,13 @@ function PlaylistTracks(props) {
                   className="btn btn-sm inline"
                   onClick={handlePlaylistLike}
                 >
-                  <h3>♥︎</h3>
+                  <h4>★</h4>
                 </button></span>
               )}
             </Col>
           </Form.Row>
         </Form>
-      </Container>
+      </Row>
       <Container>
         <Table id="playlist_table" hover><br />
           <thead id="playlist-thead">
@@ -612,7 +613,7 @@ function PlaylistTracks(props) {
               <th>ALBUM</th>
               <th>PLAYTIME</th>
               <th>PLAY</th>
-              <th>   </th>
+              <th>X</th>
             </tr>
           </thead>
           <DragDropContext onDragEnd={handleDragEnd}>
