@@ -132,7 +132,7 @@ function AdvSearch() {
       <Container>
         <Row className="d-flex justify-content-left hyper">
           <h1>trackspotter </h1>
-          <h3 className="hyper-search slant">HYPER SEARCH </h3><h4>&nbsp;➸</h4>
+          {/* <h3 className="hyper-search slant">HYPER SEARCH </h3><h4>&nbsp;➸</h4> */}
         </Row>
         <Row className="d-flex justify-content-center inline">
           <Form onSubmit={handleSearch}>
