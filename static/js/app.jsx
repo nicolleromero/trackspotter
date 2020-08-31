@@ -6,9 +6,7 @@ const { DragDropContext, Droppable, Draggable } = ReactBeautifulDnd;
 const Router = ReactRouterDOM.BrowserRouter;
 const Route = ReactRouterDOM.Route;
 const Link = ReactRouterDOM.Link;
-const Prompt = ReactRouterDOM.Prompt;
 const Switch = ReactRouterDOM.Switch;
-const Redirect = ReactRouterDOM.Redirect;
 const useHistory = ReactRouterDOM.useHistory;
 
 function millisToTime(milliseconds) {
@@ -133,7 +131,6 @@ function AdvSearch() {
       <Container>
         <Row className="d-flex justify-content-left hyper">
           <h1>trackspotter </h1>
-          {/* <h3 className="hyper-search slant">HYPER SEARCH </h3><h4>&nbsp;➸</h4> */}
         </Row>
         <Row className="d-flex justify-content-center inline">
           <Form onSubmit={handleSearch}>
@@ -212,7 +209,6 @@ function AdvSearch() {
                     id="title-form"
                   />
                   <Button
-                    // variant="outline-dark offset-9"
                     variant="outline-secondary"
                     type="submit"
                   >
@@ -407,46 +403,6 @@ function UserPlaylists(props) {
         </Table>
       </Row>
     </Container >
-  )
-}
-
-
-function PlaylistRow(props) {
-  let queries = props.query.replace(/" /g, ',').split(",");
-
-  return (
-    <tr align="center" scope="row" key={props.title}>
-      <td><h5>{queries.map((query) => {
-        if (query) {
-          return (
-            <Badge pill className="btn-dark badge">{query.replace(/"/g, ' ')}</Badge>
-          )
-        }
-      })}</h5></td>
-      <td>{props.title}</td>
-      <td>
-        {props.likes < 5 && (
-          <p>{'★'.repeat(props.likes)}{'☆'.repeat(5 - props.likes)}</p>
-        )}
-        {props.likes > 4 && (
-          <p>{'★'.repeat(5)}</p>
-        )}
-      </td>
-      <td>
-        <Link to={`/playlist/${props.playlist_id}`}>
-          <button
-            className="btn btn-sm"
-          >
-            <img
-              src="/static/img/transparent-play-button-icon-18.jpg"
-              width="30"
-              height="30"
-              className="d-inline-block align-top"
-            />
-          </button>
-        </Link>
-      </td>
-    </tr >
   )
 }
 
