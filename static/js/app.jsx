@@ -489,10 +489,8 @@ function PlaylistTracks(props) {
       .then(response => response.json())
       .then(data => {
         console.log('playlist like response', data);
-        // TODO: maybe do something here?
       });
   }
-  // TODO create route to update playlist like for playlist
 
 
   function handleDeleteTrack(target) {
@@ -514,7 +512,6 @@ function PlaylistTracks(props) {
       .then(response => response.json())
       .then(data => {
         console.log('deleted-playlist response', data);
-        // TODO: maybe do something here?
       });
   }
 
@@ -537,7 +534,6 @@ function PlaylistTracks(props) {
       .then(response => response.json())
       .then(data => {
         console.log('update-playlist response', data);
-        // TODO: maybe do something here?
       });
   }
 
@@ -579,6 +575,8 @@ function PlaylistTracks(props) {
     setTracks(newTracks);
   };
 
+  let editable = (USER != null && playlistUser === USER.user_id);
+
   return (
     <Container>
       <Row className="d-flex justify-content-between" id="tracks-header">
@@ -591,10 +589,9 @@ function PlaylistTracks(props) {
           inline
           onClick={handleSaveEditedPlaylist}
         >
-
           <Form.Row inline className="float-right">
             <Col xs="auto" >
-              {(USER != null && playlistUser === USER.user_id) && (
+              {editable && (
                 <FormControl
                   type="text"
                   value={playlistTitle}
@@ -606,7 +603,7 @@ function PlaylistTracks(props) {
               )}
             </Col>
             <Col xs="auto" >
-              {(USER != null && playlistUser === USER.user_id) && (
+              {editable && (
                 <Button
                   variant="dark inline"
                   onClick={handleDeletePlaylist}
@@ -614,14 +611,14 @@ function PlaylistTracks(props) {
                 </Button>
               )}
               {' '}
-              {(USER != null && playlistUser === USER.user_id) && (
+              {editable && (
                 <Button
                   variant="outline-secondary inline"
                   type="submit"
                 > Save Playlist
                 </Button>
               )}
-              {(USER == null || playlistUser !== USER.user_id) && (
+              {!editable && (
                 <Button
                   variant="outline-secondary inline"
                   onClick={handleCopyPlaylist}
@@ -659,7 +656,7 @@ function PlaylistTracks(props) {
               <th>ALBUM</th>
               <th>PLAYTIME</th>
               <th>PLAY</th><th>
-                {USER != null && playlistUser === USER.user_id && (
+                {editable && (
                   <span>X</span>
                 )}</th>
             </tr>

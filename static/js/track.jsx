@@ -4,7 +4,6 @@ const { Provider, useSelector, useDispatch } = ReactRedux;
 const { Badge, Button, Col, Container, Dropdown, DropdownButton, Form, FormControl, InputGroup, ListGroup, Navbar, Row, Table } = ReactBootstrap;
 
 
-// This component requires the following props: track, handleDeleteTrack
 // Map over a list of track objects
 
 function Track(props) {
@@ -18,12 +17,12 @@ function Track(props) {
   // Order for search results should come from map func index
   let order = props.index + 1;
 
-  // Or get order from playlist_tracks.track_order
-  // let order = props.track.track_order
 
   // Handles the player
   let to_play = "https://open.spotify.com/embed/track/" + props.track.uid;
   console.log(to_play)
+
+  let editable = (USER != null && props.playlistUser === USER.user_id);
 
   return (
     <React.Fragment>
@@ -48,7 +47,7 @@ function Track(props) {
         </iframe>
       </td>
       <td>
-        {USER != null && props.playlistUser === USER.user_id && (
+        {editable && (
           <button
             className="btn btn-sm delete-button"
             onClick={() => props.onDeleteTrack(props.track.track_id)}
