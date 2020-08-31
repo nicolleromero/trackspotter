@@ -7,13 +7,6 @@ const { Badge, Button, Col, Container, Form, FormControl, ListGroup, Navbar, Row
 function Topbar(props) {
   return (
     <Navbar id="topbar">
-      <Navbar.Brand href="#home">trackspotter
-      <img src="/static/img/spot_icon_bw.png"
-          width="30"
-          height="30"
-          className="d-inline-block align-top"
-          alt="Spotify logo" />
-      </Navbar.Brand>
       <Navbar.Toggle />
       <Login
         user={props.user}

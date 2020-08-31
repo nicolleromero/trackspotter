@@ -60,7 +60,8 @@ def catch_all(path):
 def login():
     """Log in to Spotify"""
 
-    scope = tk.scope.user_read_email
+    scope = tk.scope.playlist_modify_public + \
+        tk.scope.user_top_read + tk.scope.playlist_modify_private
     auth_url = cred.user_authorisation_url(scope=scope)
 
     return redirect(auth_url)
@@ -80,23 +81,19 @@ def login_callback():
     """Callback for Spotify login"""
 
     code = request.args.get('code', None)
+    print("code", code)
+    session['code'] = code
 
     token = cred.request_user_token(code)
+
     with spotify.token_as(token):
         info = spotify.current_user()
-
-    print("************user info.display_name", info.display_name)
-    print("************user info.id", info.id)
-    print("************user info.images", info.images)
-    print("************user token", token)
 
     display_name = info.display_name
     spotify_id = info.id
 
-    user = crud.get_user_or_add_user(spotify_id, display_name)
+    user = crud.get_user_or_add_user(spotify_id, display_name, token)
     session['user_id'] = user.user_id
-
-    # TODO check if user exists, save user_id to session, commit all user info to db
 
     return redirect('/')
 
@@ -117,15 +114,9 @@ def search():
     query = request.args.get('query', '').strip()
     session['query'] = query
 
-    # user_id = session.get('user_id')
-    # user = crud.get_user_by_id(user_id)
-    # created_at = datetime.now()
-    # search = crud.create_search(user, created_at, query)
-
     if not query:
         return jsonify([])
 
-    # spot_key = SPOTIFY_KEY
     token = cred.request_client_token()
 
     spot_key = token.access_token
@@ -150,8 +141,6 @@ def search():
 @app.route("/api/playlists")
 def display_playlists():
     """ Display a list of playlists for a user"""
-
-    # TODO: set offset in db query and feed next 20 playlists to client
 
     user_id = session.get('user_id')
     data = crud.get_playlist_by_user_id(user_id)
@@ -232,7 +221,12 @@ def save_playlist():
 
 @app.route("/api/update-playlist", methods=["POST"])
 def save_edited_playlist():
-    """Update db for an edited playlist"""
+    """Update db for an edited playlist and save to Spotify"""
+
+    user_id = session.get('user_id')
+    user = crud.get_user(user_id) if user_id else None
+    if not user:
+        raise 'TODO Unautborized Exception'
 
     data = request.get_json()
     playlist_tracks = data["playlist_tracks"]
@@ -241,6 +235,25 @@ def save_edited_playlist():
 
     playlist = crud.update_edited_playlist(
         playlist_id=playlist_id, playlist_tracks=playlist_tracks, playlist_title=playlist_title)
+
+    print("user refresh token", user.refresh_token)
+    token = tk.refresh_user_token(client_id, client_secret, user.refresh_token)
+
+    # TODO Check to see if spotify_playlist_id exists in db or prompt to log in to Spotify
+
+    uris = []
+    for track in playlist_tracks:
+        uris.append("spotify:track:" + track['uid'])
+        print("spotify:track:" + track['uid'])
+
+    name = data["playlist_title"]
+
+    with spotify.token_as(token):
+        playlist = spotify.playlist_create(user.spotify_id, name=name, public=False,
+                                           description=None)
+
+        response = spotify.playlist_add(playlist.id, uris=uris, position=None)
+        print("Response from playlist save attempt", response)
 
     return jsonify({})
 
@@ -285,39 +298,6 @@ def delete_playlist():
         playlist_id=playlist_id)
 
     return jsonify({})
-
-
-@app.route('/api/save_playlist_to_spotify', methods=['POST'])
-def save_playlist_spotify():
-
-    # TODO set up client and back end to save playlist to user's Spotify account
-
-    # POST "https://api.spotify.com/v1/users/thelinmichael/playlists"
-    # -H "Authorization: Bearer {your access token}" -H "Content-Type: application/json"
-    # --data "{\"name\":\"A New Playlist\", \"public\":false}"
-
-    token = cred.request_user_token(code)
-
-    with spotify.token_as(token):
-        info = spotify.current_user()
-
-    user_id = session.get('user_id')
-    data = request.get_json()
-    search_tracks = data["playlist_tracks"]
-    name = data["playlist_title"]
-    public = True  # or False
-    description = ''
-    # uris = [list of uris for tracks to be added]
-
-    playlist = Spotify.playlist_create(user_id=user_id, name=name, public=public,
-                                       description=description)
-
-    Spotify.playlist_add(playlist.playlist_id, uris, position=None)
-
-    # Required scope: playlist-modify-public
-    # Optional scope: playlist-modify-private
-
-    return(redirect("/"))
 
 
 if __name__ == "__main__":

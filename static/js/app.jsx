@@ -83,6 +83,7 @@ function AdvSearch() {
 
   const handleSavePlaylist = (event) => {
     event.preventDefault();
+    console.log("tracks", tracks)
 
     const target_playlist = {
       "playlist_title": playlist_title,
@@ -194,29 +195,31 @@ function AdvSearch() {
               })}
             </h5>
           </div>
-          {tracks.length > 0 && (
+          {tracks.length > 0 && USER != null && (
             <Form
               inline
               className="float-right"
               onSubmit={handleSavePlaylist}
             >
-              <Form.Row inline className="float-right inline save">
-                <FormControl
-                  type="text"
-                  value={playlist_title}
-                  placeholder="Playlist Title"
-                  onChange={(e) => setPlaylistTitle(e.target.value)}
-                  className="mr-sm-2 inline"
-                  id="title-form"
-                />
-                <Button
-                  // variant="outline-dark offset-9"
-                  variant="outline-secondary"
-                  type="submit"
-                >
-                  Save Playlist</Button>
-                <br />
-              </Form.Row>
+              {tracks.length > 0 && USER != null && (
+                <Form.Row inline className="float-right inline save">
+                  <FormControl
+                    type="text"
+                    value={playlist_title}
+                    placeholder="Playlist Title"
+                    onChange={(e) => setPlaylistTitle(e.target.value)}
+                    className="mr-sm-2 inline"
+                    id="title-form"
+                  />
+                  <Button
+                    // variant="outline-dark offset-9"
+                    variant="outline-secondary"
+                    type="submit"
+                  >
+                    Save Playlist</Button>
+                  <br />
+                </Form.Row>
+              )}
             </Form>
           )}
         </Row>
@@ -517,6 +520,7 @@ function PlaylistTracks(props) {
 
   const handleSaveEditedPlaylist = (event) => {
     event.preventDefault();
+    console.log("tracks", tracks)
 
     const target_playlist = {
       "playlist_id": playlist_id,

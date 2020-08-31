@@ -36,6 +36,14 @@ def get_user_by_id(user_id):
     return {'user_id': user.user_id, 'spotify_id': user.spotify_id, 'spotify_display_name': user.spotify_display_name}
 
 
+def get_user(user_id):
+    """Return details for a specific user"""
+
+    user = User.query.get(user_id)
+
+    return user
+
+
 def create_search(user_id, created_at, query):
     """Create a new search"""
 
