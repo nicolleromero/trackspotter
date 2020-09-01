@@ -255,6 +255,9 @@ def save_edited_playlist():
         response = spotify.playlist_add(playlist.id, uris=uris, position=None)
         print("Response from playlist save attempt", response)
 
+    playlist = crud.update_edited_playlist(
+        playlist_id=playlist_id, playlist_tracks=playlist_tracks, playlist_title=playlist_title)
+
     return jsonify({})
 
 

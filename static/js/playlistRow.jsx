@@ -1,4 +1,4 @@
-const { Component, useEffect, useState, useCallback, useMemo } = React;
+const { Component, useEffect, useRef, useState, useCallback, useMemo } = React;
 const { render } = ReactDOM;
 const { Badge, Button, Col, Container, Dropdown, DropdownButton, Form, FormControl, FormGroup, InputGroup, ListGroup, Navbar, Row, Table } = ReactBootstrap;
 
@@ -47,6 +47,44 @@ function PlaylistRow(props) {
           </button>
         </Link>
       </td>
+      {/* <td>
+        <Share
+        />
+      </td> */}
     </tr >
   )
 }
+
+// function Share(props) {
+
+//   const [copyStatus, setCopyStatus] = useState('');
+//   const textAreaRef = useRef(null);
+
+//   let shareLink = "http://localhost:5000/playlist/" + props.playlist_id;
+
+//   function copyToClipboard(e) {
+//     textAreaRef.current.select();
+//     document.execCommand('copy');
+//     e.target.focus();
+//     setCopyStatus('Copied!');
+//   };
+
+//   return (
+//     <div>
+//       {
+//         document.queryCommandSupported('copy') &&
+//         <div>
+//           <button
+//             onClick={copyToClipboard}>Share</button>
+//           {copyStatus}
+//         </div>
+//       }
+//       <form>
+//         <textarea
+//           ref={textAreaRef}
+//           value={shareLink}
+//         />
+//       </form>
+//     </div>
+//   );
+// }

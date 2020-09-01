@@ -58,10 +58,7 @@ function AdvSearch() {
     } else {
       newQueries.push(`${prefix}"${param}"`);
     }
-
     setQueries(newQueries);
-    console.log(`queries: ${newQueries}, query: ${buildQuery(newQueries)}`);
-
     setParam('');
     setPrefix('');
   }
@@ -81,7 +78,6 @@ function AdvSearch() {
 
   const handleSavePlaylist = (event) => {
     event.preventDefault();
-    console.log("tracks", tracks)
 
     const target_playlist = {
       "playlist_title": playlist_title,
@@ -104,7 +100,6 @@ function AdvSearch() {
   }
 
   const handleDragEnd = (result) => {
-    // dropped outside the list
     if (!result.destination) {
       return;
     }
@@ -132,46 +127,14 @@ function AdvSearch() {
         <Row className="d-flex justify-content-left hyper">
           <h1>trackspotter </h1>
         </Row>
-        <Row className="d-flex justify-content-center inline">
-          <Form onSubmit={handleSearch}>
-            <Form.Row className="inline">
-              <Form.Group controlId="exampleForm.SelectCustom">
-                <Form.Control as="select" custom onChange={(e) => setPrefix(e.target.value)}>
-                  <option value="">keyword</option>
-                  <option value="artist:">artist</option>
-                  <option value="album:">album</option>
-                  <option value="genre:">genre</option>
-                  <option value="year:">year</option>
-                  {/* <option value="NOT ">NOT</option> */}
-                </Form.Control>
-              </Form.Group>
-              <FormControl
-                type="text"
-                value={param}
-                placeholder="Enter a term"
-                onChange={(e) => setParam(e.target.value)}
-                className="mr-sm-2 inline"
-              />
-              <br />
-            </Form.Row>
-            <Form.Row>
-              <Button
-                variant="outline-secondary inline"
-                type="submit"
-              >
-                Search
-              </Button>
-              &nbsp;&nbsp;&nbsp;&nbsp;
-              <Button
-                variant="outline-secondary inline"
-                onClick={handleReset}
-              >
-                Clear
-              </Button>
-            </Form.Row>
-          </Form>
-        </Row>
       </Container>
+      <StructuredSearch
+        handleSearch={handleSearch}
+        setPrefix={setPrefix}
+        setParam={setParam}
+        handleReset={handleReset}
+        param={param}
+      />
       <Container>
         <Row className="d-flex justify-content-between">
           <div xs="auto" className="align-content-left">
@@ -223,18 +186,9 @@ function AdvSearch() {
       <Container className="tracks">
         <Row className="align-content-center">
           <Table hover>
-            <thead id="playlist-thead">
-              <tr align="center">
-                <th>   </th>
-                <th>TRACK</th>
-                <th>TITLE</th>
-                <th>ARTIST</th>
-                <th>ALBUM</th>
-                <th>PLAYTIME</th>
-                <th>PLAY</th>
-                <th>X</th>
-              </tr>
-            </thead>
+            <TracksHeader
+              editable={true}
+            />
             <DragDropContext onDragEnd={handleDragEnd}>
               <Droppable droppableId="droppable">
                 {(provided, snapshot) => (
@@ -305,7 +259,6 @@ function TopPlaylists(props) {
     fetch(`/api/top-playlists`)
       .then(response => response.json())
       .then((data) => {
-        console.log(data);
         setTopPlaylists(data);
       })
   }, [])
@@ -315,22 +268,9 @@ function TopPlaylists(props) {
       <Container >
         <Row className="align-content-center">
           <Table id="playlist_table" hover>
-            <thead>
-              <tr align="center">
-                <th colSpan="4" class="title"><h3>
-                  Popular Playlists
-              <small class="text-muted">&nbsp;🎧&nbsp;&nbsp; by genre</small>
-                </h3></th>
-              </tr>
-            </thead>
-            <thead id="playlist-thead">
-              <tr align="center">
-                <th>SEARCH TERMS</th>
-                <th>PLAYLIST TITLE</th>
-                <th>RATING</th>
-                <th>PLAY</th>
-              </tr>
-            </thead>
+            <PlaylistHeader
+              title="Popular Playlists"
+            />
             <tbody>
               {top_playlists.map((playlist) => {
                 return (
@@ -355,37 +295,21 @@ function TopPlaylists(props) {
 function UserPlaylists(props) {
   let [user_playlists, setUserPlaylists] = React.useState([]);
 
-
   React.useEffect(() => {
-
     fetch(`/api/playlists`)
       .then(response => response.json())
       .then((data) => {
-        console.log(data);
         setUserPlaylists(data);
       })
   }, [])
 
   return (
-    <Container >
+    <Container>
       <Row className="align-content-center">
         <Table id="playlist_table" hover>
-          <thead>
-            <tr align="center">
-              <th colSpan="4" class="title"><h3>
-                {props.user.spotify_display_name}'s Playlists
-                <small class="text-muted">&nbsp;🎧&nbsp;&nbsp; you're so amazing...</small>
-              </h3></th>
-            </tr>
-          </thead>
-          <thead id="playlist-thead">
-            <tr align="center">
-              <th>SEARCH TERMS</th>
-              <th>PLAYLIST TITLE</th>
-              <th>RATING</th>
-              <th>PLAY</th>
-            </tr>
-          </thead>
+          <PlaylistHeader
+            title="Your Playlists"
+          />
           <tbody>
             {user_playlists.map((playlist) => {
               return (
@@ -402,10 +326,9 @@ function UserPlaylists(props) {
           </tbody>
         </Table>
       </Row>
-    </Container >
+    </Container>
   )
 }
-
 
 function PlaylistTracks(props) {
   let { playlist_id } = props.match.params;
@@ -414,8 +337,6 @@ function PlaylistTracks(props) {
   let [playlistLike, setPlaylistLike] = React.useState(false);
   let [playlistUser, setPlaylistUser] = React.useState('');
   let history = useHistory();
-  console.log("history", history)
-  console.log("playlist_id1", playlist_id)
 
   React.useEffect(() => {
     fetch(`/api/playlists/${playlist_id}`)
@@ -425,7 +346,6 @@ function PlaylistTracks(props) {
         setPlaylistTitle(playlist.playlist_title)
         setPlaylistLike(playlist.playlist_like)
         setPlaylistUser(playlist.user_id)
-        console.log('playlist like', playlist.playlist_like)
       })
   }, [playlist_id]);
 
@@ -444,10 +364,8 @@ function PlaylistTracks(props) {
     })
       .then(response => response.json())
       .then(data => {
-        console.log('playlist like response', data);
       });
   }
-
 
   function handleDeleteTrack(target) {
     const newTracks = tracks.filter((t) => t.track_id !== target);
@@ -467,13 +385,11 @@ function PlaylistTracks(props) {
     })
       .then(response => response.json())
       .then(data => {
-        console.log('deleted-playlist response', data);
       });
   }
 
   const handleSaveEditedPlaylist = (event) => {
     event.preventDefault();
-    console.log("tracks", tracks)
 
     const target_playlist = {
       "playlist_id": playlist_id,
@@ -489,7 +405,6 @@ function PlaylistTracks(props) {
     })
       .then(response => response.json())
       .then(data => {
-        console.log('update-playlist response', data);
       });
   }
 
@@ -510,8 +425,6 @@ function PlaylistTracks(props) {
     })
       .then(response => response.json())
       .then(data => {
-        console.log("history2", history)
-        console.log("playlist_id2", data.playlist_id)
         history.push(`/playlist/${data.playlist_id}`);
       });
   }
@@ -527,7 +440,6 @@ function PlaylistTracks(props) {
       result.source.index,
       result.destination.index
     );
-
     setTracks(newTracks);
   };
 
@@ -535,88 +447,21 @@ function PlaylistTracks(props) {
 
   return (
     <Container>
-      <Row className="d-flex justify-content-between" id="tracks-header">
-        <div className="float-left title">
-          <h3>
-            {playlistTitle}
-          </h3>
-        </div>
-        <Form
-          inline
-          onClick={handleSaveEditedPlaylist}
-        >
-          <Form.Row inline className="float-right">
-            <Col xs="auto" >
-              {editable && (
-                <FormControl
-                  type="text"
-                  value={playlistTitle}
-                  placeholder="Playlist Title"
-                  onChange={(e) => setPlaylistTitle(e.target.value)}
-                  className="inline"
-                  id="title-form"
-                />
-              )}
-            </Col>
-            <Col xs="auto" >
-              {editable && (
-                <Button
-                  variant="dark inline"
-                  onClick={handleDeletePlaylist}
-                > Delete Playlist
-                </Button>
-              )}
-              {' '}
-              {editable && (
-                <Button
-                  variant="outline-secondary inline"
-                  type="submit"
-                > Save Playlist
-                </Button>
-              )}
-              {!editable && (
-                <Button
-                  variant="outline-secondary inline"
-                  onClick={handleCopyPlaylist}
-                > Copy Playlist
-                </Button>
-              )}
-              {!playlistLike && (
-                <span inline className="float-right"><button
-                  className="btn btn-sm inline"
-                  onClick={handlePlaylistLike}
-                >
-                  <h4>☆</h4>
-                </button></span>
-              )}
-              {playlistLike && (
-                <span inline className="float-right"><button
-                  className="btn btn-sm inline"
-                  onClick={handlePlaylistLike}
-                >
-                  <h4>★</h4>
-                </button></span>
-              )}
-            </Col>
-          </Form.Row>
-        </Form>
-      </Row>
+      <TrackslistUI
+        playlistTitle={playlistTitle}
+        handleSaveEditedPlaylist={handleSaveEditedPlaylist}
+        setPlaylistTitle={setPlaylistTitle}
+        handleDeletePlaylist={handleDeletePlaylist}
+        handleCopyPlaylist={handleCopyPlaylist}
+        handlePlaylistLike={handlePlaylistLike}
+        editable={editable}
+        playlistLike={playlistLike}
+      />
       <Container>
         <Table id="playlist_table" hover><br />
-          <thead id="playlist-thead">
-            <tr align="center">
-              <th>   </th>
-              <th>TRACK</th>
-              <th>TITLE</th>
-              <th>ARTIST</th>
-              <th>ALBUM</th>
-              <th>PLAYTIME</th>
-              <th>PLAY</th><th>
-                {editable && (
-                  <span>X</span>
-                )}</th>
-            </tr>
-          </thead>
+          <TracksHeader
+            editable={editable}
+          />
           <DragDropContext onDragEnd={handleDragEnd}>
             <Droppable droppableId="droppable">
               {(provided, snapshot) => (
@@ -652,7 +497,6 @@ function PlaylistTracks(props) {
     </Container>
   );
 }
-
 
 function App(props) {
   const [user, setUser] = React.useState(USER);
