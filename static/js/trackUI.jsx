@@ -14,6 +14,12 @@ const useHistory = ReactRouterDOM.useHistory;
 
 function TrackslistUI(props) {
 
+  function handleCopyURLtoClipboard() {
+    let shareURL = "http://localhost:5000/playlist/" + props.PlaylistId
+    console.log(shareURL)
+    return shareURL
+  }
+
   return (
 
     <Row className="d-flex justify-content-between" id="tracks-header">

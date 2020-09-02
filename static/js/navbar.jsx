@@ -73,22 +73,34 @@ function Login(props) {
 
   } else {
     return (
-      <Form.Row>
-        <FormControl
-          type="text"
-          value={userId}
-          placeholder="Enter user_id"
-          onChange={(e) => setUserId(e.target.value)}
-          className="lg-1 inline"
-          id="log-in"
-        />&nbsp;&nbsp;
+      <React.Fragment>
+        <nav className="navbar navbar-expand-lg">
+          <ul className="nav navbar-nav">
+            <li className="inline">
+              <Link to="/">Home</Link> |&nbsp;
+            </li>
+            <li className="inline">
+              <Link to="/top-playlists"> Browse Playlists</Link>
+            </li>
+          </ul>
+        </nav>
+        <Form.Row>
+          <FormControl
+            type="text"
+            value={userId}
+            placeholder="Enter user_id"
+            onChange={(e) => setUserId(e.target.value)}
+            className="lg-1 inline"
+            id="log-in"
+          />&nbsp;&nbsp;
         <Button
-          variant="outline-secondary"
-          href={`/devlogin/${userId}`}
-        >
-          Dev Log In
+            variant="outline-secondary"
+            href={`/devlogin/${userId}`}
+          >
+            Dev Log In
           </Button>
-      </Form.Row>
+        </Form.Row>
+      </React.Fragment>
     );
   }
 }

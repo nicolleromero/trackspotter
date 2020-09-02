@@ -258,7 +258,7 @@ def save_edited_playlist():
     playlist = crud.update_edited_playlist(
         playlist_id=playlist_id, playlist_tracks=playlist_tracks, playlist_title=playlist_title)
 
-    return jsonify({})
+    return jsonify({"playlist_id": playlist_id})
 
 
 @app.route("/api/copy-playlist", methods=["POST"])

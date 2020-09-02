@@ -1,8 +1,9 @@
-const { Component, useEffect, useState, useCallback, useMemo } = React;
+const { Autocomplete, Component, useEffect, useState, useCallback, useMemo } = React;
 const { render } = ReactDOM;
 const { Badge, Button, Col, Container, Dropdown, DropdownButton, Form, FormControl, FormGroup, InputGroup, ListGroup, Navbar, Row, Table } = ReactBootstrap;
 
 const { DragDropContext, Droppable, Draggable } = ReactBeautifulDnd;
+// const { ReactStructuredQuerySearch } = ReactStructuredQuerySearch;
 const Router = ReactRouterDOM.BrowserRouter;
 const Route = ReactRouterDOM.Route;
 const Link = ReactRouterDOM.Link;
@@ -134,6 +135,7 @@ function AdvSearch() {
         setParam={setParam}
         handleReset={handleReset}
         param={param}
+        prefix={prefix}
       />
       <Container>
         <Row className="d-flex justify-content-between">
@@ -336,6 +338,7 @@ function PlaylistTracks(props) {
   let [playlistTitle, setPlaylistTitle] = React.useState('');
   let [playlistLike, setPlaylistLike] = React.useState(false);
   let [playlistUser, setPlaylistUser] = React.useState('');
+  let [playlistId, setPlaylistId] = React.useState('');
   let history = useHistory();
 
   React.useEffect(() => {
@@ -405,6 +408,7 @@ function PlaylistTracks(props) {
     })
       .then(response => response.json())
       .then(data => {
+        setPlaylistId(data["playlist_id"])
       });
   }
 
@@ -456,6 +460,7 @@ function PlaylistTracks(props) {
         handlePlaylistLike={handlePlaylistLike}
         editable={editable}
         playlistLike={playlistLike}
+      // playlistId={platlistId}
       />
       <Container>
         <Table id="playlist_table" hover><br />
@@ -470,7 +475,11 @@ function PlaylistTracks(props) {
                   ref={provided.innerRef}
                 >
                   {tracks.map((track, index) => (
-                    <Draggable key={track.uid} draggableId={track.uid} index={index} isDragDisabled={(USER == null || playlistUser !== USER.user_id)}>
+                    <Draggable
+                      key={track.uid}
+                      draggableId={track.uid}
+                      index={index} isDragDisabled={(USER == null || playlistUser !== USER.user_id)}
+                    >
                       {(provided, snapshot) => (
                         <tr ref={provided.innerRef}
                           {...provided.draggableProps}
