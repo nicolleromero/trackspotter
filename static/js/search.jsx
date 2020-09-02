@@ -21,13 +21,20 @@ const PREFIXES = {
   'year:': 'year',
 };
 
+const OPERATORS = {
+  'equals': 'equals',
+  'contains': 'contains',
+  'starts with': 'starts with',
+  'ends with': 'ends with',
+};
+
 function StructuredSearch(props) {
 
   return (
-    <Row className="d-flex justify-content-center inline">
+    <Row className="d-flex justify-content-center inline align-items-center">
       <Form onSubmit={props.handleSearch}>
         <Form.Row className="inline">
-          <Col xs="auto" className="inline">
+          <Col xs="auto" className="inline search-top">
             <Form.Group controlId="exampleForm.SelectCustom">
               <Form.Control
                 as="select"
@@ -44,12 +51,39 @@ function StructuredSearch(props) {
               </Form.Control>
             </Form.Group>
           </Col>
-          {props.prefix !== "genre:" && (
-            <Col xs="auto" className="inline">
+          <Col xs="auto" className="inline search-top">
+            <Form.Group controlId="exampleForm.SelectCustom2">
+              <Form.Control
+                as="select"
+                custom
+                value={props.wildcard}
+                onChange={(e) => props.setWildcard(e.target.value)}
+              >
+                {Object.keys(OPERATORS).map((key) => {
+                  return (
+                    <option value={key}>{OPERATORS[key]}</option>
+                  )
+                }
+                )}
+              </Form.Control>
+            </Form.Group>
+          </Col>
+          {props.prefix !== "genre:" && props.prefix !== "year:" && (
+            <Col xs="auto" className="inline search-top">
               <FormControl
                 type="text"
                 value={props.param}
                 placeholder="Enter a term"
+                onChange={(e) => props.setParam(e.target.value)}
+                className="mr-sm-2 inline"
+              /></Col>
+          )}
+          {props.prefix === "year:" && (
+            <Col xs="auto" className="inline search-top">
+              <FormControl
+                type="text"
+                value={props.param}
+                placeholder="Enter a year or span"
                 onChange={(e) => props.setParam(e.target.value)}
                 className="mr-sm-2 inline"
               /></Col>
@@ -61,10 +95,10 @@ function StructuredSearch(props) {
               setParam={props.setParam}
               placeholder="Select a genre"
               onChange={(e) => props.setParam(e.target.value)}
-              className="mr-sm-2 inline form-control"
+              className="mr-sm-2 inline form-control search-top"
             />
           )}
-          <Col xs="auto" className="inline">
+          <Col xs="auto" className="inline search-top">
             <Button
               variant="outline-secondary inline"
               type="submit"

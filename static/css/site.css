@@ -30,9 +30,19 @@ h5 {
   padding-right: 20px;
 }
 
+.search {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.search-top {
+  margin-top: 25px;
+  margin-bottom: auto;
+}
+
 .hyper-search {
   color: #393B44;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
   font-style: italic;
   font-size: 24px;
   margin: 0 0 20px 6px;
@@ -85,6 +95,12 @@ td {
 	font-weight: lighter;
 	padding: 5px;
 	margin: 2px;
+}
+
+.auto {
+	font-family: Arial, Helvetica, sans-serif !important;
+  font-weight: lighter !important;
+  font-size: 14px !important;
 }
 
 .badge {

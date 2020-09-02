@@ -31,6 +31,7 @@ function reorder(list, startIndex, endIndex) {
 function AdvSearch() {
   let [prefix, setPrefix] = React.useState('');
   let [param, setParam] = React.useState('');
+  let [wildcard, setWildcard] = React.useState('');
   let [tracks, setTracks] = React.useState([]);
   let [queries, setQueries] = React.useState([]);
   let query = buildQuery(queries);
@@ -56,10 +57,19 @@ function AdvSearch() {
     const newQueries = queries.slice();
     if (prefix === "year:") {
       newQueries.push(`${prefix}${param}`);
+    } else if (wildcard === "starts with") {
+      newQueries.push(`${prefix}${param}*`);
+    } else if (wildcard === "ends with" && prefix !== '') {
+      newQueries.push(`${prefix}*${param}`);
+    } else if (wildcard === "contains" && prefix !== '') {
+      newQueries.push(`${prefix}*${param}*`);
     } else {
       newQueries.push(`${prefix}"${param}"`);
     }
+
+
     setQueries(newQueries);
+    setWildcard('');
     setParam('');
     setPrefix('');
   }
@@ -117,6 +127,7 @@ function AdvSearch() {
   function handleReset() {
     setParam('');
     setPrefix('');
+    setWildcard('');
     setTracks([]);
     setQueries([]);
     setPlaylistTitle('');
@@ -133,9 +144,11 @@ function AdvSearch() {
         handleSearch={handleSearch}
         setPrefix={setPrefix}
         setParam={setParam}
+        setWildcard={setWildcard}
         handleReset={handleReset}
         param={param}
         prefix={prefix}
+        wildcard={wildcard}
       />
       <Container>
         <Row className="d-flex justify-content-between">
