@@ -141,3 +141,11 @@ a {
 #title-form {
 	min-width: 250px;
 }
+
+#avatar {
+  width: 150px;
+  height: 150px;
+  background-size: cover;
+  background-position: top center;
+  border-radius: 50%;
+}

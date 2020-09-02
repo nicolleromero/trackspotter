@@ -1,6 +1,6 @@
 const { Autocomplete, Component, useEffect, useRef, useState, useCallback, useMemo } = React;
 const { render } = ReactDOM;
-const { Badge, Button, Col, Container, Dropdown, DropdownButton, Form, FormControl, FormGroup, InputGroup, ListGroup, Navbar, Row, Table } = ReactBootstrap;
+const { Badge, Button, Col, Container, Dropdown, DropdownButton, Form, FormControl, FormGroup, InputGroup, ListGroup, Navbar, OverlayTrigger, Row, Table, Tooltip } = ReactBootstrap;
 
 // const { ReactStructuredQuerySearch } = ReactStructuredQuerySearch;
 const { DragDropContext, Droppable, Draggable } = ReactBeautifulDnd;
@@ -99,11 +99,17 @@ function StructuredSearch(props) {
             />
           )}
           <Col xs="auto" className="inline search-top">
+            <NumSongs
+              numSongs={props.numSongs}
+              setNumSongs={props.setNumSongs}
+            />
+          </Col>
+          <Col xs="auto" className="inline search-top">
             <Button
               variant="outline-secondary inline"
               type="submit"
             >
-              Search
+              <i class="fa fa-search-plus"></i> Search
               </Button>
               &nbsp;
               <Button

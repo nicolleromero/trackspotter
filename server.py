@@ -107,12 +107,18 @@ def logout():
     return redirect('/')
 
 
-@app.route("/api/search")
+@app.route("/api/search", methods=["POST"])
 def search():
     """Search for tracks with Spotify endpoint"""
 
-    query = request.args.get('query', '').strip()
+    data = request.get_json()
+    query = data["query"].strip()
+    numSongs = data["numSongs"].strip()
+
+    # query = request.args.get('query', '').strip()
+    # numSongs = request.args.get('numSongs', '').strip()
     session['query'] = query
+    session['numSongs'] = numSongs
 
     if not query:
         return jsonify([])
@@ -121,7 +127,7 @@ def search():
 
     spot_key = token.access_token
 
-    params = {'q': f'{query}', 'type': 'track'}
+    params = {'q': f'{query}', 'type': 'track', 'limit': f'{numSongs}'}
 
     headers = {'Authorization': f'Bearer {spot_key}'}
 

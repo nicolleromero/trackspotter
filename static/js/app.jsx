@@ -3,7 +3,6 @@ const { render } = ReactDOM;
 const { Badge, Button, Col, Container, Dropdown, DropdownButton, Form, FormControl, FormGroup, InputGroup, ListGroup, Navbar, Row, Table } = ReactBootstrap;
 
 const { DragDropContext, Droppable, Draggable } = ReactBeautifulDnd;
-// const { ReactStructuredQuerySearch } = ReactStructuredQuerySearch;
 const Router = ReactRouterDOM.BrowserRouter;
 const Route = ReactRouterDOM.Route;
 const Link = ReactRouterDOM.Link;
@@ -32,6 +31,7 @@ function AdvSearch() {
   let [prefix, setPrefix] = React.useState('');
   let [param, setParam] = React.useState('');
   let [wildcard, setWildcard] = React.useState('');
+  let [numSongs, setNumSongs] = React.useState('');
   let [tracks, setTracks] = React.useState([]);
   let [queries, setQueries] = React.useState([]);
   let query = buildQuery(queries);
@@ -40,7 +40,27 @@ function AdvSearch() {
 
   React.useEffect(() => {
     if (query) {
-      fetch(`/api/search?query=${encodeURIComponent(query)}`)
+
+      if (!numSongs) {
+        numSongs = '20'
+      }
+      const search = {
+        "query": query,
+        "numSongs": numSongs,
+      }
+      console.log("**************", numSongs)
+      fetch('/api/search', {
+        method: 'POST',
+        body: JSON.stringify(search),
+        headers: {
+          'Content-Type': 'application/json'
+        },
+      })
+
+        // if (query) {
+        //   console.log("**************", query)
+        // }
+        //   fetch(`/api/search?query=${encodeURIComponent(query)}`)
         .then(response => response.json())
         .then(tracks => {
           setTracks(tracks);
@@ -66,7 +86,6 @@ function AdvSearch() {
     } else {
       newQueries.push(`${prefix}"${param}"`);
     }
-
 
     setQueries(newQueries);
     setWildcard('');
@@ -128,6 +147,7 @@ function AdvSearch() {
     setParam('');
     setPrefix('');
     setWildcard('');
+    setNumSongs('');
     setTracks([]);
     setQueries([]);
     setPlaylistTitle('');
@@ -146,7 +166,9 @@ function AdvSearch() {
         setParam={setParam}
         setWildcard={setWildcard}
         handleReset={handleReset}
+        setNumSongs={setNumSongs}
         param={param}
+        numSongs={numSongs}
         prefix={prefix}
         wildcard={wildcard}
       />
@@ -181,7 +203,7 @@ function AdvSearch() {
                   <FormControl
                     type="text"
                     value={playlist_title}
-                    placeholder="Playlist Title"
+                    placeholder="Playlist Title ✎"
                     onChange={(e) => setPlaylistTitle(e.target.value)}
                     className="mr-sm-2 inline"
                     id="title-form"
@@ -258,9 +280,17 @@ function AdvSearch() {
               </Droppable>
             </DragDropContext>
           </Table>
-
         </Row>
       </Container>
+      {tracks.length > 0 && (
+        <Container>
+          <Row className="float-right">
+            <Col className="float-right">
+              <span><h5>More Tracks </h5><h3>&nbsp; ➦</h3></span>
+            </Col>
+          </Row>
+        </Container>
+      )}
     </React.Fragment >
   );
 }
@@ -476,7 +506,7 @@ function PlaylistTracks(props) {
       // playlistId={platlistId}
       />
       <Container>
-        <Table id="playlist_table" hover><br />
+        <Table id="playlist_table" hover>
           <TracksHeader
             editable={editable}
           />

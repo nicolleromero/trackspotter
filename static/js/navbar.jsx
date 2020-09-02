@@ -17,7 +17,6 @@ function Topbar(props) {
             <Navbar.Text className="signed-in">
               Signed in as: {props.user.spotify_display_name}
             </Navbar.Text>
-
             <Button href="/logout" variant="outline-secondary inline" id="btn-login" className="btn-spotify space"
             >
               <img src="/static/img/spot_icon_gr.png" width="30" height="30"></img>&nbsp;
@@ -56,7 +55,7 @@ function Login(props) {
         <nav className="navbar navbar-expand-lg">
           <ul className="nav navbar-nav">
             <li className="inline">
-              <Link to="/">Home</Link> |&nbsp;
+              <Link to="/"><i class="fa fa-home"></i></Link> |&nbsp;
             </li>
             {props.user && (
               <li className="inline">
