@@ -32,6 +32,7 @@ function AdvSearch() {
   let [param, setParam] = React.useState('');
   let [wildcard, setWildcard] = React.useState('');
   let [numSongs, setNumSongs] = React.useState('');
+  let [offset, setOffset] = React.useState('');
   let [tracks, setTracks] = React.useState([]);
   let [queries, setQueries] = React.useState([]);
   let query = buildQuery(queries);
@@ -47,8 +48,8 @@ function AdvSearch() {
       const search = {
         "query": query,
         "numSongs": numSongs,
+        "offset": offset,
       }
-      console.log("**************", numSongs)
       fetch('/api/search', {
         method: 'POST',
         body: JSON.stringify(search),
@@ -56,11 +57,6 @@ function AdvSearch() {
           'Content-Type': 'application/json'
         },
       })
-
-        // if (query) {
-        //   console.log("**************", query)
-        // }
-        //   fetch(`/api/search?query=${encodeURIComponent(query)}`)
         .then(response => response.json())
         .then(tracks => {
           setTracks(tracks);
@@ -91,6 +87,7 @@ function AdvSearch() {
     setWildcard('');
     setParam('');
     setPrefix('');
+    setOffset(offset += numSongs)
   }
 
 
@@ -148,6 +145,7 @@ function AdvSearch() {
     setPrefix('');
     setWildcard('');
     setNumSongs('');
+    setOffset('');
     setTracks([]);
     setQueries([]);
     setPlaylistTitle('');
@@ -203,7 +201,7 @@ function AdvSearch() {
                   <FormControl
                     type="text"
                     value={playlist_title}
-                    placeholder="Playlist Title ✎"
+                    placeholder="Playlist Title"
                     onChange={(e) => setPlaylistTitle(e.target.value)}
                     className="mr-sm-2 inline"
                     id="title-form"
@@ -286,7 +284,12 @@ function AdvSearch() {
         <Container>
           <Row className="float-right">
             <Col className="float-right">
-              <span><h5>More Tracks </h5><h3>&nbsp; ➦</h3></span>
+              <Button
+                variant="outline-secondary inline more-space"
+              // onClick={handleSearch}
+              >
+                More Tracks
+              </Button>
             </Col>
           </Row>
         </Container>

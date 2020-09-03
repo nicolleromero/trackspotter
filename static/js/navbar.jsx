@@ -63,7 +63,7 @@ function Login(props) {
               </li>
             )}
             <li className="inline">
-              <Link to="/top-playlists"> Browse Playlists</Link>
+              <Link to="/top-playlists"> Explore Playlists</Link>
             </li>
           </ul>
         </nav>
@@ -79,7 +79,7 @@ function Login(props) {
               <Link to="/">Home</Link> |&nbsp;
             </li>
             <li className="inline">
-              <Link to="/top-playlists"> Browse Playlists</Link>
+              <Link to="/top-playlists"> Explore Playlists</Link>
             </li>
           </ul>
         </nav>

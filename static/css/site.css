@@ -25,6 +25,13 @@ h5 {
   margin: 10px;
 }
 
+.more-space {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
 .signed-in {
   vertical-align: middle;
   padding-right: 20px;
@@ -38,6 +45,10 @@ h5 {
 .search-top {
   margin-top: 25px;
   margin-bottom: auto;
+}
+
+.fixed-width {
+  width: 185px;
 }
 
 .hyper-search {

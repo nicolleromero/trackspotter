@@ -69,7 +69,7 @@ function StructuredSearch(props) {
             </Form.Group>
           </Col>
           {props.prefix !== "genre:" && props.prefix !== "year:" && (
-            <Col xs="auto" className="inline search-top">
+            <Col xs="auto" className="inline search-top fixed-width">
               <FormControl
                 type="text"
                 value={props.param}
@@ -79,7 +79,7 @@ function StructuredSearch(props) {
               /></Col>
           )}
           {props.prefix === "year:" && (
-            <Col xs="auto" className="inline search-top">
+            <Col xs="auto" className="inline search-top fixed-width">
               <FormControl
                 type="text"
                 value={props.param}
@@ -89,14 +89,16 @@ function StructuredSearch(props) {
               /></Col>
           )}
           {props.prefix === "genre:" && (
-            <Autosuggest
-              type="text"
-              value={props.param}
-              setParam={props.setParam}
-              placeholder="Select a genre"
-              onChange={(e) => props.setParam(e.target.value)}
-              className="mr-sm-2 inline form-control search-top"
-            />
+            <Col xs="auto" className="inline search-top fixed-width">
+              <Autosuggest
+                type="text"
+                value={props.param}
+                setParam={props.setParam}
+                placeholder="Select a genre"
+                onChange={(e) => props.setParam(e.target.value)}
+                className="mr-sm-2 inline form-control"
+              />
+            </Col>
           )}
           <Col xs="auto" className="inline search-top">
             <NumSongs
@@ -121,7 +123,7 @@ function StructuredSearch(props) {
           </Col>
         </Form.Row>
       </Form>
-    </Row>
+    </Row >
   );
 }
 

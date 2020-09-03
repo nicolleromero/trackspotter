@@ -114,11 +114,12 @@ def search():
     data = request.get_json()
     query = data["query"].strip()
     numSongs = data["numSongs"].strip()
-
+    offset = data["offset"].strip()
     # query = request.args.get('query', '').strip()
     # numSongs = request.args.get('numSongs', '').strip()
     session['query'] = query
     session['numSongs'] = numSongs
+    session['offset'] = offset
 
     if not query:
         return jsonify([])

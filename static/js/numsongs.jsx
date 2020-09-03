@@ -18,7 +18,7 @@ function NumSongs(props) {
   return (
     <OverlayTrigger
       placement="top"
-      overlay={<Tooltip id="button-tooltip-2">Number of songs (Max: 50)</Tooltip>}
+      overlay={<Tooltip id="button-tooltip-2">Number of songs</Tooltip>}
     >
       {({ ref, ...triggerHandler }) => (
         <FormControl
