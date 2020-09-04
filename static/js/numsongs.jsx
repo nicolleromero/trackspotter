@@ -30,7 +30,7 @@ function NumSongs(props) {
           step="5"
           value={props.numSongs}
           placeholder="20"
-          onChange={(e) => props.setNumSongs(e.target.value)}
+          onChange={(e) => props.onChange(e.target.value)}
           className="mr-sm-2 inline"
         />
       )}

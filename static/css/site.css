@@ -8,6 +8,11 @@
 
 .btn-spotify:hover {
   color: #FFF;
+  border: none !important;
+}
+
+.btn-spotify {
+  border-color:  #FFF !important;
 }
 
 body {
@@ -29,14 +34,23 @@ h5 {
 	padding-top: 10px;
 }
 
+.link {
+  padding: 15px;
+}
+
 #topbar {
   color: #F1F3F8;
+  border-bottom: 1px solid #000;
   /* background-color: #393B44; */
 }
 
 .space {
   padding: 10px;
   margin: 10px;
+}
+
+.top-space {
+  margin-top: 50px;
 }
 
 .more-space {
@@ -57,7 +71,7 @@ h5 {
 }
 
 .search-top {
-  margin-top: 25px;
+  margin-top: 10px;
   margin-bottom: auto;
 }
 
@@ -73,20 +87,30 @@ h5 {
   margin: 0 0 20px 6px;
   line-height: 40px;
   letter-spacing: .5px;
+}
 
+.h1 {
+  font-weight: 500;
+  font-weight: 500;
+  line-height: 90%;
 }
 
 .padding {
   padding-top: 30px;
 }
 
-/* .cactus {
-  filter: sepia(60%);
-} */
+.start {
+  margin-left: 50px;
+}
+
+.cactus {
+  margin-top: 30px;
+  margin-right: 150px;
+}
 
 .hyper {
-  padding-top: 50px;
-  border-bottom: 1px solid #000;
+  padding-top: 70px;
+  /* border-bottom: 1px solid #000; */
   line-height: 0.1em;
   margin: 5px 0 40px;
   vertical-align: text-bottom !important;
@@ -116,13 +140,22 @@ td {
 }
 
 #log-in {
-	max-width: 120px;
+  padding-top: 20px !important;
+	max-width: 50px;
+}
+
+#playlist_table {
+  margin-top: 10px;
+  border: none !important;
 }
 
 #playlist-thead {
-	color: #F1F3F8;
+  color: #F1F3F8;
   background-color: #393B44;
-  border-style: none !important;
+}
+
+.table th {
+  border-top: none;
 }
 
 .navbar-nav {
@@ -158,7 +191,7 @@ span {
 }
 
 #tracks-header {
-	padding: 100 px !important;
+	padding: 20 px !important;
 	margin-left: 20px !important;
 	margin-right: 20px !important;
 	margin-top: 80px !important;
@@ -169,8 +202,9 @@ span {
 	margin-right: 5px !important;
 }
 
-title {
-	color:  #393B44;
+.title {
+  color:  #393B44;
+  margin-top: 50px;
 }
 
 a {

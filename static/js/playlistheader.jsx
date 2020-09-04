@@ -17,7 +17,7 @@ function PlaylistHeader(props) {
     <React.Fragment>
       <thead>
         <tr align="center">
-          <th colSpan="4" class="title"><h3>
+          <th colSpan="4"><h3 className="title">
             {props.title} &nbsp;🎧
           </h3></th>
         </tr>

@@ -31,7 +31,7 @@ const OPERATORS = {
 function StructuredSearch(props) {
 
   return (
-    <Row className="d-flex justify-content-center inline align-items-center">
+    <Row className="d-flex justify-content-center inline align-items-center start">
       <Form onSubmit={props.handleSearch}>
         <Form.Row className="inline">
           <Col xs="auto" className="inline search-top">
@@ -105,7 +105,7 @@ function StructuredSearch(props) {
           <Col xs="auto" className="inline search-top">
             <NumSongs
               numSongs={props.numSongs}
-              setNumSongs={props.setNumSongs}
+              onChange={props.onChangeNumSongs}
             />
           </Col>
           <Col xs="auto" className="inline search-top">

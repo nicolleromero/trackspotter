@@ -31,7 +31,7 @@ function TrackslistUI(props) {
       <Form
         inline
         onSubmit={props.handleSaveEditedPlaylist}>
-        <Form.Row inline className="float-right">
+        <Form.Row inline className="float-right title">
           <Col xs="auto" >
             {props.editable && (
               <FormControl

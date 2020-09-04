@@ -112,7 +112,7 @@ def search():
 
     data = request.get_json()
     query = data["query"].strip()
-    numSongs = data["numSongs"].strip()
+    numSongs = data["numSongs"]
     offset = data.get("offset", 0)
 
     session['query'] = query
@@ -133,6 +133,9 @@ def search():
     res = requests.get('https://api.spotify.com/v1/search?',
                        headers=headers,
                        params=params)
+
+    if res.status_code != requests.codes.ok:
+        return 'spotify request failed', 424
 
     data = res.json()
     search_tracks = data['tracks']['items']

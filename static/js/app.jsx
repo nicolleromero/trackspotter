@@ -1,6 +1,6 @@
 const { Autocomplete, Component, useEffect, useState, useCallback, useMemo } = React;
 const { render } = ReactDOM;
-const { Badge, Button, Col, Container, Dropdown, DropdownButton, Form, FormControl, FormGroup, InputGroup, ListGroup, Navbar, Row, Table } = ReactBootstrap;
+const { Badge, Button, Col, Container, Dropdown, DropdownButton, Form, FormControl, FormGroup, InputGroup, ListGroup, Navbar, Row, Spinner, Table } = ReactBootstrap;
 
 const { DragDropContext, Droppable, Draggable } = ReactBeautifulDnd;
 const Router = ReactRouterDOM.BrowserRouter;
@@ -28,27 +28,28 @@ function reorder(list, startIndex, endIndex) {
 }
 
 function AdvSearch() {
-  let [prefix, setPrefix] = React.useState('');
-  let [param, setParam] = React.useState('');
-  let [wildcard, setWildcard] = React.useState('');
-  let [numSongs, setNumSongs] = React.useState(0);
-  let [offset, setOffset] = React.useState(0);
-  let [tracks, setTracks] = React.useState([]);
-  let [queries, setQueries] = React.useState([]);
-  let query = buildQuery(queries);
-  let [playlist_title, setPlaylistTitle] = React.useState('');
-  let history = useHistory();
+  const [prefix, setPrefix] = React.useState('');
+  const [param, setParam] = React.useState('');
+  const [wildcard, setWildcard] = React.useState('');
+  const [numSongs, setNumSongs] = React.useState(20);
+  const [offset, setOffset] = React.useState(0);
+  const [tracks, setTracks] = React.useState([]);
+  const [queries, setQueries] = React.useState([]);
+  const [loading, setLoading] = React.useState(false);
+  const query = buildQuery(queries);
+  const [playlist_title, setPlaylistTitle] = React.useState('');
+  const history = useHistory();
 
   React.useEffect(() => {
     if (query) {
-      if (numSongs === 0) {
-        numSongs = 20
-      }
+
       const search = {
         "query": query,
         "numSongs": numSongs,
         "offset": offset,
       }
+      setLoading(true);
+
       fetch('/api/search', {
         method: 'POST',
         body: JSON.stringify(search),
@@ -63,7 +64,8 @@ function AdvSearch() {
           } else {
             setTracks([...tracks, ...newTracks]);
           }
-        });
+        })
+        .finally(() => setLoading(false));
     } else {
       setTracks([]);
     }
@@ -150,7 +152,6 @@ function AdvSearch() {
     setParam('');
     setPrefix('');
     setWildcard('');
-    setNumSongs(0);
     setOffset(0);
     setTracks([]);
     setQueries([]);
@@ -161,10 +162,10 @@ function AdvSearch() {
     <React.Fragment>
       <Container>
         <Row className="d-flex float-right padding">
-          <img className="cactus" src="/static/img/cactus.png" width="180" height="180"></img>
+          <img className="cactus" src="/static/img/cactus.png" width="200" height="200"></img>
         </Row>
-        <Row className="d-flex justify-content-between hyper">
-          <div><h1>trackspotter </h1></div>
+        <Row className="d-flex justify-content-between hyper offset-2">
+          <h1 className="h1">Search for tracks <br />with pinpoint accuracy </h1>
         </Row>
       </Container>
       <StructuredSearch
@@ -173,7 +174,7 @@ function AdvSearch() {
         setParam={setParam}
         setWildcard={setWildcard}
         handleReset={handleReset}
-        setNumSongs={setNumSongs}
+        onChangeNumSongs={setNumSongs}
         param={param}
         numSongs={numSongs}
         prefix={prefix}
@@ -289,20 +290,32 @@ function AdvSearch() {
           </Table>
         </Row>
       </Container>
-      {tracks.length > 0 && (
+      {loading && (
         <Container>
-          <Row className="float-right">
-            <Col className="float-right">
-              <Button
-                variant="outline-secondary inline more-space"
-                onClick={handleNext}
-              >
-                More Tracks
-              </Button>
-            </Col>
+          <Row className="d-flex justify-content-center inline align-items-center">
+            <Spinner animation="border" variant="secondary" role="status">
+              <span className="sr-only">Loading...</span>
+            </Spinner>
           </Row>
-        </Container>
-      )}
+        </Container >
+      )
+      }
+      {
+        tracks.length > 0 && (
+          <Container>
+            <Row className="float-right">
+              <Col className="float-right">
+                <Button
+                  variant="outline-secondary inline more-space"
+                  onClick={handleNext}
+                >
+                  More Tracks
+              </Button>
+              </Col>
+            </Row>
+          </Container>
+        )
+      }
     </React.Fragment >
   );
 }
