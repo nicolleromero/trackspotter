@@ -30,7 +30,7 @@ function TrackslistUI(props) {
       </div>
       <Form
         inline
-        onClick={props.handleSaveEditedPlaylist}>
+        onSubmit={props.handleSaveEditedPlaylist}>
         <Form.Row inline className="float-right">
           <Col xs="auto" >
             {props.editable && (

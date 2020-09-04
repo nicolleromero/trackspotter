@@ -81,7 +81,6 @@ def login_callback():
     """Callback for Spotify login"""
 
     code = request.args.get('code', None)
-    print("code", code)
     session['code'] = code
 
     token = cred.request_user_token(code)
@@ -239,9 +238,6 @@ def save_edited_playlist():
     playlist_title = data["playlist_title"]
     playlist_id = data["playlist_id"]
 
-    playlist = crud.update_edited_playlist(
-        playlist_id=playlist_id, playlist_tracks=playlist_tracks, playlist_title=playlist_title, spotify_playlist_id=None)
-
     token = tk.refresh_user_token(client_id, client_secret, user.refresh_token)
 
     uris = []
@@ -249,15 +245,18 @@ def save_edited_playlist():
         uris.append("spotify:track:" + track['uid'])
 
     name = data["playlist_title"]
+    playlist = crud.get_playlist_by_id(playlist_id)
 
     # TODO Check to see if spotify_playlist_id exists in db or prompt to log in to Spotify
-    if playlist.spotify_playlist_id != None:
-        print("Spotify playlist id before", playlist.spotify_playlist_id)
+    spotify_playlist_id = playlist.spotify_playlist_id
+
+    if spotify_playlist_id != None:
+
         with spotify.token_as(token):
             spotify.playlist_replace(
-                playlist_id=playlist.spotify_playlist_id, uris=uris)
+                playlist_id=spotify_playlist_id, uris=uris)
             spotify.playlist_change_details(
-                playlist_id=playlist.spotify_playlist_id, name=name, public=False, collaborative=None, description=None)
+                playlist_id=spotify_playlist_id, name=name, public=False, collaborative=None, description=None)
     else:
         with spotify.token_as(token):
             playlist_spot = spotify.playlist_create(user.spotify_id, name=name, public=False,
@@ -265,11 +264,8 @@ def save_edited_playlist():
 
             response = spotify.playlist_add(
                 playlist_id=playlist_spot.id, uris=uris, position=None)
-            print("Response from playlist save attempt", response)
-            spotify_playlist_id = playlist_spot.id
 
-    print("Spotify playlist id after", spotify_playlist_id)
-    # indent above here for else
+            spotify_playlist_id = playlist_spot.id
 
     playlist = crud.update_edited_playlist(
         playlist_id=playlist_id, playlist_tracks=playlist_tracks, playlist_title=playlist_title, spotify_playlist_id=spotify_playlist_id)

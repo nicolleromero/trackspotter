@@ -331,7 +331,7 @@ def update_edited_playlist(playlist_id, playlist_title, playlist_tracks, spotify
     # update playlist title and updated_at
     playlist.playlist_title = playlist_title
     playlist.last_updated_at = datetime.now()
-    spotify_playlist_id = spotify_playlist_id
+    playlist.spotify_playlist_id = spotify_playlist_id
 
     # delete all existing playlist_track associations
     db.session.query(PlaylistTrack).filter(

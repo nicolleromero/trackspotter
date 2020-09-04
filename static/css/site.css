@@ -14,6 +14,16 @@ body {
   font-family: 'Quicksand', 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
 }
 
+option {
+  font-family: 'Quicksand', 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif !important;
+}
+
+select#fixed {
+  -webkit-appearance: none;
+  font-family: 'Quicksand', 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif !important;
+
+}
+
 h5 {
 	padding-bottom: 15px;
 	padding-top: 10px;
