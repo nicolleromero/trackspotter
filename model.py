@@ -136,6 +136,7 @@ class Playlist(db.Model):
     created_at = db.Column(db.DateTime)
     last_updated_at = db.Column(db.DateTime)
     playlist_title = db.Column(db.String)
+    spotify_playlist_id = db.Column(db.String)
     user_id = db.Column(db.Integer, db.ForeignKey('users.user_id'))
     search_id = db.Column(db.Integer, db.ForeignKey('searches.search_id'))
 
@@ -144,7 +145,7 @@ class Playlist(db.Model):
     search = db.relationship('Search')
 
     def __repr__(self):
-        return f'<Playlist playlist_id={self.playlist_id} created_at={self.created_at} last_updated_at={self.last_updated_at} playlist_title={self.playlist_title}>'
+        return f'<Playlist playlist_id={self.playlist_id} created_at={self.created_at} last_updated_at={self.last_updated_at} playlist_title={self.playlist_title} spotify_playlist_id={self.spotify_playlist_id}>'
 
     def as_dict(self):
         return {
@@ -152,6 +153,7 @@ class Playlist(db.Model):
             'playlist_title': self.playlist_title,
             'user_id': self.user_id,
             'search_id': self.search_id,
+            'spotify_playlist_id': self.spotify_playlist_id
         }
 
 

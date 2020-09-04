@@ -31,8 +31,8 @@ function AdvSearch() {
   let [prefix, setPrefix] = React.useState('');
   let [param, setParam] = React.useState('');
   let [wildcard, setWildcard] = React.useState('');
-  let [numSongs, setNumSongs] = React.useState('');
-  let [offset, setOffset] = React.useState('');
+  let [numSongs, setNumSongs] = React.useState(0);
+  let [offset, setOffset] = React.useState(0);
   let [tracks, setTracks] = React.useState([]);
   let [queries, setQueries] = React.useState([]);
   let query = buildQuery(queries);
@@ -41,9 +41,8 @@ function AdvSearch() {
 
   React.useEffect(() => {
     if (query) {
-
-      if (!numSongs) {
-        numSongs = '20'
+      if (numSongs === 0) {
+        numSongs = 20
       }
       const search = {
         "query": query,
@@ -58,13 +57,17 @@ function AdvSearch() {
         },
       })
         .then(response => response.json())
-        .then(tracks => {
-          setTracks(tracks);
+        .then(newTracks => {
+          if (offset === 0) {
+            setTracks(newTracks);
+          } else {
+            setTracks([...tracks, ...newTracks]);
+          }
         });
     } else {
       setTracks([]);
     }
-  }, [query]);
+  }, [query, offset]);
 
 
   function handleSearch(event) {
@@ -87,9 +90,12 @@ function AdvSearch() {
     setWildcard('');
     setParam('');
     setPrefix('');
-    setOffset(offset += numSongs)
+    setOffset(0);
   }
 
+  function handleNext() {
+    setOffset(offset + Number(numSongs));
+  }
 
   function handleDeleteParam(target) {
     const newQueries = queries.filter((t) => t !== target);
@@ -144,8 +150,8 @@ function AdvSearch() {
     setParam('');
     setPrefix('');
     setWildcard('');
-    setNumSongs('');
-    setOffset('');
+    setNumSongs(0);
+    setOffset(0);
     setTracks([]);
     setQueries([]);
     setPlaylistTitle('');
@@ -154,8 +160,11 @@ function AdvSearch() {
   return (
     <React.Fragment>
       <Container>
-        <Row className="d-flex justify-content-left hyper">
-          <h1>trackspotter </h1>
+        <Row className="d-flex float-right padding">
+          <img className="cactus" src="/static/img/cactus.png" width="180" height="180"></img>
+        </Row>
+        <Row className="d-flex justify-content-between hyper">
+          <div><h1>trackspotter </h1></div>
         </Row>
       </Container>
       <StructuredSearch
@@ -286,7 +295,7 @@ function AdvSearch() {
             <Col className="float-right">
               <Button
                 variant="outline-secondary inline more-space"
-              // onClick={handleSearch}
+                onClick={handleNext}
               >
                 More Tracks
               </Button>

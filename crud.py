@@ -22,14 +22,14 @@ def create_user(spotify_id, spotify_display_name, created_at, access_token, refr
     return user
 
 
-def get_users():
+def get_all_users():
     """Return all users."""
 
     return User.query.all()
 
 
 def get_user_by_id(user_id):
-    """Return details for a specific user"""
+    """Return details for a specific user as a dict"""
 
     user = User.query.get(user_id)
 
@@ -105,11 +105,11 @@ def get_track_by_track_uid(uid):
     return Track.query.filter(Track.uid == uid).first()
 
 
-def create_playlist(user_id, search_id, created_at, last_updated_at, playlist_title):
-    """Create a new rating"""
+def create_playlist(user_id, search_id, created_at, last_updated_at, playlist_title, spotify_playlist_id=None):
+    """Create a new playlist"""
 
     playlist = Playlist(user_id=user_id, search_id=search_id, created_at=created_at,
-                        last_updated_at=last_updated_at, playlist_title=playlist_title)
+                        last_updated_at=last_updated_at, playlist_title=playlist_title, spotify_playlist_id=spotify_playlist_id)
 
     db.session.add(playlist)
     db.session.commit()
@@ -117,11 +117,11 @@ def create_playlist(user_id, search_id, created_at, last_updated_at, playlist_ti
     return playlist
 
 
-def create_playlist_return_as_dict(user_id, search_id, created_at, last_updated_at, playlist_title):
-    """Create a new rating"""
+def create_playlist_return_as_dict(user_id, search_id, created_at, last_updated_at, playlist_title, spotify_playlist_id=None):
+    """Create a new playlist and return as dict"""
 
     playlist = Playlist(user_id=user_id, search_id=search_id, created_at=created_at,
-                        last_updated_at=last_updated_at, playlist_title=playlist_title)
+                        last_updated_at=last_updated_at, playlist_title=playlist_title, spotify_playlist_id=spotify_playlist_id)
 
     db.session.add(playlist)
     db.session.commit()
@@ -184,7 +184,12 @@ def get_playlist_by_user_id(target_id):
 def playlist_ordered_by_likes():
     """Return a list of the top 20 playlists ordered by most likes """
 
-    # TODO: add offset so user can get the next 20
+    # if offset != 0:
+    #     results = db.session.query(Playlist, db.func.count(PlaylistLike.playlist_id).label(
+    #         'total')).join(Playlist.search).outerjoin(PlaylistLike).group_by(Playlist).order_by(desc('total')).offset(offset).limit(20).all()
+    # else:
+    #     results = db.session.query(Playlist, db.func.count(PlaylistLike.playlist_id).label(
+    #         'total')).join(Playlist.search).outerjoin(PlaylistLike).group_by(Playlist).order_by(desc('total')).limit(20).all()
 
     results = db.session.query(Playlist, db.func.count(PlaylistLike.playlist_id).label(
         'total')).join(Playlist.search).outerjoin(PlaylistLike).group_by(Playlist).order_by(desc('total')).limit(20).all()
@@ -319,13 +324,14 @@ def create_tracks_and_playlist_tracks_for_playlist(tracks_in_playlist, playlist_
     return created_tracks
 
 
-def update_edited_playlist(playlist_id, playlist_title, playlist_tracks):
+def update_edited_playlist(playlist_id, playlist_title, playlist_tracks, spotify_playlist_id=None):
 
     playlist = get_playlist_by_id(playlist_id)
 
     # update playlist title and updated_at
     playlist.playlist_title = playlist_title
     playlist.last_updated_at = datetime.now()
+    spotify_playlist_id = spotify_playlist_id
 
     # delete all existing playlist_track associations
     db.session.query(PlaylistTrack).filter(
@@ -341,7 +347,7 @@ def update_edited_playlist(playlist_id, playlist_title, playlist_tracks):
     return playlist
 
 
-def copy_playlist(user_id, original_playlist_id, playlist_tracks):
+def copy_playlist(user_id, original_playlist_id, playlist_tracks, spotify_playlist_id=None):
 
     original_playlist = get_playlist_by_id(original_playlist_id)
 
@@ -350,7 +356,7 @@ def copy_playlist(user_id, original_playlist_id, playlist_tracks):
     playlist_title = "Copy of " + original_playlist.playlist_title
 
     new_playlist = create_playlist(
-        user_id, original_playlist.search_id, created_at, last_updated_at, playlist_title)
+        user_id, original_playlist.search_id, created_at, last_updated_at, playlist_title, spotify_playlist_id=None)
 
     # make new playlist_track associations
     for track_order, track in enumerate(playlist_tracks, start=1):
@@ -411,20 +417,20 @@ if __name__ == '__main__':
 
 
 # Test Script
-def test_script():
-    user_id = 1
-    playlist_title = "Best of Dido"
-    created_at = datetime.now()
-    last_updated_at = datetime.now()
-    search = create_search(user_id, created_at, query="dido")
-    playlist = create_playlist(user_id, search.search_id,
-                               created_at, last_updated_at, playlist_title)
-    sample = json.load(open("dido_data.json"))
-    tracks_in_playlist = sample['tracks']['items']
+# def test_script():
+#     user_id = 1
+#     playlist_title = "Best of Dido"
+#     created_at = datetime.now()
+#     last_updated_at = datetime.now()
+#     search = create_search(user_id, created_at, query="dido")
+#     playlist = create_playlist(user_id, search.search_id,
+#                                created_at, last_updated_at, playlist_title, spotify_playlist_id=None)
+#     sample = json.load(open("dido_data.json"))
+#     tracks_in_playlist = sample['tracks']['items']
 
-    result = create_tracks_and_playlist_tracks_for_playlist(
-        tracks_in_playlist, playlist.playlist_id)
+#     result = create_tracks_and_playlist_tracks_for_playlist(
+#         tracks_in_playlist, playlist.playlist_id)
 
-    print(result)
+#     print(result)
 
-    return result
+#     return result

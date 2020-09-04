@@ -114,12 +114,10 @@ def search():
     data = request.get_json()
     query = data["query"].strip()
     numSongs = data["numSongs"].strip()
-    offset = data["offset"].strip()
-    # query = request.args.get('query', '').strip()
-    # numSongs = request.args.get('numSongs', '').strip()
+    offset = data.get("offset", 0)
+
     session['query'] = query
     session['numSongs'] = numSongs
-    session['offset'] = offset
 
     if not query:
         return jsonify([])
@@ -128,7 +126,8 @@ def search():
 
     spot_key = token.access_token
 
-    params = {'q': f'{query}', 'type': 'track', 'limit': f'{numSongs}'}
+    params = {'q': query, 'type': 'track',
+              'limit': numSongs, 'offset': offset}
 
     headers = {'Authorization': f'Bearer {spot_key}'}
 
@@ -241,29 +240,39 @@ def save_edited_playlist():
     playlist_id = data["playlist_id"]
 
     playlist = crud.update_edited_playlist(
-        playlist_id=playlist_id, playlist_tracks=playlist_tracks, playlist_title=playlist_title)
+        playlist_id=playlist_id, playlist_tracks=playlist_tracks, playlist_title=playlist_title, spotify_playlist_id=None)
 
-    print("user refresh token", user.refresh_token)
     token = tk.refresh_user_token(client_id, client_secret, user.refresh_token)
-
-    # TODO Check to see if spotify_playlist_id exists in db or prompt to log in to Spotify
 
     uris = []
     for track in playlist_tracks:
         uris.append("spotify:track:" + track['uid'])
-        print("spotify:track:" + track['uid'])
 
     name = data["playlist_title"]
 
-    with spotify.token_as(token):
-        playlist = spotify.playlist_create(user.spotify_id, name=name, public=False,
-                                           description=None)
+    # TODO Check to see if spotify_playlist_id exists in db or prompt to log in to Spotify
+    if playlist.spotify_playlist_id != None:
+        print("Spotify playlist id before", playlist.spotify_playlist_id)
+        with spotify.token_as(token):
+            spotify.playlist_replace(
+                playlist_id=playlist.spotify_playlist_id, uris=uris)
+            spotify.playlist_change_details(
+                playlist_id=playlist.spotify_playlist_id, name=name, public=False, collaborative=None, description=None)
+    else:
+        with spotify.token_as(token):
+            playlist_spot = spotify.playlist_create(user.spotify_id, name=name, public=False,
+                                                    description=None)
 
-        response = spotify.playlist_add(playlist.id, uris=uris, position=None)
-        print("Response from playlist save attempt", response)
+            response = spotify.playlist_add(
+                playlist_id=playlist_spot.id, uris=uris, position=None)
+            print("Response from playlist save attempt", response)
+            spotify_playlist_id = playlist_spot.id
+
+    print("Spotify playlist id after", spotify_playlist_id)
+    # indent above here for else
 
     playlist = crud.update_edited_playlist(
-        playlist_id=playlist_id, playlist_tracks=playlist_tracks, playlist_title=playlist_title)
+        playlist_id=playlist_id, playlist_tracks=playlist_tracks, playlist_title=playlist_title, spotify_playlist_id=spotify_playlist_id)
 
     return jsonify({"playlist_id": playlist_id})
 
@@ -299,7 +308,7 @@ def update_playlist_like():
 
 @app.route("/api/delete-playlist", methods=["POST"])
 def delete_playlist():
-    """Update db to delete a playlist"""
+    """Update db to remove a playlist from user playlists"""
 
     data = request.get_json()
     playlist_id = data["playlist_id"]

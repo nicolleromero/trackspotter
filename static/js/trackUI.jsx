@@ -57,7 +57,12 @@ function TrackslistUI(props) {
               <Button
                 variant="outline-secondary inline"
                 type="submit"
-              > Save Playlist to Spotify
+              > Save to
+                <img
+                  src="/static/img/spot_icon_gr.png"
+                  width="32"
+                  height="32">
+                </img>
               </Button>
             )}
             {!props.editable && (

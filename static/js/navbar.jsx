@@ -34,8 +34,8 @@ function Topbar(props) {
           >
             <img
               src="/static/img/spot_icon_gr.png"
-              width="30"
-              height="30">
+              width="32"
+              height="32">
             </img>&nbsp;
             Log in to Spotify
           </Button>
