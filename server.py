@@ -89,11 +89,12 @@ def login_callback():
         info = spotify.current_user()
 
     display_name = info.display_name
-    spotify_image = info.images
-    print("spotify_image", spotify_image[0])
+    display_image = info.images[0].url
+
     spotify_id = info.id
 
-    user = crud.get_user_or_add_user(spotify_id, display_name, token)
+    user = crud.get_user_or_add_user(
+        spotify_id, display_name, display_image, token)
     session['user_id'] = user.user_id
 
     return redirect('/')
@@ -322,4 +323,4 @@ def delete_playlist():
 
 if __name__ == "__main__":
     connect_to_db(app)
-    app.run(debug=True, host='0.0.0.0')
+    app.run(debug=False, host='0.0.0.0')

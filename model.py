@@ -35,6 +35,7 @@ class User(db.Model):
                         )
     spotify_id = db.Column(db.String)
     spotify_display_name = db.Column(db.String)
+    spotify_image_url = db.Column(db.String)
     created_at = db.Column(db.DateTime)
     access_token = db.Column(db.String)
     refresh_token = db.Column(db.String)
@@ -50,6 +51,7 @@ class User(db.Model):
             'user_id': self.user_id,
             'spotify_id': self.spotify_id,
             'spotify_display_name': self.spotify_display_name,
+            'spotify_image_url': self.spotify_image_url,
             'created_at': self.created_at,
             'access_token': self.access_token,
             'refresh_token': self.refresh_token,

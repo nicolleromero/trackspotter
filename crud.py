@@ -7,11 +7,12 @@ import json
 from datetime import datetime
 
 
-def create_user(spotify_id, spotify_display_name, created_at, access_token, refresh_token):
+def create_user(spotify_id, spotify_display_name, spotify_image_url, created_at, access_token, refresh_token):
     """Create and return a new user."""
 
     user = User(spotify_id=spotify_id,
                 spotify_display_name=spotify_display_name,
+                spotify_image_url=spotify_image_url,
                 created_at=created_at,
                 access_token=access_token,
                 refresh_token=refresh_token)
@@ -33,7 +34,7 @@ def get_user_by_id(user_id):
 
     user = User.query.get(user_id)
 
-    return {'user_id': user.user_id, 'spotify_id': user.spotify_id, 'spotify_display_name': user.spotify_display_name}
+    return {'user_id': user.user_id, 'spotify_id': user.spotify_id, 'spotify_display_name': user.spotify_display_name, 'spotify_image_url': user.spotify_image_url}
 
 
 def get_user(user_id):
@@ -183,13 +184,6 @@ def get_playlist_by_user_id(target_id):
 
 def playlist_ordered_by_likes():
     """Return a list of the top 20 playlists ordered by most likes """
-
-    # if offset != 0:
-    #     results = db.session.query(Playlist, db.func.count(PlaylistLike.playlist_id).label(
-    #         'total')).join(Playlist.search).outerjoin(PlaylistLike).group_by(Playlist).order_by(desc('total')).offset(offset).limit(20).all()
-    # else:
-    #     results = db.session.query(Playlist, db.func.count(PlaylistLike.playlist_id).label(
-    #         'total')).join(Playlist.search).outerjoin(PlaylistLike).group_by(Playlist).order_by(desc('total')).limit(20).all()
 
     results = db.session.query(Playlist, db.func.count(PlaylistLike.playlist_id).label(
         'total')).join(Playlist.search).outerjoin(PlaylistLike).group_by(Playlist).order_by(desc('total')).limit(20).all()
@@ -380,7 +374,7 @@ def delete_playlist(playlist_id):
     return None
 
 
-def get_user_or_add_user(spotify_id, display_name, token=None):
+def get_user_or_add_user(spotify_id, display_name, display_image, token=None):
     """Fetch an existing user or create a user"""
 
     user = User.query.filter(User.spotify_id == spotify_id).first()
@@ -389,15 +383,17 @@ def get_user_or_add_user(spotify_id, display_name, token=None):
 
         spotify_id = spotify_id
         spotify_display_name = display_name
+        spotify_image_url = display_image
         created_at = datetime.now()
         access_token = None
         refresh_token = token.refresh_token if token else None
 
         user = create_user(
-            spotify_id, spotify_display_name, created_at, access_token, refresh_token)
+            spotify_id, spotify_display_name, spotify_image_url, created_at, access_token, refresh_token)
 
     elif token:
         user.refresh_token = token.refresh_token
+        user.spotify_image_url = display_image
         db.session.commit()
 
     return user
