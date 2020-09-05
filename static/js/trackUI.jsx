@@ -39,7 +39,7 @@ function TrackslistUI(props) {
                 value={props.playlistTitle}
                 placeholder="Playlist Title"
                 onChange={(e) => props.setPlaylistTitle(e.target.value)}
-                className="inline"
+                className="inline search"
                 id="title-form"
               />
             )}
@@ -47,7 +47,7 @@ function TrackslistUI(props) {
           <Col xs="auto" >
             {props.editable && (
               <Button
-                variant="dark inline"
+                variant="dark inline search"
                 onClick={props.handleDeletePlaylist}
               > Delete Playlist
               </Button>
@@ -55,7 +55,7 @@ function TrackslistUI(props) {
             {' '}
             {props.editable && (
               <Button
-                variant="outline-secondary inline"
+                variant="outline-secondary inline search"
                 type="submit"
               > Save to
                 <img
@@ -67,7 +67,7 @@ function TrackslistUI(props) {
             )}
             {!props.editable && (
               <Button
-                variant="outline-secondary inline"
+                variant="outline-secondary inline search"
                 onClick={props.handleCopyPlaylist}
               > Copy Playlist
               </Button>

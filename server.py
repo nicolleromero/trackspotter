@@ -89,6 +89,8 @@ def login_callback():
         info = spotify.current_user()
 
     display_name = info.display_name
+    spotify_image = info.images
+    print("spotify_image", spotify_image[0])
     spotify_id = info.id
 
     user = crud.get_user_or_add_user(spotify_id, display_name, token)
@@ -97,7 +99,7 @@ def login_callback():
     return redirect('/')
 
 
-@app.route('/logout', methods=['GET'])
+@ app.route('/logout', methods=['GET'])
 def logout():
     """Log out from Spotify or dev user"""
 
@@ -106,7 +108,7 @@ def logout():
     return redirect('/')
 
 
-@app.route("/api/search", methods=["POST"])
+@ app.route("/api/search", methods=["POST"])
 def search():
     """Search for tracks with Spotify endpoint"""
 
@@ -146,7 +148,7 @@ def search():
     return jsonify(search_tracks)
 
 
-@app.route("/api/playlists")
+@ app.route("/api/playlists")
 def display_playlists():
     """ Display a list of playlists for a user"""
 
@@ -156,7 +158,7 @@ def display_playlists():
     return jsonify(data)
 
 
-@app.route("/api/top-playlists")
+@ app.route("/api/top-playlists")
 def get_top_playlists():
     """Get the top playlists to display """
 
@@ -167,7 +169,7 @@ def get_top_playlists():
     return jsonify(data)
 
 
-@app.route("/api/playlists/<playlist_id>")
+@ app.route("/api/playlists/<playlist_id>")
 def display_playlist_tracks(playlist_id):
     """Display a list of playlist tracks for a specific playlist"""
 

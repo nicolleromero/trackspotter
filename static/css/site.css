@@ -90,9 +90,10 @@ h5 {
 }
 
 .h1 {
-  font-weight: 500;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 90%;
+  letter-spacing: 0px;
+  /* font-family: 'Montserrat', sans-serif; */
 }
 
 .padding {
@@ -104,7 +105,8 @@ h5 {
 }
 
 .cactus {
-  margin-top: 30px;
+  /* margin-top: 30px; */
+  margin-bottom: 10px;
   margin-right: 150px;
 }
 
@@ -114,6 +116,7 @@ h5 {
   line-height: 0.1em;
   margin: 5px 0 40px;
   vertical-align: text-bottom !important;
+  letter-spacing: 0.1em;
 }
 
 .trackspotter {
@@ -133,6 +136,10 @@ h5 {
 
 td {
 	vertical-align: middle !important;
+}
+
+.search {
+  min-height: 46px !important;
 }
 
 #need-space {
