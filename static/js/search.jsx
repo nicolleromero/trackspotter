@@ -1,10 +1,8 @@
-const { Autocomplete, Component, useEffect, useRef, useState, useCallback, useMemo } = React;
+const { Component, useEffect, useRef, useState, useCallback, useMemo } = React;
 const { render } = ReactDOM;
 const { Badge, Button, Col, Container, Dropdown, DropdownButton, Form, FormControl, FormGroup, InputGroup, ListGroup, Navbar, OverlayTrigger, Row, Table, Tooltip } = ReactBootstrap;
 
-// const { ReactStructuredQuerySearch } = ReactStructuredQuerySearch;
 const { DragDropContext, Droppable, Draggable } = ReactBeautifulDnd;
-// const { ReactAutocomplete } = ReactAutocomplete;
 const Router = ReactRouterDOM.BrowserRouter;
 const Route = ReactRouterDOM.Route;
 const Link = ReactRouterDOM.Link;
@@ -45,7 +43,7 @@ function StructuredSearch(props) {
               >
                 {Object.keys(PREFIXES).map((key) => {
                   return (
-                    <option className="dropdowns" value={key}>{PREFIXES[key]}</option>
+                    <option className="dropdowns" key={key} value={key}>{PREFIXES[key]}</option>
                   )
                 }
                 )}
@@ -63,7 +61,7 @@ function StructuredSearch(props) {
               >
                 {Object.keys(OPERATORS).map((key) => {
                   return (
-                    <option value={key}>{OPERATORS[key]}</option>
+                    <option key={key} value={key}>{OPERATORS[key]}</option>
                   )
                 }
                 )}
@@ -113,7 +111,7 @@ function StructuredSearch(props) {
               variant="outline-secondary inline"
               type="submit"
             >
-              <i class="fa fa-search-plus"></i> Search
+              <i className="fa fa-search-plus"></i> Search
               </Button>
               &nbsp;
               <Button

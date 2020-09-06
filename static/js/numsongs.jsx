@@ -1,10 +1,8 @@
-const { Autocomplete, Component, useEffect, useRef, useState, useCallback, useMemo } = React;
+const { Component, useEffect, useRef, useState, useCallback, useMemo } = React;
 const { render } = ReactDOM;
 const { Badge, Button, Col, Container, Dropdown, DropdownButton, Form, FormControl, FormGroup, InputGroup, ListGroup, Navbar, OverlayTrigger, Row, Table, Tooltip } = ReactBootstrap;
 
-// const { ReactStructuredQuerySearch } = ReactStructuredQuerySearch;
 const { DragDropContext, Droppable, Draggable } = ReactBeautifulDnd;
-// const { ReactAutocomplete } = ReactAutocomplete;
 const Router = ReactRouterDOM.BrowserRouter;
 const Route = ReactRouterDOM.Route;
 const Link = ReactRouterDOM.Link;

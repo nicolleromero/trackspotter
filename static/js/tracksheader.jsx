@@ -24,7 +24,7 @@ function TracksHeader(props) {
         <th>PLAYTIME</th>
         <th>PLAY</th><th>
           {props.editable && (
-            <span><i class="fa fa-trash-o"></i></span>
+            <span><i className="fa fa-trash-o"></i></span>
           )}</th>
       </tr>
     </thead>

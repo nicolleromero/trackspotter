@@ -1,4 +1,4 @@
-const { Autocomplete, Component, useEffect, useState, useCallback, useMemo } = React;
+const { Component, PureComponent, useEffect, useState, useCallback, useMemo } = React;
 const { render } = ReactDOM;
 const { Badge, Button, Col, Container, Dropdown, DropdownButton, Form, FormControl, FormGroup, InputGroup, ListGroup, Navbar, Row, Spinner, Table } = ReactBootstrap;
 
@@ -104,12 +104,10 @@ function AdvSearch() {
     setQueries(newQueries);
   }
 
-
   function handleDelete(target) {
     const newTracks = tracks.filter((t) => t.id !== target);
     setTracks(newTracks);
   }
-
 
   const handleSavePlaylist = (event) => {
     event.preventDefault();
@@ -253,7 +251,14 @@ function AdvSearch() {
                               {...provided.dragHandleProps}
                               align="center"
                               scope="row">
-                              <td></td>
+                              <td><span className="material-icons">
+                                <img
+                                  src="/static/img/baseline_drag_handle_black_18dp.png"
+                                  width="30"
+                                  height="20"
+                                >
+                                </img>
+                              </span></td>
                               <td>{order}</td>
                               <td>{track.name}</td>
                               <td>{track.album.artists[0].name}</td>
@@ -298,28 +303,24 @@ function AdvSearch() {
             </Spinner>
           </Row>
         </Container >
-      )
-      }
-      {
-        tracks.length > 0 && (
-          <Container>
-            <Row className="float-right">
-              <Col className="float-right">
-                <Button
-                  variant="outline-secondary inline more-space"
-                  onClick={handleNext}
-                >
-                  More Tracks
+      )}
+      {tracks.length > 0 && (
+        <Container>
+          <Row className="float-right">
+            <Col className="float-right">
+              <Button
+                variant="outline-secondary inline more-space"
+                onClick={handleNext}
+              >
+                More Tracks
               </Button>
-              </Col>
-            </Row>
-          </Container>
-        )
-      }
+            </Col>
+          </Row>
+        </Container>
+      )}
     </React.Fragment >
   );
 }
-
 
 
 function TopPlaylists(props) {
@@ -408,6 +409,8 @@ function PlaylistTracks(props) {
   let [playlistUser, setPlaylistUser] = React.useState('');
   let [playlistId, setPlaylistId] = React.useState('');
   let history = useHistory();
+  const [message, setMessage] = React.useState('');
+  const [snackbar, setSnackbar] = React.useState(false);
 
   React.useEffect(() => {
     fetch(`/api/playlists/${playlist_id}`)
@@ -441,6 +444,14 @@ function PlaylistTracks(props) {
   function handleDeleteTrack(target) {
     const newTracks = tracks.filter((t) => t.track_id !== target);
     setTracks(newTracks);
+  }
+
+  function openSnackbar(newMessage) {
+    setMessage(newMessage);
+    setSnackbar(true);
+    setTimeout(() => {
+      setSnackbar(false);
+    }, 3000);
   }
 
   function handleDeletePlaylist() {
@@ -478,6 +489,7 @@ function PlaylistTracks(props) {
       .then(data => {
         setPlaylistId(data["playlist_id"])
       });
+    openSnackbar("Playlist saved to Spotify.")
   }
 
   const handleCopyPlaylist = (event) => {
@@ -569,6 +581,10 @@ function PlaylistTracks(props) {
               )}
             </Droppable>
           </DragDropContext>
+          <Snackbar
+            message={message}
+            snackbar={snackbar}
+          />
         </Table>
       </Container>
     </Container>

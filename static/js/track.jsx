@@ -26,7 +26,17 @@ function Track(props) {
 
   return (
     <React.Fragment>
-      <td></td>
+      <td>
+        <span className="material-icons">
+          <img
+            src="/static/img/baseline_drag_handle_black_18dp.png"
+            width="30"
+            height="20"
+          >
+
+          </img>
+        </span>
+      </td>
       <td>{order}</td>
       <td>{props.track.title}</td>
       <td>{props.track.artist}</td>
