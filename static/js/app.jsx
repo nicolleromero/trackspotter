@@ -158,27 +158,30 @@ function AdvSearch() {
 
   return (
     <React.Fragment>
-      <Container>
-        <Row className="d-flex float-right padding">
-          <img className="cactus" src="/static/img/cactus.png" width="200" height="200"></img>
+      <Navbar id="cover-image">
+        <Row className="d-flex float-right padding"
+        >
+          {/* <img className="cactus"
+            src="/static/img/anthony-delanoix-hzgs56Ze49s-unsplash.jpg" width="auto" height="200"></img> */}
+          {/* <img className="cactus" src="/static/img/cactus.png" width="200" height="200"></img> */}
         </Row>
         <Row className="d-flex justify-content-between hyper offset-2">
-          <h1 className="h1">Search for tracks <br />with pinpoint accuracy </h1>
+          <h1 className="h1">Search for the <br />tracks you <br />love </h1>
         </Row>
-      </Container>
-      <StructuredSearch
-        handleSearch={handleSearch}
-        setPrefix={setPrefix}
-        setParam={setParam}
-        setWildcard={setWildcard}
-        handleReset={handleReset}
-        onChangeNumSongs={setNumSongs}
-        param={param}
-        numSongs={numSongs}
-        prefix={prefix}
-        wildcard={wildcard}
-      />
-      <Container>
+      </Navbar>
+      <Container className="padding">
+        <StructuredSearch
+          handleSearch={handleSearch}
+          setPrefix={setPrefix}
+          setParam={setParam}
+          setWildcard={setWildcard}
+          handleReset={handleReset}
+          onChangeNumSongs={setNumSongs}
+          param={param}
+          numSongs={numSongs}
+          prefix={prefix}
+          wildcard={wildcard}
+        />
         <Row className="d-flex justify-content-between">
           <div xs="auto" className="align-content-left">
             <h5>
@@ -253,9 +256,10 @@ function AdvSearch() {
                               scope="row">
                               <td><span className="material-icons">
                                 <img
-                                  src="/static/img/baseline_drag_handle_black_18dp.png"
-                                  width="30"
-                                  height="20"
+                                  className="dragger"
+                                  src="/static/img/baseline_drag_indicator_black_18dp.png"
+                                  width="32"
+                                  height="32"
                                 >
                                 </img>
                               </span></td>
@@ -295,29 +299,33 @@ function AdvSearch() {
           </Table>
         </Row>
       </Container>
-      {loading && (
-        <Container>
-          <Row className="d-flex justify-content-center inline align-items-center">
-            <Spinner animation="border" variant="secondary" role="status">
-              <span className="sr-only">Loading...</span>
-            </Spinner>
-          </Row>
-        </Container >
-      )}
-      {tracks.length > 0 && (
-        <Container>
-          <Row className="float-right">
-            <Col className="float-right">
-              <Button
-                variant="outline-secondary inline more-space"
-                onClick={handleNext}
-              >
-                More Tracks
+      {
+        loading && (
+          <Container>
+            <Row className="d-flex justify-content-center inline align-items-center">
+              <Spinner animation="border" variant="secondary" role="status">
+                <span className="sr-only">Loading...</span>
+              </Spinner>
+            </Row>
+          </Container >
+        )
+      }
+      {
+        tracks.length > 0 && (
+          <Container>
+            <Row className="float-right">
+              <Col className="float-right">
+                <Button
+                  variant="outline-secondary inline more-space"
+                  onClick={handleNext}
+                >
+                  More Tracks
               </Button>
-            </Col>
-          </Row>
-        </Container>
-      )}
+              </Col>
+            </Row>
+          </Container>
+        )
+      }
     </React.Fragment >
   );
 }
@@ -336,7 +344,15 @@ function TopPlaylists(props) {
 
   return (
     <React.Fragment>
-      <Container >
+      <Navbar id="banner-image">
+        <Row className="d-flex float-right padding"
+        >
+        </Row>
+        <Row className="d-flex justify-content-between hyper offset-2">
+          <h1 className="h1 banner">Popular <br />Playlists</h1>
+        </Row>
+      </Navbar>
+      <Container>
         <Row className="align-content-center">
           <Table id="playlist_table" hover>
             <PlaylistHeader
@@ -375,29 +391,39 @@ function UserPlaylists(props) {
   }, [])
 
   return (
-    <Container>
-      <Row className="align-content-center">
-        <Table id="playlist_table" hover>
-          <PlaylistHeader
-            title="Your Playlists"
-          />
-          <tbody>
-            {user_playlists.map((playlist) => {
-              return (
-                <PlaylistRow
-                  playlist_id={playlist.playlist_id}
-                  title={playlist.playlist_title}
-                  likes={playlist.count}
-                  value={playlist.playlist_id}
-                  query={playlist.query}
-                  onClick={props.handleOpenPlaylist}
-                />
-              )
-            })}
-          </tbody>
-        </Table>
-      </Row>
-    </Container>
+    <React.Fragment>
+      <Navbar id="banner-image">
+        <Row className="d-flex float-right padding"
+        >
+        </Row>
+        <Row className="d-flex justify-content-between hyper offset-2">
+          <h1 className="h1 banner">Your <br />Playlists</h1>
+        </Row>
+      </Navbar>
+      <Container>
+        <Row className="align-content-center">
+          <Table id="playlist_table" hover>
+            <PlaylistHeader
+              title="Your Playlists"
+            />
+            <tbody>
+              {user_playlists.map((playlist) => {
+                return (
+                  <PlaylistRow
+                    playlist_id={playlist.playlist_id}
+                    title={playlist.playlist_title}
+                    likes={playlist.count}
+                    value={playlist.playlist_id}
+                    query={playlist.query}
+                    onClick={props.handleOpenPlaylist}
+                  />
+                )
+              })}
+            </tbody>
+          </Table>
+        </Row>
+      </Container>
+    </React.Fragment>
   )
 }
 

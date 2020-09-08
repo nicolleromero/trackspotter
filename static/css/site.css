@@ -40,7 +40,7 @@ h5 {
 
 #topbar {
   color: #F1F3F8;
-  border-bottom: 1px solid #000;
+  /* border-bottom: 1px solid #000; */
   /* background-color: #393B44; */
 }
 
@@ -81,18 +81,58 @@ h5 {
 
 .hyper-search {
   color: #393B44;
-  font-family: 'Quicksand', 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
-  font-style: italic;
+  /* font-family: 'Quicksand', 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif; */
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500 !important;
+  /* font-style: italic; */
   font-size: 24px;
   margin: 0 0 20px 6px;
   line-height: 40px;
   letter-spacing: .5px;
 }
 
+#cover-image {
+  background-image:url('/static/img/banner.png') !important;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position-y: bottom;
+  padding-bottom: 100px;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin-left: 20 !important;
+  margin-right: 20 !important;
+}
+
+#banner-image {
+  background-image:url('/static/img/long_banner.png') !important;
+  background-size: 100%;
+  max-height: 180px;
+  background-repeat: no-repeat;
+  background-position-y: bottom;
+  padding-bottom: 150px;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin-left: 20 !important;
+  margin-right: 20 !important;
+}
+
+.banner {
+  margin-top: 60px;
+  padding-left: 30px;
+}
+
+.cactus {
+  /* margin-top: 30px; */
+  margin-bottom: 10px;
+  margin-right: 50px;
+}
+
 .h1 {
   font-weight: 400;
   line-height: 90%;
   letter-spacing: 0px;
+  color: cornsilk;
+  margin-left: 160px;
   /* font-family: 'Montserrat', sans-serif; */
 }
 
@@ -112,17 +152,11 @@ h5 {
   border-radius: 50%;
 }
 
-.cactus {
-  /* margin-top: 30px; */
-  margin-bottom: 10px;
-  margin-right: 150px;
-}
-
 .hyper {
-  padding-top: 70px;
+  padding-top: 50px;
   /* border-bottom: 1px solid #000; */
   line-height: 0.1em;
-  margin: 5px 0 40px;
+  margin: 0 0 40px;
   vertical-align: text-bottom !important;
   letter-spacing: 0.1em;
 }
@@ -236,6 +270,10 @@ a {
   background-size: cover;
   background-position: top center;
   border-radius: 50%;
+}
+
+.dragger {
+  opacity: 0.5;
 }
 
 

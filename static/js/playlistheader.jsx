@@ -15,13 +15,13 @@ function PlaylistHeader(props) {
 
   return (
     <React.Fragment>
-      <thead>
+      {/* <thead>
         <tr align="center">
           <th colSpan="4"><h3 className="title">
             {props.title} &nbsp;🎧
           </h3></th>
         </tr>
-      </thead>
+      </thead> */}
       <thead id="playlist-thead">
         <tr align="center">
           <th>SEARCH TERMS</th>

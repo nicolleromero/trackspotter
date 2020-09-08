@@ -29,9 +29,10 @@ function Track(props) {
       <td>
         <span className="material-icons">
           <img
-            src="/static/img/baseline_drag_handle_black_18dp.png"
+            className="dragger"
+            src="/static/img/baseline_drag_indicator_black_18dp.png"
             width="30"
-            height="20"
+            height="30"
           >
 
           </img>
