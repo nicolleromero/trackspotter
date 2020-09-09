@@ -245,6 +245,11 @@ td {
   padding-bottom: 6px;
 }
 
+.badge-lower {
+  margin-top: 60px;
+  margin-bottom: -20px;
+}
+
 span {
   max-height: 50px;
   display: inline-flex;
@@ -283,6 +288,12 @@ a {
 .tryitout {
   margin-top: -60px;
   margin-left: 210px;
+}
+
+.loginprompt {
+  margin-bottom: 10px;
+  margin-left: 210px;
+  margin-top: -80px;
 }
 
 #avatar {
