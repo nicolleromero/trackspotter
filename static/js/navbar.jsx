@@ -60,7 +60,7 @@ function Login(props) {
   if (props.user) {
     return (
       <React.Fragment>
-        <nav className="navbar navbar-expand-lg">
+        <nav className="navbar navbar-expand-lg center">
           <ul className="nav navbar-nav">
             <li className="inline link">
               <Link to="/">Home</Link>
@@ -81,8 +81,8 @@ function Login(props) {
   } else {
     return (
       <React.Fragment>
-        <Form.Row>
-          <div className="d-flex float-left log-in">
+        <Form.Row className="justify-content-center">
+          {/* <div className="d-flex float-left log-in">
             <FormControl
               type="text"
               value={userId}
@@ -97,19 +97,17 @@ function Login(props) {
             >
               Dev
           </Button>
-          </div>
-          <div className="d-flex float-right">
-            <nav className="navbar navbar-expand-lg inline">
-              <ul className="nav navbar-nav">
-                <li className="inline link">
-                  <Link to="/">Home</Link>
-                </li>
-                <li className="inline link">
-                  <Link to="/top-playlists"> Explore Playlists</Link>
-                </li>
-              </ul>
-            </nav>
-          </div>
+          </div> */}
+          <nav className="navbar navbar-expand-lg center">
+            <ul className="nav navbar-nav">
+              <li className="inline link">
+                <Link to="/">Home</Link>
+              </li>
+              <li className="inline link">
+                <Link to="/top-playlists"> Explore Playlists</Link>
+              </li>
+            </ul>
+          </nav>
         </Form.Row>
       </React.Fragment>
     );

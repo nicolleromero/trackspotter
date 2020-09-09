@@ -223,6 +223,10 @@ td {
 	margin: 2px;
 }
 
+.delete-button {
+  font-size: 24px;
+}
+
 .auto {
 	font-family: 'Quicksand', Arial, Helvetica, sans-serif !important;
   font-weight: lighter !important;
@@ -273,6 +277,12 @@ a {
   font-size: 32px;
   font-weight: bold;
   border: 0;
+  background: transparent;
+}
+
+.tryitout {
+  margin-top: -60px;
+  margin-left: 210px;
 }
 
 #avatar {
@@ -285,6 +295,10 @@ a {
 
 .dragger {
   opacity: 0.5;
+}
+
+.center {
+  justify-content: center !important;
 }
 
 .snackbar {
