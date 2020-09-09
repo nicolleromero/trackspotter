@@ -21,12 +21,12 @@ function Track(props) {
   // Handles the player
   let to_play = "https://open.spotify.com/embed/track/" + props.track.uid;
 
-  let editable = (USER != null && props.playlistUser === USER.user_id);
+  // let editable = (USER != null && props.playlistUser === USER.user_id);
 
   return (
     <React.Fragment>
       <td>
-        {editable && (
+        {props.editable && (
           <span className="material-icons">
             <img
               className="dragger"
@@ -58,7 +58,7 @@ function Track(props) {
         </iframe>
       </td>
       <td>
-        {editable && (
+        {props.editable && (
           <button
             className="btn btn-sm delete-button"
             onClick={() => props.onDeleteTrack(props.track.track_id)}

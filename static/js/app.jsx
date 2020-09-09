@@ -107,8 +107,8 @@ function AdvSearch() {
     setQueries(newQueries);
   }
 
-  function handleDelete(target) {
-    const newTracks = tracks.filter((t) => t.id !== target);
+  function handleDeleteTrack(target) {
+    const newTracks = tracks.filter((t) => t.track_id !== target);
     setTracks(newTracks);
   }
 
@@ -192,7 +192,7 @@ function AdvSearch() {
                 return (
                   <Badge
                     pill
-                    className="btn-dark badge"
+                    className="btn-dark badge badge-lower"
                     href="#"
                     variant="dark"
                     key={element}
@@ -204,14 +204,29 @@ function AdvSearch() {
               })}
             </h5>
           </div>
+          {tracks.length > 0 && USER == null && (
+            <div>
+              <Row className="offset-2">
+                <Col >
+                  <img
+                    className="loginprompt"
+                    src="/static/img/loginprompt.png"
+                    width="300"
+                    height="auto"
+                  >
+                  </img>
+                </Col>
+              </Row>
+            </div>
+          )}
           {tracks.length > 0 && USER != null && (
             <Form
               inline
-              className="float-right"
+              className="float-right inline"
               onSubmit={handleSavePlaylist}
             >
               {tracks.length > 0 && USER != null && (
-                <Form.Row inline className="float-right inline save">
+                <Form.Row inline className="float-right inline save top-space">
                   <FormControl
                     type="text"
                     value={playlist_title}
@@ -260,55 +275,28 @@ function AdvSearch() {
                       {...provided.droppableProps}
                       ref={provided.innerRef}
                     >
-                      {tracks.map((track, index) => {
-                        let order = index + 1;
-                        let track_time = millisToTime(track.duration_ms);
-                        let to_play = "https://open.spotify.com/embed/track/" + track.id // Handles the player
-                        return (
-                          <Draggable key={track.id} draggableId={track.id} index={index}>
-                            {(provided, snapshot) => (
-                              <tr ref={provided.innerRef}
-                                {...provided.draggableProps}
-                                {...provided.dragHandleProps}
-                                align="center"
-                                scope="row">
-                                <td><span className="material-icons">
-                                  <img
-                                    className="dragger"
-                                    src="/static/img/baseline_drag_indicator_black_18dp.png"
-                                    width="32"
-                                    height="32"
-                                  >
-                                  </img>
-                                </span></td>
-                                <td>{order}</td>
-                                <td>{track.name}</td>
-                                <td>{track.album.artists[0].name}</td>
-                                <td>{track.album.name}</td>
-                                <td>{track_time}</td>
-                                {/* <td><img src={track.album.images[2].url}></img></td> */}
-                                <td><iframe
-                                  src={to_play}
-                                  width="80"
-                                  height="80"
-                                  frameBorder="0"
-                                  allowtransparency="true"
-                                  allow="encrypted-media"
-                                >
-                                </iframe></td>
-                                <td>
-                                  <button
-                                    className="btn btn-sm delete-button"
-                                    onClick={() => handleDelete(track.id)}
-                                  >
-                                    ×
-                                </button>
-                                </td>
-                              </tr>
-                            )}
-                          </Draggable>
-                        )
-                      })}
+                      {tracks.map((track, index) => (
+                        <Draggable
+                          key={track.uid}
+                          draggableId={track.uid}
+                          index={index}
+                        >
+                          {(provided, snapshot) => (
+                            <tr ref={provided.innerRef}
+                              {...provided.draggableProps}
+                              {...provided.dragHandleProps}
+                              align="center"
+                              scope="row">
+                              <Track
+                                track={track}
+                                index={index}
+                                onDeleteTrack={handleDeleteTrack}
+                                editable={true}
+                              />
+                            </tr>
+                          )}
+                        </Draggable>
+                      ))}
                       {provided.placeholder}
                     </tbody>
                   )}
@@ -656,6 +644,7 @@ function PlaylistTracks(props) {
                             index={index}
                             playlistUser={playlistUser}
                             onDeleteTrack={handleDeleteTrack}
+                            editable={editable}
                           />
                         </tr>
                       )}

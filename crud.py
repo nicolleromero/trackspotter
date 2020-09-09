@@ -278,7 +278,7 @@ def create_tracks_and_playlist_tracks_for_playlist(tracks_in_playlist, playlist_
 
     for track in tracks:
         # track.id from client == track.uid in db
-        uid = track['id']
+        uid = track['uid']
         db_track = get_track_by_track_uid(uid)
         print("***************", db_track is not None)
 
@@ -316,6 +316,48 @@ def create_tracks_and_playlist_tracks_for_playlist(tracks_in_playlist, playlist_
             track_id=track.track_id, playlist_id=playlist_id, track_order=track_order)
 
     return created_tracks
+
+
+def create_tracks_from_search(tracks_in_search):
+    """Tracks to display after a search"""
+
+    tracks = tracks_in_search
+    created_tracks = []
+
+    for track in tracks:
+        # track.id from client == track.uid in db
+        uid = track['id']
+        db_track = get_track_by_track_uid(uid)
+        print("***************", db_track is not None)
+
+        # not db.session.query(db.session.query(Track).filter_by(uid=uid).exists()).scalar():
+        if db_track is None:
+
+            uid, title, artist, album, release_date, playtime, preview, popularity, album_art = (
+                track['id'],
+                track['name'],
+                track['artists'][0]['name'],
+                track['album']['name'],
+                track['album']['release_date'],
+                track['duration_ms'],
+                track['preview_url'],
+                track['popularity'],
+                track['album']['images'][2]["url"])
+
+            db_track = create_track(uid=uid,
+                                    title=title,
+                                    artist=artist,
+                                    album=album,
+                                    release_date=release_date,
+                                    playtime=playtime,
+                                    preview=preview,
+                                    popularity=popularity,
+                                    album_art=album_art,
+                                    genre=None)
+
+        created_tracks.append(db_track)
+
+    return [track.as_dict() for track in created_tracks]
 
 
 def update_edited_playlist(playlist_id, playlist_title, playlist_tracks, spotify_playlist_id=None):

@@ -144,9 +144,10 @@ def search():
     search_tracks = data['tracks']['items']
     session['search_tracks'] = search_tracks
 
-    # TODO: return tracks from db (add tracks to db, then retrieve w/ crud method)
+    # return tracks as list of dicts to render for search tracks
+    tracks = crud.create_tracks_from_search(search_tracks)
 
-    return jsonify(search_tracks)
+    return jsonify(tracks)
 
 
 @ app.route("/api/playlists")
