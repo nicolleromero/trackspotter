@@ -38,6 +38,7 @@ h5 {
   padding: 15px;
 }
 
+
 #topbar {
   color: #F1F3F8;
   /* border-bottom: 1px solid #000; */
@@ -77,6 +78,10 @@ h5 {
 
 .fixed-width {
   width: 185px;
+}
+
+.wider {
+  min-width: 400px;
 }
 
 .hyper-search {
@@ -230,7 +235,10 @@ td {
 	border-style: solid;
 	border-width: 1px;
 	border-color: #204051;
-	margin-top: 25px;
+  margin-top: 25px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 6px;
 }
 
 span {
@@ -261,7 +269,10 @@ a {
 }
 
 #title-form {
-	min-width: 250px;
+  min-width: 400px;
+  font-size: 32px;
+  font-weight: bold;
+  border: 0;
 }
 
 #avatar {
@@ -275,7 +286,6 @@ a {
 .dragger {
   opacity: 0.5;
 }
-
 
 .snackbar {
   visibility: hidden;

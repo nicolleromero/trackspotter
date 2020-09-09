@@ -20,7 +20,7 @@ function PlaylistRow(props) {
       <td><h5>{queries.map((query) => {
         if (query) {
           return (
-            <Badge pill className="btn-dark badge">{query.replace(/"/g, ' ')}</Badge>
+            <Badge pill className="btn-dark badge" key={query}>{query.replace(/"/g, ' ')}</Badge>
           )
         }
       })}</h5></td>

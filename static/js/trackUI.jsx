@@ -15,36 +15,31 @@ const useHistory = ReactRouterDOM.useHistory;
 
 function TrackslistUI(props) {
 
-  function handleCopyURLtoClipboard() {
-    let shareURL = "http://localhost:5000/playlist/" + props.PlaylistId
-    console.log(shareURL)
-    return shareURL
-  }
+  // function handleCopyURLtoClipboard() {
+  //   let shareURL = "http://localhost:5000/playlist/" + props.PlaylistId
+  //   return shareURL
+  // }
 
   return (
-    <Row className="d-flex justify-content-between" id="tracks-header">
-      <div className="float-left title">
-        <h3>
-          {props.playlistTitle}
-        </h3>
-      </div>
+    <Row id="tracks-header">
       <Form
         inline
+        className="flex-grow-1 justify-content-between"
         onSubmit={props.handleSaveEditedPlaylist}>
-        <Form.Row inline className="float-right title">
-          <Col xs="auto" >
-            {props.editable && (
-              <FormControl
-                type="text"
-                value={props.playlistTitle}
-                placeholder="Playlist Title"
-                onChange={(e) => props.setPlaylistTitle(e.target.value)}
-                className="inline search"
-                id="title-form"
-              />
-            )}
+        <Form.Row inline className="title">
+          <Col xs="auto">
+            <FormControl
+              type="text"
+              value={props.playlistTitle}
+              placeholder="Playlist Title"
+              onChange={(e) => props.setPlaylistTitle(e.target.value)}
+              id="title-form"
+              readOnly={!props.editable}
+            />
           </Col>
-          <Col xs="auto" >
+        </Form.Row>
+        <Form.Row inline className="title">
+          <Col xs="auto">
             {props.editable && (
               <Button
                 variant="dark inline search"

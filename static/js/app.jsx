@@ -42,6 +42,8 @@ function AdvSearch() {
 
   React.useEffect(() => {
     if (query) {
+      console.log("query2", query)
+      console.log("wildcard2", wildcard)
 
       const search = {
         "query": query,
@@ -74,6 +76,8 @@ function AdvSearch() {
 
   function handleSearch(event) {
     event.preventDefault();
+    console.log("query1", query)
+    console.log("wildcard1", wildcard)
 
     const newQueries = queries.slice();
     if (prefix === "year:") {
@@ -84,10 +88,11 @@ function AdvSearch() {
       newQueries.push(`${prefix}*${param}`);
     } else if (wildcard === "contains" && prefix !== '') {
       newQueries.push(`${prefix}*${param}*`);
+    } else if (wildcard === "contains" && prefix === '') {
+      newQueries.push(`${prefix}${param}*`);
     } else {
       newQueries.push(`${prefix}"${param}"`);
     }
-
     setQueries(newQueries);
     setWildcard('');
     setParam('');
@@ -214,8 +219,7 @@ function AdvSearch() {
                     value={playlist_title}
                     placeholder="Playlist Title"
                     onChange={(e) => setPlaylistTitle(e.target.value)}
-                    className="mr-sm-2 inline"
-                    id="title-form"
+                    className="mr-sm-2 inline wider"
                   />
                   <Button
                     variant="outline-secondary"
@@ -413,6 +417,7 @@ function UserPlaylists(props) {
                     playlist_id={playlist.playlist_id}
                     title={playlist.playlist_title}
                     likes={playlist.count}
+                    key={playlist.playlist_id}
                     value={playlist.playlist_id}
                     query={playlist.query}
                     onClick={props.handleOpenPlaylist}
@@ -565,6 +570,7 @@ function PlaylistTracks(props) {
         handleCopyPlaylist={handleCopyPlaylist}
         handlePlaylistLike={handlePlaylistLike}
         editable={editable}
+        tracks={tracks}
         playlistLike={playlistLike}
       // playlistId={platlistId}
       />

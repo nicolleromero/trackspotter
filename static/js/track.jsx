@@ -20,7 +20,6 @@ function Track(props) {
 
   // Handles the player
   let to_play = "https://open.spotify.com/embed/track/" + props.track.uid;
-  console.log(to_play)
 
   let editable = (USER != null && props.playlistUser === USER.user_id);
 
