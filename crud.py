@@ -182,11 +182,11 @@ def get_playlist_by_user_id(target_id):
     return user_playlists
 
 
-def playlist_ordered_by_likes():
+def playlist_ordered_by_likes(offset):
     """Return a list of the top 20 playlists ordered by most likes """
 
     results = db.session.query(Playlist, db.func.count(PlaylistLike.playlist_id).label(
-        'total')).join(Playlist.search).outerjoin(PlaylistLike).group_by(Playlist).order_by(desc('total')).limit(20).all()
+        'total')).join(Playlist.search).outerjoin(PlaylistLike).group_by(Playlist).order_by(desc('total')).limit(20).offset(offset).all()
 
     playlists_by_likes = []
 

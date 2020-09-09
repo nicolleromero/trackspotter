@@ -198,7 +198,7 @@ function AdvSearch() {
                     key={element}
                     onClick={() => handleDeleteParam(element)}
                   >
-                    X {element.replace(/"/g, '')}
+                    × {element.replace(/"/g, '')}
                   </Badge>
                 )
               })}
@@ -231,76 +231,93 @@ function AdvSearch() {
           )}
         </Row>
       </Container>
-      <Container className="tracks">
-        <Row className="align-content-center">
-          <Table hover>
-            <TracksHeader
-              editable={true}
-            />
-            <DragDropContext onDragEnd={handleDragEnd}>
-              <Droppable droppableId="droppable">
-                {(provided, snapshot) => (
-                  <tbody
-                    {...provided.droppableProps}
-                    ref={provided.innerRef}
-                  >
-                    {tracks.map((track, index) => {
-                      let order = index + 1;
-                      let track_time = millisToTime(track.duration_ms);
-                      let to_play = "https://open.spotify.com/embed/track/" + track.id // Handles the player
-                      return (
-                        <Draggable key={track.id} draggableId={track.id} index={index}>
-                          {(provided, snapshot) => (
-                            <tr ref={provided.innerRef}
-                              {...provided.draggableProps}
-                              {...provided.dragHandleProps}
-                              align="center"
-                              scope="row">
-                              <td><span className="material-icons">
-                                <img
-                                  className="dragger"
-                                  src="/static/img/baseline_drag_indicator_black_18dp.png"
-                                  width="32"
-                                  height="32"
+      {!loading && tracks.length === 0 && (
+        <Container>
+          <Row className="offset-2">
+            <Col >
+              <img
+                className="tryitout"
+                src="/static/img/tryitout.png"
+                width="200"
+                height="auto"
+              >
+              </img>
+            </Col>
+          </Row>
+        </Container>
+      )}
+      {tracks.length > 0 && (
+        <Container className="tracks">
+          <Row className="align-content-center">
+            <Table hover>
+              <TracksHeader
+                editable={true}
+              />
+              <DragDropContext onDragEnd={handleDragEnd}>
+                <Droppable droppableId="droppable">
+                  {(provided, snapshot) => (
+                    <tbody
+                      {...provided.droppableProps}
+                      ref={provided.innerRef}
+                    >
+                      {tracks.map((track, index) => {
+                        let order = index + 1;
+                        let track_time = millisToTime(track.duration_ms);
+                        let to_play = "https://open.spotify.com/embed/track/" + track.id // Handles the player
+                        return (
+                          <Draggable key={track.id} draggableId={track.id} index={index}>
+                            {(provided, snapshot) => (
+                              <tr ref={provided.innerRef}
+                                {...provided.draggableProps}
+                                {...provided.dragHandleProps}
+                                align="center"
+                                scope="row">
+                                <td><span className="material-icons">
+                                  <img
+                                    className="dragger"
+                                    src="/static/img/baseline_drag_indicator_black_18dp.png"
+                                    width="32"
+                                    height="32"
+                                  >
+                                  </img>
+                                </span></td>
+                                <td>{order}</td>
+                                <td>{track.name}</td>
+                                <td>{track.album.artists[0].name}</td>
+                                <td>{track.album.name}</td>
+                                <td>{track_time}</td>
+                                {/* <td><img src={track.album.images[2].url}></img></td> */}
+                                <td><iframe
+                                  src={to_play}
+                                  width="80"
+                                  height="80"
+                                  frameBorder="0"
+                                  allowtransparency="true"
+                                  allow="encrypted-media"
                                 >
-                                </img>
-                              </span></td>
-                              <td>{order}</td>
-                              <td>{track.name}</td>
-                              <td>{track.album.artists[0].name}</td>
-                              <td>{track.album.name}</td>
-                              <td>{track_time}</td>
-                              {/* <td><img src={track.album.images[2].url}></img></td> */}
-                              <td><iframe
-                                src={to_play}
-                                width="80"
-                                height="80"
-                                frameBorder="0"
-                                allowtransparency="true"
-                                allow="encrypted-media"
-                              >
-                              </iframe></td>
-                              <td>
-                                <button
-                                  className="btn btn-sm delete-button"
-                                  onClick={() => handleDelete(track.id)}
-                                >
-                                  X
+                                </iframe></td>
+                                <td>
+                                  <button
+                                    className="btn btn-sm delete-button"
+                                    onClick={() => handleDelete(track.id)}
+                                  >
+                                    ×
                                 </button>
-                              </td>
-                            </tr>
-                          )}
-                        </Draggable>
-                      )
-                    })}
-                    {provided.placeholder}
-                  </tbody>
-                )}
-              </Droppable>
-            </DragDropContext>
-          </Table>
-        </Row>
-      </Container>
+                                </td>
+                              </tr>
+                            )}
+                          </Draggable>
+                        )
+                      })}
+                      {provided.placeholder}
+                    </tbody>
+                  )}
+                </Droppable>
+              </DragDropContext>
+            </Table>
+          </Row>
+        </Container>
+      )}
       {
         loading && (
           <Container>
@@ -328,6 +345,7 @@ function AdvSearch() {
           </Container>
         )
       }
+
     </React.Fragment >
   );
 }

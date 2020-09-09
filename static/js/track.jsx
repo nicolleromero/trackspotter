@@ -26,16 +26,17 @@ function Track(props) {
   return (
     <React.Fragment>
       <td>
-        <span className="material-icons">
-          <img
-            className="dragger"
-            src="/static/img/baseline_drag_indicator_black_18dp.png"
-            width="30"
-            height="30"
-          >
-
-          </img>
-        </span>
+        {editable && (
+          <span className="material-icons">
+            <img
+              className="dragger"
+              src="/static/img/baseline_drag_indicator_black_18dp.png"
+              width="30"
+              height="30"
+            >
+            </img>
+          </span>
+        )}
       </td>
       <td>{order}</td>
       <td>{props.track.title}</td>
@@ -62,7 +63,7 @@ function Track(props) {
             className="btn btn-sm delete-button"
             onClick={() => props.onDeleteTrack(props.track.track_id)}
           >
-            X
+            ×
           </button>
         )}
       </td>

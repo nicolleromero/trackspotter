@@ -163,9 +163,9 @@ def display_playlists():
 def get_top_playlists():
     """Get the top playlists to display """
 
-    # TODO: set offset in db query and feed next 20 playlists to client
+    offset = request.args.get('offset', 0)
 
-    data = crud.playlist_ordered_by_likes()
+    data = crud.playlist_ordered_by_likes(offset)
 
     return jsonify(data)
 

@@ -64,6 +64,7 @@ function TrackslistUI(props) {
               <Button
                 variant="outline-secondary inline search"
                 onClick={props.handleCopyPlaylist}
+                disabled={!USER}
               > Copy Playlist
               </Button>
             )}
