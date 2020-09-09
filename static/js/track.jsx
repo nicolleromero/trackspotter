@@ -1,10 +1,7 @@
 const { Component, useState, useCallback } = React;
 const { render } = ReactDOM;
-const { Provider, useSelector, useDispatch } = ReactRedux;
 const { Badge, Button, Col, Container, Dropdown, DropdownButton, Form, FormControl, InputGroup, ListGroup, Navbar, Row, Table } = ReactBootstrap;
 
-
-// Map over a list of track objects
 
 function Track(props) {
 
@@ -19,9 +16,7 @@ function Track(props) {
 
 
   // Handles the player
-  let to_play = "https://open.spotify.com/embed/track/" + props.track.uid;
-
-  // let editable = (USER != null && props.playlistUser === USER.user_id);
+  let toPlay = "https://open.spotify.com/embed/track/" + props.track.uid;
 
   return (
     <React.Fragment>
@@ -48,7 +43,7 @@ function Track(props) {
         </td> */}
       <td>
         <iframe
-          src={to_play}
+          src={toPlay}
           width="80"
           height="80"
           frameBorder="0"

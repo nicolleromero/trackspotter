@@ -140,9 +140,6 @@ def get_playlist_tracks():
 
     playlist_tracks = PlaylistTrack.query.all()
 
-    # for playlist_track in playlist_tracks:
-    #     print(playlist_track.as_dict())
-
     return playlist_tracks
 
 

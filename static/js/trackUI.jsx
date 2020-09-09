@@ -3,7 +3,6 @@ const { render } = ReactDOM;
 const { Badge, Button, Col, Container, Dropdown, DropdownButton, Form, FormControl, FormGroup, InputGroup, ListGroup, Navbar, Row, Table } = ReactBootstrap;
 
 const { DragDropContext, Droppable, Draggable } = ReactBeautifulDnd;
-
 const Router = ReactRouterDOM.BrowserRouter;
 const Route = ReactRouterDOM.Route;
 const Link = ReactRouterDOM.Link;

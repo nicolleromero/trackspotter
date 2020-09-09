@@ -37,7 +37,7 @@ function AdvSearch() {
   const [queries, setQueries] = React.useState([]);
   const [loading, setLoading] = React.useState(false);
   const query = buildQuery(queries);
-  const [playlist_title, setPlaylistTitle] = React.useState('');
+  const [playlistTitle, setPlaylistTitle] = React.useState('');
   const history = useHistory();
 
   React.useEffect(() => {
@@ -115,14 +115,14 @@ function AdvSearch() {
   const handleSavePlaylist = (event) => {
     event.preventDefault();
 
-    const target_playlist = {
-      "playlist_title": playlist_title,
+    const targetPlaylist = {
+      "playlist_title": playlistTitle,
       "playlist_tracks": tracks,
       "query": query,
     }
     fetch('/api/save-playlist', {
       method: 'POST',
-      body: JSON.stringify(target_playlist),
+      body: JSON.stringify(targetPlaylist),
       headers: {
         'Content-Type': 'application/json'
       },
@@ -164,12 +164,9 @@ function AdvSearch() {
       <Navbar id="cover-image">
         <Row className="d-flex float-right padding"
         >
-          {/* <img className="cactus"
-            src="/static/img/anthony-delanoix-hzgs56Ze49s-unsplash.jpg" width="auto" height="200"></img> */}
-          {/* <img className="cactus" src="/static/img/cactus.png" width="200" height="200"></img> */}
         </Row>
         <Row className="d-flex justify-content-between hyper offset-2">
-          <h1 className="h1">Search for the <br />tracks you <br />love </h1>
+          <h1 className="h1">Expertly find <br />the tracks you <br />love </h1>
         </Row>
       </Navbar>
       <Container className="padding">
@@ -186,32 +183,34 @@ function AdvSearch() {
           wildcard={wildcard}
         />
         <Row className="d-flex justify-content-between">
-          <div xs="auto" className="align-content-left">
-            <h5>
-              {queries.map((element) => {
-                return (
-                  <Badge
-                    pill
-                    className="btn-dark badge badge-lower"
-                    href="#"
-                    variant="dark"
-                    key={element}
-                    onClick={() => handleDeleteParam(element)}
-                  >
-                    × {element.replace(/"/g, '')}
-                  </Badge>
-                )
-              })}
-            </h5>
-          </div>
+          {tracks.length > 0 && (
+            <div xs="auto" className="align-content-left">
+              <h5>
+                {queries.map((element) => {
+                  return (
+                    <Badge
+                      pill
+                      className="btn-dark badge badge-lower"
+                      href="#"
+                      variant="dark"
+                      key={element}
+                      onClick={() => handleDeleteParam(element)}
+                    >
+                      × {element.replace(/"/g, '')}
+                    </Badge>
+                  )
+                })}
+              </h5>
+            </div>
+          )}
           {tracks.length > 0 && USER == null && (
             <div>
               <Row className="offset-2">
                 <Col >
                   <img
                     className="loginprompt"
-                    src="/static/img/loginprompt.png"
-                    width="300"
+                    src="/static/img/login.png"
+                    width="250"
                     height="auto"
                   >
                   </img>
@@ -229,7 +228,7 @@ function AdvSearch() {
                 <Form.Row inline className="float-right inline save top-space">
                   <FormControl
                     type="text"
-                    value={playlist_title}
+                    value={playlistTitle}
                     placeholder="Playlist Title"
                     onChange={(e) => setPlaylistTitle(e.target.value)}
                     className="mr-sm-2 inline wider"
@@ -246,7 +245,7 @@ function AdvSearch() {
           )}
         </Row>
       </Container>
-      {!loading && tracks.length === 0 && (
+      {!loading && tracks.length === 0 && USER == null && (
         <Container>
           <Row className="offset-2">
             <Col >
@@ -349,7 +348,6 @@ function TopPlaylists(props) {
   }
 
   React.useEffect(() => {
-
     setLoading(true);
 
     fetch(`/api/top-playlists?offset=${offset}`)
@@ -397,17 +395,15 @@ function TopPlaylists(props) {
           </Table>
         </Row>
       </Container >
-      {
-        loading && (
-          <Container>
-            <Row className="d-flex justify-content-center inline align-items-center">
-              <Spinner animation="border" variant="secondary" role="status">
-                <span className="sr-only">Loading...</span>
-              </Spinner>
-            </Row>
-          </Container >
-        )
-      }
+      {loading && (
+        <Container>
+          <Row className="d-flex justify-content-center inline align-items-center">
+            <Spinner animation="border" variant="secondary" role="status">
+              <span className="sr-only">Loading...</span>
+            </Spinner>
+          </Row>
+        </Container >
+      )}
       <Container>
         <Row className="float-right">
           <Col className="float-right">
@@ -425,7 +421,7 @@ function TopPlaylists(props) {
 }
 
 function UserPlaylists(props) {
-  let [user_playlists, setUserPlaylists] = React.useState([]);
+  let [userPlaylists, setUserPlaylists] = React.useState([]);
 
   React.useEffect(() => {
     fetch(`/api/playlists`)
@@ -452,7 +448,7 @@ function UserPlaylists(props) {
               title="Your Playlists"
             />
             <tbody>
-              {user_playlists.map((playlist) => {
+              {userPlaylists.map((playlist) => {
                 return (
                   <PlaylistRow
                     playlist_id={playlist.playlist_id}
@@ -498,12 +494,12 @@ function PlaylistTracks(props) {
   function handlePlaylistLike() {
     setPlaylistLike(!playlistLike);
 
-    const target_playlist = {
+    const targetPlaylist = {
       "playlist_id": playlist_id,
     }
     fetch('/api/update-playlist-like', {
       method: 'POST',
-      body: JSON.stringify(target_playlist),
+      body: JSON.stringify(targetPlaylist),
       headers: {
         'Content-Type': 'application/json'
       },
@@ -527,12 +523,12 @@ function PlaylistTracks(props) {
   }
 
   function handleDeletePlaylist() {
-    const target_playlist = {
+    const targetPlaylist = {
       "playlist_id": playlist_id,
     }
     fetch('/api/delete-playlist', {
       method: 'POST',
-      body: JSON.stringify(target_playlist),
+      body: JSON.stringify(targetPlaylist),
       headers: {
         'Content-Type': 'application/json'
       },
@@ -545,14 +541,14 @@ function PlaylistTracks(props) {
   const handleSaveEditedPlaylist = (event) => {
     event.preventDefault();
 
-    const target_playlist = {
+    const targetPlaylist = {
       "playlist_id": playlist_id,
       "playlist_title": playlistTitle,
       "playlist_tracks": tracks,
     }
     fetch('/api/update-playlist', {
       method: 'POST',
-      body: JSON.stringify(target_playlist),
+      body: JSON.stringify(targetPlaylist),
       headers: {
         'Content-Type': 'application/json'
       },
@@ -567,14 +563,14 @@ function PlaylistTracks(props) {
   const handleCopyPlaylist = (event) => {
     event.preventDefault();
 
-    const target_playlist = {
+    const targetPlaylist = {
       "playlist_id": playlist_id,
       "playlist_title": playlistTitle,
       "playlist_tracks": tracks,
     }
     fetch('/api/copy-playlist', {
       method: 'POST',
-      body: JSON.stringify(target_playlist),
+      body: JSON.stringify(targetPlaylist),
       headers: {
         'Content-Type': 'application/json'
       },
@@ -586,7 +582,6 @@ function PlaylistTracks(props) {
   }
 
   const handleDragEnd = (result) => {
-    // dropped outside the list
     if (!result.destination) {
       return;
     }

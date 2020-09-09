@@ -1,6 +1,5 @@
 const { Component } = React;
 const { render } = ReactDOM;
-const { Provider, useSelector, useDispatch } = ReactRedux;
 const { Badge, Button, Col, Container, Form, FormControl, ListGroup, Navbar, Row, Table } = ReactBootstrap;
 
 
@@ -26,8 +25,7 @@ function Topbar(props) {
               </Navbar.Text>
               <Button href="/logout" variant="outline-secondary inline" id="btn-login" className="btn-spotify space"
               >
-                {/* <img src="/static/img/spot_icon_gr.png" width="35" height="35"></img>&nbsp; */}
-              Log Out
+                Log Out
           </Button>
 
             </div>

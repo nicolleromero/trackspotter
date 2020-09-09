@@ -143,7 +143,7 @@ class Playlist(db.Model):
     search_id = db.Column(db.Integer, db.ForeignKey('searches.search_id'))
 
     user = db.relationship('User')
-    # playlist_tracks = db.relationship('PlaylistTrack')
+
     search = db.relationship('Search')
 
     def __repr__(self):
