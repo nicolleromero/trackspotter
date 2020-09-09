@@ -42,8 +42,6 @@ function AdvSearch() {
 
   React.useEffect(() => {
     if (query) {
-      console.log("query2", query)
-      console.log("wildcard2", wildcard)
 
       const search = {
         "query": query,
@@ -336,15 +334,29 @@ function AdvSearch() {
 
 
 function TopPlaylists(props) {
-  const [top_playlists, setTopPlaylists] = React.useState([]);
+  const [topPlaylists, setTopPlaylists] = React.useState([]);
+  const [offset, setOffset] = React.useState(0);
+  const [loading, setLoading] = React.useState(false);
+
+  function handleNextPlaylist() {
+    setOffset(offset + 20);
+  }
 
   React.useEffect(() => {
-    fetch(`/api/top-playlists`)
+
+    setLoading(true);
+
+    fetch(`/api/top-playlists?offset=${offset}`)
       .then(response => response.json())
       .then((data) => {
-        setTopPlaylists(data);
+        if (offset === 0) {
+          setTopPlaylists(data);
+        } else {
+          setTopPlaylists([...topPlaylists, ...data]);
+        }
       })
-  }, [])
+      .finally(() => setLoading(false));
+  }, [offset]);
 
   return (
     <React.Fragment>
@@ -363,7 +375,7 @@ function TopPlaylists(props) {
               title="Popular Playlists"
             />
             <tbody>
-              {top_playlists.map((playlist) => {
+              {topPlaylists.map((playlist) => {
                 return (
                   <PlaylistRow
                     playlist_id={playlist.playlist_id}
@@ -379,6 +391,29 @@ function TopPlaylists(props) {
           </Table>
         </Row>
       </Container >
+      {
+        loading && (
+          <Container>
+            <Row className="d-flex justify-content-center inline align-items-center">
+              <Spinner animation="border" variant="secondary" role="status">
+                <span className="sr-only">Loading...</span>
+              </Spinner>
+            </Row>
+          </Container >
+        )
+      }
+      <Container>
+        <Row className="float-right">
+          <Col className="float-right">
+            <Button
+              variant="outline-secondary inline more-space"
+              onClick={handleNextPlaylist}
+            >
+              More Playlists
+              </Button>
+          </Col>
+        </Row>
+      </Container>
     </React.Fragment>
   )
 }
