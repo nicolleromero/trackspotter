@@ -37,12 +37,12 @@ function Topbar(props) {
               variant="outline-secondary inline"
               id="btn-login"
             >
+              Log In&nbsp;
               <img
                 src="/static/img/spot_icon_gr.png"
                 width="35"
                 height="35">
-              </img>&nbsp;
-            Log in to Spotify
+              </img>
             </Button>
           )}
         </Navbar.Collapse>

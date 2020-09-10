@@ -42,7 +42,7 @@ function AdvSearch() {
   const [wildcard, setWildcard] = React.useState('');
   const [numSongs, setNumSongs] = React.useState(20);
   const [offset, setOffset] = React.useState(0);
-  const [tracks, setTracks] = React.useState([]);
+  const [tracks, setTracks] = React.useState(getSessionStorage('tracks') || []);
   const [queries, setQueries] = React.useState(getSessionStorage('queries') || []);
   const [loading, setLoading] = React.useState(false);
   const query = buildQuery(queries);
@@ -52,6 +52,10 @@ function AdvSearch() {
   React.useEffect(() => {
     setSessionStorage('queries', queries);
   }, [queries]);
+
+  // React.useEffect(() => {
+  //   setSessionStorage('tracks', tracks);
+  // }, [tracks]);
 
   React.useEffect(() => {
     if (query) {
@@ -172,6 +176,8 @@ function AdvSearch() {
     setPlaylistTitle('');
   }
 
+  let editable = (USER != null);
+
   return (
     <React.Fragment>
       <Navbar id="cover-image">
@@ -222,7 +228,7 @@ function AdvSearch() {
                 <Col >
                   <img
                     className="loginprompt"
-                    src="/static/img/login.png"
+                    src="/static/img/loginprompt.png"
                     width="250"
                     height="auto"
                   >
@@ -250,7 +256,7 @@ function AdvSearch() {
                     variant="outline-secondary"
                     type="submit"
                   >
-                    Save Playlist</Button>
+                    Set Playlist</Button>
                   <br />
                 </Form.Row>
               )}
@@ -278,7 +284,7 @@ function AdvSearch() {
           <Row className="align-content-center">
             <Table hover>
               <TracksHeader
-                editable={true}
+                editable={editable}
               />
               <DragDropContext onDragEnd={handleDragEnd}>
                 <Droppable droppableId="droppable">
@@ -291,7 +297,7 @@ function AdvSearch() {
                         <Draggable
                           key={track.uid}
                           draggableId={track.uid}
-                          index={index}
+                          index={index} isDragDisabled={(USER == null)}
                         >
                           {(provided, snapshot) => (
                             <tr ref={provided.innerRef}
@@ -303,7 +309,7 @@ function AdvSearch() {
                                 track={track}
                                 index={index}
                                 onDeleteTrack={handleDeleteTrack}
-                                editable={true}
+                                editable={editable}
                               />
                             </tr>
                           )}
