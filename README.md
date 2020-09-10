@@ -28,6 +28,8 @@ https://trackspotter.app/
 
 ## <a name="app-features"></a>App Features
 
+# <img src="https://github.com/nicolleromero/trackspotter/blob/master/static/img/search-screenshot.png" width="80%" alt="Trackspotter Search">
+
 * Users can search by artist, album, keyword, release date (or year span), and even genre, where an autocomplete component provides targeted suggestions to the user for the 495 valid Spotify genres.
 * Under the hood, the GUI structures parameters and operators and applies wildcards to optimize the search.
 * Paginated search results allow users to pull in additional tracks as they modify their query.
