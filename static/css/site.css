@@ -275,7 +275,7 @@ span {
 }
 
 a {
-  color:  #393B44;
+  color:  #393B44 !important;
 }
 
 #title-form {
