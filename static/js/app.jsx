@@ -300,18 +300,19 @@ function AdvSearch() {
                           index={index} isDragDisabled={(USER == null)}
                         >
                           {(provided, snapshot) => (
-                            <tr ref={provided.innerRef}
+                            <TrackRow
                               {...provided.draggableProps}
                               {...provided.dragHandleProps}
-                              align="center"
-                              scope="row">
+                              innerRef={provided.innerRef}
+                              isDragging={snapshot.isDragging}
+                            >
                               <Track
                                 track={track}
                                 index={index}
                                 onDeleteTrack={handleDeleteTrack}
                                 editable={editable}
                               />
-                            </tr>
+                            </TrackRow>
                           )}
                         </Draggable>
                       ))}
@@ -648,11 +649,12 @@ function PlaylistTracks(props) {
                       index={index} isDragDisabled={(USER == null || playlistUser !== USER.user_id)}
                     >
                       {(provided, snapshot) => (
-                        <tr ref={provided.innerRef}
+                        <TrackRow
                           {...provided.draggableProps}
                           {...provided.dragHandleProps}
-                          align="center"
-                          scope="row">
+                          innerRef={provided.innerRef}
+                          isDragging={snapshot.isDragging}
+                        >
                           <Track
                             track={track}
                             index={index}
@@ -660,7 +662,7 @@ function PlaylistTracks(props) {
                             onDeleteTrack={handleDeleteTrack}
                             editable={editable}
                           />
-                        </tr>
+                        </TrackRow>
                       )}
                     </Draggable>
                   ))}
