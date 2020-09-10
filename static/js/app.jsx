@@ -9,6 +9,15 @@ const Link = ReactRouterDOM.Link;
 const Switch = ReactRouterDOM.Switch;
 const useHistory = ReactRouterDOM.useHistory;
 
+function setSessionStorage(key, value) {
+  window.sessionStorage.setItem(key, JSON.stringify(value));
+}
+
+function getSessionStorage(key) {
+  const value = window.sessionStorage.getItem(key);
+  return value ? JSON.parse(value) : undefined;
+}
+
 function millisToTime(milliseconds) {
   let minutes = Math.floor(milliseconds / 60000);
   let seconds = ((milliseconds % 60000) / 1000).toFixed(0);
@@ -34,11 +43,15 @@ function AdvSearch() {
   const [numSongs, setNumSongs] = React.useState(20);
   const [offset, setOffset] = React.useState(0);
   const [tracks, setTracks] = React.useState([]);
-  const [queries, setQueries] = React.useState([]);
+  const [queries, setQueries] = React.useState(getSessionStorage('queries') || []);
   const [loading, setLoading] = React.useState(false);
   const query = buildQuery(queries);
   const [playlistTitle, setPlaylistTitle] = React.useState('');
   const history = useHistory();
+
+  React.useEffect(() => {
+    setSessionStorage('queries', queries);
+  }, [queries]);
 
   React.useEffect(() => {
     if (query) {
@@ -166,7 +179,7 @@ function AdvSearch() {
         >
         </Row>
         <Row className="d-flex justify-content-between hyper offset-2">
-          <h1 className="h1">Expertly find <br />the tracks you <br />love </h1>
+          <h1 className="h1">Easily find <br />the tracks you <br />love </h1>
         </Row>
       </Navbar>
       <Container className="padding">
