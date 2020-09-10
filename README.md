@@ -1,4 +1,4 @@
-# <img src="https://github.com/nicolleromero/trackspotter/blob/master/static/img/logo.png" width="60%" alt="Trackspotter">
+# <img src="https://github.com/nicolleromero/trackspotter/blob/master/static/img/logo.png" width="90%" alt="Trackspotter">
 Trackspotter is a single-page web app built in React that provides a streamlined GUI allowing users to perform powerful, targeted searches of Spotify's 50+ million track music library. The app supports a set of advanced search syntax, building and editing playlists from the search results, and saving playlists to a user's own Spotify account (via OAuth 2.0).
 
 ## About Me
