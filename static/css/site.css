@@ -78,11 +78,17 @@ h5 {
 }
 
 .fixed-width {
-  width: 250px;
+  width: 250px !important;
+  padding-right: 5px;
+  padding-left: 5px;
 }
 
 .wider {
   min-width: 400px;
+}
+
+.control {
+  width: 240px !important;
 }
 
 .hyper-search {
@@ -290,6 +296,8 @@ a {
   margin-top: -15px;
   margin-left: 210px;
   opacity: 0.8;
+  z-index: -1;
+  position: relative;
 }
 
 .loginprompt {

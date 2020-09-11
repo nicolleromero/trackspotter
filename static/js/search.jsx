@@ -96,7 +96,7 @@ function StructuredSearch(props) {
                 setParam={props.setParam}
                 placeholder="Select a genre"
                 onChange={(e) => props.setParam(e.target.value)}
-                className="mr-sm-2 inline form-control"
+                className="mr-sm-2 inline form-control control"
               />
             </Col>
           )}
