@@ -7,8 +7,8 @@
 }
 
 .btn-spotify:hover {
-  color: #FFF;
-  border: none !important;
+  color: #FFF !important;
+  background-color: #6c757d !important;
 }
 
 .btn-spotify {
