@@ -20,9 +20,11 @@ function Topbar(props) {
         <Navbar.Collapse className="justify-content-end">
           {props.user && (
             <div>
-              <Navbar.Text>
-                <img src={props.user.spotify_image_url} className="avatar" />
-              </Navbar.Text>
+              {props.user.spotify_image_url && (
+                <Navbar.Text>
+                  <img src={props.user.spotify_image_url} className="avatar" />
+                </Navbar.Text>
+              )}
               <Button href="/logout" variant="outline-secondary inline" id="btn-login" className="btn-spotify space"
               >
                 Log Out

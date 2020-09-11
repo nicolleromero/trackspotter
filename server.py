@@ -87,7 +87,11 @@ def login_callback():
         info = spotify.current_user()
 
     display_name = info.display_name
-    display_image = info.images[0].url
+
+    if len(info.images) > 0:
+        display_image = info.images[0].url
+    else:
+        display_image = None
 
     spotify_id = info.id
 

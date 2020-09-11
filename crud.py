@@ -413,7 +413,7 @@ def delete_playlist(playlist_id):
     return None
 
 
-def get_user_or_add_user(spotify_id, display_name, display_image, token=None):
+def get_user_or_add_user(spotify_id, display_name, display_image=None, token=None):
     """Fetch an existing user or create a user"""
 
     user = User.query.filter(User.spotify_id == spotify_id).first()
