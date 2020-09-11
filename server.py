@@ -81,8 +81,6 @@ def login_callback():
     """Callback for Spotify login"""
 
     code = request.args.get('code', None)
-    session['code'] = code
-
     token = cred.request_user_token(code)
 
     with spotify.token_as(token):
@@ -118,9 +116,6 @@ def search():
     numSongs = data["numSongs"]
     offset = data.get("offset", 0)
 
-    session['query'] = query
-    session['numSongs'] = numSongs
-
     if not query:
         return jsonify([])
 
@@ -142,7 +137,6 @@ def search():
 
     data = res.json()
     search_tracks = data['tracks']['items']
-    session['search_tracks'] = search_tracks
 
     # return tracks as list of dicts to render for search tracks
     tracks = crud.create_tracks_from_search(search_tracks)
