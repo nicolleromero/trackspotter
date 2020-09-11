@@ -33,6 +33,7 @@ class User(db.Model):
                         primary_key=True,
                         autoincrement=True,
                         )
+    # TODO should be unique, update crud to create or update
     spotify_id = db.Column(db.String)
     spotify_display_name = db.Column(db.String)
     spotify_image_url = db.Column(db.String)

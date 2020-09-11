@@ -24,6 +24,8 @@ https://trackspotter.app/
 * React-Bootstrap
 * React
 * React-Router
+* HTML
+* CSS
 * Spotify API
 
 ## <a name="app-features"></a>App Features

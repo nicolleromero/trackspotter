@@ -555,7 +555,9 @@ function PlaylistTracks(props) {
     })
       .then(response => response.json())
       .then(data => {
+        history.push(`/user-playlists`);
       });
+    openSnackbar("Playlist successfully deleted.")
   }
 
   const handleSaveEditedPlaylist = (event) => {
