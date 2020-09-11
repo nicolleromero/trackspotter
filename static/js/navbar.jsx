@@ -6,17 +6,17 @@ const { Badge, Button, Col, Container, Form, FormControl, ListGroup, Navbar, Row
 function Topbar(props) {
   return (
     <Navbar id="topbar">
-      <Col className="justify-content-start">
+      <Col className="justify-content-start mr-auto">
         <Navbar.Text>
           <h3>trackspotter</h3>
         </Navbar.Text>
       </Col>
-      <Col className="justify-content-center">
+      <Col xs lg="6" className="justify-content-center">
         <Login
           user={props.user}
           onLogin={props.onLogin} />
       </Col>
-      <Col>
+      <Col className="mr-auto">
         <Navbar.Collapse className="justify-content-end">
           {props.user && (
             <div>
@@ -60,7 +60,7 @@ function Login(props) {
   if (props.user) {
     return (
       <React.Fragment>
-        <nav className="navbar navbar-expand-lg center">
+        <nav className="navbar center mr-auto">
           <ul className="nav navbar-nav">
             <li className="inline link">
               <Link to="/">Home</Link>
