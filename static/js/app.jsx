@@ -458,14 +458,14 @@ function UserPlaylists(props) {
         >
         </Row>
         <Row className="d-flex justify-content-between hyper offset-2">
-          <h1 className="h1 banner">Your <br />Playlists</h1>
+          <h1 className="h1 banner">Saved <br />Playlists</h1>
         </Row>
       </Navbar>
       <Container>
         <Row className="align-content-center">
           <Table id="playlist_table" hover>
             <PlaylistHeader
-              title="Your Playlists"
+              title="Saved Playlists"
             />
             <tbody>
               {userPlaylists.map((playlist) => {

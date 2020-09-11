@@ -65,7 +65,7 @@ function Login(props) {
             </li>
             {props.user && (
               <li className="inline link">
-                <Link to="/user-playlists"> Your Playlists</Link>
+                <Link to="/user-playlists"> Saved Playlists</Link>
               </li>
             )}
             <li className="inline link">
