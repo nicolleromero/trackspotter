@@ -1,0 +1,2042 @@
+{
+  "tracks": {
+    "href": "https://api.spotify.com/v1/search?query=genre%3A%22Latin+Comedy%22&type=track&offset=0&limit=20",
+    "items": [
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/3Ac7ymYqL8NMoyhuU6vrNJ"
+              },
+              "href": "https://api.spotify.com/v1/artists/3Ac7ymYqL8NMoyhuU6vrNJ",
+              "id": "3Ac7ymYqL8NMoyhuU6vrNJ",
+              "name": "Pablo Francisco",
+              "type": "artist",
+              "uri": "spotify:artist:3Ac7ymYqL8NMoyhuU6vrNJ"
+            }
+          ],
+          "available_markets": [
+            "AD",
+            "AE",
+            "AL",
+            "AR",
+            "AT",
+            "AU",
+            "BA",
+            "BE",
+            "BG",
+            "BH",
+            "BO",
+            "BR",
+            "BY",
+            "CA",
+            "CH",
+            "CL",
+            "CO",
+            "CR",
+            "CY",
+            "CZ",
+            "DE",
+            "DK",
+            "DO",
+            "DZ",
+            "EC",
+            "EE",
+            "EG",
+            "ES",
+            "FI",
+            "FR",
+            "GB",
+            "GR",
+            "GT",
+            "HK",
+            "HN",
+            "HR",
+            "HU",
+            "ID",
+            "IE",
+            "IL",
+            "IN",
+            "IS",
+            "IT",
+            "JO",
+            "JP",
+            "KW",
+            "KZ",
+            "LB",
+            "LI",
+            "LT",
+            "LU",
+            "LV",
+            "MA",
+            "MC",
+            "MD",
+            "ME",
+            "MK",
+            "MT",
+            "MX",
+            "MY",
+            "NI",
+            "NL",
+            "NO",
+            "NZ",
+            "OM",
+            "PA",
+            "PE",
+            "PH",
+            "PL",
+            "PS",
+            "PT",
+            "PY",
+            "QA",
+            "RO",
+            "RS",
+            "RU",
+            "SA",
+            "SE",
+            "SG",
+            "SI",
+            "SK",
+            "SV",
+            "TH",
+            "TN",
+            "TR",
+            "TW",
+            "UA",
+            "US",
+            "UY",
+            "VN",
+            "XK",
+            "ZA"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/4Hw7gSMzSX4B2p8ePKiQGj"
+          },
+          "href": "https://api.spotify.com/v1/albums/4Hw7gSMzSX4B2p8ePKiQGj",
+          "id": "4Hw7gSMzSX4B2p8ePKiQGj",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b27397410e3d9e94159282831031",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e0297410e3d9e94159282831031",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d0000485197410e3d9e94159282831031",
+              "width": 64
+            }
+          ],
+          "name": "Knee To The Groin",
+          "release_date": "1997-05-13",
+          "release_date_precision": "day",
+          "total_tracks": 15,
+          "type": "album",
+          "uri": "spotify:album:4Hw7gSMzSX4B2p8ePKiQGj"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/3Ac7ymYqL8NMoyhuU6vrNJ"
+            },
+            "href": "https://api.spotify.com/v1/artists/3Ac7ymYqL8NMoyhuU6vrNJ",
+            "id": "3Ac7ymYqL8NMoyhuU6vrNJ",
+            "name": "Pablo Francisco",
+            "type": "artist",
+            "uri": "spotify:artist:3Ac7ymYqL8NMoyhuU6vrNJ"
+          }
+        ],
+        "available_markets": [
+          "AD",
+          "AE",
+          "AL",
+          "AR",
+          "AT",
+          "AU",
+          "BA",
+          "BE",
+          "BG",
+          "BH",
+          "BO",
+          "BR",
+          "BY",
+          "CA",
+          "CH",
+          "CL",
+          "CO",
+          "CR",
+          "CY",
+          "CZ",
+          "DE",
+          "DK",
+          "DO",
+          "DZ",
+          "EC",
+          "EE",
+          "EG",
+          "ES",
+          "FI",
+          "FR",
+          "GB",
+          "GR",
+          "GT",
+          "HK",
+          "HN",
+          "HR",
+          "HU",
+          "ID",
+          "IE",
+          "IL",
+          "IN",
+          "IS",
+          "IT",
+          "JO",
+          "JP",
+          "KW",
+          "KZ",
+          "LB",
+          "LI",
+          "LT",
+          "LU",
+          "LV",
+          "MA",
+          "MC",
+          "MD",
+          "ME",
+          "MK",
+          "MT",
+          "MX",
+          "MY",
+          "NI",
+          "NL",
+          "NO",
+          "NZ",
+          "OM",
+          "PA",
+          "PE",
+          "PH",
+          "PL",
+          "PS",
+          "PT",
+          "PY",
+          "QA",
+          "RO",
+          "RS",
+          "RU",
+          "SA",
+          "SE",
+          "SG",
+          "SI",
+          "SK",
+          "SV",
+          "TH",
+          "TN",
+          "TR",
+          "TW",
+          "UA",
+          "US",
+          "UY",
+          "VN",
+          "XK",
+          "ZA"
+        ],
+        "disc_number": 1,
+        "duration_ms": 220266,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "USA370615458"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4nvgOOsVAilfa3xgku5fSE"
+        },
+        "href": "https://api.spotify.com/v1/tracks/4nvgOOsVAilfa3xgku5fSE",
+        "id": "4nvgOOsVAilfa3xgku5fSE",
+        "is_local": false,
+        "name": "Movie Previews",
+        "popularity": 41,
+        "preview_url": "https://p.scdn.co/mp3-preview/889d1c926dfedc3bb31898864edc5eeb2fdcf778?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 15,
+        "type": "track",
+        "uri": "spotify:track:4nvgOOsVAilfa3xgku5fSE"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/4mB2yDrWdUxy5tISyQPvpu"
+              },
+              "href": "https://api.spotify.com/v1/artists/4mB2yDrWdUxy5tISyQPvpu",
+              "id": "4mB2yDrWdUxy5tISyQPvpu",
+              "name": "Gabriel Iglesias",
+              "type": "artist",
+              "uri": "spotify:artist:4mB2yDrWdUxy5tISyQPvpu"
+            }
+          ],
+          "available_markets": [
+            "CA",
+            "US"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/4DEb5ri7tjn69T5XSV6uI4"
+          },
+          "href": "https://api.spotify.com/v1/albums/4DEb5ri7tjn69T5XSV6uI4",
+          "id": "4DEb5ri7tjn69T5XSV6uI4",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273730913acd747a05eaea5a194",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02730913acd747a05eaea5a194",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851730913acd747a05eaea5a194",
+              "width": 64
+            }
+          ],
+          "name": "Aloha Fluffy",
+          "release_date": "2013-09-24",
+          "release_date_precision": "day",
+          "total_tracks": 24,
+          "type": "album",
+          "uri": "spotify:album:4DEb5ri7tjn69T5XSV6uI4"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/4mB2yDrWdUxy5tISyQPvpu"
+            },
+            "href": "https://api.spotify.com/v1/artists/4mB2yDrWdUxy5tISyQPvpu",
+            "id": "4mB2yDrWdUxy5tISyQPvpu",
+            "name": "Gabriel Iglesias",
+            "type": "artist",
+            "uri": "spotify:artist:4mB2yDrWdUxy5tISyQPvpu"
+          }
+        ],
+        "available_markets": [
+          "CA",
+          "US"
+        ],
+        "disc_number": 1,
+        "duration_ms": 402520,
+        "explicit": true,
+        "external_ids": {
+          "isrc": "US85P1318503"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5hyV7awSl7X4RrEklCBMvL"
+        },
+        "href": "https://api.spotify.com/v1/tracks/5hyV7awSl7X4RrEklCBMvL",
+        "id": "5hyV7awSl7X4RrEklCBMvL",
+        "is_local": false,
+        "name": "World Tour",
+        "popularity": 40,
+        "preview_url": "https://p.scdn.co/mp3-preview/abf831c9985d87d4cc1fa215ef0b1b8d23780f07?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 3,
+        "type": "track",
+        "uri": "spotify:track:5hyV7awSl7X4RrEklCBMvL"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/4mB2yDrWdUxy5tISyQPvpu"
+              },
+              "href": "https://api.spotify.com/v1/artists/4mB2yDrWdUxy5tISyQPvpu",
+              "id": "4mB2yDrWdUxy5tISyQPvpu",
+              "name": "Gabriel Iglesias",
+              "type": "artist",
+              "uri": "spotify:artist:4mB2yDrWdUxy5tISyQPvpu"
+            }
+          ],
+          "available_markets": [
+            "CA",
+            "US"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/4DEb5ri7tjn69T5XSV6uI4"
+          },
+          "href": "https://api.spotify.com/v1/albums/4DEb5ri7tjn69T5XSV6uI4",
+          "id": "4DEb5ri7tjn69T5XSV6uI4",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273730913acd747a05eaea5a194",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02730913acd747a05eaea5a194",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851730913acd747a05eaea5a194",
+              "width": 64
+            }
+          ],
+          "name": "Aloha Fluffy",
+          "release_date": "2013-09-24",
+          "release_date_precision": "day",
+          "total_tracks": 24,
+          "type": "album",
+          "uri": "spotify:album:4DEb5ri7tjn69T5XSV6uI4"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/4mB2yDrWdUxy5tISyQPvpu"
+            },
+            "href": "https://api.spotify.com/v1/artists/4mB2yDrWdUxy5tISyQPvpu",
+            "id": "4mB2yDrWdUxy5tISyQPvpu",
+            "name": "Gabriel Iglesias",
+            "type": "artist",
+            "uri": "spotify:artist:4mB2yDrWdUxy5tISyQPvpu"
+          }
+        ],
+        "available_markets": [
+          "CA",
+          "US"
+        ],
+        "disc_number": 1,
+        "duration_ms": 515826,
+        "explicit": true,
+        "external_ids": {
+          "isrc": "US85P1318506"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4Gfw5SfLjPohN7zC1goxXz"
+        },
+        "href": "https://api.spotify.com/v1/tracks/4Gfw5SfLjPohN7zC1goxXz",
+        "id": "4Gfw5SfLjPohN7zC1goxXz",
+        "is_local": false,
+        "name": "Revenge",
+        "popularity": 38,
+        "preview_url": "https://p.scdn.co/mp3-preview/608a3a44f2acc7addb026ebba1c92c64f209e6b6?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 6,
+        "type": "track",
+        "uri": "spotify:track:4Gfw5SfLjPohN7zC1goxXz"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/4mB2yDrWdUxy5tISyQPvpu"
+              },
+              "href": "https://api.spotify.com/v1/artists/4mB2yDrWdUxy5tISyQPvpu",
+              "id": "4mB2yDrWdUxy5tISyQPvpu",
+              "name": "Gabriel Iglesias",
+              "type": "artist",
+              "uri": "spotify:artist:4mB2yDrWdUxy5tISyQPvpu"
+            }
+          ],
+          "available_markets": [
+            "CA",
+            "US"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/4DEb5ri7tjn69T5XSV6uI4"
+          },
+          "href": "https://api.spotify.com/v1/albums/4DEb5ri7tjn69T5XSV6uI4",
+          "id": "4DEb5ri7tjn69T5XSV6uI4",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273730913acd747a05eaea5a194",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02730913acd747a05eaea5a194",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851730913acd747a05eaea5a194",
+              "width": 64
+            }
+          ],
+          "name": "Aloha Fluffy",
+          "release_date": "2013-09-24",
+          "release_date_precision": "day",
+          "total_tracks": 24,
+          "type": "album",
+          "uri": "spotify:album:4DEb5ri7tjn69T5XSV6uI4"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/4mB2yDrWdUxy5tISyQPvpu"
+            },
+            "href": "https://api.spotify.com/v1/artists/4mB2yDrWdUxy5tISyQPvpu",
+            "id": "4mB2yDrWdUxy5tISyQPvpu",
+            "name": "Gabriel Iglesias",
+            "type": "artist",
+            "uri": "spotify:artist:4mB2yDrWdUxy5tISyQPvpu"
+          }
+        ],
+        "available_markets": [
+          "CA",
+          "US"
+        ],
+        "disc_number": 1,
+        "duration_ms": 449093,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "US85P1318501"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2fpoe3QTBGXme9Ah2Y0wcp"
+        },
+        "href": "https://api.spotify.com/v1/tracks/2fpoe3QTBGXme9Ah2Y0wcp",
+        "id": "2fpoe3QTBGXme9Ah2Y0wcp",
+        "is_local": false,
+        "name": "Welcome To Hawaii",
+        "popularity": 38,
+        "preview_url": "https://p.scdn.co/mp3-preview/e1c582512b86e88a85f2d31ecde7f734bf56de4b?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 1,
+        "type": "track",
+        "uri": "spotify:track:2fpoe3QTBGXme9Ah2Y0wcp"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/4mB2yDrWdUxy5tISyQPvpu"
+              },
+              "href": "https://api.spotify.com/v1/artists/4mB2yDrWdUxy5tISyQPvpu",
+              "id": "4mB2yDrWdUxy5tISyQPvpu",
+              "name": "Gabriel Iglesias",
+              "type": "artist",
+              "uri": "spotify:artist:4mB2yDrWdUxy5tISyQPvpu"
+            }
+          ],
+          "available_markets": [
+            "CA",
+            "US"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/4DEb5ri7tjn69T5XSV6uI4"
+          },
+          "href": "https://api.spotify.com/v1/albums/4DEb5ri7tjn69T5XSV6uI4",
+          "id": "4DEb5ri7tjn69T5XSV6uI4",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273730913acd747a05eaea5a194",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02730913acd747a05eaea5a194",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851730913acd747a05eaea5a194",
+              "width": 64
+            }
+          ],
+          "name": "Aloha Fluffy",
+          "release_date": "2013-09-24",
+          "release_date_precision": "day",
+          "total_tracks": 24,
+          "type": "album",
+          "uri": "spotify:album:4DEb5ri7tjn69T5XSV6uI4"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/4mB2yDrWdUxy5tISyQPvpu"
+            },
+            "href": "https://api.spotify.com/v1/artists/4mB2yDrWdUxy5tISyQPvpu",
+            "id": "4mB2yDrWdUxy5tISyQPvpu",
+            "name": "Gabriel Iglesias",
+            "type": "artist",
+            "uri": "spotify:artist:4mB2yDrWdUxy5tISyQPvpu"
+          }
+        ],
+        "available_markets": [
+          "CA",
+          "US"
+        ],
+        "disc_number": 1,
+        "duration_ms": 206773,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "US85P1318502"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3MKHQ04HgPPrloc0oIuo0f"
+        },
+        "href": "https://api.spotify.com/v1/tracks/3MKHQ04HgPPrloc0oIuo0f",
+        "id": "3MKHQ04HgPPrloc0oIuo0f",
+        "is_local": false,
+        "name": "Hawaiian Words",
+        "popularity": 38,
+        "preview_url": "https://p.scdn.co/mp3-preview/1acb0fe03e5b3727935f74bde92c6a951c4206ae?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 2,
+        "type": "track",
+        "uri": "spotify:track:3MKHQ04HgPPrloc0oIuo0f"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/4mB2yDrWdUxy5tISyQPvpu"
+              },
+              "href": "https://api.spotify.com/v1/artists/4mB2yDrWdUxy5tISyQPvpu",
+              "id": "4mB2yDrWdUxy5tISyQPvpu",
+              "name": "Gabriel Iglesias",
+              "type": "artist",
+              "uri": "spotify:artist:4mB2yDrWdUxy5tISyQPvpu"
+            }
+          ],
+          "available_markets": [
+            "CA",
+            "US"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/4DEb5ri7tjn69T5XSV6uI4"
+          },
+          "href": "https://api.spotify.com/v1/albums/4DEb5ri7tjn69T5XSV6uI4",
+          "id": "4DEb5ri7tjn69T5XSV6uI4",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273730913acd747a05eaea5a194",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02730913acd747a05eaea5a194",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851730913acd747a05eaea5a194",
+              "width": 64
+            }
+          ],
+          "name": "Aloha Fluffy",
+          "release_date": "2013-09-24",
+          "release_date_precision": "day",
+          "total_tracks": 24,
+          "type": "album",
+          "uri": "spotify:album:4DEb5ri7tjn69T5XSV6uI4"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/4mB2yDrWdUxy5tISyQPvpu"
+            },
+            "href": "https://api.spotify.com/v1/artists/4mB2yDrWdUxy5tISyQPvpu",
+            "id": "4mB2yDrWdUxy5tISyQPvpu",
+            "name": "Gabriel Iglesias",
+            "type": "artist",
+            "uri": "spotify:artist:4mB2yDrWdUxy5tISyQPvpu"
+          }
+        ],
+        "available_markets": [
+          "CA",
+          "US"
+        ],
+        "disc_number": 1,
+        "duration_ms": 236906,
+        "explicit": true,
+        "external_ids": {
+          "isrc": "US85P1318505"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1CAiaZsv0YkBP63KRj8fYn"
+        },
+        "href": "https://api.spotify.com/v1/tracks/1CAiaZsv0YkBP63KRj8fYn",
+        "id": "1CAiaZsv0YkBP63KRj8fYn",
+        "is_local": false,
+        "name": "Deodorant",
+        "popularity": 38,
+        "preview_url": "https://p.scdn.co/mp3-preview/48c3681edc61511c54707fba5543dbc16b649a79?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 5,
+        "type": "track",
+        "uri": "spotify:track:1CAiaZsv0YkBP63KRj8fYn"
+      },
+      {
+        "album": {
+          "album_type": "single",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/7uWSNqvFk0TnPO9zKbzLI5"
+              },
+              "href": "https://api.spotify.com/v1/artists/7uWSNqvFk0TnPO9zKbzLI5",
+              "id": "7uWSNqvFk0TnPO9zKbzLI5",
+              "name": "Chingo Bling",
+              "type": "artist",
+              "uri": "spotify:artist:7uWSNqvFk0TnPO9zKbzLI5"
+            }
+          ],
+          "available_markets": [
+            "AD",
+            "AE",
+            "AL",
+            "AR",
+            "AT",
+            "AU",
+            "BA",
+            "BE",
+            "BG",
+            "BH",
+            "BO",
+            "BR",
+            "BY",
+            "CA",
+            "CH",
+            "CL",
+            "CO",
+            "CR",
+            "CY",
+            "CZ",
+            "DE",
+            "DK",
+            "DO",
+            "DZ",
+            "EC",
+            "EE",
+            "EG",
+            "ES",
+            "FI",
+            "FR",
+            "GB",
+            "GR",
+            "GT",
+            "HK",
+            "HN",
+            "HR",
+            "HU",
+            "ID",
+            "IE",
+            "IL",
+            "IN",
+            "IS",
+            "IT",
+            "JO",
+            "JP",
+            "KW",
+            "KZ",
+            "LB",
+            "LI",
+            "LT",
+            "LU",
+            "LV",
+            "MA",
+            "MC",
+            "MD",
+            "ME",
+            "MK",
+            "MT",
+            "MX",
+            "MY",
+            "NI",
+            "NL",
+            "NO",
+            "NZ",
+            "OM",
+            "PA",
+            "PE",
+            "PH",
+            "PL",
+            "PS",
+            "PT",
+            "PY",
+            "QA",
+            "RO",
+            "RS",
+            "RU",
+            "SA",
+            "SE",
+            "SG",
+            "SI",
+            "SK",
+            "SV",
+            "TH",
+            "TN",
+            "TR",
+            "TW",
+            "UA",
+            "US",
+            "UY",
+            "VN",
+            "XK",
+            "ZA"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/1WqhPiJzM4X6Rn9zva8Rzz"
+          },
+          "href": "https://api.spotify.com/v1/albums/1WqhPiJzM4X6Rn9zva8Rzz",
+          "id": "1WqhPiJzM4X6Rn9zva8Rzz",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b27356442d6f1aaf351236480402",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e0256442d6f1aaf351236480402",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d0000485156442d6f1aaf351236480402",
+              "width": 64
+            }
+          ],
+          "name": "Puro Pinche Pari",
+          "release_date": "2014-04-23",
+          "release_date_precision": "day",
+          "total_tracks": 1,
+          "type": "album",
+          "uri": "spotify:album:1WqhPiJzM4X6Rn9zva8Rzz"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/7uWSNqvFk0TnPO9zKbzLI5"
+            },
+            "href": "https://api.spotify.com/v1/artists/7uWSNqvFk0TnPO9zKbzLI5",
+            "id": "7uWSNqvFk0TnPO9zKbzLI5",
+            "name": "Chingo Bling",
+            "type": "artist",
+            "uri": "spotify:artist:7uWSNqvFk0TnPO9zKbzLI5"
+          },
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/6lXf3LNBVzoibeG278ZXSn"
+            },
+            "href": "https://api.spotify.com/v1/artists/6lXf3LNBVzoibeG278ZXSn",
+            "id": "6lXf3LNBVzoibeG278ZXSn",
+            "name": "Erick Jaimez",
+            "type": "artist",
+            "uri": "spotify:artist:6lXf3LNBVzoibeG278ZXSn"
+          }
+        ],
+        "available_markets": [
+          "AD",
+          "AE",
+          "AL",
+          "AR",
+          "AT",
+          "AU",
+          "BA",
+          "BE",
+          "BG",
+          "BH",
+          "BO",
+          "BR",
+          "BY",
+          "CA",
+          "CH",
+          "CL",
+          "CO",
+          "CR",
+          "CY",
+          "CZ",
+          "DE",
+          "DK",
+          "DO",
+          "DZ",
+          "EC",
+          "EE",
+          "EG",
+          "ES",
+          "FI",
+          "FR",
+          "GB",
+          "GR",
+          "GT",
+          "HK",
+          "HN",
+          "HR",
+          "HU",
+          "ID",
+          "IE",
+          "IL",
+          "IN",
+          "IS",
+          "IT",
+          "JO",
+          "JP",
+          "KW",
+          "KZ",
+          "LB",
+          "LI",
+          "LT",
+          "LU",
+          "LV",
+          "MA",
+          "MC",
+          "MD",
+          "ME",
+          "MK",
+          "MT",
+          "MX",
+          "MY",
+          "NI",
+          "NL",
+          "NO",
+          "NZ",
+          "OM",
+          "PA",
+          "PE",
+          "PH",
+          "PL",
+          "PS",
+          "PT",
+          "PY",
+          "QA",
+          "RO",
+          "RS",
+          "RU",
+          "SA",
+          "SE",
+          "SG",
+          "SI",
+          "SK",
+          "SV",
+          "TH",
+          "TN",
+          "TR",
+          "TW",
+          "UA",
+          "US",
+          "UY",
+          "VN",
+          "XK",
+          "ZA"
+        ],
+        "disc_number": 1,
+        "duration_ms": 193358,
+        "explicit": true,
+        "external_ids": {
+          "isrc": "USXQS1409164"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/03KzntGQQeVcP7cVrsgnlr"
+        },
+        "href": "https://api.spotify.com/v1/tracks/03KzntGQQeVcP7cVrsgnlr",
+        "id": "03KzntGQQeVcP7cVrsgnlr",
+        "is_local": false,
+        "name": "Puro Pinche Pari",
+        "popularity": 39,
+        "preview_url": "https://p.scdn.co/mp3-preview/3ee5341dc9af6bc90c6ca709f0c309b29b9afc12?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 1,
+        "type": "track",
+        "uri": "spotify:track:03KzntGQQeVcP7cVrsgnlr"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/4mB2yDrWdUxy5tISyQPvpu"
+              },
+              "href": "https://api.spotify.com/v1/artists/4mB2yDrWdUxy5tISyQPvpu",
+              "id": "4mB2yDrWdUxy5tISyQPvpu",
+              "name": "Gabriel Iglesias",
+              "type": "artist",
+              "uri": "spotify:artist:4mB2yDrWdUxy5tISyQPvpu"
+            }
+          ],
+          "available_markets": [
+            "CA",
+            "US"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/4DEb5ri7tjn69T5XSV6uI4"
+          },
+          "href": "https://api.spotify.com/v1/albums/4DEb5ri7tjn69T5XSV6uI4",
+          "id": "4DEb5ri7tjn69T5XSV6uI4",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273730913acd747a05eaea5a194",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02730913acd747a05eaea5a194",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851730913acd747a05eaea5a194",
+              "width": 64
+            }
+          ],
+          "name": "Aloha Fluffy",
+          "release_date": "2013-09-24",
+          "release_date_precision": "day",
+          "total_tracks": 24,
+          "type": "album",
+          "uri": "spotify:album:4DEb5ri7tjn69T5XSV6uI4"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/4mB2yDrWdUxy5tISyQPvpu"
+            },
+            "href": "https://api.spotify.com/v1/artists/4mB2yDrWdUxy5tISyQPvpu",
+            "id": "4mB2yDrWdUxy5tISyQPvpu",
+            "name": "Gabriel Iglesias",
+            "type": "artist",
+            "uri": "spotify:artist:4mB2yDrWdUxy5tISyQPvpu"
+          }
+        ],
+        "available_markets": [
+          "CA",
+          "US"
+        ],
+        "disc_number": 1,
+        "duration_ms": 217706,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "US85P1318504"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5gn7HDJLAkPwoXAG9Q0KRH"
+        },
+        "href": "https://api.spotify.com/v1/tracks/5gn7HDJLAkPwoXAG9Q0KRH",
+        "id": "5gn7HDJLAkPwoXAG9Q0KRH",
+        "is_local": false,
+        "name": "Family",
+        "popularity": 37,
+        "preview_url": "https://p.scdn.co/mp3-preview/30a47e9d4a6cba7ea7b804a062fc6cb92bcf5036?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 4,
+        "type": "track",
+        "uri": "spotify:track:5gn7HDJLAkPwoXAG9Q0KRH"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/4mB2yDrWdUxy5tISyQPvpu"
+              },
+              "href": "https://api.spotify.com/v1/artists/4mB2yDrWdUxy5tISyQPvpu",
+              "id": "4mB2yDrWdUxy5tISyQPvpu",
+              "name": "Gabriel Iglesias",
+              "type": "artist",
+              "uri": "spotify:artist:4mB2yDrWdUxy5tISyQPvpu"
+            }
+          ],
+          "available_markets": [
+            "CA",
+            "US"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/4DEb5ri7tjn69T5XSV6uI4"
+          },
+          "href": "https://api.spotify.com/v1/albums/4DEb5ri7tjn69T5XSV6uI4",
+          "id": "4DEb5ri7tjn69T5XSV6uI4",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273730913acd747a05eaea5a194",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02730913acd747a05eaea5a194",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851730913acd747a05eaea5a194",
+              "width": 64
+            }
+          ],
+          "name": "Aloha Fluffy",
+          "release_date": "2013-09-24",
+          "release_date_precision": "day",
+          "total_tracks": 24,
+          "type": "album",
+          "uri": "spotify:album:4DEb5ri7tjn69T5XSV6uI4"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/4mB2yDrWdUxy5tISyQPvpu"
+            },
+            "href": "https://api.spotify.com/v1/artists/4mB2yDrWdUxy5tISyQPvpu",
+            "id": "4mB2yDrWdUxy5tISyQPvpu",
+            "name": "Gabriel Iglesias",
+            "type": "artist",
+            "uri": "spotify:artist:4mB2yDrWdUxy5tISyQPvpu"
+          }
+        ],
+        "available_markets": [
+          "CA",
+          "US"
+        ],
+        "disc_number": 1,
+        "duration_ms": 509733,
+        "explicit": true,
+        "external_ids": {
+          "isrc": "US85P1318508"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1C8N3GCkEGIQgvRNuDxgkS"
+        },
+        "href": "https://api.spotify.com/v1/tracks/1C8N3GCkEGIQgvRNuDxgkS",
+        "id": "1C8N3GCkEGIQgvRNuDxgkS",
+        "is_local": false,
+        "name": "The Shot Test",
+        "popularity": 37,
+        "preview_url": "https://p.scdn.co/mp3-preview/0875798cdba1705c7a00c98865fd5d9a7bde0ea3?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 8,
+        "type": "track",
+        "uri": "spotify:track:1C8N3GCkEGIQgvRNuDxgkS"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/4mB2yDrWdUxy5tISyQPvpu"
+              },
+              "href": "https://api.spotify.com/v1/artists/4mB2yDrWdUxy5tISyQPvpu",
+              "id": "4mB2yDrWdUxy5tISyQPvpu",
+              "name": "Gabriel Iglesias",
+              "type": "artist",
+              "uri": "spotify:artist:4mB2yDrWdUxy5tISyQPvpu"
+            }
+          ],
+          "available_markets": [
+            "CA",
+            "US"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/4DEb5ri7tjn69T5XSV6uI4"
+          },
+          "href": "https://api.spotify.com/v1/albums/4DEb5ri7tjn69T5XSV6uI4",
+          "id": "4DEb5ri7tjn69T5XSV6uI4",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273730913acd747a05eaea5a194",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02730913acd747a05eaea5a194",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851730913acd747a05eaea5a194",
+              "width": 64
+            }
+          ],
+          "name": "Aloha Fluffy",
+          "release_date": "2013-09-24",
+          "release_date_precision": "day",
+          "total_tracks": 24,
+          "type": "album",
+          "uri": "spotify:album:4DEb5ri7tjn69T5XSV6uI4"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/4mB2yDrWdUxy5tISyQPvpu"
+            },
+            "href": "https://api.spotify.com/v1/artists/4mB2yDrWdUxy5tISyQPvpu",
+            "id": "4mB2yDrWdUxy5tISyQPvpu",
+            "name": "Gabriel Iglesias",
+            "type": "artist",
+            "uri": "spotify:artist:4mB2yDrWdUxy5tISyQPvpu"
+          }
+        ],
+        "available_markets": [
+          "CA",
+          "US"
+        ],
+        "disc_number": 1,
+        "duration_ms": 355160,
+        "explicit": true,
+        "external_ids": {
+          "isrc": "US85P1318507"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0aHpK9IvRuY1vJ97T1SuKl"
+        },
+        "href": "https://api.spotify.com/v1/tracks/0aHpK9IvRuY1vJ97T1SuKl",
+        "id": "0aHpK9IvRuY1vJ97T1SuKl",
+        "is_local": false,
+        "name": "My Girl",
+        "popularity": 37,
+        "preview_url": "https://p.scdn.co/mp3-preview/44b0889321aed88e9deb73395c214898de962da9?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 7,
+        "type": "track",
+        "uri": "spotify:track:0aHpK9IvRuY1vJ97T1SuKl"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/4mB2yDrWdUxy5tISyQPvpu"
+              },
+              "href": "https://api.spotify.com/v1/artists/4mB2yDrWdUxy5tISyQPvpu",
+              "id": "4mB2yDrWdUxy5tISyQPvpu",
+              "name": "Gabriel Iglesias",
+              "type": "artist",
+              "uri": "spotify:artist:4mB2yDrWdUxy5tISyQPvpu"
+            }
+          ],
+          "available_markets": [
+            "CA",
+            "US"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/4DEb5ri7tjn69T5XSV6uI4"
+          },
+          "href": "https://api.spotify.com/v1/albums/4DEb5ri7tjn69T5XSV6uI4",
+          "id": "4DEb5ri7tjn69T5XSV6uI4",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273730913acd747a05eaea5a194",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02730913acd747a05eaea5a194",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851730913acd747a05eaea5a194",
+              "width": 64
+            }
+          ],
+          "name": "Aloha Fluffy",
+          "release_date": "2013-09-24",
+          "release_date_precision": "day",
+          "total_tracks": 24,
+          "type": "album",
+          "uri": "spotify:album:4DEb5ri7tjn69T5XSV6uI4"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/4mB2yDrWdUxy5tISyQPvpu"
+            },
+            "href": "https://api.spotify.com/v1/artists/4mB2yDrWdUxy5tISyQPvpu",
+            "id": "4mB2yDrWdUxy5tISyQPvpu",
+            "name": "Gabriel Iglesias",
+            "type": "artist",
+            "uri": "spotify:artist:4mB2yDrWdUxy5tISyQPvpu"
+          }
+        ],
+        "available_markets": [
+          "CA",
+          "US"
+        ],
+        "disc_number": 1,
+        "duration_ms": 541946,
+        "explicit": true,
+        "external_ids": {
+          "isrc": "US85P1318514"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/766AOUIOIlbYjp5c3La3vM"
+        },
+        "href": "https://api.spotify.com/v1/tracks/766AOUIOIlbYjp5c3La3vM",
+        "id": "766AOUIOIlbYjp5c3La3vM",
+        "is_local": false,
+        "name": "Racist Gift Basket, Part 1",
+        "popularity": 36,
+        "preview_url": "https://p.scdn.co/mp3-preview/d9593d12c8d76690539d24c87049791482800f58?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 14,
+        "type": "track",
+        "uri": "spotify:track:766AOUIOIlbYjp5c3La3vM"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/4mB2yDrWdUxy5tISyQPvpu"
+              },
+              "href": "https://api.spotify.com/v1/artists/4mB2yDrWdUxy5tISyQPvpu",
+              "id": "4mB2yDrWdUxy5tISyQPvpu",
+              "name": "Gabriel Iglesias",
+              "type": "artist",
+              "uri": "spotify:artist:4mB2yDrWdUxy5tISyQPvpu"
+            }
+          ],
+          "available_markets": [
+            "CA",
+            "US"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/4DEb5ri7tjn69T5XSV6uI4"
+          },
+          "href": "https://api.spotify.com/v1/albums/4DEb5ri7tjn69T5XSV6uI4",
+          "id": "4DEb5ri7tjn69T5XSV6uI4",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273730913acd747a05eaea5a194",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02730913acd747a05eaea5a194",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851730913acd747a05eaea5a194",
+              "width": 64
+            }
+          ],
+          "name": "Aloha Fluffy",
+          "release_date": "2013-09-24",
+          "release_date_precision": "day",
+          "total_tracks": 24,
+          "type": "album",
+          "uri": "spotify:album:4DEb5ri7tjn69T5XSV6uI4"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/4mB2yDrWdUxy5tISyQPvpu"
+            },
+            "href": "https://api.spotify.com/v1/artists/4mB2yDrWdUxy5tISyQPvpu",
+            "id": "4mB2yDrWdUxy5tISyQPvpu",
+            "name": "Gabriel Iglesias",
+            "type": "artist",
+            "uri": "spotify:artist:4mB2yDrWdUxy5tISyQPvpu"
+          }
+        ],
+        "available_markets": [
+          "CA",
+          "US"
+        ],
+        "disc_number": 1,
+        "duration_ms": 299746,
+        "explicit": true,
+        "external_ids": {
+          "isrc": "US85P1318509"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6GBiam851r3FnMfWyza024"
+        },
+        "href": "https://api.spotify.com/v1/tracks/6GBiam851r3FnMfWyza024",
+        "id": "6GBiam851r3FnMfWyza024",
+        "is_local": false,
+        "name": "Breaking The Mold",
+        "popularity": 36,
+        "preview_url": "https://p.scdn.co/mp3-preview/5cfebdc15e43d4651a4945b0e6e2b1c0aeb6dde2?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 9,
+        "type": "track",
+        "uri": "spotify:track:6GBiam851r3FnMfWyza024"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/4mB2yDrWdUxy5tISyQPvpu"
+              },
+              "href": "https://api.spotify.com/v1/artists/4mB2yDrWdUxy5tISyQPvpu",
+              "id": "4mB2yDrWdUxy5tISyQPvpu",
+              "name": "Gabriel Iglesias",
+              "type": "artist",
+              "uri": "spotify:artist:4mB2yDrWdUxy5tISyQPvpu"
+            }
+          ],
+          "available_markets": [
+            "CA",
+            "US"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/4DEb5ri7tjn69T5XSV6uI4"
+          },
+          "href": "https://api.spotify.com/v1/albums/4DEb5ri7tjn69T5XSV6uI4",
+          "id": "4DEb5ri7tjn69T5XSV6uI4",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273730913acd747a05eaea5a194",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02730913acd747a05eaea5a194",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851730913acd747a05eaea5a194",
+              "width": 64
+            }
+          ],
+          "name": "Aloha Fluffy",
+          "release_date": "2013-09-24",
+          "release_date_precision": "day",
+          "total_tracks": 24,
+          "type": "album",
+          "uri": "spotify:album:4DEb5ri7tjn69T5XSV6uI4"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/4mB2yDrWdUxy5tISyQPvpu"
+            },
+            "href": "https://api.spotify.com/v1/artists/4mB2yDrWdUxy5tISyQPvpu",
+            "id": "4mB2yDrWdUxy5tISyQPvpu",
+            "name": "Gabriel Iglesias",
+            "type": "artist",
+            "uri": "spotify:artist:4mB2yDrWdUxy5tISyQPvpu"
+          }
+        ],
+        "available_markets": [
+          "CA",
+          "US"
+        ],
+        "disc_number": 1,
+        "duration_ms": 424306,
+        "explicit": true,
+        "external_ids": {
+          "isrc": "US85P1318511"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/16XuBJSsm4cXXR2P6CGqPi"
+        },
+        "href": "https://api.spotify.com/v1/tracks/16XuBJSsm4cXXR2P6CGqPi",
+        "id": "16XuBJSsm4cXXR2P6CGqPi",
+        "is_local": false,
+        "name": "The Secret Desert Show",
+        "popularity": 36,
+        "preview_url": "https://p.scdn.co/mp3-preview/d86f5c2324fde3b51013b29686a032ffc79902e2?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 11,
+        "type": "track",
+        "uri": "spotify:track:16XuBJSsm4cXXR2P6CGqPi"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/4mB2yDrWdUxy5tISyQPvpu"
+              },
+              "href": "https://api.spotify.com/v1/artists/4mB2yDrWdUxy5tISyQPvpu",
+              "id": "4mB2yDrWdUxy5tISyQPvpu",
+              "name": "Gabriel Iglesias",
+              "type": "artist",
+              "uri": "spotify:artist:4mB2yDrWdUxy5tISyQPvpu"
+            }
+          ],
+          "available_markets": [
+            "CA",
+            "US"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/4DEb5ri7tjn69T5XSV6uI4"
+          },
+          "href": "https://api.spotify.com/v1/albums/4DEb5ri7tjn69T5XSV6uI4",
+          "id": "4DEb5ri7tjn69T5XSV6uI4",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273730913acd747a05eaea5a194",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02730913acd747a05eaea5a194",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851730913acd747a05eaea5a194",
+              "width": 64
+            }
+          ],
+          "name": "Aloha Fluffy",
+          "release_date": "2013-09-24",
+          "release_date_precision": "day",
+          "total_tracks": 24,
+          "type": "album",
+          "uri": "spotify:album:4DEb5ri7tjn69T5XSV6uI4"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/4mB2yDrWdUxy5tISyQPvpu"
+            },
+            "href": "https://api.spotify.com/v1/artists/4mB2yDrWdUxy5tISyQPvpu",
+            "id": "4mB2yDrWdUxy5tISyQPvpu",
+            "name": "Gabriel Iglesias",
+            "type": "artist",
+            "uri": "spotify:artist:4mB2yDrWdUxy5tISyQPvpu"
+          }
+        ],
+        "available_markets": [
+          "CA",
+          "US"
+        ],
+        "disc_number": 1,
+        "duration_ms": 300000,
+        "explicit": true,
+        "external_ids": {
+          "isrc": "US85P1318510"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3exZaB3aWL5FDRXOh5nLcA"
+        },
+        "href": "https://api.spotify.com/v1/tracks/3exZaB3aWL5FDRXOh5nLcA",
+        "id": "3exZaB3aWL5FDRXOh5nLcA",
+        "is_local": false,
+        "name": "The Middle East",
+        "popularity": 36,
+        "preview_url": "https://p.scdn.co/mp3-preview/732affef345a1a02d4b06b813a3265e134d7a33a?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 10,
+        "type": "track",
+        "uri": "spotify:track:3exZaB3aWL5FDRXOh5nLcA"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/4mB2yDrWdUxy5tISyQPvpu"
+              },
+              "href": "https://api.spotify.com/v1/artists/4mB2yDrWdUxy5tISyQPvpu",
+              "id": "4mB2yDrWdUxy5tISyQPvpu",
+              "name": "Gabriel Iglesias",
+              "type": "artist",
+              "uri": "spotify:artist:4mB2yDrWdUxy5tISyQPvpu"
+            }
+          ],
+          "available_markets": [
+            "CA",
+            "US"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/4DEb5ri7tjn69T5XSV6uI4"
+          },
+          "href": "https://api.spotify.com/v1/albums/4DEb5ri7tjn69T5XSV6uI4",
+          "id": "4DEb5ri7tjn69T5XSV6uI4",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273730913acd747a05eaea5a194",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02730913acd747a05eaea5a194",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851730913acd747a05eaea5a194",
+              "width": 64
+            }
+          ],
+          "name": "Aloha Fluffy",
+          "release_date": "2013-09-24",
+          "release_date_precision": "day",
+          "total_tracks": 24,
+          "type": "album",
+          "uri": "spotify:album:4DEb5ri7tjn69T5XSV6uI4"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/4mB2yDrWdUxy5tISyQPvpu"
+            },
+            "href": "https://api.spotify.com/v1/artists/4mB2yDrWdUxy5tISyQPvpu",
+            "id": "4mB2yDrWdUxy5tISyQPvpu",
+            "name": "Gabriel Iglesias",
+            "type": "artist",
+            "uri": "spotify:artist:4mB2yDrWdUxy5tISyQPvpu"
+          }
+        ],
+        "available_markets": [
+          "CA",
+          "US"
+        ],
+        "disc_number": 1,
+        "duration_ms": 416333,
+        "explicit": true,
+        "external_ids": {
+          "isrc": "US85P1318513"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4xwtDJE2r8cwKiA5PQz4JJ"
+        },
+        "href": "https://api.spotify.com/v1/tracks/4xwtDJE2r8cwKiA5PQz4JJ",
+        "id": "4xwtDJE2r8cwKiA5PQz4JJ",
+        "is_local": false,
+        "name": "The Prince's Palace",
+        "popularity": 35,
+        "preview_url": "https://p.scdn.co/mp3-preview/55209cfb3f5f91a7c85f2accd2551a25b503fdef?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 13,
+        "type": "track",
+        "uri": "spotify:track:4xwtDJE2r8cwKiA5PQz4JJ"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/4mB2yDrWdUxy5tISyQPvpu"
+              },
+              "href": "https://api.spotify.com/v1/artists/4mB2yDrWdUxy5tISyQPvpu",
+              "id": "4mB2yDrWdUxy5tISyQPvpu",
+              "name": "Gabriel Iglesias",
+              "type": "artist",
+              "uri": "spotify:artist:4mB2yDrWdUxy5tISyQPvpu"
+            }
+          ],
+          "available_markets": [
+            "CA",
+            "US"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/4DEb5ri7tjn69T5XSV6uI4"
+          },
+          "href": "https://api.spotify.com/v1/albums/4DEb5ri7tjn69T5XSV6uI4",
+          "id": "4DEb5ri7tjn69T5XSV6uI4",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273730913acd747a05eaea5a194",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02730913acd747a05eaea5a194",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851730913acd747a05eaea5a194",
+              "width": 64
+            }
+          ],
+          "name": "Aloha Fluffy",
+          "release_date": "2013-09-24",
+          "release_date_precision": "day",
+          "total_tracks": 24,
+          "type": "album",
+          "uri": "spotify:album:4DEb5ri7tjn69T5XSV6uI4"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/4mB2yDrWdUxy5tISyQPvpu"
+            },
+            "href": "https://api.spotify.com/v1/artists/4mB2yDrWdUxy5tISyQPvpu",
+            "id": "4mB2yDrWdUxy5tISyQPvpu",
+            "name": "Gabriel Iglesias",
+            "type": "artist",
+            "uri": "spotify:artist:4mB2yDrWdUxy5tISyQPvpu"
+          }
+        ],
+        "available_markets": [
+          "CA",
+          "US"
+        ],
+        "disc_number": 1,
+        "duration_ms": 242293,
+        "explicit": true,
+        "external_ids": {
+          "isrc": "US85P1318512"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4HOHJbZ6j8jNTUNYtCv9Ou"
+        },
+        "href": "https://api.spotify.com/v1/tracks/4HOHJbZ6j8jNTUNYtCv9Ou",
+        "id": "4HOHJbZ6j8jNTUNYtCv9Ou",
+        "is_local": false,
+        "name": "The Prince",
+        "popularity": 35,
+        "preview_url": "https://p.scdn.co/mp3-preview/e365b901f7282e135e3ef7388507680a9bc32d89?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 12,
+        "type": "track",
+        "uri": "spotify:track:4HOHJbZ6j8jNTUNYtCv9Ou"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/4mB2yDrWdUxy5tISyQPvpu"
+              },
+              "href": "https://api.spotify.com/v1/artists/4mB2yDrWdUxy5tISyQPvpu",
+              "id": "4mB2yDrWdUxy5tISyQPvpu",
+              "name": "Gabriel Iglesias",
+              "type": "artist",
+              "uri": "spotify:artist:4mB2yDrWdUxy5tISyQPvpu"
+            }
+          ],
+          "available_markets": [
+            "CA",
+            "US"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/4DEb5ri7tjn69T5XSV6uI4"
+          },
+          "href": "https://api.spotify.com/v1/albums/4DEb5ri7tjn69T5XSV6uI4",
+          "id": "4DEb5ri7tjn69T5XSV6uI4",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273730913acd747a05eaea5a194",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02730913acd747a05eaea5a194",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851730913acd747a05eaea5a194",
+              "width": 64
+            }
+          ],
+          "name": "Aloha Fluffy",
+          "release_date": "2013-09-24",
+          "release_date_precision": "day",
+          "total_tracks": 24,
+          "type": "album",
+          "uri": "spotify:album:4DEb5ri7tjn69T5XSV6uI4"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/4mB2yDrWdUxy5tISyQPvpu"
+            },
+            "href": "https://api.spotify.com/v1/artists/4mB2yDrWdUxy5tISyQPvpu",
+            "id": "4mB2yDrWdUxy5tISyQPvpu",
+            "name": "Gabriel Iglesias",
+            "type": "artist",
+            "uri": "spotify:artist:4mB2yDrWdUxy5tISyQPvpu"
+          }
+        ],
+        "available_markets": [
+          "CA",
+          "US"
+        ],
+        "disc_number": 1,
+        "duration_ms": 349373,
+        "explicit": true,
+        "external_ids": {
+          "isrc": "US85P1318515"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4prMyntRyYCFH4DFqVVFk7"
+        },
+        "href": "https://api.spotify.com/v1/tracks/4prMyntRyYCFH4DFqVVFk7",
+        "id": "4prMyntRyYCFH4DFqVVFk7",
+        "is_local": false,
+        "name": "Racist Gift Basket, Part 2",
+        "popularity": 35,
+        "preview_url": "https://p.scdn.co/mp3-preview/b7ae07feb7bd88fbea25baa18212a9fc84cbd4ab?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 15,
+        "type": "track",
+        "uri": "spotify:track:4prMyntRyYCFH4DFqVVFk7"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/4mB2yDrWdUxy5tISyQPvpu"
+              },
+              "href": "https://api.spotify.com/v1/artists/4mB2yDrWdUxy5tISyQPvpu",
+              "id": "4mB2yDrWdUxy5tISyQPvpu",
+              "name": "Gabriel Iglesias",
+              "type": "artist",
+              "uri": "spotify:artist:4mB2yDrWdUxy5tISyQPvpu"
+            }
+          ],
+          "available_markets": [
+            "CA",
+            "US"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/4DEb5ri7tjn69T5XSV6uI4"
+          },
+          "href": "https://api.spotify.com/v1/albums/4DEb5ri7tjn69T5XSV6uI4",
+          "id": "4DEb5ri7tjn69T5XSV6uI4",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273730913acd747a05eaea5a194",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02730913acd747a05eaea5a194",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851730913acd747a05eaea5a194",
+              "width": 64
+            }
+          ],
+          "name": "Aloha Fluffy",
+          "release_date": "2013-09-24",
+          "release_date_precision": "day",
+          "total_tracks": 24,
+          "type": "album",
+          "uri": "spotify:album:4DEb5ri7tjn69T5XSV6uI4"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/4mB2yDrWdUxy5tISyQPvpu"
+            },
+            "href": "https://api.spotify.com/v1/artists/4mB2yDrWdUxy5tISyQPvpu",
+            "id": "4mB2yDrWdUxy5tISyQPvpu",
+            "name": "Gabriel Iglesias",
+            "type": "artist",
+            "uri": "spotify:artist:4mB2yDrWdUxy5tISyQPvpu"
+          }
+        ],
+        "available_markets": [
+          "CA",
+          "US"
+        ],
+        "disc_number": 1,
+        "duration_ms": 270053,
+        "explicit": true,
+        "external_ids": {
+          "isrc": "US85P1318517"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5GkOxUG0rcTHuLIaNK6Utc"
+        },
+        "href": "https://api.spotify.com/v1/tracks/5GkOxUG0rcTHuLIaNK6Utc",
+        "id": "5GkOxUG0rcTHuLIaNK6Utc",
+        "is_local": false,
+        "name": "Immigration Check Point",
+        "popularity": 35,
+        "preview_url": "https://p.scdn.co/mp3-preview/1c1d9836393668f10a1bbe956f7660b64b435047?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 17,
+        "type": "track",
+        "uri": "spotify:track:5GkOxUG0rcTHuLIaNK6Utc"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/4mB2yDrWdUxy5tISyQPvpu"
+              },
+              "href": "https://api.spotify.com/v1/artists/4mB2yDrWdUxy5tISyQPvpu",
+              "id": "4mB2yDrWdUxy5tISyQPvpu",
+              "name": "Gabriel Iglesias",
+              "type": "artist",
+              "uri": "spotify:artist:4mB2yDrWdUxy5tISyQPvpu"
+            }
+          ],
+          "available_markets": [
+            "CA",
+            "US"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/4DEb5ri7tjn69T5XSV6uI4"
+          },
+          "href": "https://api.spotify.com/v1/albums/4DEb5ri7tjn69T5XSV6uI4",
+          "id": "4DEb5ri7tjn69T5XSV6uI4",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273730913acd747a05eaea5a194",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02730913acd747a05eaea5a194",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851730913acd747a05eaea5a194",
+              "width": 64
+            }
+          ],
+          "name": "Aloha Fluffy",
+          "release_date": "2013-09-24",
+          "release_date_precision": "day",
+          "total_tracks": 24,
+          "type": "album",
+          "uri": "spotify:album:4DEb5ri7tjn69T5XSV6uI4"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/4mB2yDrWdUxy5tISyQPvpu"
+            },
+            "href": "https://api.spotify.com/v1/artists/4mB2yDrWdUxy5tISyQPvpu",
+            "id": "4mB2yDrWdUxy5tISyQPvpu",
+            "name": "Gabriel Iglesias",
+            "type": "artist",
+            "uri": "spotify:artist:4mB2yDrWdUxy5tISyQPvpu"
+          }
+        ],
+        "available_markets": [
+          "CA",
+          "US"
+        ],
+        "disc_number": 1,
+        "duration_ms": 949186,
+        "explicit": true,
+        "external_ids": {
+          "isrc": "US85P1318516"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2nbc5ZQ0ogUk0aYF2PkUqa"
+        },
+        "href": "https://api.spotify.com/v1/tracks/2nbc5ZQ0ogUk0aYF2PkUqa",
+        "id": "2nbc5ZQ0ogUk0aYF2PkUqa",
+        "is_local": false,
+        "name": "Magic Mike Story",
+        "popularity": 34,
+        "preview_url": "https://p.scdn.co/mp3-preview/27b283579e0459adbd0da4738781fb7b6c0eb58f?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 16,
+        "type": "track",
+        "uri": "spotify:track:2nbc5ZQ0ogUk0aYF2PkUqa"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/4mB2yDrWdUxy5tISyQPvpu"
+              },
+              "href": "https://api.spotify.com/v1/artists/4mB2yDrWdUxy5tISyQPvpu",
+              "id": "4mB2yDrWdUxy5tISyQPvpu",
+              "name": "Gabriel Iglesias",
+              "type": "artist",
+              "uri": "spotify:artist:4mB2yDrWdUxy5tISyQPvpu"
+            }
+          ],
+          "available_markets": [
+            "CA",
+            "US"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/4DEb5ri7tjn69T5XSV6uI4"
+          },
+          "href": "https://api.spotify.com/v1/albums/4DEb5ri7tjn69T5XSV6uI4",
+          "id": "4DEb5ri7tjn69T5XSV6uI4",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273730913acd747a05eaea5a194",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02730913acd747a05eaea5a194",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851730913acd747a05eaea5a194",
+              "width": 64
+            }
+          ],
+          "name": "Aloha Fluffy",
+          "release_date": "2013-09-24",
+          "release_date_precision": "day",
+          "total_tracks": 24,
+          "type": "album",
+          "uri": "spotify:album:4DEb5ri7tjn69T5XSV6uI4"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/4mB2yDrWdUxy5tISyQPvpu"
+            },
+            "href": "https://api.spotify.com/v1/artists/4mB2yDrWdUxy5tISyQPvpu",
+            "id": "4mB2yDrWdUxy5tISyQPvpu",
+            "name": "Gabriel Iglesias",
+            "type": "artist",
+            "uri": "spotify:artist:4mB2yDrWdUxy5tISyQPvpu"
+          }
+        ],
+        "available_markets": [
+          "CA",
+          "US"
+        ],
+        "disc_number": 1,
+        "duration_ms": 237093,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "US85P1318522"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4ngaLStlbPg0OdaWewjaVf"
+        },
+        "href": "https://api.spotify.com/v1/tracks/4ngaLStlbPg0OdaWewjaVf",
+        "id": "4ngaLStlbPg0OdaWewjaVf",
+        "is_local": false,
+        "name": "Martin and Siri",
+        "popularity": 34,
+        "preview_url": "https://p.scdn.co/mp3-preview/06b3e1e2f73c701f4d91197e7674238210bede19?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 22,
+        "type": "track",
+        "uri": "spotify:track:4ngaLStlbPg0OdaWewjaVf"
+      }
+    ],
+    "limit": 20,
+    "next": "https://api.spotify.com/v1/search?query=genre%3A%22Latin+Comedy%22&type=track&offset=20&limit=20",
+    "offset": 0,
+    "previous": null,
+    "total": 2375
+  }
+}

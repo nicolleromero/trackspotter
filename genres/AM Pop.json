@@ -1,0 +1,1650 @@
+{
+  "tracks": {
+    "href": "https://api.spotify.com/v1/search?query=genre%3A%22AM+Pop%22&type=track&offset=0&limit=20",
+    "items": [
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/1QAJqy2dA3ihHBFIHRphZj"
+              },
+              "href": "https://api.spotify.com/v1/artists/1QAJqy2dA3ihHBFIHRphZj",
+              "id": "1QAJqy2dA3ihHBFIHRphZj",
+              "name": "Cigarettes After Sex",
+              "type": "artist",
+              "uri": "spotify:artist:1QAJqy2dA3ihHBFIHRphZj"
+            }
+          ],
+          "available_markets": [
+            "US"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/5bP82ZIls6rzhpf5Qu6AzC"
+          },
+          "href": "https://api.spotify.com/v1/albums/5bP82ZIls6rzhpf5Qu6AzC",
+          "id": "5bP82ZIls6rzhpf5Qu6AzC",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b2736b701428ed4c6e053902174a",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e026b701428ed4c6e053902174a",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d000048516b701428ed4c6e053902174a",
+              "width": 64
+            }
+          ],
+          "name": "Cigarettes After Sex",
+          "release_date": "2017-06-09",
+          "release_date_precision": "day",
+          "total_tracks": 10,
+          "type": "album",
+          "uri": "spotify:album:5bP82ZIls6rzhpf5Qu6AzC"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/1QAJqy2dA3ihHBFIHRphZj"
+            },
+            "href": "https://api.spotify.com/v1/artists/1QAJqy2dA3ihHBFIHRphZj",
+            "id": "1QAJqy2dA3ihHBFIHRphZj",
+            "name": "Cigarettes After Sex",
+            "type": "artist",
+            "uri": "spotify:artist:1QAJqy2dA3ihHBFIHRphZj"
+          }
+        ],
+        "available_markets": [
+          "US"
+        ],
+        "disc_number": 1,
+        "duration_ms": 290146,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "USBQU1700034"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3AVrVz5rK8Hrqo9YGiVGN5"
+        },
+        "href": "https://api.spotify.com/v1/tracks/3AVrVz5rK8Hrqo9YGiVGN5",
+        "id": "3AVrVz5rK8Hrqo9YGiVGN5",
+        "is_local": false,
+        "name": "Apocalypse",
+        "popularity": 63,
+        "preview_url": "https://p.scdn.co/mp3-preview/c896477c65a10edff588cb8a3123e59e200ed134?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 4,
+        "type": "track",
+        "uri": "spotify:track:3AVrVz5rK8Hrqo9YGiVGN5"
+      },
+      {
+        "album": {
+          "album_type": "single",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/1QAJqy2dA3ihHBFIHRphZj"
+              },
+              "href": "https://api.spotify.com/v1/artists/1QAJqy2dA3ihHBFIHRphZj",
+              "id": "1QAJqy2dA3ihHBFIHRphZj",
+              "name": "Cigarettes After Sex",
+              "type": "artist",
+              "uri": "spotify:artist:1QAJqy2dA3ihHBFIHRphZj"
+            }
+          ],
+          "available_markets": [
+            "CA",
+            "US"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/6w9osZGOS8B7XWW51SBwFT"
+          },
+          "href": "https://api.spotify.com/v1/albums/6w9osZGOS8B7XWW51SBwFT",
+          "id": "6w9osZGOS8B7XWW51SBwFT",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b2730879d25910f5f03e0927935e",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e020879d25910f5f03e0927935e",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d000048510879d25910f5f03e0927935e",
+              "width": 64
+            }
+          ],
+          "name": "I.",
+          "release_date": "2012-07-21",
+          "release_date_precision": "day",
+          "total_tracks": 4,
+          "type": "album",
+          "uri": "spotify:album:6w9osZGOS8B7XWW51SBwFT"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/1QAJqy2dA3ihHBFIHRphZj"
+            },
+            "href": "https://api.spotify.com/v1/artists/1QAJqy2dA3ihHBFIHRphZj",
+            "id": "1QAJqy2dA3ihHBFIHRphZj",
+            "name": "Cigarettes After Sex",
+            "type": "artist",
+            "uri": "spotify:artist:1QAJqy2dA3ihHBFIHRphZj"
+          }
+        ],
+        "available_markets": [
+          "CA",
+          "US"
+        ],
+        "disc_number": 1,
+        "duration_ms": 286293,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "TCACJ1593857"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3GhsBdS9ulPK3KCdwHRPhG"
+        },
+        "href": "https://api.spotify.com/v1/tracks/3GhsBdS9ulPK3KCdwHRPhG",
+        "id": "3GhsBdS9ulPK3KCdwHRPhG",
+        "is_local": false,
+        "name": "Nothing's Gonna Hurt You Baby",
+        "popularity": 61,
+        "preview_url": "https://p.scdn.co/mp3-preview/1b251b68588f44084ee6cb276130e223820bd388?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 1,
+        "type": "track",
+        "uri": "spotify:track:3GhsBdS9ulPK3KCdwHRPhG"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/1QAJqy2dA3ihHBFIHRphZj"
+              },
+              "href": "https://api.spotify.com/v1/artists/1QAJqy2dA3ihHBFIHRphZj",
+              "id": "1QAJqy2dA3ihHBFIHRphZj",
+              "name": "Cigarettes After Sex",
+              "type": "artist",
+              "uri": "spotify:artist:1QAJqy2dA3ihHBFIHRphZj"
+            }
+          ],
+          "available_markets": [
+            "US"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/5bP82ZIls6rzhpf5Qu6AzC"
+          },
+          "href": "https://api.spotify.com/v1/albums/5bP82ZIls6rzhpf5Qu6AzC",
+          "id": "5bP82ZIls6rzhpf5Qu6AzC",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b2736b701428ed4c6e053902174a",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e026b701428ed4c6e053902174a",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d000048516b701428ed4c6e053902174a",
+              "width": 64
+            }
+          ],
+          "name": "Cigarettes After Sex",
+          "release_date": "2017-06-09",
+          "release_date_precision": "day",
+          "total_tracks": 10,
+          "type": "album",
+          "uri": "spotify:album:5bP82ZIls6rzhpf5Qu6AzC"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/1QAJqy2dA3ihHBFIHRphZj"
+            },
+            "href": "https://api.spotify.com/v1/artists/1QAJqy2dA3ihHBFIHRphZj",
+            "id": "1QAJqy2dA3ihHBFIHRphZj",
+            "name": "Cigarettes After Sex",
+            "type": "artist",
+            "uri": "spotify:artist:1QAJqy2dA3ihHBFIHRphZj"
+          }
+        ],
+        "available_markets": [
+          "US"
+        ],
+        "disc_number": 1,
+        "duration_ms": 319560,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "USBQU1600214"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7LX4aXtvImhdgUHQBlo8Kp"
+        },
+        "href": "https://api.spotify.com/v1/tracks/7LX4aXtvImhdgUHQBlo8Kp",
+        "id": "7LX4aXtvImhdgUHQBlo8Kp",
+        "is_local": false,
+        "name": "K.",
+        "popularity": 58,
+        "preview_url": "https://p.scdn.co/mp3-preview/8900c741891262a59bd5d56a0735fedc5fb43fda?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 1,
+        "type": "track",
+        "uri": "spotify:track:7LX4aXtvImhdgUHQBlo8Kp"
+      },
+      {
+        "album": {
+          "album_type": "single",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/1QAJqy2dA3ihHBFIHRphZj"
+              },
+              "href": "https://api.spotify.com/v1/artists/1QAJqy2dA3ihHBFIHRphZj",
+              "id": "1QAJqy2dA3ihHBFIHRphZj",
+              "name": "Cigarettes After Sex",
+              "type": "artist",
+              "uri": "spotify:artist:1QAJqy2dA3ihHBFIHRphZj"
+            }
+          ],
+          "available_markets": [
+            "US"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/5lU2BUnMIIe6JcbqV9LXtS"
+          },
+          "href": "https://api.spotify.com/v1/albums/5lU2BUnMIIe6JcbqV9LXtS",
+          "id": "5lU2BUnMIIe6JcbqV9LXtS",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b2734d8c27f369cbebe866a53058",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e024d8c27f369cbebe866a53058",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d000048514d8c27f369cbebe866a53058",
+              "width": 64
+            }
+          ],
+          "name": "You're All I Want",
+          "release_date": "2020-05-26",
+          "release_date_precision": "day",
+          "total_tracks": 1,
+          "type": "album",
+          "uri": "spotify:album:5lU2BUnMIIe6JcbqV9LXtS"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/1QAJqy2dA3ihHBFIHRphZj"
+            },
+            "href": "https://api.spotify.com/v1/artists/1QAJqy2dA3ihHBFIHRphZj",
+            "id": "1QAJqy2dA3ihHBFIHRphZj",
+            "name": "Cigarettes After Sex",
+            "type": "artist",
+            "uri": "spotify:artist:1QAJqy2dA3ihHBFIHRphZj"
+          }
+        ],
+        "available_markets": [
+          "US"
+        ],
+        "disc_number": 1,
+        "duration_ms": 264453,
+        "explicit": true,
+        "external_ids": {
+          "isrc": "USBQU1900259"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0EUw3ZK8Ti14t6R6FOP8Ty"
+        },
+        "href": "https://api.spotify.com/v1/tracks/0EUw3ZK8Ti14t6R6FOP8Ty",
+        "id": "0EUw3ZK8Ti14t6R6FOP8Ty",
+        "is_local": false,
+        "name": "You're All I Want",
+        "popularity": 56,
+        "preview_url": "https://p.scdn.co/mp3-preview/d927e9c9bf44df12b796fd13f6fbde84a2536d3d?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 1,
+        "type": "track",
+        "uri": "spotify:track:0EUw3ZK8Ti14t6R6FOP8Ty"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/1QAJqy2dA3ihHBFIHRphZj"
+              },
+              "href": "https://api.spotify.com/v1/artists/1QAJqy2dA3ihHBFIHRphZj",
+              "id": "1QAJqy2dA3ihHBFIHRphZj",
+              "name": "Cigarettes After Sex",
+              "type": "artist",
+              "uri": "spotify:artist:1QAJqy2dA3ihHBFIHRphZj"
+            }
+          ],
+          "available_markets": [
+            "US"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/5bP82ZIls6rzhpf5Qu6AzC"
+          },
+          "href": "https://api.spotify.com/v1/albums/5bP82ZIls6rzhpf5Qu6AzC",
+          "id": "5bP82ZIls6rzhpf5Qu6AzC",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b2736b701428ed4c6e053902174a",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e026b701428ed4c6e053902174a",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d000048516b701428ed4c6e053902174a",
+              "width": 64
+            }
+          ],
+          "name": "Cigarettes After Sex",
+          "release_date": "2017-06-09",
+          "release_date_precision": "day",
+          "total_tracks": 10,
+          "type": "album",
+          "uri": "spotify:album:5bP82ZIls6rzhpf5Qu6AzC"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/1QAJqy2dA3ihHBFIHRphZj"
+            },
+            "href": "https://api.spotify.com/v1/artists/1QAJqy2dA3ihHBFIHRphZj",
+            "id": "1QAJqy2dA3ihHBFIHRphZj",
+            "name": "Cigarettes After Sex",
+            "type": "artist",
+            "uri": "spotify:artist:1QAJqy2dA3ihHBFIHRphZj"
+          }
+        ],
+        "available_markets": [
+          "US"
+        ],
+        "disc_number": 1,
+        "duration_ms": 291640,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "USBQU1700036"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3VSYkAf6f46i5ZkXOHORq1"
+        },
+        "href": "https://api.spotify.com/v1/tracks/3VSYkAf6f46i5ZkXOHORq1",
+        "id": "3VSYkAf6f46i5ZkXOHORq1",
+        "is_local": false,
+        "name": "Sweet",
+        "popularity": 56,
+        "preview_url": "https://p.scdn.co/mp3-preview/d9bbbf09ec3dceadcbcf8573836f5a4e5ff8983f?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 6,
+        "type": "track",
+        "uri": "spotify:track:3VSYkAf6f46i5ZkXOHORq1"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/1QAJqy2dA3ihHBFIHRphZj"
+              },
+              "href": "https://api.spotify.com/v1/artists/1QAJqy2dA3ihHBFIHRphZj",
+              "id": "1QAJqy2dA3ihHBFIHRphZj",
+              "name": "Cigarettes After Sex",
+              "type": "artist",
+              "uri": "spotify:artist:1QAJqy2dA3ihHBFIHRphZj"
+            }
+          ],
+          "available_markets": [
+            "US"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/6fUVptFdeOgcqDvCZzM2kC"
+          },
+          "href": "https://api.spotify.com/v1/albums/6fUVptFdeOgcqDvCZzM2kC",
+          "id": "6fUVptFdeOgcqDvCZzM2kC",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273ced182a9a86195e9ba2a5183",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02ced182a9a86195e9ba2a5183",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851ced182a9a86195e9ba2a5183",
+              "width": 64
+            }
+          ],
+          "name": "Cry",
+          "release_date": "2019-10-25",
+          "release_date_precision": "day",
+          "total_tracks": 9,
+          "type": "album",
+          "uri": "spotify:album:6fUVptFdeOgcqDvCZzM2kC"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/1QAJqy2dA3ihHBFIHRphZj"
+            },
+            "href": "https://api.spotify.com/v1/artists/1QAJqy2dA3ihHBFIHRphZj",
+            "id": "1QAJqy2dA3ihHBFIHRphZj",
+            "name": "Cigarettes After Sex",
+            "type": "artist",
+            "uri": "spotify:artist:1QAJqy2dA3ihHBFIHRphZj"
+          }
+        ],
+        "available_markets": [
+          "US"
+        ],
+        "disc_number": 1,
+        "duration_ms": 288595,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "USBQU1900118"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1Bh0UzthW8pKEnYg7v40Oa"
+        },
+        "href": "https://api.spotify.com/v1/tracks/1Bh0UzthW8pKEnYg7v40Oa",
+        "id": "1Bh0UzthW8pKEnYg7v40Oa",
+        "is_local": false,
+        "name": "Heavenly",
+        "popularity": 54,
+        "preview_url": "https://p.scdn.co/mp3-preview/eae6702755dd4ca3898ffc9760558ebd57b9e6ce?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 3,
+        "type": "track",
+        "uri": "spotify:track:1Bh0UzthW8pKEnYg7v40Oa"
+      },
+      {
+        "album": {
+          "album_type": "single",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/1QAJqy2dA3ihHBFIHRphZj"
+              },
+              "href": "https://api.spotify.com/v1/artists/1QAJqy2dA3ihHBFIHRphZj",
+              "id": "1QAJqy2dA3ihHBFIHRphZj",
+              "name": "Cigarettes After Sex",
+              "type": "artist",
+              "uri": "spotify:artist:1QAJqy2dA3ihHBFIHRphZj"
+            }
+          ],
+          "available_markets": [
+            "US"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/5m3edD6VcJ23DxiLPwjDaB"
+          },
+          "href": "https://api.spotify.com/v1/albums/5m3edD6VcJ23DxiLPwjDaB",
+          "id": "5m3edD6VcJ23DxiLPwjDaB",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b2735f592cf31f9602e45c1ddf16",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e025f592cf31f9602e45c1ddf16",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d000048515f592cf31f9602e45c1ddf16",
+              "width": 64
+            }
+          ],
+          "name": "Crush",
+          "release_date": "2018-07-10",
+          "release_date_precision": "day",
+          "total_tracks": 2,
+          "type": "album",
+          "uri": "spotify:album:5m3edD6VcJ23DxiLPwjDaB"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/1QAJqy2dA3ihHBFIHRphZj"
+            },
+            "href": "https://api.spotify.com/v1/artists/1QAJqy2dA3ihHBFIHRphZj",
+            "id": "1QAJqy2dA3ihHBFIHRphZj",
+            "name": "Cigarettes After Sex",
+            "type": "artist",
+            "uri": "spotify:artist:1QAJqy2dA3ihHBFIHRphZj"
+          }
+        ],
+        "available_markets": [
+          "US"
+        ],
+        "disc_number": 1,
+        "duration_ms": 266666,
+        "explicit": true,
+        "external_ids": {
+          "isrc": "USBQU1800070"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2y7JqO7Jc7ErdOmxpvifRF"
+        },
+        "href": "https://api.spotify.com/v1/tracks/2y7JqO7Jc7ErdOmxpvifRF",
+        "id": "2y7JqO7Jc7ErdOmxpvifRF",
+        "is_local": false,
+        "name": "Crush",
+        "popularity": 54,
+        "preview_url": "https://p.scdn.co/mp3-preview/c4f3467a93de681f2ad7583862f9a4262ef9c4fc?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 1,
+        "type": "track",
+        "uri": "spotify:track:2y7JqO7Jc7ErdOmxpvifRF"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/1QAJqy2dA3ihHBFIHRphZj"
+              },
+              "href": "https://api.spotify.com/v1/artists/1QAJqy2dA3ihHBFIHRphZj",
+              "id": "1QAJqy2dA3ihHBFIHRphZj",
+              "name": "Cigarettes After Sex",
+              "type": "artist",
+              "uri": "spotify:artist:1QAJqy2dA3ihHBFIHRphZj"
+            }
+          ],
+          "available_markets": [
+            "US"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/5bP82ZIls6rzhpf5Qu6AzC"
+          },
+          "href": "https://api.spotify.com/v1/albums/5bP82ZIls6rzhpf5Qu6AzC",
+          "id": "5bP82ZIls6rzhpf5Qu6AzC",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b2736b701428ed4c6e053902174a",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e026b701428ed4c6e053902174a",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d000048516b701428ed4c6e053902174a",
+              "width": 64
+            }
+          ],
+          "name": "Cigarettes After Sex",
+          "release_date": "2017-06-09",
+          "release_date_precision": "day",
+          "total_tracks": 10,
+          "type": "album",
+          "uri": "spotify:album:5bP82ZIls6rzhpf5Qu6AzC"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/1QAJqy2dA3ihHBFIHRphZj"
+            },
+            "href": "https://api.spotify.com/v1/artists/1QAJqy2dA3ihHBFIHRphZj",
+            "id": "1QAJqy2dA3ihHBFIHRphZj",
+            "name": "Cigarettes After Sex",
+            "type": "artist",
+            "uri": "spotify:artist:1QAJqy2dA3ihHBFIHRphZj"
+          }
+        ],
+        "available_markets": [
+          "US"
+        ],
+        "disc_number": 1,
+        "duration_ms": 214680,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "USBQU1700033"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/69UqtTHfUKAJweQwEStRzC"
+        },
+        "href": "https://api.spotify.com/v1/tracks/69UqtTHfUKAJweQwEStRzC",
+        "id": "69UqtTHfUKAJweQwEStRzC",
+        "is_local": false,
+        "name": "Sunsetz",
+        "popularity": 53,
+        "preview_url": "https://p.scdn.co/mp3-preview/d8f56b035504b6df074e7399e7566ae6a30e746c?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 3,
+        "type": "track",
+        "uri": "spotify:track:69UqtTHfUKAJweQwEStRzC"
+      },
+      {
+        "album": {
+          "album_type": "single",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/1QAJqy2dA3ihHBFIHRphZj"
+              },
+              "href": "https://api.spotify.com/v1/artists/1QAJqy2dA3ihHBFIHRphZj",
+              "id": "1QAJqy2dA3ihHBFIHRphZj",
+              "name": "Cigarettes After Sex",
+              "type": "artist",
+              "uri": "spotify:artist:1QAJqy2dA3ihHBFIHRphZj"
+            }
+          ],
+          "available_markets": [
+            "CA",
+            "US"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/5MdPMGnu8UZlDrrF0nQEKL"
+          },
+          "href": "https://api.spotify.com/v1/albums/5MdPMGnu8UZlDrrF0nQEKL",
+          "id": "5MdPMGnu8UZlDrrF0nQEKL",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b27360a8aaa49e86772697854949",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e0260a8aaa49e86772697854949",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d0000485160a8aaa49e86772697854949",
+              "width": 64
+            }
+          ],
+          "name": "Affection",
+          "release_date": "2015-10-05",
+          "release_date_precision": "day",
+          "total_tracks": 2,
+          "type": "album",
+          "uri": "spotify:album:5MdPMGnu8UZlDrrF0nQEKL"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/1QAJqy2dA3ihHBFIHRphZj"
+            },
+            "href": "https://api.spotify.com/v1/artists/1QAJqy2dA3ihHBFIHRphZj",
+            "id": "1QAJqy2dA3ihHBFIHRphZj",
+            "name": "Cigarettes After Sex",
+            "type": "artist",
+            "uri": "spotify:artist:1QAJqy2dA3ihHBFIHRphZj"
+          }
+        ],
+        "available_markets": [
+          "CA",
+          "US"
+        ],
+        "disc_number": 1,
+        "duration_ms": 311000,
+        "explicit": true,
+        "external_ids": {
+          "isrc": "TCACJ1596829"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4eVNSHRazoHgfYGv3AYFyZ"
+        },
+        "href": "https://api.spotify.com/v1/tracks/4eVNSHRazoHgfYGv3AYFyZ",
+        "id": "4eVNSHRazoHgfYGv3AYFyZ",
+        "is_local": false,
+        "name": "Affection",
+        "popularity": 53,
+        "preview_url": "https://p.scdn.co/mp3-preview/8797073937e9fa9506277917a10fccebd559eca4?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 1,
+        "type": "track",
+        "uri": "spotify:track:4eVNSHRazoHgfYGv3AYFyZ"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/1P6U1dCeHxPui5pIrGmndZ"
+              },
+              "href": "https://api.spotify.com/v1/artists/1P6U1dCeHxPui5pIrGmndZ",
+              "id": "1P6U1dCeHxPui5pIrGmndZ",
+              "name": "Air",
+              "type": "artist",
+              "uri": "spotify:artist:1P6U1dCeHxPui5pIrGmndZ"
+            }
+          ],
+          "available_markets": [
+            "US"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/206GTDefY2qRMQxYXmfb0a"
+          },
+          "href": "https://api.spotify.com/v1/albums/206GTDefY2qRMQxYXmfb0a",
+          "id": "206GTDefY2qRMQxYXmfb0a",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b2734c61518dd67952f9a30e969b",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e024c61518dd67952f9a30e969b",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d000048514c61518dd67952f9a30e969b",
+              "width": 64
+            }
+          ],
+          "name": "Moon Safari",
+          "release_date": "1998-01-14",
+          "release_date_precision": "day",
+          "total_tracks": 10,
+          "type": "album",
+          "uri": "spotify:album:206GTDefY2qRMQxYXmfb0a"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/1P6U1dCeHxPui5pIrGmndZ"
+            },
+            "href": "https://api.spotify.com/v1/artists/1P6U1dCeHxPui5pIrGmndZ",
+            "id": "1P6U1dCeHxPui5pIrGmndZ",
+            "name": "Air",
+            "type": "artist",
+            "uri": "spotify:artist:1P6U1dCeHxPui5pIrGmndZ"
+          }
+        ],
+        "available_markets": [
+          "US"
+        ],
+        "disc_number": 1,
+        "duration_ms": 426614,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "FRS639700550"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6tEaLXZlN8b71vWV1SSsRf"
+        },
+        "href": "https://api.spotify.com/v1/tracks/6tEaLXZlN8b71vWV1SSsRf",
+        "id": "6tEaLXZlN8b71vWV1SSsRf",
+        "is_local": false,
+        "name": "La femme d'argent",
+        "popularity": 51,
+        "preview_url": "https://p.scdn.co/mp3-preview/34c0a82ae981cda5729e8621225ed9888fbe61eb?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 1,
+        "type": "track",
+        "uri": "spotify:track:6tEaLXZlN8b71vWV1SSsRf"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/1QAJqy2dA3ihHBFIHRphZj"
+              },
+              "href": "https://api.spotify.com/v1/artists/1QAJqy2dA3ihHBFIHRphZj",
+              "id": "1QAJqy2dA3ihHBFIHRphZj",
+              "name": "Cigarettes After Sex",
+              "type": "artist",
+              "uri": "spotify:artist:1QAJqy2dA3ihHBFIHRphZj"
+            }
+          ],
+          "available_markets": [
+            "US"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/6fUVptFdeOgcqDvCZzM2kC"
+          },
+          "href": "https://api.spotify.com/v1/albums/6fUVptFdeOgcqDvCZzM2kC",
+          "id": "6fUVptFdeOgcqDvCZzM2kC",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273ced182a9a86195e9ba2a5183",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02ced182a9a86195e9ba2a5183",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851ced182a9a86195e9ba2a5183",
+              "width": 64
+            }
+          ],
+          "name": "Cry",
+          "release_date": "2019-10-25",
+          "release_date_precision": "day",
+          "total_tracks": 9,
+          "type": "album",
+          "uri": "spotify:album:6fUVptFdeOgcqDvCZzM2kC"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/1QAJqy2dA3ihHBFIHRphZj"
+            },
+            "href": "https://api.spotify.com/v1/artists/1QAJqy2dA3ihHBFIHRphZj",
+            "id": "1QAJqy2dA3ihHBFIHRphZj",
+            "name": "Cigarettes After Sex",
+            "type": "artist",
+            "uri": "spotify:artist:1QAJqy2dA3ihHBFIHRphZj"
+          }
+        ],
+        "available_markets": [
+          "US"
+        ],
+        "disc_number": 1,
+        "duration_ms": 292853,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "USBQU1900116"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3A1kkAIXl4IPxeJRCCF4Bc"
+        },
+        "href": "https://api.spotify.com/v1/tracks/3A1kkAIXl4IPxeJRCCF4Bc",
+        "id": "3A1kkAIXl4IPxeJRCCF4Bc",
+        "is_local": false,
+        "name": "Touch",
+        "popularity": 51,
+        "preview_url": "https://p.scdn.co/mp3-preview/36f46a6b7d7e4662130c3f587a13cd8b77665087?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 5,
+        "type": "track",
+        "uri": "spotify:track:3A1kkAIXl4IPxeJRCCF4Bc"
+      },
+      {
+        "album": {
+          "album_type": "single",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/40Ojab0UtVQFjA76qXr8Ot"
+              },
+              "href": "https://api.spotify.com/v1/artists/40Ojab0UtVQFjA76qXr8Ot",
+              "id": "40Ojab0UtVQFjA76qXr8Ot",
+              "name": "Apparat",
+              "type": "artist",
+              "uri": "spotify:artist:40Ojab0UtVQFjA76qXr8Ot"
+            }
+          ],
+          "available_markets": [
+            "CA",
+            "US"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/04iB0QL1U7VtwMDsbgFlRT"
+          },
+          "href": "https://api.spotify.com/v1/albums/04iB0QL1U7VtwMDsbgFlRT",
+          "id": "04iB0QL1U7VtwMDsbgFlRT",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b2730d7b954bcb684472da064d9c",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e020d7b954bcb684472da064d9c",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d000048510d7b954bcb684472da064d9c",
+              "width": 64
+            }
+          ],
+          "name": "Goodbye (feat. Soap&Skin) [Theme from Dark, A Netflix Original Series]",
+          "release_date": "2011",
+          "release_date_precision": "year",
+          "total_tracks": 1,
+          "type": "album",
+          "uri": "spotify:album:04iB0QL1U7VtwMDsbgFlRT"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/40Ojab0UtVQFjA76qXr8Ot"
+            },
+            "href": "https://api.spotify.com/v1/artists/40Ojab0UtVQFjA76qXr8Ot",
+            "id": "40Ojab0UtVQFjA76qXr8Ot",
+            "name": "Apparat",
+            "type": "artist",
+            "uri": "spotify:artist:40Ojab0UtVQFjA76qXr8Ot"
+          },
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/2mAYpnSe3g2Y22JcZ2ddku"
+            },
+            "href": "https://api.spotify.com/v1/artists/2mAYpnSe3g2Y22JcZ2ddku",
+            "id": "2mAYpnSe3g2Y22JcZ2ddku",
+            "name": "Soap&Skin",
+            "type": "artist",
+            "uri": "spotify:artist:2mAYpnSe3g2Y22JcZ2ddku"
+          }
+        ],
+        "available_markets": [
+          "CA",
+          "US"
+        ],
+        "disc_number": 1,
+        "duration_ms": 256786,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "GBPVV1802238"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3wAEhWSx5GvfCkqJ1SPA5S"
+        },
+        "href": "https://api.spotify.com/v1/tracks/3wAEhWSx5GvfCkqJ1SPA5S",
+        "id": "3wAEhWSx5GvfCkqJ1SPA5S",
+        "is_local": false,
+        "name": "Goodbye (feat. Soap&Skin) [Theme from Dark, A Netflix Original Series]",
+        "popularity": 51,
+        "preview_url": "https://p.scdn.co/mp3-preview/25f3f840d5ddafa7fa452b903e266f49167d6714?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 1,
+        "type": "track",
+        "uri": "spotify:track:3wAEhWSx5GvfCkqJ1SPA5S"
+      },
+      {
+        "album": {
+          "album_type": "single",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/1QAJqy2dA3ihHBFIHRphZj"
+              },
+              "href": "https://api.spotify.com/v1/artists/1QAJqy2dA3ihHBFIHRphZj",
+              "id": "1QAJqy2dA3ihHBFIHRphZj",
+              "name": "Cigarettes After Sex",
+              "type": "artist",
+              "uri": "spotify:artist:1QAJqy2dA3ihHBFIHRphZj"
+            }
+          ],
+          "available_markets": [
+            "CA",
+            "US"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/5MdPMGnu8UZlDrrF0nQEKL"
+          },
+          "href": "https://api.spotify.com/v1/albums/5MdPMGnu8UZlDrrF0nQEKL",
+          "id": "5MdPMGnu8UZlDrrF0nQEKL",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b27360a8aaa49e86772697854949",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e0260a8aaa49e86772697854949",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d0000485160a8aaa49e86772697854949",
+              "width": 64
+            }
+          ],
+          "name": "Affection",
+          "release_date": "2015-10-05",
+          "release_date_precision": "day",
+          "total_tracks": 2,
+          "type": "album",
+          "uri": "spotify:album:5MdPMGnu8UZlDrrF0nQEKL"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/1QAJqy2dA3ihHBFIHRphZj"
+            },
+            "href": "https://api.spotify.com/v1/artists/1QAJqy2dA3ihHBFIHRphZj",
+            "id": "1QAJqy2dA3ihHBFIHRphZj",
+            "name": "Cigarettes After Sex",
+            "type": "artist",
+            "uri": "spotify:artist:1QAJqy2dA3ihHBFIHRphZj"
+          }
+        ],
+        "available_markets": [
+          "CA",
+          "US"
+        ],
+        "disc_number": 1,
+        "duration_ms": 233000,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "TCACJ1596832"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6dYcUcj1TyZZES5ivtjLdk"
+        },
+        "href": "https://api.spotify.com/v1/tracks/6dYcUcj1TyZZES5ivtjLdk",
+        "id": "6dYcUcj1TyZZES5ivtjLdk",
+        "is_local": false,
+        "name": "Keep On Loving You",
+        "popularity": 51,
+        "preview_url": "https://p.scdn.co/mp3-preview/2c48067ac2a0b122be823f114f557bde2d8c2726?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 2,
+        "type": "track",
+        "uri": "spotify:track:6dYcUcj1TyZZES5ivtjLdk"
+      },
+      {
+        "album": {
+          "album_type": "single",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/1QAJqy2dA3ihHBFIHRphZj"
+              },
+              "href": "https://api.spotify.com/v1/artists/1QAJqy2dA3ihHBFIHRphZj",
+              "id": "1QAJqy2dA3ihHBFIHRphZj",
+              "name": "Cigarettes After Sex",
+              "type": "artist",
+              "uri": "spotify:artist:1QAJqy2dA3ihHBFIHRphZj"
+            }
+          ],
+          "available_markets": [
+            "US"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/7kFz92XFqgJ1mAOlbZT3ky"
+          },
+          "href": "https://api.spotify.com/v1/albums/7kFz92XFqgJ1mAOlbZT3ky",
+          "id": "7kFz92XFqgJ1mAOlbZT3ky",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273b97d7592d933f2c9da26a262",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02b97d7592d933f2c9da26a262",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851b97d7592d933f2c9da26a262",
+              "width": 64
+            }
+          ],
+          "name": "Heavenly",
+          "release_date": "2019-08-28",
+          "release_date_precision": "day",
+          "total_tracks": 1,
+          "type": "album",
+          "uri": "spotify:album:7kFz92XFqgJ1mAOlbZT3ky"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/1QAJqy2dA3ihHBFIHRphZj"
+            },
+            "href": "https://api.spotify.com/v1/artists/1QAJqy2dA3ihHBFIHRphZj",
+            "id": "1QAJqy2dA3ihHBFIHRphZj",
+            "name": "Cigarettes After Sex",
+            "type": "artist",
+            "uri": "spotify:artist:1QAJqy2dA3ihHBFIHRphZj"
+          }
+        ],
+        "available_markets": [
+          "US"
+        ],
+        "disc_number": 1,
+        "duration_ms": 288595,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "USBQU1900118"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6dwNcWigdxPUcqfz2zM6GL"
+        },
+        "href": "https://api.spotify.com/v1/tracks/6dwNcWigdxPUcqfz2zM6GL",
+        "id": "6dwNcWigdxPUcqfz2zM6GL",
+        "is_local": false,
+        "name": "Heavenly",
+        "popularity": 50,
+        "preview_url": "https://p.scdn.co/mp3-preview/eae6702755dd4ca3898ffc9760558ebd57b9e6ce?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 1,
+        "type": "track",
+        "uri": "spotify:track:6dwNcWigdxPUcqfz2zM6GL"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/1QAJqy2dA3ihHBFIHRphZj"
+              },
+              "href": "https://api.spotify.com/v1/artists/1QAJqy2dA3ihHBFIHRphZj",
+              "id": "1QAJqy2dA3ihHBFIHRphZj",
+              "name": "Cigarettes After Sex",
+              "type": "artist",
+              "uri": "spotify:artist:1QAJqy2dA3ihHBFIHRphZj"
+            }
+          ],
+          "available_markets": [
+            "US"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/5bP82ZIls6rzhpf5Qu6AzC"
+          },
+          "href": "https://api.spotify.com/v1/albums/5bP82ZIls6rzhpf5Qu6AzC",
+          "id": "5bP82ZIls6rzhpf5Qu6AzC",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b2736b701428ed4c6e053902174a",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e026b701428ed4c6e053902174a",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d000048516b701428ed4c6e053902174a",
+              "width": 64
+            }
+          ],
+          "name": "Cigarettes After Sex",
+          "release_date": "2017-06-09",
+          "release_date_precision": "day",
+          "total_tracks": 10,
+          "type": "album",
+          "uri": "spotify:album:5bP82ZIls6rzhpf5Qu6AzC"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/1QAJqy2dA3ihHBFIHRphZj"
+            },
+            "href": "https://api.spotify.com/v1/artists/1QAJqy2dA3ihHBFIHRphZj",
+            "id": "1QAJqy2dA3ihHBFIHRphZj",
+            "name": "Cigarettes After Sex",
+            "type": "artist",
+            "uri": "spotify:artist:1QAJqy2dA3ihHBFIHRphZj"
+          }
+        ],
+        "available_markets": [
+          "US"
+        ],
+        "disc_number": 1,
+        "duration_ms": 258013,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "USBQU1700039"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5IonbH68pmDKBwcKlyswmR"
+        },
+        "href": "https://api.spotify.com/v1/tracks/5IonbH68pmDKBwcKlyswmR",
+        "id": "5IonbH68pmDKBwcKlyswmR",
+        "is_local": false,
+        "name": "John Wayne",
+        "popularity": 50,
+        "preview_url": "https://p.scdn.co/mp3-preview/3513b0354d2f97135434da6a0d3143acd7afe5ed?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 9,
+        "type": "track",
+        "uri": "spotify:track:5IonbH68pmDKBwcKlyswmR"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/1QAJqy2dA3ihHBFIHRphZj"
+              },
+              "href": "https://api.spotify.com/v1/artists/1QAJqy2dA3ihHBFIHRphZj",
+              "id": "1QAJqy2dA3ihHBFIHRphZj",
+              "name": "Cigarettes After Sex",
+              "type": "artist",
+              "uri": "spotify:artist:1QAJqy2dA3ihHBFIHRphZj"
+            }
+          ],
+          "available_markets": [
+            "US"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/6fUVptFdeOgcqDvCZzM2kC"
+          },
+          "href": "https://api.spotify.com/v1/albums/6fUVptFdeOgcqDvCZzM2kC",
+          "id": "6fUVptFdeOgcqDvCZzM2kC",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273ced182a9a86195e9ba2a5183",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02ced182a9a86195e9ba2a5183",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851ced182a9a86195e9ba2a5183",
+              "width": 64
+            }
+          ],
+          "name": "Cry",
+          "release_date": "2019-10-25",
+          "release_date_precision": "day",
+          "total_tracks": 9,
+          "type": "album",
+          "uri": "spotify:album:6fUVptFdeOgcqDvCZzM2kC"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/1QAJqy2dA3ihHBFIHRphZj"
+            },
+            "href": "https://api.spotify.com/v1/artists/1QAJqy2dA3ihHBFIHRphZj",
+            "id": "1QAJqy2dA3ihHBFIHRphZj",
+            "name": "Cigarettes After Sex",
+            "type": "artist",
+            "uri": "spotify:artist:1QAJqy2dA3ihHBFIHRphZj"
+          }
+        ],
+        "available_markets": [
+          "US"
+        ],
+        "disc_number": 1,
+        "duration_ms": 262560,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "USBQU1900114"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0dBQm6NsxCQ1cOwR4zWw89"
+        },
+        "href": "https://api.spotify.com/v1/tracks/0dBQm6NsxCQ1cOwR4zWw89",
+        "id": "0dBQm6NsxCQ1cOwR4zWw89",
+        "is_local": false,
+        "name": "Don't Let Me Go",
+        "popularity": 50,
+        "preview_url": "https://p.scdn.co/mp3-preview/4b30c7b1f934b3aeaf20c69e4c685310c02f7218?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 1,
+        "type": "track",
+        "uri": "spotify:track:0dBQm6NsxCQ1cOwR4zWw89"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/1QAJqy2dA3ihHBFIHRphZj"
+              },
+              "href": "https://api.spotify.com/v1/artists/1QAJqy2dA3ihHBFIHRphZj",
+              "id": "1QAJqy2dA3ihHBFIHRphZj",
+              "name": "Cigarettes After Sex",
+              "type": "artist",
+              "uri": "spotify:artist:1QAJqy2dA3ihHBFIHRphZj"
+            }
+          ],
+          "available_markets": [
+            "US"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/6fUVptFdeOgcqDvCZzM2kC"
+          },
+          "href": "https://api.spotify.com/v1/albums/6fUVptFdeOgcqDvCZzM2kC",
+          "id": "6fUVptFdeOgcqDvCZzM2kC",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273ced182a9a86195e9ba2a5183",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02ced182a9a86195e9ba2a5183",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851ced182a9a86195e9ba2a5183",
+              "width": 64
+            }
+          ],
+          "name": "Cry",
+          "release_date": "2019-10-25",
+          "release_date_precision": "day",
+          "total_tracks": 9,
+          "type": "album",
+          "uri": "spotify:album:6fUVptFdeOgcqDvCZzM2kC"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/1QAJqy2dA3ihHBFIHRphZj"
+            },
+            "href": "https://api.spotify.com/v1/artists/1QAJqy2dA3ihHBFIHRphZj",
+            "id": "1QAJqy2dA3ihHBFIHRphZj",
+            "name": "Cigarettes After Sex",
+            "type": "artist",
+            "uri": "spotify:artist:1QAJqy2dA3ihHBFIHRphZj"
+          }
+        ],
+        "available_markets": [
+          "US"
+        ],
+        "disc_number": 1,
+        "duration_ms": 245840,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "USBQU1900119"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4m1jesCFX1gQtIRFirfwCW"
+        },
+        "href": "https://api.spotify.com/v1/tracks/4m1jesCFX1gQtIRFirfwCW",
+        "id": "4m1jesCFX1gQtIRFirfwCW",
+        "is_local": false,
+        "name": "Falling In Love",
+        "popularity": 49,
+        "preview_url": "https://p.scdn.co/mp3-preview/b99534447943c33a206c56cffb0b63f818aa7e1e?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 8,
+        "type": "track",
+        "uri": "spotify:track:4m1jesCFX1gQtIRFirfwCW"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/1QAJqy2dA3ihHBFIHRphZj"
+              },
+              "href": "https://api.spotify.com/v1/artists/1QAJqy2dA3ihHBFIHRphZj",
+              "id": "1QAJqy2dA3ihHBFIHRphZj",
+              "name": "Cigarettes After Sex",
+              "type": "artist",
+              "uri": "spotify:artist:1QAJqy2dA3ihHBFIHRphZj"
+            }
+          ],
+          "available_markets": [
+            "US"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/5bP82ZIls6rzhpf5Qu6AzC"
+          },
+          "href": "https://api.spotify.com/v1/albums/5bP82ZIls6rzhpf5Qu6AzC",
+          "id": "5bP82ZIls6rzhpf5Qu6AzC",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b2736b701428ed4c6e053902174a",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e026b701428ed4c6e053902174a",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d000048516b701428ed4c6e053902174a",
+              "width": 64
+            }
+          ],
+          "name": "Cigarettes After Sex",
+          "release_date": "2017-06-09",
+          "release_date_precision": "day",
+          "total_tracks": 10,
+          "type": "album",
+          "uri": "spotify:album:5bP82ZIls6rzhpf5Qu6AzC"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/1QAJqy2dA3ihHBFIHRphZj"
+            },
+            "href": "https://api.spotify.com/v1/artists/1QAJqy2dA3ihHBFIHRphZj",
+            "id": "1QAJqy2dA3ihHBFIHRphZj",
+            "name": "Cigarettes After Sex",
+            "type": "artist",
+            "uri": "spotify:artist:1QAJqy2dA3ihHBFIHRphZj"
+          }
+        ],
+        "available_markets": [
+          "US"
+        ],
+        "disc_number": 1,
+        "duration_ms": 364680,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "USBQU1700037"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0syIc2ocYBIKASFqifvwRz"
+        },
+        "href": "https://api.spotify.com/v1/tracks/0syIc2ocYBIKASFqifvwRz",
+        "id": "0syIc2ocYBIKASFqifvwRz",
+        "is_local": false,
+        "name": "Opera House",
+        "popularity": 49,
+        "preview_url": "https://p.scdn.co/mp3-preview/1c544ae5efd9386f91b709d20ccbe04e2bf2561b?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 7,
+        "type": "track",
+        "uri": "spotify:track:0syIc2ocYBIKASFqifvwRz"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/1QAJqy2dA3ihHBFIHRphZj"
+              },
+              "href": "https://api.spotify.com/v1/artists/1QAJqy2dA3ihHBFIHRphZj",
+              "id": "1QAJqy2dA3ihHBFIHRphZj",
+              "name": "Cigarettes After Sex",
+              "type": "artist",
+              "uri": "spotify:artist:1QAJqy2dA3ihHBFIHRphZj"
+            }
+          ],
+          "available_markets": [
+            "US"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/5bP82ZIls6rzhpf5Qu6AzC"
+          },
+          "href": "https://api.spotify.com/v1/albums/5bP82ZIls6rzhpf5Qu6AzC",
+          "id": "5bP82ZIls6rzhpf5Qu6AzC",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b2736b701428ed4c6e053902174a",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e026b701428ed4c6e053902174a",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d000048516b701428ed4c6e053902174a",
+              "width": 64
+            }
+          ],
+          "name": "Cigarettes After Sex",
+          "release_date": "2017-06-09",
+          "release_date_precision": "day",
+          "total_tracks": 10,
+          "type": "album",
+          "uri": "spotify:album:5bP82ZIls6rzhpf5Qu6AzC"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/1QAJqy2dA3ihHBFIHRphZj"
+            },
+            "href": "https://api.spotify.com/v1/artists/1QAJqy2dA3ihHBFIHRphZj",
+            "id": "1QAJqy2dA3ihHBFIHRphZj",
+            "name": "Cigarettes After Sex",
+            "type": "artist",
+            "uri": "spotify:artist:1QAJqy2dA3ihHBFIHRphZj"
+          }
+        ],
+        "available_markets": [
+          "US"
+        ],
+        "disc_number": 1,
+        "duration_ms": 290160,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "USBQU1700032"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6YbqjyoqQx9p13IndkOzeP"
+        },
+        "href": "https://api.spotify.com/v1/tracks/6YbqjyoqQx9p13IndkOzeP",
+        "id": "6YbqjyoqQx9p13IndkOzeP",
+        "is_local": false,
+        "name": "Each Time You Fall In Love",
+        "popularity": 49,
+        "preview_url": "https://p.scdn.co/mp3-preview/8c5734663971274bad41dc2252f0841c7f0f9329?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 2,
+        "type": "track",
+        "uri": "spotify:track:6YbqjyoqQx9p13IndkOzeP"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/1QAJqy2dA3ihHBFIHRphZj"
+              },
+              "href": "https://api.spotify.com/v1/artists/1QAJqy2dA3ihHBFIHRphZj",
+              "id": "1QAJqy2dA3ihHBFIHRphZj",
+              "name": "Cigarettes After Sex",
+              "type": "artist",
+              "uri": "spotify:artist:1QAJqy2dA3ihHBFIHRphZj"
+            }
+          ],
+          "available_markets": [
+            "US"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/6fUVptFdeOgcqDvCZzM2kC"
+          },
+          "href": "https://api.spotify.com/v1/albums/6fUVptFdeOgcqDvCZzM2kC",
+          "id": "6fUVptFdeOgcqDvCZzM2kC",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273ced182a9a86195e9ba2a5183",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02ced182a9a86195e9ba2a5183",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851ced182a9a86195e9ba2a5183",
+              "width": 64
+            }
+          ],
+          "name": "Cry",
+          "release_date": "2019-10-25",
+          "release_date_precision": "day",
+          "total_tracks": 9,
+          "type": "album",
+          "uri": "spotify:album:6fUVptFdeOgcqDvCZzM2kC"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/1QAJqy2dA3ihHBFIHRphZj"
+            },
+            "href": "https://api.spotify.com/v1/artists/1QAJqy2dA3ihHBFIHRphZj",
+            "id": "1QAJqy2dA3ihHBFIHRphZj",
+            "name": "Cigarettes After Sex",
+            "type": "artist",
+            "uri": "spotify:artist:1QAJqy2dA3ihHBFIHRphZj"
+          }
+        ],
+        "available_markets": [
+          "US"
+        ],
+        "disc_number": 1,
+        "duration_ms": 269933,
+        "explicit": true,
+        "external_ids": {
+          "isrc": "USBQU1900115"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1Mhf6QIO0UuVr2ZvQPgymt"
+        },
+        "href": "https://api.spotify.com/v1/tracks/1Mhf6QIO0UuVr2ZvQPgymt",
+        "id": "1Mhf6QIO0UuVr2ZvQPgymt",
+        "is_local": false,
+        "name": "Kiss It Off Me",
+        "popularity": 48,
+        "preview_url": "https://p.scdn.co/mp3-preview/ef14047d8bb2291ad35b6eb48f6e7b833112be43?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 2,
+        "type": "track",
+        "uri": "spotify:track:1Mhf6QIO0UuVr2ZvQPgymt"
+      }
+    ],
+    "limit": 20,
+    "next": "https://api.spotify.com/v1/search?query=genre%3A%22AM+Pop%22&type=track&offset=20&limit=20",
+    "offset": 0,
+    "previous": null,
+    "total": 9865
+  }
+}

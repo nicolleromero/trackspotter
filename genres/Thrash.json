@@ -1,0 +1,2264 @@
+{
+  "tracks": {
+    "href": "https://api.spotify.com/v1/search?query=genre%3A%22Thrash%22&type=track&offset=0&limit=20",
+    "items": [
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/2ye2Wgw4gimLv2eAKyk1NB"
+              },
+              "href": "https://api.spotify.com/v1/artists/2ye2Wgw4gimLv2eAKyk1NB",
+              "id": "2ye2Wgw4gimLv2eAKyk1NB",
+              "name": "Metallica",
+              "type": "artist",
+              "uri": "spotify:artist:2ye2Wgw4gimLv2eAKyk1NB"
+            }
+          ],
+          "available_markets": [
+            "CA",
+            "US"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/6QdCohkHKNTVoaSx1ZzitH"
+          },
+          "href": "https://api.spotify.com/v1/albums/6QdCohkHKNTVoaSx1ZzitH",
+          "id": "6QdCohkHKNTVoaSx1ZzitH",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273af07dc851962508661bbcfce",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02af07dc851962508661bbcfce",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851af07dc851962508661bbcfce",
+              "width": 64
+            }
+          ],
+          "name": "Metallica",
+          "release_date": "1991-08-12",
+          "release_date_precision": "day",
+          "total_tracks": 12,
+          "type": "album",
+          "uri": "spotify:album:6QdCohkHKNTVoaSx1ZzitH"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/2ye2Wgw4gimLv2eAKyk1NB"
+            },
+            "href": "https://api.spotify.com/v1/artists/2ye2Wgw4gimLv2eAKyk1NB",
+            "id": "2ye2Wgw4gimLv2eAKyk1NB",
+            "name": "Metallica",
+            "type": "artist",
+            "uri": "spotify:artist:2ye2Wgw4gimLv2eAKyk1NB"
+          }
+        ],
+        "available_markets": [
+          "CA",
+          "US"
+        ],
+        "disc_number": 1,
+        "duration_ms": 331573,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "USEE10001992"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5BIMPccDwShpXq784RJlJp"
+        },
+        "href": "https://api.spotify.com/v1/tracks/5BIMPccDwShpXq784RJlJp",
+        "id": "5BIMPccDwShpXq784RJlJp",
+        "is_local": false,
+        "name": "Enter Sandman",
+        "popularity": 74,
+        "preview_url": "https://p.scdn.co/mp3-preview/1ee9f1b0c3e3b327dd49ebc6dd64266b01adb96a?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 1,
+        "type": "track",
+        "uri": "spotify:track:5BIMPccDwShpXq784RJlJp"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/2ye2Wgw4gimLv2eAKyk1NB"
+              },
+              "href": "https://api.spotify.com/v1/artists/2ye2Wgw4gimLv2eAKyk1NB",
+              "id": "2ye2Wgw4gimLv2eAKyk1NB",
+              "name": "Metallica",
+              "type": "artist",
+              "uri": "spotify:artist:2ye2Wgw4gimLv2eAKyk1NB"
+            }
+          ],
+          "available_markets": [
+            "CA",
+            "US"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/2XbWaerVk9fjhEiGSrd6TF"
+          },
+          "href": "https://api.spotify.com/v1/albums/2XbWaerVk9fjhEiGSrd6TF",
+          "id": "2XbWaerVk9fjhEiGSrd6TF",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273be54746b374358970b5e617a",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02be54746b374358970b5e617a",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851be54746b374358970b5e617a",
+              "width": 64
+            }
+          ],
+          "name": "...And Justice for All (Remastered Deluxe Box Set)",
+          "release_date": "1988-09-07",
+          "release_date_precision": "day",
+          "total_tracks": 147,
+          "type": "album",
+          "uri": "spotify:album:2XbWaerVk9fjhEiGSrd6TF"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/2ye2Wgw4gimLv2eAKyk1NB"
+            },
+            "href": "https://api.spotify.com/v1/artists/2ye2Wgw4gimLv2eAKyk1NB",
+            "id": "2ye2Wgw4gimLv2eAKyk1NB",
+            "name": "Metallica",
+            "type": "artist",
+            "uri": "spotify:artist:2ye2Wgw4gimLv2eAKyk1NB"
+          }
+        ],
+        "available_markets": [
+          "CA",
+          "US"
+        ],
+        "disc_number": 1,
+        "duration_ms": 446145,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "QMKHM1700138"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0LAcM6I7ijW4VVW0aytl1t"
+        },
+        "href": "https://api.spotify.com/v1/tracks/0LAcM6I7ijW4VVW0aytl1t",
+        "id": "0LAcM6I7ijW4VVW0aytl1t",
+        "is_local": false,
+        "name": "One (Remastered)",
+        "popularity": 68,
+        "preview_url": "https://p.scdn.co/mp3-preview/4b448b02d032feffc0ea50533b9885d5fdcf9b6a?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 4,
+        "type": "track",
+        "uri": "spotify:track:0LAcM6I7ijW4VVW0aytl1t"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/2ye2Wgw4gimLv2eAKyk1NB"
+              },
+              "href": "https://api.spotify.com/v1/artists/2ye2Wgw4gimLv2eAKyk1NB",
+              "id": "2ye2Wgw4gimLv2eAKyk1NB",
+              "name": "Metallica",
+              "type": "artist",
+              "uri": "spotify:artist:2ye2Wgw4gimLv2eAKyk1NB"
+            }
+          ],
+          "available_markets": [
+            "CA",
+            "US"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/7CGhx630DIjdJqaBDVKc5j"
+          },
+          "href": "https://api.spotify.com/v1/albums/7CGhx630DIjdJqaBDVKc5j",
+          "id": "7CGhx630DIjdJqaBDVKc5j",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273cad4832cb7b5844343278daa",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02cad4832cb7b5844343278daa",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851cad4832cb7b5844343278daa",
+              "width": 64
+            }
+          ],
+          "name": "Master of Puppets (Remastered Deluxe Box Set)",
+          "release_date": "1986-03-03",
+          "release_date_precision": "day",
+          "total_tracks": 137,
+          "type": "album",
+          "uri": "spotify:album:7CGhx630DIjdJqaBDVKc5j"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/2ye2Wgw4gimLv2eAKyk1NB"
+            },
+            "href": "https://api.spotify.com/v1/artists/2ye2Wgw4gimLv2eAKyk1NB",
+            "id": "2ye2Wgw4gimLv2eAKyk1NB",
+            "name": "Metallica",
+            "type": "artist",
+            "uri": "spotify:artist:2ye2Wgw4gimLv2eAKyk1NB"
+          }
+        ],
+        "available_markets": [
+          "CA",
+          "US"
+        ],
+        "disc_number": 1,
+        "duration_ms": 515386,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "QMKHM1600219"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/54bm2e3tk8cliUz3VSdCPZ"
+        },
+        "href": "https://api.spotify.com/v1/tracks/54bm2e3tk8cliUz3VSdCPZ",
+        "id": "54bm2e3tk8cliUz3VSdCPZ",
+        "is_local": false,
+        "name": "Master of Puppets (Remastered)",
+        "popularity": 67,
+        "preview_url": "https://p.scdn.co/mp3-preview/12d4140bb2d0b18aa26cf84c33e4f4efd97fe72b?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 2,
+        "type": "track",
+        "uri": "spotify:track:54bm2e3tk8cliUz3VSdCPZ"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/2ye2Wgw4gimLv2eAKyk1NB"
+              },
+              "href": "https://api.spotify.com/v1/artists/2ye2Wgw4gimLv2eAKyk1NB",
+              "id": "2ye2Wgw4gimLv2eAKyk1NB",
+              "name": "Metallica",
+              "type": "artist",
+              "uri": "spotify:artist:2ye2Wgw4gimLv2eAKyk1NB"
+            }
+          ],
+          "available_markets": [
+            "CA",
+            "US"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/2omIeSJEGQeKHPOpiXgfkr"
+          },
+          "href": "https://api.spotify.com/v1/albums/2omIeSJEGQeKHPOpiXgfkr",
+          "id": "2omIeSJEGQeKHPOpiXgfkr",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273533fd0b248052d04e6b732c0",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02533fd0b248052d04e6b732c0",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851533fd0b248052d04e6b732c0",
+              "width": 64
+            }
+          ],
+          "name": "Ride The Lightning (Deluxe Remaster)",
+          "release_date": "1984-07-27",
+          "release_date_precision": "day",
+          "total_tracks": 63,
+          "type": "album",
+          "uri": "spotify:album:2omIeSJEGQeKHPOpiXgfkr"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/2ye2Wgw4gimLv2eAKyk1NB"
+            },
+            "href": "https://api.spotify.com/v1/artists/2ye2Wgw4gimLv2eAKyk1NB",
+            "id": "2ye2Wgw4gimLv2eAKyk1NB",
+            "name": "Metallica",
+            "type": "artist",
+            "uri": "spotify:artist:2ye2Wgw4gimLv2eAKyk1NB"
+          }
+        ],
+        "available_markets": [
+          "CA",
+          "US"
+        ],
+        "disc_number": 1,
+        "duration_ms": 309973,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "USEE10170109"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/51YZAJhOwIC5Gg3jMbAmhZ"
+        },
+        "href": "https://api.spotify.com/v1/tracks/51YZAJhOwIC5Gg3jMbAmhZ",
+        "id": "51YZAJhOwIC5Gg3jMbAmhZ",
+        "is_local": false,
+        "name": "For Whom The Bell Tolls (Remastered)",
+        "popularity": 66,
+        "preview_url": "https://p.scdn.co/mp3-preview/5ec34f31f15d7fd09bb958ecfa6b91228d8c8a3c?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 3,
+        "type": "track",
+        "uri": "spotify:track:51YZAJhOwIC5Gg3jMbAmhZ"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/2ye2Wgw4gimLv2eAKyk1NB"
+              },
+              "href": "https://api.spotify.com/v1/artists/2ye2Wgw4gimLv2eAKyk1NB",
+              "id": "2ye2Wgw4gimLv2eAKyk1NB",
+              "name": "Metallica",
+              "type": "artist",
+              "uri": "spotify:artist:2ye2Wgw4gimLv2eAKyk1NB"
+            }
+          ],
+          "available_markets": [
+            "CA",
+            "US"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/6QdCohkHKNTVoaSx1ZzitH"
+          },
+          "href": "https://api.spotify.com/v1/albums/6QdCohkHKNTVoaSx1ZzitH",
+          "id": "6QdCohkHKNTVoaSx1ZzitH",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273af07dc851962508661bbcfce",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02af07dc851962508661bbcfce",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851af07dc851962508661bbcfce",
+              "width": 64
+            }
+          ],
+          "name": "Metallica",
+          "release_date": "1991-08-12",
+          "release_date_precision": "day",
+          "total_tracks": 12,
+          "type": "album",
+          "uri": "spotify:album:6QdCohkHKNTVoaSx1ZzitH"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/2ye2Wgw4gimLv2eAKyk1NB"
+            },
+            "href": "https://api.spotify.com/v1/artists/2ye2Wgw4gimLv2eAKyk1NB",
+            "id": "2ye2Wgw4gimLv2eAKyk1NB",
+            "name": "Metallica",
+            "type": "artist",
+            "uri": "spotify:artist:2ye2Wgw4gimLv2eAKyk1NB"
+          }
+        ],
+        "available_markets": [
+          "CA",
+          "US"
+        ],
+        "disc_number": 1,
+        "duration_ms": 387133,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "USEE10001995"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2lF8jQFhIjpmQa501sYXxR"
+        },
+        "href": "https://api.spotify.com/v1/tracks/2lF8jQFhIjpmQa501sYXxR",
+        "id": "2lF8jQFhIjpmQa501sYXxR",
+        "is_local": false,
+        "name": "The Unforgiven",
+        "popularity": 65,
+        "preview_url": "https://p.scdn.co/mp3-preview/61856ca038cf3825d383532f474dd6f7c8d54463?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 4,
+        "type": "track",
+        "uri": "spotify:track:2lF8jQFhIjpmQa501sYXxR"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/14pVkFUHDL207LzLHtSA18"
+              },
+              "href": "https://api.spotify.com/v1/artists/14pVkFUHDL207LzLHtSA18",
+              "id": "14pVkFUHDL207LzLHtSA18",
+              "name": "Pantera",
+              "type": "artist",
+              "uri": "spotify:artist:14pVkFUHDL207LzLHtSA18"
+            }
+          ],
+          "available_markets": [
+            "AD",
+            "AE",
+            "AL",
+            "AR",
+            "AT",
+            "AU",
+            "BA",
+            "BE",
+            "BG",
+            "BH",
+            "BO",
+            "BR",
+            "BY",
+            "CA",
+            "CH",
+            "CL",
+            "CO",
+            "CR",
+            "CY",
+            "CZ",
+            "DE",
+            "DK",
+            "DO",
+            "DZ",
+            "EC",
+            "EE",
+            "EG",
+            "ES",
+            "FI",
+            "FR",
+            "GB",
+            "GR",
+            "GT",
+            "HK",
+            "HN",
+            "HR",
+            "HU",
+            "ID",
+            "IE",
+            "IL",
+            "IN",
+            "IS",
+            "IT",
+            "JO",
+            "JP",
+            "KW",
+            "KZ",
+            "LB",
+            "LI",
+            "LT",
+            "LU",
+            "LV",
+            "MA",
+            "MC",
+            "MD",
+            "ME",
+            "MK",
+            "MT",
+            "MX",
+            "MY",
+            "NI",
+            "NL",
+            "NO",
+            "NZ",
+            "OM",
+            "PA",
+            "PE",
+            "PH",
+            "PL",
+            "PS",
+            "PT",
+            "PY",
+            "QA",
+            "RO",
+            "RS",
+            "RU",
+            "SA",
+            "SE",
+            "SG",
+            "SI",
+            "SK",
+            "SV",
+            "TH",
+            "TN",
+            "TR",
+            "TW",
+            "UA",
+            "US",
+            "UY",
+            "VN",
+            "XK",
+            "ZA"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/7kW0cpKgSVsEqcc8xgbSb0"
+          },
+          "href": "https://api.spotify.com/v1/albums/7kW0cpKgSVsEqcc8xgbSb0",
+          "id": "7kW0cpKgSVsEqcc8xgbSb0",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273347c0a40c1e3f0c890a6d9d6",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02347c0a40c1e3f0c890a6d9d6",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851347c0a40c1e3f0c890a6d9d6",
+              "width": 64
+            }
+          ],
+          "name": "Vulgar Display of Power",
+          "release_date": "1992-02-21",
+          "release_date_precision": "day",
+          "total_tracks": 11,
+          "type": "album",
+          "uri": "spotify:album:7kW0cpKgSVsEqcc8xgbSb0"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/14pVkFUHDL207LzLHtSA18"
+            },
+            "href": "https://api.spotify.com/v1/artists/14pVkFUHDL207LzLHtSA18",
+            "id": "14pVkFUHDL207LzLHtSA18",
+            "name": "Pantera",
+            "type": "artist",
+            "uri": "spotify:artist:14pVkFUHDL207LzLHtSA18"
+          }
+        ],
+        "available_markets": [
+          "AD",
+          "AE",
+          "AL",
+          "AR",
+          "AT",
+          "AU",
+          "BA",
+          "BE",
+          "BG",
+          "BH",
+          "BO",
+          "BR",
+          "BY",
+          "CA",
+          "CH",
+          "CL",
+          "CO",
+          "CR",
+          "CY",
+          "CZ",
+          "DE",
+          "DK",
+          "DO",
+          "DZ",
+          "EC",
+          "EE",
+          "EG",
+          "ES",
+          "FI",
+          "FR",
+          "GB",
+          "GR",
+          "GT",
+          "HK",
+          "HN",
+          "HR",
+          "HU",
+          "ID",
+          "IE",
+          "IL",
+          "IN",
+          "IS",
+          "IT",
+          "JO",
+          "JP",
+          "KW",
+          "KZ",
+          "LB",
+          "LI",
+          "LT",
+          "LU",
+          "LV",
+          "MA",
+          "MC",
+          "MD",
+          "ME",
+          "MK",
+          "MT",
+          "MX",
+          "MY",
+          "NI",
+          "NL",
+          "NO",
+          "NZ",
+          "OM",
+          "PA",
+          "PE",
+          "PH",
+          "PL",
+          "PS",
+          "PT",
+          "PY",
+          "QA",
+          "RO",
+          "RS",
+          "RU",
+          "SA",
+          "SE",
+          "SG",
+          "SI",
+          "SK",
+          "SV",
+          "TH",
+          "TN",
+          "TR",
+          "TW",
+          "UA",
+          "US",
+          "UY",
+          "VN",
+          "XK",
+          "ZA"
+        ],
+        "disc_number": 1,
+        "duration_ms": 315120,
+        "explicit": true,
+        "external_ids": {
+          "isrc": "USEE10170088"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7fcfNW0XxTWlwVlftzfDOR"
+        },
+        "href": "https://api.spotify.com/v1/tracks/7fcfNW0XxTWlwVlftzfDOR",
+        "id": "7fcfNW0XxTWlwVlftzfDOR",
+        "is_local": false,
+        "name": "Walk",
+        "popularity": 73,
+        "preview_url": "https://p.scdn.co/mp3-preview/14e66cb261d6027f14d31e7d247b2281b9e79e71?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 3,
+        "type": "track",
+        "uri": "spotify:track:7fcfNW0XxTWlwVlftzfDOR"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/2ye2Wgw4gimLv2eAKyk1NB"
+              },
+              "href": "https://api.spotify.com/v1/artists/2ye2Wgw4gimLv2eAKyk1NB",
+              "id": "2ye2Wgw4gimLv2eAKyk1NB",
+              "name": "Metallica",
+              "type": "artist",
+              "uri": "spotify:artist:2ye2Wgw4gimLv2eAKyk1NB"
+            }
+          ],
+          "available_markets": [
+            "CA",
+            "US"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/6QdCohkHKNTVoaSx1ZzitH"
+          },
+          "href": "https://api.spotify.com/v1/albums/6QdCohkHKNTVoaSx1ZzitH",
+          "id": "6QdCohkHKNTVoaSx1ZzitH",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273af07dc851962508661bbcfce",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02af07dc851962508661bbcfce",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851af07dc851962508661bbcfce",
+              "width": 64
+            }
+          ],
+          "name": "Metallica",
+          "release_date": "1991-08-12",
+          "release_date_precision": "day",
+          "total_tracks": 12,
+          "type": "album",
+          "uri": "spotify:album:6QdCohkHKNTVoaSx1ZzitH"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/2ye2Wgw4gimLv2eAKyk1NB"
+            },
+            "href": "https://api.spotify.com/v1/artists/2ye2Wgw4gimLv2eAKyk1NB",
+            "id": "2ye2Wgw4gimLv2eAKyk1NB",
+            "name": "Metallica",
+            "type": "artist",
+            "uri": "spotify:artist:2ye2Wgw4gimLv2eAKyk1NB"
+          }
+        ],
+        "available_markets": [
+          "CA",
+          "US"
+        ],
+        "disc_number": 1,
+        "duration_ms": 324560,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "USEE10001993"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1Ug98CRiQYu7wiSym4uLY4"
+        },
+        "href": "https://api.spotify.com/v1/tracks/1Ug98CRiQYu7wiSym4uLY4",
+        "id": "1Ug98CRiQYu7wiSym4uLY4",
+        "is_local": false,
+        "name": "Sad But True",
+        "popularity": 64,
+        "preview_url": "https://p.scdn.co/mp3-preview/577a4a4762be905cc26096d90e0e4663fafc2ec0?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 2,
+        "type": "track",
+        "uri": "spotify:track:1Ug98CRiQYu7wiSym4uLY4"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/1Yox196W7bzVNZI7RBaPnf"
+              },
+              "href": "https://api.spotify.com/v1/artists/1Yox196W7bzVNZI7RBaPnf",
+              "id": "1Yox196W7bzVNZI7RBaPnf",
+              "name": "Megadeth",
+              "type": "artist",
+              "uri": "spotify:artist:1Yox196W7bzVNZI7RBaPnf"
+            }
+          ],
+          "available_markets": [
+            "AD",
+            "AL",
+            "AR",
+            "AT",
+            "AU",
+            "BA",
+            "BE",
+            "BG",
+            "BO",
+            "BR",
+            "BY",
+            "CA",
+            "CH",
+            "CL",
+            "CO",
+            "CR",
+            "CY",
+            "CZ",
+            "DE",
+            "DK",
+            "DO",
+            "EC",
+            "EE",
+            "ES",
+            "FI",
+            "FR",
+            "GB",
+            "GR",
+            "GT",
+            "HK",
+            "HN",
+            "HR",
+            "HU",
+            "ID",
+            "IE",
+            "IL",
+            "IS",
+            "IT",
+            "JP",
+            "KZ",
+            "LI",
+            "LT",
+            "LU",
+            "LV",
+            "MC",
+            "MD",
+            "ME",
+            "MK",
+            "MT",
+            "MX",
+            "MY",
+            "NI",
+            "NL",
+            "NO",
+            "NZ",
+            "PA",
+            "PE",
+            "PH",
+            "PL",
+            "PT",
+            "PY",
+            "RO",
+            "RS",
+            "RU",
+            "SE",
+            "SG",
+            "SI",
+            "SK",
+            "SV",
+            "TH",
+            "TR",
+            "TW",
+            "UA",
+            "US",
+            "UY",
+            "VN",
+            "XK",
+            "ZA"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/1w9opfGdFtR3ulNHxnnO1e"
+          },
+          "href": "https://api.spotify.com/v1/albums/1w9opfGdFtR3ulNHxnnO1e",
+          "id": "1w9opfGdFtR3ulNHxnnO1e",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b2737b178f928742be1492c6fba2",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e027b178f928742be1492c6fba2",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d000048517b178f928742be1492c6fba2",
+              "width": 64
+            }
+          ],
+          "name": "Countdown To Extinction",
+          "release_date": "1992-07-14",
+          "release_date_precision": "day",
+          "total_tracks": 15,
+          "type": "album",
+          "uri": "spotify:album:1w9opfGdFtR3ulNHxnnO1e"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/1Yox196W7bzVNZI7RBaPnf"
+            },
+            "href": "https://api.spotify.com/v1/artists/1Yox196W7bzVNZI7RBaPnf",
+            "id": "1Yox196W7bzVNZI7RBaPnf",
+            "name": "Megadeth",
+            "type": "artist",
+            "uri": "spotify:artist:1Yox196W7bzVNZI7RBaPnf"
+          }
+        ],
+        "available_markets": [
+          "AD",
+          "AL",
+          "AR",
+          "AT",
+          "AU",
+          "BA",
+          "BE",
+          "BG",
+          "BO",
+          "BR",
+          "BY",
+          "CA",
+          "CH",
+          "CL",
+          "CO",
+          "CR",
+          "CY",
+          "CZ",
+          "DE",
+          "DK",
+          "DO",
+          "EC",
+          "EE",
+          "ES",
+          "FI",
+          "FR",
+          "GB",
+          "GR",
+          "GT",
+          "HK",
+          "HN",
+          "HR",
+          "HU",
+          "ID",
+          "IE",
+          "IL",
+          "IS",
+          "IT",
+          "JP",
+          "KZ",
+          "LI",
+          "LT",
+          "LU",
+          "LV",
+          "MC",
+          "MD",
+          "ME",
+          "MK",
+          "MT",
+          "MX",
+          "MY",
+          "NI",
+          "NL",
+          "NO",
+          "NZ",
+          "PA",
+          "PE",
+          "PH",
+          "PL",
+          "PT",
+          "PY",
+          "RO",
+          "RS",
+          "RU",
+          "SE",
+          "SG",
+          "SI",
+          "SK",
+          "SV",
+          "TH",
+          "TR",
+          "TW",
+          "UA",
+          "US",
+          "UY",
+          "VN",
+          "XK",
+          "ZA"
+        ],
+        "disc_number": 1,
+        "duration_ms": 246733,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "USCA20400616"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/51TG9W3y9qyO8BY5RXKgnZ"
+        },
+        "href": "https://api.spotify.com/v1/tracks/51TG9W3y9qyO8BY5RXKgnZ",
+        "id": "51TG9W3y9qyO8BY5RXKgnZ",
+        "is_local": false,
+        "name": "Symphony Of Destruction",
+        "popularity": 71,
+        "preview_url": null,
+        "track_number": 2,
+        "type": "track",
+        "uri": "spotify:track:51TG9W3y9qyO8BY5RXKgnZ"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/2ye2Wgw4gimLv2eAKyk1NB"
+              },
+              "href": "https://api.spotify.com/v1/artists/2ye2Wgw4gimLv2eAKyk1NB",
+              "id": "2ye2Wgw4gimLv2eAKyk1NB",
+              "name": "Metallica",
+              "type": "artist",
+              "uri": "spotify:artist:2ye2Wgw4gimLv2eAKyk1NB"
+            }
+          ],
+          "available_markets": [
+            "CA",
+            "US"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/2omIeSJEGQeKHPOpiXgfkr"
+          },
+          "href": "https://api.spotify.com/v1/albums/2omIeSJEGQeKHPOpiXgfkr",
+          "id": "2omIeSJEGQeKHPOpiXgfkr",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273533fd0b248052d04e6b732c0",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02533fd0b248052d04e6b732c0",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851533fd0b248052d04e6b732c0",
+              "width": 64
+            }
+          ],
+          "name": "Ride The Lightning (Deluxe Remaster)",
+          "release_date": "1984-07-27",
+          "release_date_precision": "day",
+          "total_tracks": 63,
+          "type": "album",
+          "uri": "spotify:album:2omIeSJEGQeKHPOpiXgfkr"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/2ye2Wgw4gimLv2eAKyk1NB"
+            },
+            "href": "https://api.spotify.com/v1/artists/2ye2Wgw4gimLv2eAKyk1NB",
+            "id": "2ye2Wgw4gimLv2eAKyk1NB",
+            "name": "Metallica",
+            "type": "artist",
+            "uri": "spotify:artist:2ye2Wgw4gimLv2eAKyk1NB"
+          }
+        ],
+        "available_markets": [
+          "CA",
+          "US"
+        ],
+        "disc_number": 1,
+        "duration_ms": 417226,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "USEE10170110"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0dqGfCMAGyDgpUAgLNOjWd"
+        },
+        "href": "https://api.spotify.com/v1/tracks/0dqGfCMAGyDgpUAgLNOjWd",
+        "id": "0dqGfCMAGyDgpUAgLNOjWd",
+        "is_local": false,
+        "name": "Fade To Black (Remastered)",
+        "popularity": 63,
+        "preview_url": "https://p.scdn.co/mp3-preview/1ed11e779717e87b588b0a47c0e3a2b5a7717bfe?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 4,
+        "type": "track",
+        "uri": "spotify:track:0dqGfCMAGyDgpUAgLNOjWd"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/14pVkFUHDL207LzLHtSA18"
+              },
+              "href": "https://api.spotify.com/v1/artists/14pVkFUHDL207LzLHtSA18",
+              "id": "14pVkFUHDL207LzLHtSA18",
+              "name": "Pantera",
+              "type": "artist",
+              "uri": "spotify:artist:14pVkFUHDL207LzLHtSA18"
+            }
+          ],
+          "available_markets": [
+            "AD",
+            "AE",
+            "AL",
+            "AR",
+            "AT",
+            "AU",
+            "BA",
+            "BE",
+            "BG",
+            "BH",
+            "BO",
+            "BR",
+            "BY",
+            "CA",
+            "CH",
+            "CL",
+            "CO",
+            "CR",
+            "CY",
+            "CZ",
+            "DE",
+            "DK",
+            "DO",
+            "DZ",
+            "EC",
+            "EE",
+            "EG",
+            "ES",
+            "FI",
+            "FR",
+            "GB",
+            "GR",
+            "GT",
+            "HK",
+            "HN",
+            "HR",
+            "HU",
+            "ID",
+            "IE",
+            "IL",
+            "IN",
+            "IS",
+            "IT",
+            "JO",
+            "JP",
+            "KW",
+            "KZ",
+            "LB",
+            "LI",
+            "LT",
+            "LU",
+            "LV",
+            "MA",
+            "MC",
+            "MD",
+            "ME",
+            "MK",
+            "MT",
+            "MX",
+            "MY",
+            "NI",
+            "NL",
+            "NO",
+            "NZ",
+            "OM",
+            "PA",
+            "PE",
+            "PH",
+            "PL",
+            "PT",
+            "PY",
+            "QA",
+            "RO",
+            "RS",
+            "RU",
+            "SA",
+            "SE",
+            "SG",
+            "SI",
+            "SK",
+            "SV",
+            "TH",
+            "TN",
+            "TR",
+            "TW",
+            "UA",
+            "US",
+            "UY",
+            "VN",
+            "XK",
+            "ZA"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/5szY4sBOSD6IFjFN1RtWTe"
+          },
+          "href": "https://api.spotify.com/v1/albums/5szY4sBOSD6IFjFN1RtWTe",
+          "id": "5szY4sBOSD6IFjFN1RtWTe",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b2730ce52f4ba340a1e459e6a978",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e020ce52f4ba340a1e459e6a978",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d000048510ce52f4ba340a1e459e6a978",
+              "width": 64
+            }
+          ],
+          "name": "Cowboys from Hell",
+          "release_date": "1990-07-20",
+          "release_date_precision": "day",
+          "total_tracks": 12,
+          "type": "album",
+          "uri": "spotify:album:5szY4sBOSD6IFjFN1RtWTe"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/14pVkFUHDL207LzLHtSA18"
+            },
+            "href": "https://api.spotify.com/v1/artists/14pVkFUHDL207LzLHtSA18",
+            "id": "14pVkFUHDL207LzLHtSA18",
+            "name": "Pantera",
+            "type": "artist",
+            "uri": "spotify:artist:14pVkFUHDL207LzLHtSA18"
+          }
+        ],
+        "available_markets": [
+          "AD",
+          "AE",
+          "AL",
+          "AR",
+          "AT",
+          "AU",
+          "BA",
+          "BE",
+          "BG",
+          "BH",
+          "BO",
+          "BR",
+          "BY",
+          "CA",
+          "CH",
+          "CL",
+          "CO",
+          "CR",
+          "CY",
+          "CZ",
+          "DE",
+          "DK",
+          "DO",
+          "DZ",
+          "EC",
+          "EE",
+          "EG",
+          "ES",
+          "FI",
+          "FR",
+          "GB",
+          "GR",
+          "GT",
+          "HK",
+          "HN",
+          "HR",
+          "HU",
+          "ID",
+          "IE",
+          "IL",
+          "IN",
+          "IS",
+          "IT",
+          "JO",
+          "JP",
+          "KW",
+          "KZ",
+          "LB",
+          "LI",
+          "LT",
+          "LU",
+          "LV",
+          "MA",
+          "MC",
+          "MD",
+          "ME",
+          "MK",
+          "MT",
+          "MX",
+          "MY",
+          "NI",
+          "NL",
+          "NO",
+          "NZ",
+          "OM",
+          "PA",
+          "PE",
+          "PH",
+          "PL",
+          "PT",
+          "PY",
+          "QA",
+          "RO",
+          "RS",
+          "RU",
+          "SA",
+          "SE",
+          "SG",
+          "SI",
+          "SK",
+          "SV",
+          "TH",
+          "TN",
+          "TR",
+          "TW",
+          "UA",
+          "US",
+          "UY",
+          "VN",
+          "XK",
+          "ZA"
+        ],
+        "disc_number": 1,
+        "duration_ms": 243533,
+        "explicit": true,
+        "external_ids": {
+          "isrc": "USEE10170414"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2SgbR6ttzoNlCRGQOKjrop"
+        },
+        "href": "https://api.spotify.com/v1/tracks/2SgbR6ttzoNlCRGQOKjrop",
+        "id": "2SgbR6ttzoNlCRGQOKjrop",
+        "is_local": false,
+        "name": "Cowboys from Hell",
+        "popularity": 71,
+        "preview_url": "https://p.scdn.co/mp3-preview/3c390eff507ec1287a1dae98e32787d652f52de5?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 1,
+        "type": "track",
+        "uri": "spotify:track:2SgbR6ttzoNlCRGQOKjrop"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/2ye2Wgw4gimLv2eAKyk1NB"
+              },
+              "href": "https://api.spotify.com/v1/artists/2ye2Wgw4gimLv2eAKyk1NB",
+              "id": "2ye2Wgw4gimLv2eAKyk1NB",
+              "name": "Metallica",
+              "type": "artist",
+              "uri": "spotify:artist:2ye2Wgw4gimLv2eAKyk1NB"
+            }
+          ],
+          "available_markets": [
+            "CA",
+            "US"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/5b7HQ04lPT7eGJQ7fmVsjC"
+          },
+          "href": "https://api.spotify.com/v1/albums/5b7HQ04lPT7eGJQ7fmVsjC",
+          "id": "5b7HQ04lPT7eGJQ7fmVsjC",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b2737e1f85f69323acac962516c4",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e027e1f85f69323acac962516c4",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d000048517e1f85f69323acac962516c4",
+              "width": 64
+            }
+          ],
+          "name": "Garage, Inc.",
+          "release_date": "1998-11-24",
+          "release_date_precision": "day",
+          "total_tracks": 27,
+          "type": "album",
+          "uri": "spotify:album:5b7HQ04lPT7eGJQ7fmVsjC"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/2ye2Wgw4gimLv2eAKyk1NB"
+            },
+            "href": "https://api.spotify.com/v1/artists/2ye2Wgw4gimLv2eAKyk1NB",
+            "id": "2ye2Wgw4gimLv2eAKyk1NB",
+            "name": "Metallica",
+            "type": "artist",
+            "uri": "spotify:artist:2ye2Wgw4gimLv2eAKyk1NB"
+          }
+        ],
+        "available_markets": [
+          "CA",
+          "US"
+        ],
+        "disc_number": 1,
+        "duration_ms": 304893,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "USEV19800013"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3ZpWy5rBZv2aLQAldnmTsP"
+        },
+        "href": "https://api.spotify.com/v1/tracks/3ZpWy5rBZv2aLQAldnmTsP",
+        "id": "3ZpWy5rBZv2aLQAldnmTsP",
+        "is_local": false,
+        "name": "Whiskey In The Jar",
+        "popularity": 62,
+        "preview_url": "https://p.scdn.co/mp3-preview/fb4b43214506212442cf9a4493d094fe6d30f110?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 9,
+        "type": "track",
+        "uri": "spotify:track:3ZpWy5rBZv2aLQAldnmTsP"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/2ye2Wgw4gimLv2eAKyk1NB"
+              },
+              "href": "https://api.spotify.com/v1/artists/2ye2Wgw4gimLv2eAKyk1NB",
+              "id": "2ye2Wgw4gimLv2eAKyk1NB",
+              "name": "Metallica",
+              "type": "artist",
+              "uri": "spotify:artist:2ye2Wgw4gimLv2eAKyk1NB"
+            }
+          ],
+          "available_markets": [
+            "CA",
+            "US"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/6QdCohkHKNTVoaSx1ZzitH"
+          },
+          "href": "https://api.spotify.com/v1/albums/6QdCohkHKNTVoaSx1ZzitH",
+          "id": "6QdCohkHKNTVoaSx1ZzitH",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273af07dc851962508661bbcfce",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02af07dc851962508661bbcfce",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851af07dc851962508661bbcfce",
+              "width": 64
+            }
+          ],
+          "name": "Metallica",
+          "release_date": "1991-08-12",
+          "release_date_precision": "day",
+          "total_tracks": 12,
+          "type": "album",
+          "uri": "spotify:album:6QdCohkHKNTVoaSx1ZzitH"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/2ye2Wgw4gimLv2eAKyk1NB"
+            },
+            "href": "https://api.spotify.com/v1/artists/2ye2Wgw4gimLv2eAKyk1NB",
+            "id": "2ye2Wgw4gimLv2eAKyk1NB",
+            "name": "Metallica",
+            "type": "artist",
+            "uri": "spotify:artist:2ye2Wgw4gimLv2eAKyk1NB"
+          }
+        ],
+        "available_markets": [
+          "CA",
+          "US"
+        ],
+        "disc_number": 1,
+        "duration_ms": 404240,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "USEE10001996"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/49rcSzMayJhIwGf0CJCaxJ"
+        },
+        "href": "https://api.spotify.com/v1/tracks/49rcSzMayJhIwGf0CJCaxJ",
+        "id": "49rcSzMayJhIwGf0CJCaxJ",
+        "is_local": false,
+        "name": "Wherever I May Roam",
+        "popularity": 61,
+        "preview_url": "https://p.scdn.co/mp3-preview/a00865413e260ae336c56654055b3cf5f7e52473?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 5,
+        "type": "track",
+        "uri": "spotify:track:49rcSzMayJhIwGf0CJCaxJ"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/2ye2Wgw4gimLv2eAKyk1NB"
+              },
+              "href": "https://api.spotify.com/v1/artists/2ye2Wgw4gimLv2eAKyk1NB",
+              "id": "2ye2Wgw4gimLv2eAKyk1NB",
+              "name": "Metallica",
+              "type": "artist",
+              "uri": "spotify:artist:2ye2Wgw4gimLv2eAKyk1NB"
+            }
+          ],
+          "available_markets": [
+            "CA",
+            "US"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/7KDqRmr937ylvGilPGWxfD"
+          },
+          "href": "https://api.spotify.com/v1/albums/7KDqRmr937ylvGilPGWxfD",
+          "id": "7KDqRmr937ylvGilPGWxfD",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273a49eff6d64cafc2551553380",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02a49eff6d64cafc2551553380",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851a49eff6d64cafc2551553380",
+              "width": 64
+            }
+          ],
+          "name": "Reload",
+          "release_date": "1997-11-18",
+          "release_date_precision": "day",
+          "total_tracks": 13,
+          "type": "album",
+          "uri": "spotify:album:7KDqRmr937ylvGilPGWxfD"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/2ye2Wgw4gimLv2eAKyk1NB"
+            },
+            "href": "https://api.spotify.com/v1/artists/2ye2Wgw4gimLv2eAKyk1NB",
+            "id": "2ye2Wgw4gimLv2eAKyk1NB",
+            "name": "Metallica",
+            "type": "artist",
+            "uri": "spotify:artist:2ye2Wgw4gimLv2eAKyk1NB"
+          }
+        ],
+        "available_markets": [
+          "CA",
+          "US"
+        ],
+        "disc_number": 1,
+        "duration_ms": 269733,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "USEV19719673"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1tTPC0hsnXq1IGpvWY54JC"
+        },
+        "href": "https://api.spotify.com/v1/tracks/1tTPC0hsnXq1IGpvWY54JC",
+        "id": "1tTPC0hsnXq1IGpvWY54JC",
+        "is_local": false,
+        "name": "Fuel",
+        "popularity": 61,
+        "preview_url": "https://p.scdn.co/mp3-preview/c44db490b2b4755ab68001cb94a4f10d70d93b78?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 1,
+        "type": "track",
+        "uri": "spotify:track:1tTPC0hsnXq1IGpvWY54JC"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/1IQ2e1buppatiN1bxUVkrk"
+              },
+              "href": "https://api.spotify.com/v1/artists/1IQ2e1buppatiN1bxUVkrk",
+              "id": "1IQ2e1buppatiN1bxUVkrk",
+              "name": "Slayer",
+              "type": "artist",
+              "uri": "spotify:artist:1IQ2e1buppatiN1bxUVkrk"
+            }
+          ],
+          "available_markets": [
+            "CA",
+            "MX",
+            "US"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/2DumvqHl78bNXuvU9kQfPN"
+          },
+          "href": "https://api.spotify.com/v1/albums/2DumvqHl78bNXuvU9kQfPN",
+          "id": "2DumvqHl78bNXuvU9kQfPN",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273fd833375c806981a61bb82ec",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02fd833375c806981a61bb82ec",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851fd833375c806981a61bb82ec",
+              "width": 64
+            }
+          ],
+          "name": "Reign In Blood",
+          "release_date": "1986-01-01",
+          "release_date_precision": "day",
+          "total_tracks": 12,
+          "type": "album",
+          "uri": "spotify:album:2DumvqHl78bNXuvU9kQfPN"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/1IQ2e1buppatiN1bxUVkrk"
+            },
+            "href": "https://api.spotify.com/v1/artists/1IQ2e1buppatiN1bxUVkrk",
+            "id": "1IQ2e1buppatiN1bxUVkrk",
+            "name": "Slayer",
+            "type": "artist",
+            "uri": "spotify:artist:1IQ2e1buppatiN1bxUVkrk"
+          }
+        ],
+        "available_markets": [
+          "CA",
+          "MX",
+          "US"
+        ],
+        "disc_number": 1,
+        "duration_ms": 254400,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "USSM18600241"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/01Mpj13vURSO3cCLprPt5T"
+        },
+        "href": "https://api.spotify.com/v1/tracks/01Mpj13vURSO3cCLprPt5T",
+        "id": "01Mpj13vURSO3cCLprPt5T",
+        "is_local": false,
+        "name": "Raining Blood",
+        "popularity": 62,
+        "preview_url": null,
+        "track_number": 10,
+        "type": "track",
+        "uri": "spotify:track:01Mpj13vURSO3cCLprPt5T"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/2ye2Wgw4gimLv2eAKyk1NB"
+              },
+              "href": "https://api.spotify.com/v1/artists/2ye2Wgw4gimLv2eAKyk1NB",
+              "id": "2ye2Wgw4gimLv2eAKyk1NB",
+              "name": "Metallica",
+              "type": "artist",
+              "uri": "spotify:artist:2ye2Wgw4gimLv2eAKyk1NB"
+            }
+          ],
+          "available_markets": [
+            "CA",
+            "US"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/5b7HQ04lPT7eGJQ7fmVsjC"
+          },
+          "href": "https://api.spotify.com/v1/albums/5b7HQ04lPT7eGJQ7fmVsjC",
+          "id": "5b7HQ04lPT7eGJQ7fmVsjC",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b2737e1f85f69323acac962516c4",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e027e1f85f69323acac962516c4",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d000048517e1f85f69323acac962516c4",
+              "width": 64
+            }
+          ],
+          "name": "Garage, Inc.",
+          "release_date": "1998-11-24",
+          "release_date_precision": "day",
+          "total_tracks": 27,
+          "type": "album",
+          "uri": "spotify:album:5b7HQ04lPT7eGJQ7fmVsjC"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/2ye2Wgw4gimLv2eAKyk1NB"
+            },
+            "href": "https://api.spotify.com/v1/artists/2ye2Wgw4gimLv2eAKyk1NB",
+            "id": "2ye2Wgw4gimLv2eAKyk1NB",
+            "name": "Metallica",
+            "type": "artist",
+            "uri": "spotify:artist:2ye2Wgw4gimLv2eAKyk1NB"
+          }
+        ],
+        "available_markets": [
+          "CA",
+          "US"
+        ],
+        "disc_number": 1,
+        "duration_ms": 366400,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "USEV19800008"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7HPhrbgMHV5cUskknWA2oo"
+        },
+        "href": "https://api.spotify.com/v1/tracks/7HPhrbgMHV5cUskknWA2oo",
+        "id": "7HPhrbgMHV5cUskknWA2oo",
+        "is_local": false,
+        "name": "Turn The Page",
+        "popularity": 60,
+        "preview_url": "https://p.scdn.co/mp3-preview/28645e9a565ae18a0e544f91f327c8a05aef1125?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 4,
+        "type": "track",
+        "uri": "spotify:track:7HPhrbgMHV5cUskknWA2oo"
+      },
+      {
+        "album": {
+          "album_type": "single",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/2ye2Wgw4gimLv2eAKyk1NB"
+              },
+              "href": "https://api.spotify.com/v1/artists/2ye2Wgw4gimLv2eAKyk1NB",
+              "id": "2ye2Wgw4gimLv2eAKyk1NB",
+              "name": "Metallica",
+              "type": "artist",
+              "uri": "spotify:artist:2ye2Wgw4gimLv2eAKyk1NB"
+            },
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/1qHStDLIc8uV7hvTG6FGRJ"
+              },
+              "href": "https://api.spotify.com/v1/artists/1qHStDLIc8uV7hvTG6FGRJ",
+              "id": "1qHStDLIc8uV7hvTG6FGRJ",
+              "name": "San Francisco Symphony",
+              "type": "artist",
+              "uri": "spotify:artist:1qHStDLIc8uV7hvTG6FGRJ"
+            }
+          ],
+          "available_markets": [
+            "CA",
+            "US"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/5Od43KqRw3TLAusoGZpXMx"
+          },
+          "href": "https://api.spotify.com/v1/albums/5Od43KqRw3TLAusoGZpXMx",
+          "id": "5Od43KqRw3TLAusoGZpXMx",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273d8227da36d1cadb40c07e789",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02d8227da36d1cadb40c07e789",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851d8227da36d1cadb40c07e789",
+              "width": 64
+            }
+          ],
+          "name": "Moth Into Flame (Live)",
+          "release_date": "2020-08-05",
+          "release_date_precision": "day",
+          "total_tracks": 5,
+          "type": "album",
+          "uri": "spotify:album:5Od43KqRw3TLAusoGZpXMx"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/2ye2Wgw4gimLv2eAKyk1NB"
+            },
+            "href": "https://api.spotify.com/v1/artists/2ye2Wgw4gimLv2eAKyk1NB",
+            "id": "2ye2Wgw4gimLv2eAKyk1NB",
+            "name": "Metallica",
+            "type": "artist",
+            "uri": "spotify:artist:2ye2Wgw4gimLv2eAKyk1NB"
+          },
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/1qHStDLIc8uV7hvTG6FGRJ"
+            },
+            "href": "https://api.spotify.com/v1/artists/1qHStDLIc8uV7hvTG6FGRJ",
+            "id": "1qHStDLIc8uV7hvTG6FGRJ",
+            "name": "San Francisco Symphony",
+            "type": "artist",
+            "uri": "spotify:artist:1qHStDLIc8uV7hvTG6FGRJ"
+          }
+        ],
+        "available_markets": [
+          "CA",
+          "US"
+        ],
+        "disc_number": 1,
+        "duration_ms": 377800,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "QMKHM1900334"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3jtUadYDplxqFL9Pa4LcCC"
+        },
+        "href": "https://api.spotify.com/v1/tracks/3jtUadYDplxqFL9Pa4LcCC",
+        "id": "3jtUadYDplxqFL9Pa4LcCC",
+        "is_local": false,
+        "name": "Moth Into Flame (Live)",
+        "popularity": 43,
+        "preview_url": "https://p.scdn.co/mp3-preview/2e580a66f8cb9d3e9df148345cf8dd3dafa06ab3?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 1,
+        "type": "track",
+        "uri": "spotify:track:3jtUadYDplxqFL9Pa4LcCC"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/2ye2Wgw4gimLv2eAKyk1NB"
+              },
+              "href": "https://api.spotify.com/v1/artists/2ye2Wgw4gimLv2eAKyk1NB",
+              "id": "2ye2Wgw4gimLv2eAKyk1NB",
+              "name": "Metallica",
+              "type": "artist",
+              "uri": "spotify:artist:2ye2Wgw4gimLv2eAKyk1NB"
+            }
+          ],
+          "available_markets": [
+            "CA",
+            "US"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/0vNBQof86Lv5gLuf26ML7o"
+          },
+          "href": "https://api.spotify.com/v1/albums/0vNBQof86Lv5gLuf26ML7o",
+          "id": "0vNBQof86Lv5gLuf26ML7o",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b27320292e6cce666a69ba5a86fb",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e0220292e6cce666a69ba5a86fb",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d0000485120292e6cce666a69ba5a86fb",
+              "width": 64
+            }
+          ],
+          "name": "Kill 'Em All (Remastered)",
+          "release_date": "1983-07-25",
+          "release_date_precision": "day",
+          "total_tracks": 10,
+          "type": "album",
+          "uri": "spotify:album:0vNBQof86Lv5gLuf26ML7o"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/2ye2Wgw4gimLv2eAKyk1NB"
+            },
+            "href": "https://api.spotify.com/v1/artists/2ye2Wgw4gimLv2eAKyk1NB",
+            "id": "2ye2Wgw4gimLv2eAKyk1NB",
+            "name": "Metallica",
+            "type": "artist",
+            "uri": "spotify:artist:2ye2Wgw4gimLv2eAKyk1NB"
+          }
+        ],
+        "available_markets": [
+          "CA",
+          "US"
+        ],
+        "disc_number": 1,
+        "duration_ms": 414720,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "USEE19900919"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5DrNFzZZZVfXaEZCaceKnp"
+        },
+        "href": "https://api.spotify.com/v1/tracks/5DrNFzZZZVfXaEZCaceKnp",
+        "id": "5DrNFzZZZVfXaEZCaceKnp",
+        "is_local": false,
+        "name": "Seek & Destroy (Remastered)",
+        "popularity": 59,
+        "preview_url": "https://p.scdn.co/mp3-preview/608f0fbc1ccde9d631b1ca917ae464a3228cf338?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 9,
+        "type": "track",
+        "uri": "spotify:track:5DrNFzZZZVfXaEZCaceKnp"
+      },
+      {
+        "album": {
+          "album_type": "single",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/2ye2Wgw4gimLv2eAKyk1NB"
+              },
+              "href": "https://api.spotify.com/v1/artists/2ye2Wgw4gimLv2eAKyk1NB",
+              "id": "2ye2Wgw4gimLv2eAKyk1NB",
+              "name": "Metallica",
+              "type": "artist",
+              "uri": "spotify:artist:2ye2Wgw4gimLv2eAKyk1NB"
+            },
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/1qHStDLIc8uV7hvTG6FGRJ"
+              },
+              "href": "https://api.spotify.com/v1/artists/1qHStDLIc8uV7hvTG6FGRJ",
+              "id": "1qHStDLIc8uV7hvTG6FGRJ",
+              "name": "San Francisco Symphony",
+              "type": "artist",
+              "uri": "spotify:artist:1qHStDLIc8uV7hvTG6FGRJ"
+            }
+          ],
+          "available_markets": [
+            "CA",
+            "US"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/5Od43KqRw3TLAusoGZpXMx"
+          },
+          "href": "https://api.spotify.com/v1/albums/5Od43KqRw3TLAusoGZpXMx",
+          "id": "5Od43KqRw3TLAusoGZpXMx",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273d8227da36d1cadb40c07e789",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02d8227da36d1cadb40c07e789",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851d8227da36d1cadb40c07e789",
+              "width": 64
+            }
+          ],
+          "name": "Moth Into Flame (Live)",
+          "release_date": "2020-08-05",
+          "release_date_precision": "day",
+          "total_tracks": 5,
+          "type": "album",
+          "uri": "spotify:album:5Od43KqRw3TLAusoGZpXMx"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/2ye2Wgw4gimLv2eAKyk1NB"
+            },
+            "href": "https://api.spotify.com/v1/artists/2ye2Wgw4gimLv2eAKyk1NB",
+            "id": "2ye2Wgw4gimLv2eAKyk1NB",
+            "name": "Metallica",
+            "type": "artist",
+            "uri": "spotify:artist:2ye2Wgw4gimLv2eAKyk1NB"
+          },
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/1qHStDLIc8uV7hvTG6FGRJ"
+            },
+            "href": "https://api.spotify.com/v1/artists/1qHStDLIc8uV7hvTG6FGRJ",
+            "id": "1qHStDLIc8uV7hvTG6FGRJ",
+            "name": "San Francisco Symphony",
+            "type": "artist",
+            "uri": "spotify:artist:1qHStDLIc8uV7hvTG6FGRJ"
+          }
+        ],
+        "available_markets": [
+          "CA",
+          "US"
+        ],
+        "disc_number": 1,
+        "duration_ms": 288492,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "QMKHM2000084"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6VGwFyLzbm149GNyH30HS3"
+        },
+        "href": "https://api.spotify.com/v1/tracks/6VGwFyLzbm149GNyH30HS3",
+        "id": "6VGwFyLzbm149GNyH30HS3",
+        "is_local": false,
+        "name": "All Within My Hands (Live) [Radio Edit]",
+        "popularity": 34,
+        "preview_url": "https://p.scdn.co/mp3-preview/0481571eef722baef3d648fdb4c204f5f90ae83e?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 2,
+        "type": "track",
+        "uri": "spotify:track:6VGwFyLzbm149GNyH30HS3"
+      },
+      {
+        "album": {
+          "album_type": "single",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/2ye2Wgw4gimLv2eAKyk1NB"
+              },
+              "href": "https://api.spotify.com/v1/artists/2ye2Wgw4gimLv2eAKyk1NB",
+              "id": "2ye2Wgw4gimLv2eAKyk1NB",
+              "name": "Metallica",
+              "type": "artist",
+              "uri": "spotify:artist:2ye2Wgw4gimLv2eAKyk1NB"
+            },
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/1qHStDLIc8uV7hvTG6FGRJ"
+              },
+              "href": "https://api.spotify.com/v1/artists/1qHStDLIc8uV7hvTG6FGRJ",
+              "id": "1qHStDLIc8uV7hvTG6FGRJ",
+              "name": "San Francisco Symphony",
+              "type": "artist",
+              "uri": "spotify:artist:1qHStDLIc8uV7hvTG6FGRJ"
+            }
+          ],
+          "available_markets": [
+            "CA",
+            "US"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/5Od43KqRw3TLAusoGZpXMx"
+          },
+          "href": "https://api.spotify.com/v1/albums/5Od43KqRw3TLAusoGZpXMx",
+          "id": "5Od43KqRw3TLAusoGZpXMx",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273d8227da36d1cadb40c07e789",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02d8227da36d1cadb40c07e789",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851d8227da36d1cadb40c07e789",
+              "width": 64
+            }
+          ],
+          "name": "Moth Into Flame (Live)",
+          "release_date": "2020-08-05",
+          "release_date_precision": "day",
+          "total_tracks": 5,
+          "type": "album",
+          "uri": "spotify:album:5Od43KqRw3TLAusoGZpXMx"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/2ye2Wgw4gimLv2eAKyk1NB"
+            },
+            "href": "https://api.spotify.com/v1/artists/2ye2Wgw4gimLv2eAKyk1NB",
+            "id": "2ye2Wgw4gimLv2eAKyk1NB",
+            "name": "Metallica",
+            "type": "artist",
+            "uri": "spotify:artist:2ye2Wgw4gimLv2eAKyk1NB"
+          },
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/1qHStDLIc8uV7hvTG6FGRJ"
+            },
+            "href": "https://api.spotify.com/v1/artists/1qHStDLIc8uV7hvTG6FGRJ",
+            "id": "1qHStDLIc8uV7hvTG6FGRJ",
+            "name": "San Francisco Symphony",
+            "type": "artist",
+            "uri": "spotify:artist:1qHStDLIc8uV7hvTG6FGRJ"
+          }
+        ],
+        "available_markets": [
+          "CA",
+          "US"
+        ],
+        "disc_number": 1,
+        "duration_ms": 399600,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "QMKHM1900348"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/16zPBg1yPo17CI9pvooFGX"
+        },
+        "href": "https://api.spotify.com/v1/tracks/16zPBg1yPo17CI9pvooFGX",
+        "id": "16zPBg1yPo17CI9pvooFGX",
+        "is_local": false,
+        "name": "Nothing Else Matters (Live)",
+        "popularity": 28,
+        "preview_url": "https://p.scdn.co/mp3-preview/ac4a25d918e3140bf99b2c0999e223d8a4d051f5?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 5,
+        "type": "track",
+        "uri": "spotify:track:16zPBg1yPo17CI9pvooFGX"
+      },
+      {
+        "album": {
+          "album_type": "single",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/2ye2Wgw4gimLv2eAKyk1NB"
+              },
+              "href": "https://api.spotify.com/v1/artists/2ye2Wgw4gimLv2eAKyk1NB",
+              "id": "2ye2Wgw4gimLv2eAKyk1NB",
+              "name": "Metallica",
+              "type": "artist",
+              "uri": "spotify:artist:2ye2Wgw4gimLv2eAKyk1NB"
+            },
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/1qHStDLIc8uV7hvTG6FGRJ"
+              },
+              "href": "https://api.spotify.com/v1/artists/1qHStDLIc8uV7hvTG6FGRJ",
+              "id": "1qHStDLIc8uV7hvTG6FGRJ",
+              "name": "San Francisco Symphony",
+              "type": "artist",
+              "uri": "spotify:artist:1qHStDLIc8uV7hvTG6FGRJ"
+            }
+          ],
+          "available_markets": [
+            "CA",
+            "US"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/5Od43KqRw3TLAusoGZpXMx"
+          },
+          "href": "https://api.spotify.com/v1/albums/5Od43KqRw3TLAusoGZpXMx",
+          "id": "5Od43KqRw3TLAusoGZpXMx",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273d8227da36d1cadb40c07e789",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02d8227da36d1cadb40c07e789",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851d8227da36d1cadb40c07e789",
+              "width": 64
+            }
+          ],
+          "name": "Moth Into Flame (Live)",
+          "release_date": "2020-08-05",
+          "release_date_precision": "day",
+          "total_tracks": 5,
+          "type": "album",
+          "uri": "spotify:album:5Od43KqRw3TLAusoGZpXMx"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/2ye2Wgw4gimLv2eAKyk1NB"
+            },
+            "href": "https://api.spotify.com/v1/artists/2ye2Wgw4gimLv2eAKyk1NB",
+            "id": "2ye2Wgw4gimLv2eAKyk1NB",
+            "name": "Metallica",
+            "type": "artist",
+            "uri": "spotify:artist:2ye2Wgw4gimLv2eAKyk1NB"
+          },
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/1qHStDLIc8uV7hvTG6FGRJ"
+            },
+            "href": "https://api.spotify.com/v1/artists/1qHStDLIc8uV7hvTG6FGRJ",
+            "id": "1qHStDLIc8uV7hvTG6FGRJ",
+            "name": "San Francisco Symphony",
+            "type": "artist",
+            "uri": "spotify:artist:1qHStDLIc8uV7hvTG6FGRJ"
+          }
+        ],
+        "available_markets": [
+          "CA",
+          "US"
+        ],
+        "disc_number": 1,
+        "duration_ms": 267453,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "QMKHM2000089"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4a93l5kKN33WbuucDsmIdL"
+        },
+        "href": "https://api.spotify.com/v1/tracks/4a93l5kKN33WbuucDsmIdL",
+        "id": "4a93l5kKN33WbuucDsmIdL",
+        "is_local": false,
+        "name": "Nothing Else Matters (Live) [Radio Edit]",
+        "popularity": 28,
+        "preview_url": "https://p.scdn.co/mp3-preview/e710a96f254daef3ededdab51a82859b36c33caa?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 3,
+        "type": "track",
+        "uri": "spotify:track:4a93l5kKN33WbuucDsmIdL"
+      }
+    ],
+    "limit": 20,
+    "next": "https://api.spotify.com/v1/search?query=genre%3A%22Thrash%22&type=track&offset=20&limit=20",
+    "offset": 0,
+    "previous": null,
+    "total": 60344
+  }
+}

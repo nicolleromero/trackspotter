@@ -1,0 +1,2790 @@
+{
+  "tracks": {
+    "href": "https://api.spotify.com/v1/search?query=genre%3A%22Shoegaze%22&type=track&offset=0&limit=20",
+    "items": [
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/63MQldklfxkjYDoUE4Tppz"
+              },
+              "href": "https://api.spotify.com/v1/artists/63MQldklfxkjYDoUE4Tppz",
+              "id": "63MQldklfxkjYDoUE4Tppz",
+              "name": "M83",
+              "type": "artist",
+              "uri": "spotify:artist:63MQldklfxkjYDoUE4Tppz"
+            }
+          ],
+          "available_markets": [
+            "CA",
+            "US"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/6R0ynY7RF20ofs9GJR5TXR"
+          },
+          "href": "https://api.spotify.com/v1/albums/6R0ynY7RF20ofs9GJR5TXR",
+          "id": "6R0ynY7RF20ofs9GJR5TXR",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b27389c5c957f376e8c87ed23dcc",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e0289c5c957f376e8c87ed23dcc",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d0000485189c5c957f376e8c87ed23dcc",
+              "width": 64
+            }
+          ],
+          "name": "Hurry Up, We're Dreaming",
+          "release_date": "2011",
+          "release_date_precision": "year",
+          "total_tracks": 22,
+          "type": "album",
+          "uri": "spotify:album:6R0ynY7RF20ofs9GJR5TXR"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/63MQldklfxkjYDoUE4Tppz"
+            },
+            "href": "https://api.spotify.com/v1/artists/63MQldklfxkjYDoUE4Tppz",
+            "id": "63MQldklfxkjYDoUE4Tppz",
+            "name": "M83",
+            "type": "artist",
+            "uri": "spotify:artist:63MQldklfxkjYDoUE4Tppz"
+          }
+        ],
+        "available_markets": [
+          "CA",
+          "US"
+        ],
+        "disc_number": 1,
+        "duration_ms": 241440,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "GB55H1100002"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1eyzqe2QqGZUmfcPZtrIyt"
+        },
+        "href": "https://api.spotify.com/v1/tracks/1eyzqe2QqGZUmfcPZtrIyt",
+        "id": "1eyzqe2QqGZUmfcPZtrIyt",
+        "is_local": false,
+        "name": "Midnight City",
+        "popularity": 73,
+        "preview_url": "https://p.scdn.co/mp3-preview/2620971cb1ef9fda9aa2d3a5ce3a74dc9be73dd2?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 2,
+        "type": "track",
+        "uri": "spotify:track:1eyzqe2QqGZUmfcPZtrIyt"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/2cGwlqi3k18jFpUyTrsR84"
+              },
+              "href": "https://api.spotify.com/v1/artists/2cGwlqi3k18jFpUyTrsR84",
+              "id": "2cGwlqi3k18jFpUyTrsR84",
+              "name": "The Verve",
+              "type": "artist",
+              "uri": "spotify:artist:2cGwlqi3k18jFpUyTrsR84"
+            }
+          ],
+          "available_markets": [
+            "AD",
+            "AE",
+            "AL",
+            "AR",
+            "AU",
+            "BA",
+            "BE",
+            "BG",
+            "BH",
+            "BO",
+            "BR",
+            "BY",
+            "CA",
+            "CL",
+            "CO",
+            "CR",
+            "CY",
+            "CZ",
+            "DK",
+            "DO",
+            "DZ",
+            "EC",
+            "EE",
+            "EG",
+            "ES",
+            "FI",
+            "FR",
+            "GB",
+            "GR",
+            "GT",
+            "HK",
+            "HN",
+            "HR",
+            "HU",
+            "ID",
+            "IE",
+            "IL",
+            "IN",
+            "IS",
+            "IT",
+            "JO",
+            "JP",
+            "KW",
+            "KZ",
+            "LB",
+            "LI",
+            "LT",
+            "LU",
+            "LV",
+            "MA",
+            "MC",
+            "MD",
+            "ME",
+            "MK",
+            "MT",
+            "MX",
+            "MY",
+            "NI",
+            "NL",
+            "NO",
+            "NZ",
+            "OM",
+            "PA",
+            "PE",
+            "PH",
+            "PL",
+            "PS",
+            "PT",
+            "PY",
+            "QA",
+            "RO",
+            "RS",
+            "RU",
+            "SA",
+            "SE",
+            "SG",
+            "SI",
+            "SK",
+            "SV",
+            "TH",
+            "TN",
+            "TR",
+            "TW",
+            "UA",
+            "US",
+            "UY",
+            "VN",
+            "XK",
+            "ZA"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/52AeC4gwbxDfFlLHgK1ByD"
+          },
+          "href": "https://api.spotify.com/v1/albums/52AeC4gwbxDfFlLHgK1ByD",
+          "id": "52AeC4gwbxDfFlLHgK1ByD",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273707d13d3f87652e737e94d45",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02707d13d3f87652e737e94d45",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851707d13d3f87652e737e94d45",
+              "width": 64
+            }
+          ],
+          "name": "Urban Hymns (Remastered 2016)",
+          "release_date": "1997-09-29",
+          "release_date_precision": "day",
+          "total_tracks": 13,
+          "type": "album",
+          "uri": "spotify:album:52AeC4gwbxDfFlLHgK1ByD"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/2cGwlqi3k18jFpUyTrsR84"
+            },
+            "href": "https://api.spotify.com/v1/artists/2cGwlqi3k18jFpUyTrsR84",
+            "id": "2cGwlqi3k18jFpUyTrsR84",
+            "name": "The Verve",
+            "type": "artist",
+            "uri": "spotify:artist:2cGwlqi3k18jFpUyTrsR84"
+          }
+        ],
+        "available_markets": [
+          "AD",
+          "AE",
+          "AL",
+          "AR",
+          "AU",
+          "BA",
+          "BE",
+          "BG",
+          "BH",
+          "BO",
+          "BR",
+          "BY",
+          "CA",
+          "CL",
+          "CO",
+          "CR",
+          "CY",
+          "CZ",
+          "DK",
+          "DO",
+          "DZ",
+          "EC",
+          "EE",
+          "EG",
+          "ES",
+          "FI",
+          "FR",
+          "GB",
+          "GR",
+          "GT",
+          "HK",
+          "HN",
+          "HR",
+          "HU",
+          "ID",
+          "IE",
+          "IL",
+          "IN",
+          "IS",
+          "IT",
+          "JO",
+          "JP",
+          "KW",
+          "KZ",
+          "LB",
+          "LI",
+          "LT",
+          "LU",
+          "LV",
+          "MA",
+          "MC",
+          "MD",
+          "ME",
+          "MK",
+          "MT",
+          "MX",
+          "MY",
+          "NI",
+          "NL",
+          "NO",
+          "NZ",
+          "OM",
+          "PA",
+          "PE",
+          "PH",
+          "PL",
+          "PS",
+          "PT",
+          "PY",
+          "QA",
+          "RO",
+          "RS",
+          "RU",
+          "SA",
+          "SE",
+          "SG",
+          "SI",
+          "SK",
+          "SV",
+          "TH",
+          "TN",
+          "TR",
+          "TW",
+          "UA",
+          "US",
+          "UY",
+          "VN",
+          "XK",
+          "ZA"
+        ],
+        "disc_number": 1,
+        "duration_ms": 357266,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "GBUM71601816"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/57iDDD9N9tTWe75x6qhStw"
+        },
+        "href": "https://api.spotify.com/v1/tracks/57iDDD9N9tTWe75x6qhStw",
+        "id": "57iDDD9N9tTWe75x6qhStw",
+        "is_local": false,
+        "name": "Bitter Sweet Symphony",
+        "popularity": 79,
+        "preview_url": null,
+        "track_number": 1,
+        "type": "track",
+        "uri": "spotify:track:57iDDD9N9tTWe75x6qhStw"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/63MQldklfxkjYDoUE4Tppz"
+              },
+              "href": "https://api.spotify.com/v1/artists/63MQldklfxkjYDoUE4Tppz",
+              "id": "63MQldklfxkjYDoUE4Tppz",
+              "name": "M83",
+              "type": "artist",
+              "uri": "spotify:artist:63MQldklfxkjYDoUE4Tppz"
+            }
+          ],
+          "available_markets": [
+            "CA",
+            "US"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/6R0ynY7RF20ofs9GJR5TXR"
+          },
+          "href": "https://api.spotify.com/v1/albums/6R0ynY7RF20ofs9GJR5TXR",
+          "id": "6R0ynY7RF20ofs9GJR5TXR",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b27389c5c957f376e8c87ed23dcc",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e0289c5c957f376e8c87ed23dcc",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d0000485189c5c957f376e8c87ed23dcc",
+              "width": 64
+            }
+          ],
+          "name": "Hurry Up, We're Dreaming",
+          "release_date": "2011",
+          "release_date_precision": "year",
+          "total_tracks": 22,
+          "type": "album",
+          "uri": "spotify:album:6R0ynY7RF20ofs9GJR5TXR"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/63MQldklfxkjYDoUE4Tppz"
+            },
+            "href": "https://api.spotify.com/v1/artists/63MQldklfxkjYDoUE4Tppz",
+            "id": "63MQldklfxkjYDoUE4Tppz",
+            "name": "M83",
+            "type": "artist",
+            "uri": "spotify:artist:63MQldklfxkjYDoUE4Tppz"
+          }
+        ],
+        "available_markets": [
+          "CA",
+          "US"
+        ],
+        "disc_number": 1,
+        "duration_ms": 343253,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "GB55H1100005"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3rTnGUeDrnZV22DvRuUuXr"
+        },
+        "href": "https://api.spotify.com/v1/tracks/3rTnGUeDrnZV22DvRuUuXr",
+        "id": "3rTnGUeDrnZV22DvRuUuXr",
+        "is_local": false,
+        "name": "Wait",
+        "popularity": 66,
+        "preview_url": "https://p.scdn.co/mp3-preview/8c328a0b0ef00f620bbb44e0a063f28e80a14e67?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 5,
+        "type": "track",
+        "uri": "spotify:track:3rTnGUeDrnZV22DvRuUuXr"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/63MQldklfxkjYDoUE4Tppz"
+              },
+              "href": "https://api.spotify.com/v1/artists/63MQldklfxkjYDoUE4Tppz",
+              "id": "63MQldklfxkjYDoUE4Tppz",
+              "name": "M83",
+              "type": "artist",
+              "uri": "spotify:artist:63MQldklfxkjYDoUE4Tppz"
+            }
+          ],
+          "available_markets": [
+            "CA",
+            "US"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/6R0ynY7RF20ofs9GJR5TXR"
+          },
+          "href": "https://api.spotify.com/v1/albums/6R0ynY7RF20ofs9GJR5TXR",
+          "id": "6R0ynY7RF20ofs9GJR5TXR",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b27389c5c957f376e8c87ed23dcc",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e0289c5c957f376e8c87ed23dcc",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d0000485189c5c957f376e8c87ed23dcc",
+              "width": 64
+            }
+          ],
+          "name": "Hurry Up, We're Dreaming",
+          "release_date": "2011",
+          "release_date_precision": "year",
+          "total_tracks": 22,
+          "type": "album",
+          "uri": "spotify:album:6R0ynY7RF20ofs9GJR5TXR"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/63MQldklfxkjYDoUE4Tppz"
+            },
+            "href": "https://api.spotify.com/v1/artists/63MQldklfxkjYDoUE4Tppz",
+            "id": "63MQldklfxkjYDoUE4Tppz",
+            "name": "M83",
+            "type": "artist",
+            "uri": "spotify:artist:63MQldklfxkjYDoUE4Tppz"
+          }
+        ],
+        "available_markets": [
+          "CA",
+          "US"
+        ],
+        "disc_number": 2,
+        "duration_ms": 151826,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "GB55H1100012"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1Fwj0wThn3kTg8D7KgWdsU"
+        },
+        "href": "https://api.spotify.com/v1/tracks/1Fwj0wThn3kTg8D7KgWdsU",
+        "id": "1Fwj0wThn3kTg8D7KgWdsU",
+        "is_local": false,
+        "name": "My Tears Are Becoming A Sea",
+        "popularity": 64,
+        "preview_url": "https://p.scdn.co/mp3-preview/b320a486166d237d03ab69b790ae08e01cf0cac4?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 1,
+        "type": "track",
+        "uri": "spotify:track:1Fwj0wThn3kTg8D7KgWdsU"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/1QAJqy2dA3ihHBFIHRphZj"
+              },
+              "href": "https://api.spotify.com/v1/artists/1QAJqy2dA3ihHBFIHRphZj",
+              "id": "1QAJqy2dA3ihHBFIHRphZj",
+              "name": "Cigarettes After Sex",
+              "type": "artist",
+              "uri": "spotify:artist:1QAJqy2dA3ihHBFIHRphZj"
+            }
+          ],
+          "available_markets": [
+            "US"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/5bP82ZIls6rzhpf5Qu6AzC"
+          },
+          "href": "https://api.spotify.com/v1/albums/5bP82ZIls6rzhpf5Qu6AzC",
+          "id": "5bP82ZIls6rzhpf5Qu6AzC",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b2736b701428ed4c6e053902174a",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e026b701428ed4c6e053902174a",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d000048516b701428ed4c6e053902174a",
+              "width": 64
+            }
+          ],
+          "name": "Cigarettes After Sex",
+          "release_date": "2017-06-09",
+          "release_date_precision": "day",
+          "total_tracks": 10,
+          "type": "album",
+          "uri": "spotify:album:5bP82ZIls6rzhpf5Qu6AzC"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/1QAJqy2dA3ihHBFIHRphZj"
+            },
+            "href": "https://api.spotify.com/v1/artists/1QAJqy2dA3ihHBFIHRphZj",
+            "id": "1QAJqy2dA3ihHBFIHRphZj",
+            "name": "Cigarettes After Sex",
+            "type": "artist",
+            "uri": "spotify:artist:1QAJqy2dA3ihHBFIHRphZj"
+          }
+        ],
+        "available_markets": [
+          "US"
+        ],
+        "disc_number": 1,
+        "duration_ms": 290146,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "USBQU1700034"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3AVrVz5rK8Hrqo9YGiVGN5"
+        },
+        "href": "https://api.spotify.com/v1/tracks/3AVrVz5rK8Hrqo9YGiVGN5",
+        "id": "3AVrVz5rK8Hrqo9YGiVGN5",
+        "is_local": false,
+        "name": "Apocalypse",
+        "popularity": 63,
+        "preview_url": "https://p.scdn.co/mp3-preview/c896477c65a10edff588cb8a3123e59e200ed134?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 4,
+        "type": "track",
+        "uri": "spotify:track:3AVrVz5rK8Hrqo9YGiVGN5"
+      },
+      {
+        "album": {
+          "album_type": "single",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/1QAJqy2dA3ihHBFIHRphZj"
+              },
+              "href": "https://api.spotify.com/v1/artists/1QAJqy2dA3ihHBFIHRphZj",
+              "id": "1QAJqy2dA3ihHBFIHRphZj",
+              "name": "Cigarettes After Sex",
+              "type": "artist",
+              "uri": "spotify:artist:1QAJqy2dA3ihHBFIHRphZj"
+            }
+          ],
+          "available_markets": [
+            "CA",
+            "US"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/6w9osZGOS8B7XWW51SBwFT"
+          },
+          "href": "https://api.spotify.com/v1/albums/6w9osZGOS8B7XWW51SBwFT",
+          "id": "6w9osZGOS8B7XWW51SBwFT",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b2730879d25910f5f03e0927935e",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e020879d25910f5f03e0927935e",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d000048510879d25910f5f03e0927935e",
+              "width": 64
+            }
+          ],
+          "name": "I.",
+          "release_date": "2012-07-21",
+          "release_date_precision": "day",
+          "total_tracks": 4,
+          "type": "album",
+          "uri": "spotify:album:6w9osZGOS8B7XWW51SBwFT"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/1QAJqy2dA3ihHBFIHRphZj"
+            },
+            "href": "https://api.spotify.com/v1/artists/1QAJqy2dA3ihHBFIHRphZj",
+            "id": "1QAJqy2dA3ihHBFIHRphZj",
+            "name": "Cigarettes After Sex",
+            "type": "artist",
+            "uri": "spotify:artist:1QAJqy2dA3ihHBFIHRphZj"
+          }
+        ],
+        "available_markets": [
+          "CA",
+          "US"
+        ],
+        "disc_number": 1,
+        "duration_ms": 286293,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "TCACJ1593857"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3GhsBdS9ulPK3KCdwHRPhG"
+        },
+        "href": "https://api.spotify.com/v1/tracks/3GhsBdS9ulPK3KCdwHRPhG",
+        "id": "3GhsBdS9ulPK3KCdwHRPhG",
+        "is_local": false,
+        "name": "Nothing's Gonna Hurt You Baby",
+        "popularity": 61,
+        "preview_url": "https://p.scdn.co/mp3-preview/1b251b68588f44084ee6cb276130e223820bd388?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 1,
+        "type": "track",
+        "uri": "spotify:track:3GhsBdS9ulPK3KCdwHRPhG"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/1bwUhKRmEkOZ1wuTnV9XjC"
+              },
+              "href": "https://api.spotify.com/v1/artists/1bwUhKRmEkOZ1wuTnV9XjC",
+              "id": "1bwUhKRmEkOZ1wuTnV9XjC",
+              "name": "Beach Fossils",
+              "type": "artist",
+              "uri": "spotify:artist:1bwUhKRmEkOZ1wuTnV9XjC"
+            }
+          ],
+          "available_markets": [
+            "AD",
+            "AE",
+            "AL",
+            "AR",
+            "AT",
+            "AU",
+            "BA",
+            "BE",
+            "BG",
+            "BH",
+            "BO",
+            "BR",
+            "BY",
+            "CA",
+            "CH",
+            "CL",
+            "CO",
+            "CR",
+            "CY",
+            "CZ",
+            "DE",
+            "DK",
+            "DO",
+            "DZ",
+            "EC",
+            "EE",
+            "EG",
+            "ES",
+            "FI",
+            "FR",
+            "GB",
+            "GR",
+            "GT",
+            "HK",
+            "HN",
+            "HR",
+            "HU",
+            "ID",
+            "IE",
+            "IL",
+            "IN",
+            "IS",
+            "IT",
+            "JO",
+            "KW",
+            "KZ",
+            "LB",
+            "LI",
+            "LT",
+            "LU",
+            "LV",
+            "MA",
+            "MC",
+            "MD",
+            "ME",
+            "MK",
+            "MT",
+            "MX",
+            "MY",
+            "NI",
+            "NL",
+            "NO",
+            "NZ",
+            "OM",
+            "PA",
+            "PE",
+            "PH",
+            "PL",
+            "PS",
+            "PT",
+            "PY",
+            "QA",
+            "RO",
+            "RS",
+            "RU",
+            "SA",
+            "SE",
+            "SG",
+            "SI",
+            "SK",
+            "SV",
+            "TH",
+            "TN",
+            "TR",
+            "TW",
+            "UA",
+            "US",
+            "UY",
+            "VN",
+            "XK",
+            "ZA"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/6Kkz3vJXJzemMSQkbsqWQR"
+          },
+          "href": "https://api.spotify.com/v1/albums/6Kkz3vJXJzemMSQkbsqWQR",
+          "id": "6Kkz3vJXJzemMSQkbsqWQR",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b2734f5dd456ecd31eb5c17d0b07",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e024f5dd456ecd31eb5c17d0b07",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d000048514f5dd456ecd31eb5c17d0b07",
+              "width": 64
+            }
+          ],
+          "name": "Somersault",
+          "release_date": "2017-06-02",
+          "release_date_precision": "day",
+          "total_tracks": 11,
+          "type": "album",
+          "uri": "spotify:album:6Kkz3vJXJzemMSQkbsqWQR"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/1bwUhKRmEkOZ1wuTnV9XjC"
+            },
+            "href": "https://api.spotify.com/v1/artists/1bwUhKRmEkOZ1wuTnV9XjC",
+            "id": "1bwUhKRmEkOZ1wuTnV9XjC",
+            "name": "Beach Fossils",
+            "type": "artist",
+            "uri": "spotify:artist:1bwUhKRmEkOZ1wuTnV9XjC"
+          }
+        ],
+        "available_markets": [
+          "AD",
+          "AE",
+          "AL",
+          "AR",
+          "AT",
+          "AU",
+          "BA",
+          "BE",
+          "BG",
+          "BH",
+          "BO",
+          "BR",
+          "BY",
+          "CA",
+          "CH",
+          "CL",
+          "CO",
+          "CR",
+          "CY",
+          "CZ",
+          "DE",
+          "DK",
+          "DO",
+          "DZ",
+          "EC",
+          "EE",
+          "EG",
+          "ES",
+          "FI",
+          "FR",
+          "GB",
+          "GR",
+          "GT",
+          "HK",
+          "HN",
+          "HR",
+          "HU",
+          "ID",
+          "IE",
+          "IL",
+          "IN",
+          "IS",
+          "IT",
+          "JO",
+          "KW",
+          "KZ",
+          "LB",
+          "LI",
+          "LT",
+          "LU",
+          "LV",
+          "MA",
+          "MC",
+          "MD",
+          "ME",
+          "MK",
+          "MT",
+          "MX",
+          "MY",
+          "NI",
+          "NL",
+          "NO",
+          "NZ",
+          "OM",
+          "PA",
+          "PE",
+          "PH",
+          "PL",
+          "PS",
+          "PT",
+          "PY",
+          "QA",
+          "RO",
+          "RS",
+          "RU",
+          "SA",
+          "SE",
+          "SG",
+          "SI",
+          "SK",
+          "SV",
+          "TH",
+          "TN",
+          "TR",
+          "TW",
+          "UA",
+          "US",
+          "UY",
+          "VN",
+          "XK",
+          "ZA"
+        ],
+        "disc_number": 1,
+        "duration_ms": 158474,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "QM6YT1701409"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1KPDAA9zyJXcEDvFW5inYi"
+        },
+        "href": "https://api.spotify.com/v1/tracks/1KPDAA9zyJXcEDvFW5inYi",
+        "id": "1KPDAA9zyJXcEDvFW5inYi",
+        "is_local": false,
+        "name": "Down the Line",
+        "popularity": 66,
+        "preview_url": "https://p.scdn.co/mp3-preview/772a0c43958beac962cb6d20199389b8e6376c61?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 9,
+        "type": "track",
+        "uri": "spotify:track:1KPDAA9zyJXcEDvFW5inYi"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/3kzwYV3OCB010YfXMF0Avt"
+              },
+              "href": "https://api.spotify.com/v1/artists/3kzwYV3OCB010YfXMF0Avt",
+              "id": "3kzwYV3OCB010YfXMF0Avt",
+              "name": "Alvvays",
+              "type": "artist",
+              "uri": "spotify:artist:3kzwYV3OCB010YfXMF0Avt"
+            }
+          ],
+          "available_markets": [
+            "AE",
+            "AR",
+            "BH",
+            "BO",
+            "BR",
+            "CL",
+            "CO",
+            "CR",
+            "DO",
+            "DZ",
+            "EC",
+            "EG",
+            "GT",
+            "HN",
+            "ID",
+            "IL",
+            "IN",
+            "JO",
+            "KW",
+            "KZ",
+            "LB",
+            "MA",
+            "MX",
+            "MY",
+            "NI",
+            "OM",
+            "PA",
+            "PE",
+            "PH",
+            "PS",
+            "PY",
+            "QA",
+            "SA",
+            "SG",
+            "SV",
+            "TH",
+            "TN",
+            "US",
+            "UY",
+            "VN",
+            "ZA"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/7CCwkPweMxKq8yWkVerH6T"
+          },
+          "href": "https://api.spotify.com/v1/albums/7CCwkPweMxKq8yWkVerH6T",
+          "id": "7CCwkPweMxKq8yWkVerH6T",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273ad8f67f5f03d44e215deea50",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02ad8f67f5f03d44e215deea50",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851ad8f67f5f03d44e215deea50",
+              "width": 64
+            }
+          ],
+          "name": "Antisocialites",
+          "release_date": "2017-09-08",
+          "release_date_precision": "day",
+          "total_tracks": 10,
+          "type": "album",
+          "uri": "spotify:album:7CCwkPweMxKq8yWkVerH6T"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/3kzwYV3OCB010YfXMF0Avt"
+            },
+            "href": "https://api.spotify.com/v1/artists/3kzwYV3OCB010YfXMF0Avt",
+            "id": "3kzwYV3OCB010YfXMF0Avt",
+            "name": "Alvvays",
+            "type": "artist",
+            "uri": "spotify:artist:3kzwYV3OCB010YfXMF0Avt"
+          }
+        ],
+        "available_markets": [
+          "AE",
+          "AR",
+          "BH",
+          "BO",
+          "BR",
+          "CL",
+          "CO",
+          "CR",
+          "DO",
+          "DZ",
+          "EC",
+          "EG",
+          "GT",
+          "HN",
+          "ID",
+          "IL",
+          "IN",
+          "JO",
+          "KW",
+          "KZ",
+          "LB",
+          "MA",
+          "MX",
+          "MY",
+          "NI",
+          "OM",
+          "PA",
+          "PE",
+          "PH",
+          "PS",
+          "PY",
+          "QA",
+          "SA",
+          "SG",
+          "SV",
+          "TH",
+          "TN",
+          "US",
+          "UY",
+          "VN",
+          "ZA"
+        ],
+        "disc_number": 1,
+        "duration_ms": 196026,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "US3R41733402"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0DRvClQbN9znQ295sx76VC"
+        },
+        "href": "https://api.spotify.com/v1/tracks/0DRvClQbN9znQ295sx76VC",
+        "id": "0DRvClQbN9znQ295sx76VC",
+        "is_local": false,
+        "name": "Dreams Tonite",
+        "popularity": 62,
+        "preview_url": "https://p.scdn.co/mp3-preview/8aadd8176e98e7ce394bb37b7e5a990c7eeb3ee0?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 2,
+        "type": "track",
+        "uri": "spotify:track:0DRvClQbN9znQ295sx76VC"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/3kzwYV3OCB010YfXMF0Avt"
+              },
+              "href": "https://api.spotify.com/v1/artists/3kzwYV3OCB010YfXMF0Avt",
+              "id": "3kzwYV3OCB010YfXMF0Avt",
+              "name": "Alvvays",
+              "type": "artist",
+              "uri": "spotify:artist:3kzwYV3OCB010YfXMF0Avt"
+            }
+          ],
+          "available_markets": [
+            "AE",
+            "AR",
+            "AU",
+            "BH",
+            "BO",
+            "BR",
+            "CL",
+            "CO",
+            "CR",
+            "DO",
+            "DZ",
+            "EC",
+            "EG",
+            "GT",
+            "HK",
+            "HN",
+            "ID",
+            "IL",
+            "IN",
+            "JO",
+            "JP",
+            "KW",
+            "KZ",
+            "LB",
+            "MA",
+            "MX",
+            "MY",
+            "NI",
+            "NZ",
+            "OM",
+            "PA",
+            "PE",
+            "PH",
+            "PS",
+            "PY",
+            "QA",
+            "SA",
+            "SG",
+            "SV",
+            "TH",
+            "TN",
+            "TW",
+            "US",
+            "UY",
+            "VN",
+            "ZA"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/4PrBMzWzzoMOwm55Bfo3dt"
+          },
+          "href": "https://api.spotify.com/v1/albums/4PrBMzWzzoMOwm55Bfo3dt",
+          "id": "4PrBMzWzzoMOwm55Bfo3dt",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273ce93b2fc719ae92dacec2b4b",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02ce93b2fc719ae92dacec2b4b",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851ce93b2fc719ae92dacec2b4b",
+              "width": 64
+            }
+          ],
+          "name": "Alvvays",
+          "release_date": "2014-07-22",
+          "release_date_precision": "day",
+          "total_tracks": 9,
+          "type": "album",
+          "uri": "spotify:album:4PrBMzWzzoMOwm55Bfo3dt"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/3kzwYV3OCB010YfXMF0Avt"
+            },
+            "href": "https://api.spotify.com/v1/artists/3kzwYV3OCB010YfXMF0Avt",
+            "id": "3kzwYV3OCB010YfXMF0Avt",
+            "name": "Alvvays",
+            "type": "artist",
+            "uri": "spotify:artist:3kzwYV3OCB010YfXMF0Avt"
+          }
+        ],
+        "available_markets": [
+          "AE",
+          "AR",
+          "AU",
+          "BH",
+          "BO",
+          "BR",
+          "CL",
+          "CO",
+          "CR",
+          "DO",
+          "DZ",
+          "EC",
+          "EG",
+          "GT",
+          "HK",
+          "HN",
+          "ID",
+          "IL",
+          "IN",
+          "JO",
+          "JP",
+          "KW",
+          "KZ",
+          "LB",
+          "MA",
+          "MX",
+          "MY",
+          "NI",
+          "NZ",
+          "OM",
+          "PA",
+          "PE",
+          "PH",
+          "PS",
+          "PY",
+          "QA",
+          "SA",
+          "SG",
+          "SV",
+          "TH",
+          "TN",
+          "TW",
+          "US",
+          "UY",
+          "VN",
+          "ZA"
+        ],
+        "disc_number": 1,
+        "duration_ms": 196560,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "US3R41428202"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5HLes17mwCwKt81mi0Tk35"
+        },
+        "href": "https://api.spotify.com/v1/tracks/5HLes17mwCwKt81mi0Tk35",
+        "id": "5HLes17mwCwKt81mi0Tk35",
+        "is_local": false,
+        "name": "Archie, Marry Me",
+        "popularity": 61,
+        "preview_url": "https://p.scdn.co/mp3-preview/044ff036b0e459da670f022a4ca882d25a743dfb?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 2,
+        "type": "track",
+        "uri": "spotify:track:5HLes17mwCwKt81mi0Tk35"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/1QAJqy2dA3ihHBFIHRphZj"
+              },
+              "href": "https://api.spotify.com/v1/artists/1QAJqy2dA3ihHBFIHRphZj",
+              "id": "1QAJqy2dA3ihHBFIHRphZj",
+              "name": "Cigarettes After Sex",
+              "type": "artist",
+              "uri": "spotify:artist:1QAJqy2dA3ihHBFIHRphZj"
+            }
+          ],
+          "available_markets": [
+            "US"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/5bP82ZIls6rzhpf5Qu6AzC"
+          },
+          "href": "https://api.spotify.com/v1/albums/5bP82ZIls6rzhpf5Qu6AzC",
+          "id": "5bP82ZIls6rzhpf5Qu6AzC",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b2736b701428ed4c6e053902174a",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e026b701428ed4c6e053902174a",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d000048516b701428ed4c6e053902174a",
+              "width": 64
+            }
+          ],
+          "name": "Cigarettes After Sex",
+          "release_date": "2017-06-09",
+          "release_date_precision": "day",
+          "total_tracks": 10,
+          "type": "album",
+          "uri": "spotify:album:5bP82ZIls6rzhpf5Qu6AzC"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/1QAJqy2dA3ihHBFIHRphZj"
+            },
+            "href": "https://api.spotify.com/v1/artists/1QAJqy2dA3ihHBFIHRphZj",
+            "id": "1QAJqy2dA3ihHBFIHRphZj",
+            "name": "Cigarettes After Sex",
+            "type": "artist",
+            "uri": "spotify:artist:1QAJqy2dA3ihHBFIHRphZj"
+          }
+        ],
+        "available_markets": [
+          "US"
+        ],
+        "disc_number": 1,
+        "duration_ms": 319560,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "USBQU1600214"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7LX4aXtvImhdgUHQBlo8Kp"
+        },
+        "href": "https://api.spotify.com/v1/tracks/7LX4aXtvImhdgUHQBlo8Kp",
+        "id": "7LX4aXtvImhdgUHQBlo8Kp",
+        "is_local": false,
+        "name": "K.",
+        "popularity": 58,
+        "preview_url": "https://p.scdn.co/mp3-preview/8900c741891262a59bd5d56a0735fedc5fb43fda?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 1,
+        "type": "track",
+        "uri": "spotify:track:7LX4aXtvImhdgUHQBlo8Kp"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/63MQldklfxkjYDoUE4Tppz"
+              },
+              "href": "https://api.spotify.com/v1/artists/63MQldklfxkjYDoUE4Tppz",
+              "id": "63MQldklfxkjYDoUE4Tppz",
+              "name": "M83",
+              "type": "artist",
+              "uri": "spotify:artist:63MQldklfxkjYDoUE4Tppz"
+            }
+          ],
+          "available_markets": [
+            "CA",
+            "US"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/6R0ynY7RF20ofs9GJR5TXR"
+          },
+          "href": "https://api.spotify.com/v1/albums/6R0ynY7RF20ofs9GJR5TXR",
+          "id": "6R0ynY7RF20ofs9GJR5TXR",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b27389c5c957f376e8c87ed23dcc",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e0289c5c957f376e8c87ed23dcc",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d0000485189c5c957f376e8c87ed23dcc",
+              "width": 64
+            }
+          ],
+          "name": "Hurry Up, We're Dreaming",
+          "release_date": "2011",
+          "release_date_precision": "year",
+          "total_tracks": 22,
+          "type": "album",
+          "uri": "spotify:album:6R0ynY7RF20ofs9GJR5TXR"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/63MQldklfxkjYDoUE4Tppz"
+            },
+            "href": "https://api.spotify.com/v1/artists/63MQldklfxkjYDoUE4Tppz",
+            "id": "63MQldklfxkjYDoUE4Tppz",
+            "name": "M83",
+            "type": "artist",
+            "uri": "spotify:artist:63MQldklfxkjYDoUE4Tppz"
+          }
+        ],
+        "available_markets": [
+          "CA",
+          "US"
+        ],
+        "disc_number": 2,
+        "duration_ms": 247026,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "GB55H1100022"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2QVmiA93GVhWNTWQctyY1K"
+        },
+        "href": "https://api.spotify.com/v1/tracks/2QVmiA93GVhWNTWQctyY1K",
+        "id": "2QVmiA93GVhWNTWQctyY1K",
+        "is_local": false,
+        "name": "Outro",
+        "popularity": 58,
+        "preview_url": "https://p.scdn.co/mp3-preview/33d31646128bc087c64f64f57a348323db5d6a41?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 11,
+        "type": "track",
+        "uri": "spotify:track:2QVmiA93GVhWNTWQctyY1K"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/1bwUhKRmEkOZ1wuTnV9XjC"
+              },
+              "href": "https://api.spotify.com/v1/artists/1bwUhKRmEkOZ1wuTnV9XjC",
+              "id": "1bwUhKRmEkOZ1wuTnV9XjC",
+              "name": "Beach Fossils",
+              "type": "artist",
+              "uri": "spotify:artist:1bwUhKRmEkOZ1wuTnV9XjC"
+            }
+          ],
+          "available_markets": [
+            "AD",
+            "AE",
+            "AL",
+            "AR",
+            "AT",
+            "AU",
+            "BA",
+            "BE",
+            "BG",
+            "BH",
+            "BO",
+            "BR",
+            "BY",
+            "CA",
+            "CH",
+            "CL",
+            "CO",
+            "CR",
+            "CY",
+            "CZ",
+            "DE",
+            "DK",
+            "DO",
+            "DZ",
+            "EC",
+            "EE",
+            "EG",
+            "ES",
+            "FI",
+            "FR",
+            "GB",
+            "GR",
+            "GT",
+            "HK",
+            "HN",
+            "HR",
+            "HU",
+            "ID",
+            "IE",
+            "IL",
+            "IN",
+            "IS",
+            "IT",
+            "JO",
+            "JP",
+            "KW",
+            "KZ",
+            "LB",
+            "LI",
+            "LT",
+            "LU",
+            "LV",
+            "MA",
+            "MC",
+            "MD",
+            "ME",
+            "MK",
+            "MT",
+            "MX",
+            "MY",
+            "NI",
+            "NL",
+            "NO",
+            "NZ",
+            "OM",
+            "PA",
+            "PE",
+            "PH",
+            "PL",
+            "PS",
+            "PT",
+            "PY",
+            "QA",
+            "RO",
+            "RS",
+            "RU",
+            "SA",
+            "SE",
+            "SG",
+            "SI",
+            "SK",
+            "SV",
+            "TH",
+            "TN",
+            "TR",
+            "TW",
+            "UA",
+            "US",
+            "UY",
+            "VN",
+            "XK",
+            "ZA"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/5azIxtaUJfDBczJd9o6l7p"
+          },
+          "href": "https://api.spotify.com/v1/albums/5azIxtaUJfDBczJd9o6l7p",
+          "id": "5azIxtaUJfDBczJd9o6l7p",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273930d619f6011fa6099e080e8",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02930d619f6011fa6099e080e8",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851930d619f6011fa6099e080e8",
+              "width": 64
+            }
+          ],
+          "name": "Clash the Truth",
+          "release_date": "2013-02-19",
+          "release_date_precision": "day",
+          "total_tracks": 14,
+          "type": "album",
+          "uri": "spotify:album:5azIxtaUJfDBczJd9o6l7p"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/1bwUhKRmEkOZ1wuTnV9XjC"
+            },
+            "href": "https://api.spotify.com/v1/artists/1bwUhKRmEkOZ1wuTnV9XjC",
+            "id": "1bwUhKRmEkOZ1wuTnV9XjC",
+            "name": "Beach Fossils",
+            "type": "artist",
+            "uri": "spotify:artist:1bwUhKRmEkOZ1wuTnV9XjC"
+          }
+        ],
+        "available_markets": [
+          "AD",
+          "AE",
+          "AL",
+          "AR",
+          "AT",
+          "AU",
+          "BA",
+          "BE",
+          "BG",
+          "BH",
+          "BO",
+          "BR",
+          "BY",
+          "CA",
+          "CH",
+          "CL",
+          "CO",
+          "CR",
+          "CY",
+          "CZ",
+          "DE",
+          "DK",
+          "DO",
+          "DZ",
+          "EC",
+          "EE",
+          "EG",
+          "ES",
+          "FI",
+          "FR",
+          "GB",
+          "GR",
+          "GT",
+          "HK",
+          "HN",
+          "HR",
+          "HU",
+          "ID",
+          "IE",
+          "IL",
+          "IN",
+          "IS",
+          "IT",
+          "JO",
+          "JP",
+          "KW",
+          "KZ",
+          "LB",
+          "LI",
+          "LT",
+          "LU",
+          "LV",
+          "MA",
+          "MC",
+          "MD",
+          "ME",
+          "MK",
+          "MT",
+          "MX",
+          "MY",
+          "NI",
+          "NL",
+          "NO",
+          "NZ",
+          "OM",
+          "PA",
+          "PE",
+          "PH",
+          "PL",
+          "PS",
+          "PT",
+          "PY",
+          "QA",
+          "RO",
+          "RS",
+          "RU",
+          "SA",
+          "SE",
+          "SG",
+          "SI",
+          "SK",
+          "SV",
+          "TH",
+          "TN",
+          "TR",
+          "TW",
+          "UA",
+          "US",
+          "UY",
+          "VN",
+          "XK",
+          "ZA"
+        ],
+        "disc_number": 1,
+        "duration_ms": 146293,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "QMMZN1300102"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/34LohAliZ2QKydqVJcFpwV"
+        },
+        "href": "https://api.spotify.com/v1/tracks/34LohAliZ2QKydqVJcFpwV",
+        "id": "34LohAliZ2QKydqVJcFpwV",
+        "is_local": false,
+        "name": "Sleep Apnea",
+        "popularity": 63,
+        "preview_url": "https://p.scdn.co/mp3-preview/7c1d40ef5ca199946a72b41a1c744883842f9563?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 3,
+        "type": "track",
+        "uri": "spotify:track:34LohAliZ2QKydqVJcFpwV"
+      },
+      {
+        "album": {
+          "album_type": "single",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/1QAJqy2dA3ihHBFIHRphZj"
+              },
+              "href": "https://api.spotify.com/v1/artists/1QAJqy2dA3ihHBFIHRphZj",
+              "id": "1QAJqy2dA3ihHBFIHRphZj",
+              "name": "Cigarettes After Sex",
+              "type": "artist",
+              "uri": "spotify:artist:1QAJqy2dA3ihHBFIHRphZj"
+            }
+          ],
+          "available_markets": [
+            "US"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/5lU2BUnMIIe6JcbqV9LXtS"
+          },
+          "href": "https://api.spotify.com/v1/albums/5lU2BUnMIIe6JcbqV9LXtS",
+          "id": "5lU2BUnMIIe6JcbqV9LXtS",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b2734d8c27f369cbebe866a53058",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e024d8c27f369cbebe866a53058",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d000048514d8c27f369cbebe866a53058",
+              "width": 64
+            }
+          ],
+          "name": "You're All I Want",
+          "release_date": "2020-05-26",
+          "release_date_precision": "day",
+          "total_tracks": 1,
+          "type": "album",
+          "uri": "spotify:album:5lU2BUnMIIe6JcbqV9LXtS"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/1QAJqy2dA3ihHBFIHRphZj"
+            },
+            "href": "https://api.spotify.com/v1/artists/1QAJqy2dA3ihHBFIHRphZj",
+            "id": "1QAJqy2dA3ihHBFIHRphZj",
+            "name": "Cigarettes After Sex",
+            "type": "artist",
+            "uri": "spotify:artist:1QAJqy2dA3ihHBFIHRphZj"
+          }
+        ],
+        "available_markets": [
+          "US"
+        ],
+        "disc_number": 1,
+        "duration_ms": 264453,
+        "explicit": true,
+        "external_ids": {
+          "isrc": "USBQU1900259"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0EUw3ZK8Ti14t6R6FOP8Ty"
+        },
+        "href": "https://api.spotify.com/v1/tracks/0EUw3ZK8Ti14t6R6FOP8Ty",
+        "id": "0EUw3ZK8Ti14t6R6FOP8Ty",
+        "is_local": false,
+        "name": "You're All I Want",
+        "popularity": 56,
+        "preview_url": "https://p.scdn.co/mp3-preview/d927e9c9bf44df12b796fd13f6fbde84a2536d3d?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 1,
+        "type": "track",
+        "uri": "spotify:track:0EUw3ZK8Ti14t6R6FOP8Ty"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/1QAJqy2dA3ihHBFIHRphZj"
+              },
+              "href": "https://api.spotify.com/v1/artists/1QAJqy2dA3ihHBFIHRphZj",
+              "id": "1QAJqy2dA3ihHBFIHRphZj",
+              "name": "Cigarettes After Sex",
+              "type": "artist",
+              "uri": "spotify:artist:1QAJqy2dA3ihHBFIHRphZj"
+            }
+          ],
+          "available_markets": [
+            "US"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/5bP82ZIls6rzhpf5Qu6AzC"
+          },
+          "href": "https://api.spotify.com/v1/albums/5bP82ZIls6rzhpf5Qu6AzC",
+          "id": "5bP82ZIls6rzhpf5Qu6AzC",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b2736b701428ed4c6e053902174a",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e026b701428ed4c6e053902174a",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d000048516b701428ed4c6e053902174a",
+              "width": 64
+            }
+          ],
+          "name": "Cigarettes After Sex",
+          "release_date": "2017-06-09",
+          "release_date_precision": "day",
+          "total_tracks": 10,
+          "type": "album",
+          "uri": "spotify:album:5bP82ZIls6rzhpf5Qu6AzC"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/1QAJqy2dA3ihHBFIHRphZj"
+            },
+            "href": "https://api.spotify.com/v1/artists/1QAJqy2dA3ihHBFIHRphZj",
+            "id": "1QAJqy2dA3ihHBFIHRphZj",
+            "name": "Cigarettes After Sex",
+            "type": "artist",
+            "uri": "spotify:artist:1QAJqy2dA3ihHBFIHRphZj"
+          }
+        ],
+        "available_markets": [
+          "US"
+        ],
+        "disc_number": 1,
+        "duration_ms": 291640,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "USBQU1700036"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3VSYkAf6f46i5ZkXOHORq1"
+        },
+        "href": "https://api.spotify.com/v1/tracks/3VSYkAf6f46i5ZkXOHORq1",
+        "id": "3VSYkAf6f46i5ZkXOHORq1",
+        "is_local": false,
+        "name": "Sweet",
+        "popularity": 56,
+        "preview_url": "https://p.scdn.co/mp3-preview/d9bbbf09ec3dceadcbcf8573836f5a4e5ff8983f?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 6,
+        "type": "track",
+        "uri": "spotify:track:3VSYkAf6f46i5ZkXOHORq1"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/5Wabl1lPdNOeIn0SQ5A1mp"
+              },
+              "href": "https://api.spotify.com/v1/artists/5Wabl1lPdNOeIn0SQ5A1mp",
+              "id": "5Wabl1lPdNOeIn0SQ5A1mp",
+              "name": "Cocteau Twins",
+              "type": "artist",
+              "uri": "spotify:artist:5Wabl1lPdNOeIn0SQ5A1mp"
+            }
+          ],
+          "available_markets": [
+            "AD",
+            "AE",
+            "AL",
+            "AR",
+            "AT",
+            "AU",
+            "BA",
+            "BE",
+            "BG",
+            "BH",
+            "BO",
+            "BR",
+            "BY",
+            "CA",
+            "CH",
+            "CL",
+            "CO",
+            "CR",
+            "CY",
+            "CZ",
+            "DE",
+            "DK",
+            "DO",
+            "DZ",
+            "EC",
+            "EE",
+            "EG",
+            "ES",
+            "FI",
+            "FR",
+            "GB",
+            "GR",
+            "GT",
+            "HK",
+            "HN",
+            "HR",
+            "HU",
+            "ID",
+            "IE",
+            "IL",
+            "IN",
+            "IS",
+            "IT",
+            "JO",
+            "JP",
+            "KW",
+            "KZ",
+            "LB",
+            "LI",
+            "LT",
+            "LU",
+            "LV",
+            "MA",
+            "MC",
+            "MD",
+            "ME",
+            "MK",
+            "MT",
+            "MX",
+            "MY",
+            "NI",
+            "NL",
+            "NO",
+            "NZ",
+            "OM",
+            "PA",
+            "PE",
+            "PH",
+            "PL",
+            "PS",
+            "PT",
+            "PY",
+            "QA",
+            "RO",
+            "RS",
+            "RU",
+            "SA",
+            "SE",
+            "SG",
+            "SI",
+            "SK",
+            "SV",
+            "TH",
+            "TN",
+            "TR",
+            "TW",
+            "UA",
+            "US",
+            "UY",
+            "VN",
+            "XK",
+            "ZA"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/37hHXJ7xas2Nb7Jbi8ip4E"
+          },
+          "href": "https://api.spotify.com/v1/albums/37hHXJ7xas2Nb7Jbi8ip4E",
+          "id": "37hHXJ7xas2Nb7Jbi8ip4E",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273276b940445d7ab5ae6ceba82",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02276b940445d7ab5ae6ceba82",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851276b940445d7ab5ae6ceba82",
+              "width": 64
+            }
+          ],
+          "name": "Heaven Or Las Vegas (Remastered)",
+          "release_date": "1990-09-17",
+          "release_date_precision": "day",
+          "total_tracks": 10,
+          "type": "album",
+          "uri": "spotify:album:37hHXJ7xas2Nb7Jbi8ip4E"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/5Wabl1lPdNOeIn0SQ5A1mp"
+            },
+            "href": "https://api.spotify.com/v1/artists/5Wabl1lPdNOeIn0SQ5A1mp",
+            "id": "5Wabl1lPdNOeIn0SQ5A1mp",
+            "name": "Cocteau Twins",
+            "type": "artist",
+            "uri": "spotify:artist:5Wabl1lPdNOeIn0SQ5A1mp"
+          }
+        ],
+        "available_markets": [
+          "AD",
+          "AE",
+          "AL",
+          "AR",
+          "AT",
+          "AU",
+          "BA",
+          "BE",
+          "BG",
+          "BH",
+          "BO",
+          "BR",
+          "BY",
+          "CA",
+          "CH",
+          "CL",
+          "CO",
+          "CR",
+          "CY",
+          "CZ",
+          "DE",
+          "DK",
+          "DO",
+          "DZ",
+          "EC",
+          "EE",
+          "EG",
+          "ES",
+          "FI",
+          "FR",
+          "GB",
+          "GR",
+          "GT",
+          "HK",
+          "HN",
+          "HR",
+          "HU",
+          "ID",
+          "IE",
+          "IL",
+          "IN",
+          "IS",
+          "IT",
+          "JO",
+          "JP",
+          "KW",
+          "KZ",
+          "LB",
+          "LI",
+          "LT",
+          "LU",
+          "LV",
+          "MA",
+          "MC",
+          "MD",
+          "ME",
+          "MK",
+          "MT",
+          "MX",
+          "MY",
+          "NI",
+          "NL",
+          "NO",
+          "NZ",
+          "OM",
+          "PA",
+          "PE",
+          "PH",
+          "PL",
+          "PS",
+          "PT",
+          "PY",
+          "QA",
+          "RO",
+          "RS",
+          "RU",
+          "SA",
+          "SE",
+          "SG",
+          "SI",
+          "SK",
+          "SV",
+          "TH",
+          "TN",
+          "TR",
+          "TW",
+          "UA",
+          "US",
+          "UY",
+          "VN",
+          "XK",
+          "ZA"
+        ],
+        "disc_number": 1,
+        "duration_ms": 192466,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "GBAFL9000062"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6sVQNUvcVFTXvlk3ec0ngd"
+        },
+        "href": "https://api.spotify.com/v1/tracks/6sVQNUvcVFTXvlk3ec0ngd",
+        "id": "6sVQNUvcVFTXvlk3ec0ngd",
+        "is_local": false,
+        "name": "Cherry-coloured Funk",
+        "popularity": 63,
+        "preview_url": "https://p.scdn.co/mp3-preview/0aaa104c38a4043c6d40c8d7c1c136551a44a7b3?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 1,
+        "type": "track",
+        "uri": "spotify:track:6sVQNUvcVFTXvlk3ec0ngd"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/30uiS1n3uIGXJEYFR1GVDy"
+              },
+              "href": "https://api.spotify.com/v1/artists/30uiS1n3uIGXJEYFR1GVDy",
+              "id": "30uiS1n3uIGXJEYFR1GVDy",
+              "name": "The Brian Jonestown Massacre",
+              "type": "artist",
+              "uri": "spotify:artist:30uiS1n3uIGXJEYFR1GVDy"
+            }
+          ],
+          "available_markets": [
+            "AD",
+            "AE",
+            "AL",
+            "AR",
+            "AT",
+            "BA",
+            "BE",
+            "BG",
+            "BH",
+            "BO",
+            "BR",
+            "BY",
+            "CA",
+            "CH",
+            "CL",
+            "CO",
+            "CR",
+            "CY",
+            "CZ",
+            "DE",
+            "DK",
+            "DO",
+            "DZ",
+            "EC",
+            "EE",
+            "EG",
+            "ES",
+            "FI",
+            "FR",
+            "GB",
+            "GR",
+            "GT",
+            "HK",
+            "HN",
+            "HR",
+            "HU",
+            "ID",
+            "IE",
+            "IL",
+            "IN",
+            "IS",
+            "IT",
+            "JO",
+            "JP",
+            "KW",
+            "KZ",
+            "LB",
+            "LI",
+            "LT",
+            "LU",
+            "LV",
+            "MA",
+            "MC",
+            "MD",
+            "ME",
+            "MK",
+            "MT",
+            "MX",
+            "MY",
+            "NI",
+            "NL",
+            "NO",
+            "OM",
+            "PA",
+            "PE",
+            "PH",
+            "PL",
+            "PS",
+            "PT",
+            "PY",
+            "QA",
+            "RO",
+            "RS",
+            "RU",
+            "SA",
+            "SE",
+            "SG",
+            "SI",
+            "SK",
+            "SV",
+            "TH",
+            "TN",
+            "TR",
+            "TW",
+            "UA",
+            "US",
+            "UY",
+            "VN",
+            "XK",
+            "ZA"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/4kXc4XcGYOpHpXRlWq1RFi"
+          },
+          "href": "https://api.spotify.com/v1/albums/4kXc4XcGYOpHpXRlWq1RFi",
+          "id": "4kXc4XcGYOpHpXRlWq1RFi",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b2732557f5ed1ca07d5111d49b93",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e022557f5ed1ca07d5111d49b93",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d000048512557f5ed1ca07d5111d49b93",
+              "width": 64
+            }
+          ],
+          "name": "Their Satanic Majesties' Second Request",
+          "release_date": "2008-06-09",
+          "release_date_precision": "day",
+          "total_tracks": 19,
+          "type": "album",
+          "uri": "spotify:album:4kXc4XcGYOpHpXRlWq1RFi"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/30uiS1n3uIGXJEYFR1GVDy"
+            },
+            "href": "https://api.spotify.com/v1/artists/30uiS1n3uIGXJEYFR1GVDy",
+            "id": "30uiS1n3uIGXJEYFR1GVDy",
+            "name": "The Brian Jonestown Massacre",
+            "type": "artist",
+            "uri": "spotify:artist:30uiS1n3uIGXJEYFR1GVDy"
+          }
+        ],
+        "available_markets": [
+          "AD",
+          "AE",
+          "AL",
+          "AR",
+          "AT",
+          "BA",
+          "BE",
+          "BG",
+          "BH",
+          "BO",
+          "BR",
+          "BY",
+          "CA",
+          "CH",
+          "CL",
+          "CO",
+          "CR",
+          "CY",
+          "CZ",
+          "DE",
+          "DK",
+          "DO",
+          "DZ",
+          "EC",
+          "EE",
+          "EG",
+          "ES",
+          "FI",
+          "FR",
+          "GB",
+          "GR",
+          "GT",
+          "HK",
+          "HN",
+          "HR",
+          "HU",
+          "ID",
+          "IE",
+          "IL",
+          "IN",
+          "IS",
+          "IT",
+          "JO",
+          "JP",
+          "KW",
+          "KZ",
+          "LB",
+          "LI",
+          "LT",
+          "LU",
+          "LV",
+          "MA",
+          "MC",
+          "MD",
+          "ME",
+          "MK",
+          "MT",
+          "MX",
+          "MY",
+          "NI",
+          "NL",
+          "NO",
+          "OM",
+          "PA",
+          "PE",
+          "PH",
+          "PL",
+          "PS",
+          "PT",
+          "PY",
+          "QA",
+          "RO",
+          "RS",
+          "RU",
+          "SA",
+          "SE",
+          "SG",
+          "SI",
+          "SK",
+          "SV",
+          "TH",
+          "TN",
+          "TR",
+          "TW",
+          "UA",
+          "US",
+          "UY",
+          "VN",
+          "XK",
+          "ZA"
+        ],
+        "disc_number": 1,
+        "duration_ms": 334466,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "GBSLX0810071"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/70WSr32oW4jC1na5I0j0D6"
+        },
+        "href": "https://api.spotify.com/v1/tracks/70WSr32oW4jC1na5I0j0D6",
+        "id": "70WSr32oW4jC1na5I0j0D6",
+        "is_local": false,
+        "name": "Anemone",
+        "popularity": 64,
+        "preview_url": "https://p.scdn.co/mp3-preview/5ee0ccca5244114075c0d5e9b203552488928710?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 10,
+        "type": "track",
+        "uri": "spotify:track:70WSr32oW4jC1na5I0j0D6"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/1QAJqy2dA3ihHBFIHRphZj"
+              },
+              "href": "https://api.spotify.com/v1/artists/1QAJqy2dA3ihHBFIHRphZj",
+              "id": "1QAJqy2dA3ihHBFIHRphZj",
+              "name": "Cigarettes After Sex",
+              "type": "artist",
+              "uri": "spotify:artist:1QAJqy2dA3ihHBFIHRphZj"
+            }
+          ],
+          "available_markets": [
+            "US"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/6fUVptFdeOgcqDvCZzM2kC"
+          },
+          "href": "https://api.spotify.com/v1/albums/6fUVptFdeOgcqDvCZzM2kC",
+          "id": "6fUVptFdeOgcqDvCZzM2kC",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273ced182a9a86195e9ba2a5183",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02ced182a9a86195e9ba2a5183",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851ced182a9a86195e9ba2a5183",
+              "width": 64
+            }
+          ],
+          "name": "Cry",
+          "release_date": "2019-10-25",
+          "release_date_precision": "day",
+          "total_tracks": 9,
+          "type": "album",
+          "uri": "spotify:album:6fUVptFdeOgcqDvCZzM2kC"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/1QAJqy2dA3ihHBFIHRphZj"
+            },
+            "href": "https://api.spotify.com/v1/artists/1QAJqy2dA3ihHBFIHRphZj",
+            "id": "1QAJqy2dA3ihHBFIHRphZj",
+            "name": "Cigarettes After Sex",
+            "type": "artist",
+            "uri": "spotify:artist:1QAJqy2dA3ihHBFIHRphZj"
+          }
+        ],
+        "available_markets": [
+          "US"
+        ],
+        "disc_number": 1,
+        "duration_ms": 288595,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "USBQU1900118"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1Bh0UzthW8pKEnYg7v40Oa"
+        },
+        "href": "https://api.spotify.com/v1/tracks/1Bh0UzthW8pKEnYg7v40Oa",
+        "id": "1Bh0UzthW8pKEnYg7v40Oa",
+        "is_local": false,
+        "name": "Heavenly",
+        "popularity": 54,
+        "preview_url": "https://p.scdn.co/mp3-preview/eae6702755dd4ca3898ffc9760558ebd57b9e6ce?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 3,
+        "type": "track",
+        "uri": "spotify:track:1Bh0UzthW8pKEnYg7v40Oa"
+      },
+      {
+        "album": {
+          "album_type": "single",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/1QAJqy2dA3ihHBFIHRphZj"
+              },
+              "href": "https://api.spotify.com/v1/artists/1QAJqy2dA3ihHBFIHRphZj",
+              "id": "1QAJqy2dA3ihHBFIHRphZj",
+              "name": "Cigarettes After Sex",
+              "type": "artist",
+              "uri": "spotify:artist:1QAJqy2dA3ihHBFIHRphZj"
+            }
+          ],
+          "available_markets": [
+            "US"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/5m3edD6VcJ23DxiLPwjDaB"
+          },
+          "href": "https://api.spotify.com/v1/albums/5m3edD6VcJ23DxiLPwjDaB",
+          "id": "5m3edD6VcJ23DxiLPwjDaB",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b2735f592cf31f9602e45c1ddf16",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e025f592cf31f9602e45c1ddf16",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d000048515f592cf31f9602e45c1ddf16",
+              "width": 64
+            }
+          ],
+          "name": "Crush",
+          "release_date": "2018-07-10",
+          "release_date_precision": "day",
+          "total_tracks": 2,
+          "type": "album",
+          "uri": "spotify:album:5m3edD6VcJ23DxiLPwjDaB"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/1QAJqy2dA3ihHBFIHRphZj"
+            },
+            "href": "https://api.spotify.com/v1/artists/1QAJqy2dA3ihHBFIHRphZj",
+            "id": "1QAJqy2dA3ihHBFIHRphZj",
+            "name": "Cigarettes After Sex",
+            "type": "artist",
+            "uri": "spotify:artist:1QAJqy2dA3ihHBFIHRphZj"
+          }
+        ],
+        "available_markets": [
+          "US"
+        ],
+        "disc_number": 1,
+        "duration_ms": 266666,
+        "explicit": true,
+        "external_ids": {
+          "isrc": "USBQU1800070"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2y7JqO7Jc7ErdOmxpvifRF"
+        },
+        "href": "https://api.spotify.com/v1/tracks/2y7JqO7Jc7ErdOmxpvifRF",
+        "id": "2y7JqO7Jc7ErdOmxpvifRF",
+        "is_local": false,
+        "name": "Crush",
+        "popularity": 54,
+        "preview_url": "https://p.scdn.co/mp3-preview/c4f3467a93de681f2ad7583862f9a4262ef9c4fc?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 1,
+        "type": "track",
+        "uri": "spotify:track:2y7JqO7Jc7ErdOmxpvifRF"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/1QAJqy2dA3ihHBFIHRphZj"
+              },
+              "href": "https://api.spotify.com/v1/artists/1QAJqy2dA3ihHBFIHRphZj",
+              "id": "1QAJqy2dA3ihHBFIHRphZj",
+              "name": "Cigarettes After Sex",
+              "type": "artist",
+              "uri": "spotify:artist:1QAJqy2dA3ihHBFIHRphZj"
+            }
+          ],
+          "available_markets": [
+            "US"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/5bP82ZIls6rzhpf5Qu6AzC"
+          },
+          "href": "https://api.spotify.com/v1/albums/5bP82ZIls6rzhpf5Qu6AzC",
+          "id": "5bP82ZIls6rzhpf5Qu6AzC",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b2736b701428ed4c6e053902174a",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e026b701428ed4c6e053902174a",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d000048516b701428ed4c6e053902174a",
+              "width": 64
+            }
+          ],
+          "name": "Cigarettes After Sex",
+          "release_date": "2017-06-09",
+          "release_date_precision": "day",
+          "total_tracks": 10,
+          "type": "album",
+          "uri": "spotify:album:5bP82ZIls6rzhpf5Qu6AzC"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/1QAJqy2dA3ihHBFIHRphZj"
+            },
+            "href": "https://api.spotify.com/v1/artists/1QAJqy2dA3ihHBFIHRphZj",
+            "id": "1QAJqy2dA3ihHBFIHRphZj",
+            "name": "Cigarettes After Sex",
+            "type": "artist",
+            "uri": "spotify:artist:1QAJqy2dA3ihHBFIHRphZj"
+          }
+        ],
+        "available_markets": [
+          "US"
+        ],
+        "disc_number": 1,
+        "duration_ms": 214680,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "USBQU1700033"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/69UqtTHfUKAJweQwEStRzC"
+        },
+        "href": "https://api.spotify.com/v1/tracks/69UqtTHfUKAJweQwEStRzC",
+        "id": "69UqtTHfUKAJweQwEStRzC",
+        "is_local": false,
+        "name": "Sunsetz",
+        "popularity": 53,
+        "preview_url": "https://p.scdn.co/mp3-preview/d8f56b035504b6df074e7399e7566ae6a30e746c?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 3,
+        "type": "track",
+        "uri": "spotify:track:69UqtTHfUKAJweQwEStRzC"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/3kzwYV3OCB010YfXMF0Avt"
+              },
+              "href": "https://api.spotify.com/v1/artists/3kzwYV3OCB010YfXMF0Avt",
+              "id": "3kzwYV3OCB010YfXMF0Avt",
+              "name": "Alvvays",
+              "type": "artist",
+              "uri": "spotify:artist:3kzwYV3OCB010YfXMF0Avt"
+            }
+          ],
+          "available_markets": [
+            "AE",
+            "AR",
+            "BH",
+            "BO",
+            "BR",
+            "CL",
+            "CO",
+            "CR",
+            "DO",
+            "DZ",
+            "EC",
+            "EG",
+            "GT",
+            "HN",
+            "ID",
+            "IL",
+            "IN",
+            "JO",
+            "KW",
+            "KZ",
+            "LB",
+            "MA",
+            "MX",
+            "MY",
+            "NI",
+            "OM",
+            "PA",
+            "PE",
+            "PH",
+            "PS",
+            "PY",
+            "QA",
+            "SA",
+            "SG",
+            "SV",
+            "TH",
+            "TN",
+            "US",
+            "UY",
+            "VN",
+            "ZA"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/7CCwkPweMxKq8yWkVerH6T"
+          },
+          "href": "https://api.spotify.com/v1/albums/7CCwkPweMxKq8yWkVerH6T",
+          "id": "7CCwkPweMxKq8yWkVerH6T",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273ad8f67f5f03d44e215deea50",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02ad8f67f5f03d44e215deea50",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851ad8f67f5f03d44e215deea50",
+              "width": 64
+            }
+          ],
+          "name": "Antisocialites",
+          "release_date": "2017-09-08",
+          "release_date_precision": "day",
+          "total_tracks": 10,
+          "type": "album",
+          "uri": "spotify:album:7CCwkPweMxKq8yWkVerH6T"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/3kzwYV3OCB010YfXMF0Avt"
+            },
+            "href": "https://api.spotify.com/v1/artists/3kzwYV3OCB010YfXMF0Avt",
+            "id": "3kzwYV3OCB010YfXMF0Avt",
+            "name": "Alvvays",
+            "type": "artist",
+            "uri": "spotify:artist:3kzwYV3OCB010YfXMF0Avt"
+          }
+        ],
+        "available_markets": [
+          "AE",
+          "AR",
+          "BH",
+          "BO",
+          "BR",
+          "CL",
+          "CO",
+          "CR",
+          "DO",
+          "DZ",
+          "EC",
+          "EG",
+          "GT",
+          "HN",
+          "ID",
+          "IL",
+          "IN",
+          "JO",
+          "KW",
+          "KZ",
+          "LB",
+          "MA",
+          "MX",
+          "MY",
+          "NI",
+          "OM",
+          "PA",
+          "PE",
+          "PH",
+          "PS",
+          "PY",
+          "QA",
+          "SA",
+          "SG",
+          "SV",
+          "TH",
+          "TN",
+          "US",
+          "UY",
+          "VN",
+          "ZA"
+        ],
+        "disc_number": 1,
+        "duration_ms": 256413,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "US3R41733405"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/27bBjan9bD8rUESGYqK9a7"
+        },
+        "href": "https://api.spotify.com/v1/tracks/27bBjan9bD8rUESGYqK9a7",
+        "id": "27bBjan9bD8rUESGYqK9a7",
+        "is_local": false,
+        "name": "Not My Baby",
+        "popularity": 55,
+        "preview_url": "https://p.scdn.co/mp3-preview/f2f529489c65ee97d7defd1b9ed8dc80a857b2bf?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 5,
+        "type": "track",
+        "uri": "spotify:track:27bBjan9bD8rUESGYqK9a7"
+      }
+    ],
+    "limit": 20,
+    "next": "https://api.spotify.com/v1/search?query=genre%3A%22Shoegaze%22&type=track&offset=20&limit=20",
+    "offset": 0,
+    "previous": null,
+    "total": 27714
+  }
+}

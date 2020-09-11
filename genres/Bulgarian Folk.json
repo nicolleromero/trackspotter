@@ -1,0 +1,3216 @@
+{
+  "tracks": {
+    "href": "https://api.spotify.com/v1/search?query=genre%3A%22Bulgarian+Folk%22&type=track&offset=0&limit=20",
+    "items": [
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/5j3PVTaVrMlssk4IC0kumd"
+              },
+              "href": "https://api.spotify.com/v1/artists/5j3PVTaVrMlssk4IC0kumd",
+              "id": "5j3PVTaVrMlssk4IC0kumd",
+              "name": "Bulgarian State Television Female Choir",
+              "type": "artist",
+              "uri": "spotify:artist:5j3PVTaVrMlssk4IC0kumd"
+            }
+          ],
+          "available_markets": [
+            "AR",
+            "BO",
+            "BR",
+            "CA",
+            "CL",
+            "CO",
+            "CR",
+            "EC",
+            "GT",
+            "HN",
+            "MX",
+            "NI",
+            "PA",
+            "PE",
+            "PY",
+            "SV",
+            "US",
+            "UY"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/7dYnr4klmbv4OTDceGfekf"
+          },
+          "href": "https://api.spotify.com/v1/albums/7dYnr4klmbv4OTDceGfekf",
+          "id": "7dYnr4klmbv4OTDceGfekf",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273f6602ac2ef4fb8b13f62b638",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02f6602ac2ef4fb8b13f62b638",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851f6602ac2ef4fb8b13f62b638",
+              "width": 64
+            }
+          ],
+          "name": "Le Myst\u00e8re des Voix Bulgares, Vol. 2",
+          "release_date": "1988",
+          "release_date_precision": "year",
+          "total_tracks": 16,
+          "type": "album",
+          "uri": "spotify:album:7dYnr4klmbv4OTDceGfekf"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/5j3PVTaVrMlssk4IC0kumd"
+            },
+            "href": "https://api.spotify.com/v1/artists/5j3PVTaVrMlssk4IC0kumd",
+            "id": "5j3PVTaVrMlssk4IC0kumd",
+            "name": "Bulgarian State Television Female Choir",
+            "type": "artist",
+            "uri": "spotify:artist:5j3PVTaVrMlssk4IC0kumd"
+          }
+        ],
+        "available_markets": [
+          "AR",
+          "BO",
+          "BR",
+          "CA",
+          "CL",
+          "CO",
+          "CR",
+          "EC",
+          "GT",
+          "HN",
+          "MX",
+          "NI",
+          "PA",
+          "PE",
+          "PY",
+          "SV",
+          "US",
+          "UY"
+        ],
+        "disc_number": 1,
+        "duration_ms": 131706,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "USNO18820101"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/64rvuYgKLuIHqacdZZiwPr"
+        },
+        "href": "https://api.spotify.com/v1/tracks/64rvuYgKLuIHqacdZZiwPr",
+        "id": "64rvuYgKLuIHqacdZZiwPr",
+        "is_local": false,
+        "name": "Kaval Sviri (The Flute Plays)",
+        "popularity": 24,
+        "preview_url": "https://p.scdn.co/mp3-preview/1e9b98f050af6f4dcdcc46d6bfde1c9e53c021ad?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 1,
+        "type": "track",
+        "uri": "spotify:track:64rvuYgKLuIHqacdZZiwPr"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/5j3PVTaVrMlssk4IC0kumd"
+              },
+              "href": "https://api.spotify.com/v1/artists/5j3PVTaVrMlssk4IC0kumd",
+              "id": "5j3PVTaVrMlssk4IC0kumd",
+              "name": "Bulgarian State Television Female Choir",
+              "type": "artist",
+              "uri": "spotify:artist:5j3PVTaVrMlssk4IC0kumd"
+            }
+          ],
+          "available_markets": [
+            "AR",
+            "BO",
+            "BR",
+            "CA",
+            "CL",
+            "CO",
+            "CR",
+            "EC",
+            "GT",
+            "HN",
+            "MX",
+            "NI",
+            "PA",
+            "PE",
+            "PY",
+            "SV",
+            "US",
+            "UY"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/6sq0xFq7n6ToKZjBcQvYwI"
+          },
+          "href": "https://api.spotify.com/v1/albums/6sq0xFq7n6ToKZjBcQvYwI",
+          "id": "6sq0xFq7n6ToKZjBcQvYwI",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273b36bae66deef7e133be21f40",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02b36bae66deef7e133be21f40",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851b36bae66deef7e133be21f40",
+              "width": 64
+            }
+          ],
+          "name": "Le Mystere Des Voix Bulgares",
+          "release_date": "1990",
+          "release_date_precision": "year",
+          "total_tracks": 13,
+          "type": "album",
+          "uri": "spotify:album:6sq0xFq7n6ToKZjBcQvYwI"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/5j3PVTaVrMlssk4IC0kumd"
+            },
+            "href": "https://api.spotify.com/v1/artists/5j3PVTaVrMlssk4IC0kumd",
+            "id": "5j3PVTaVrMlssk4IC0kumd",
+            "name": "Bulgarian State Television Female Choir",
+            "type": "artist",
+            "uri": "spotify:artist:5j3PVTaVrMlssk4IC0kumd"
+          }
+        ],
+        "available_markets": [
+          "AR",
+          "BO",
+          "BR",
+          "CA",
+          "CL",
+          "CO",
+          "CR",
+          "EC",
+          "GT",
+          "HN",
+          "MX",
+          "NI",
+          "PA",
+          "PE",
+          "PY",
+          "SV",
+          "US",
+          "UY"
+        ],
+        "disc_number": 1,
+        "duration_ms": 305760,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "USNO18716503"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2iG3k3Xd7mlatWOVvH7HqE"
+        },
+        "href": "https://api.spotify.com/v1/tracks/2iG3k3Xd7mlatWOVvH7HqE",
+        "id": "2iG3k3Xd7mlatWOVvH7HqE",
+        "is_local": false,
+        "name": "Kalimankou Denkou (The Evening Gathering)",
+        "popularity": 22,
+        "preview_url": "https://p.scdn.co/mp3-preview/2fd45dae30281977f562ea5ea68c21d203b05598?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 3,
+        "type": "track",
+        "uri": "spotify:track:2iG3k3Xd7mlatWOVvH7HqE"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/5j3PVTaVrMlssk4IC0kumd"
+              },
+              "href": "https://api.spotify.com/v1/artists/5j3PVTaVrMlssk4IC0kumd",
+              "id": "5j3PVTaVrMlssk4IC0kumd",
+              "name": "Bulgarian State Television Female Choir",
+              "type": "artist",
+              "uri": "spotify:artist:5j3PVTaVrMlssk4IC0kumd"
+            }
+          ],
+          "available_markets": [
+            "AR",
+            "BO",
+            "BR",
+            "CA",
+            "CL",
+            "CO",
+            "CR",
+            "EC",
+            "GT",
+            "HN",
+            "MX",
+            "NI",
+            "PA",
+            "PE",
+            "PY",
+            "SV",
+            "US",
+            "UY"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/6sq0xFq7n6ToKZjBcQvYwI"
+          },
+          "href": "https://api.spotify.com/v1/albums/6sq0xFq7n6ToKZjBcQvYwI",
+          "id": "6sq0xFq7n6ToKZjBcQvYwI",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273b36bae66deef7e133be21f40",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02b36bae66deef7e133be21f40",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851b36bae66deef7e133be21f40",
+              "width": 64
+            }
+          ],
+          "name": "Le Mystere Des Voix Bulgares",
+          "release_date": "1990",
+          "release_date_precision": "year",
+          "total_tracks": 13,
+          "type": "album",
+          "uri": "spotify:album:6sq0xFq7n6ToKZjBcQvYwI"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/5j3PVTaVrMlssk4IC0kumd"
+            },
+            "href": "https://api.spotify.com/v1/artists/5j3PVTaVrMlssk4IC0kumd",
+            "id": "5j3PVTaVrMlssk4IC0kumd",
+            "name": "Bulgarian State Television Female Choir",
+            "type": "artist",
+            "uri": "spotify:artist:5j3PVTaVrMlssk4IC0kumd"
+          }
+        ],
+        "available_markets": [
+          "AR",
+          "BO",
+          "BR",
+          "CA",
+          "CL",
+          "CO",
+          "CR",
+          "EC",
+          "GT",
+          "HN",
+          "MX",
+          "NI",
+          "PA",
+          "PE",
+          "PY",
+          "SV",
+          "US",
+          "UY"
+        ],
+        "disc_number": 1,
+        "duration_ms": 140852,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "USNO18716501"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1npXx6gwd9ZLUPHmjUo5cR"
+        },
+        "href": "https://api.spotify.com/v1/tracks/1npXx6gwd9ZLUPHmjUo5cR",
+        "id": "1npXx6gwd9ZLUPHmjUo5cR",
+        "is_local": false,
+        "name": "Pilentze Pee",
+        "popularity": 21,
+        "preview_url": "https://p.scdn.co/mp3-preview/c05080bcfec35fed6933c87d44557d716475afa6?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 1,
+        "type": "track",
+        "uri": "spotify:track:1npXx6gwd9ZLUPHmjUo5cR"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/5j3PVTaVrMlssk4IC0kumd"
+              },
+              "href": "https://api.spotify.com/v1/artists/5j3PVTaVrMlssk4IC0kumd",
+              "id": "5j3PVTaVrMlssk4IC0kumd",
+              "name": "Bulgarian State Television Female Choir",
+              "type": "artist",
+              "uri": "spotify:artist:5j3PVTaVrMlssk4IC0kumd"
+            }
+          ],
+          "available_markets": [
+            "AR",
+            "BO",
+            "BR",
+            "CA",
+            "CL",
+            "CO",
+            "CR",
+            "EC",
+            "GT",
+            "HN",
+            "MX",
+            "NI",
+            "PA",
+            "PE",
+            "PY",
+            "SV",
+            "US",
+            "UY"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/6sq0xFq7n6ToKZjBcQvYwI"
+          },
+          "href": "https://api.spotify.com/v1/albums/6sq0xFq7n6ToKZjBcQvYwI",
+          "id": "6sq0xFq7n6ToKZjBcQvYwI",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273b36bae66deef7e133be21f40",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02b36bae66deef7e133be21f40",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851b36bae66deef7e133be21f40",
+              "width": 64
+            }
+          ],
+          "name": "Le Mystere Des Voix Bulgares",
+          "release_date": "1990",
+          "release_date_precision": "year",
+          "total_tracks": 13,
+          "type": "album",
+          "uri": "spotify:album:6sq0xFq7n6ToKZjBcQvYwI"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/5j3PVTaVrMlssk4IC0kumd"
+            },
+            "href": "https://api.spotify.com/v1/artists/5j3PVTaVrMlssk4IC0kumd",
+            "id": "5j3PVTaVrMlssk4IC0kumd",
+            "name": "Bulgarian State Television Female Choir",
+            "type": "artist",
+            "uri": "spotify:artist:5j3PVTaVrMlssk4IC0kumd"
+          }
+        ],
+        "available_markets": [
+          "AR",
+          "BO",
+          "BR",
+          "CA",
+          "CL",
+          "CO",
+          "CR",
+          "EC",
+          "GT",
+          "HN",
+          "MX",
+          "NI",
+          "PA",
+          "PE",
+          "PY",
+          "SV",
+          "US",
+          "UY"
+        ],
+        "disc_number": 1,
+        "duration_ms": 217478,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "USNO18716513"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2zqLPc7SNIX1JZmKtbq2F6"
+        },
+        "href": "https://api.spotify.com/v1/tracks/2zqLPc7SNIX1JZmKtbq2F6",
+        "id": "2zqLPc7SNIX1JZmKtbq2F6",
+        "is_local": false,
+        "name": "Polegnala e Todora (Love Song)",
+        "popularity": 19,
+        "preview_url": "https://p.scdn.co/mp3-preview/6b49c438b289bb6dce341e0c8681c8335f534acb?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 13,
+        "type": "track",
+        "uri": "spotify:track:2zqLPc7SNIX1JZmKtbq2F6"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/6OxyG688AdDLBKo5yrJXU9"
+              },
+              "href": "https://api.spotify.com/v1/artists/6OxyG688AdDLBKo5yrJXU9",
+              "id": "6OxyG688AdDLBKo5yrJXU9",
+              "name": "The Bulgarian Voices Angelite",
+              "type": "artist",
+              "uri": "spotify:artist:6OxyG688AdDLBKo5yrJXU9"
+            },
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/1bK0K2tuAcvMScEWIHt54t"
+              },
+              "href": "https://api.spotify.com/v1/artists/1bK0K2tuAcvMScEWIHt54t",
+              "id": "1bK0K2tuAcvMScEWIHt54t",
+              "name": "Huun-Huur-Tu",
+              "type": "artist",
+              "uri": "spotify:artist:1bK0K2tuAcvMScEWIHt54t"
+            }
+          ],
+          "available_markets": [
+            "AD",
+            "AE",
+            "AL",
+            "AR",
+            "AT",
+            "AU",
+            "BA",
+            "BE",
+            "BG",
+            "BH",
+            "BO",
+            "BR",
+            "BY",
+            "CA",
+            "CH",
+            "CL",
+            "CO",
+            "CR",
+            "CY",
+            "CZ",
+            "DE",
+            "DK",
+            "DO",
+            "DZ",
+            "EC",
+            "EE",
+            "EG",
+            "ES",
+            "FI",
+            "FR",
+            "GB",
+            "GR",
+            "GT",
+            "HK",
+            "HN",
+            "HR",
+            "HU",
+            "ID",
+            "IE",
+            "IL",
+            "IN",
+            "IS",
+            "IT",
+            "JO",
+            "JP",
+            "KW",
+            "KZ",
+            "LB",
+            "LI",
+            "LT",
+            "LU",
+            "LV",
+            "MA",
+            "MC",
+            "MD",
+            "ME",
+            "MK",
+            "MT",
+            "MX",
+            "MY",
+            "NI",
+            "NL",
+            "NO",
+            "NZ",
+            "OM",
+            "PA",
+            "PE",
+            "PH",
+            "PL",
+            "PS",
+            "PT",
+            "PY",
+            "QA",
+            "RO",
+            "RS",
+            "RU",
+            "SA",
+            "SE",
+            "SG",
+            "SI",
+            "SK",
+            "SV",
+            "TH",
+            "TN",
+            "TR",
+            "TW",
+            "UA",
+            "US",
+            "UY",
+            "VN",
+            "XK",
+            "ZA"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/7COTJEh61fok2wxIfBbMH0"
+          },
+          "href": "https://api.spotify.com/v1/albums/7COTJEh61fok2wxIfBbMH0",
+          "id": "7COTJEh61fok2wxIfBbMH0",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273dbbb8edffdc73d7603421267",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02dbbb8edffdc73d7603421267",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851dbbb8edffdc73d7603421267",
+              "width": 64
+            }
+          ],
+          "name": "Fly, Fly My Sadness",
+          "release_date": "1997-05-13",
+          "release_date_precision": "day",
+          "total_tracks": 5,
+          "type": "album",
+          "uri": "spotify:album:7COTJEh61fok2wxIfBbMH0"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/6OxyG688AdDLBKo5yrJXU9"
+            },
+            "href": "https://api.spotify.com/v1/artists/6OxyG688AdDLBKo5yrJXU9",
+            "id": "6OxyG688AdDLBKo5yrJXU9",
+            "name": "The Bulgarian Voices Angelite",
+            "type": "artist",
+            "uri": "spotify:artist:6OxyG688AdDLBKo5yrJXU9"
+          },
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/1bK0K2tuAcvMScEWIHt54t"
+            },
+            "href": "https://api.spotify.com/v1/artists/1bK0K2tuAcvMScEWIHt54t",
+            "id": "1bK0K2tuAcvMScEWIHt54t",
+            "name": "Huun-Huur-Tu",
+            "type": "artist",
+            "uri": "spotify:artist:1bK0K2tuAcvMScEWIHt54t"
+          }
+        ],
+        "available_markets": [
+          "AD",
+          "AE",
+          "AL",
+          "AR",
+          "AT",
+          "AU",
+          "BA",
+          "BE",
+          "BG",
+          "BH",
+          "BO",
+          "BR",
+          "BY",
+          "CA",
+          "CH",
+          "CL",
+          "CO",
+          "CR",
+          "CY",
+          "CZ",
+          "DE",
+          "DK",
+          "DO",
+          "DZ",
+          "EC",
+          "EE",
+          "EG",
+          "ES",
+          "FI",
+          "FR",
+          "GB",
+          "GR",
+          "GT",
+          "HK",
+          "HN",
+          "HR",
+          "HU",
+          "ID",
+          "IE",
+          "IL",
+          "IN",
+          "IS",
+          "IT",
+          "JO",
+          "JP",
+          "KW",
+          "KZ",
+          "LB",
+          "LI",
+          "LT",
+          "LU",
+          "LV",
+          "MA",
+          "MC",
+          "MD",
+          "ME",
+          "MK",
+          "MT",
+          "MX",
+          "MY",
+          "NI",
+          "NL",
+          "NO",
+          "NZ",
+          "OM",
+          "PA",
+          "PE",
+          "PH",
+          "PL",
+          "PS",
+          "PT",
+          "PY",
+          "QA",
+          "RO",
+          "RS",
+          "RU",
+          "SA",
+          "SE",
+          "SG",
+          "SI",
+          "SK",
+          "SV",
+          "TH",
+          "TN",
+          "TR",
+          "TW",
+          "UA",
+          "US",
+          "UY",
+          "VN",
+          "XK",
+          "ZA"
+        ],
+        "disc_number": 1,
+        "duration_ms": 461026,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "DEA710203780"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7hAK6BNmKkuH4TukUoGgFY"
+        },
+        "href": "https://api.spotify.com/v1/tracks/7hAK6BNmKkuH4TukUoGgFY",
+        "id": "7hAK6BNmKkuH4TukUoGgFY",
+        "is_local": false,
+        "name": "Legend",
+        "popularity": 25,
+        "preview_url": "https://p.scdn.co/mp3-preview/2dc11a34888c4c2f49897f8cef6c1490034761f5?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 2,
+        "type": "track",
+        "uri": "spotify:track:7hAK6BNmKkuH4TukUoGgFY"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/5j3PVTaVrMlssk4IC0kumd"
+              },
+              "href": "https://api.spotify.com/v1/artists/5j3PVTaVrMlssk4IC0kumd",
+              "id": "5j3PVTaVrMlssk4IC0kumd",
+              "name": "Bulgarian State Television Female Choir",
+              "type": "artist",
+              "uri": "spotify:artist:5j3PVTaVrMlssk4IC0kumd"
+            }
+          ],
+          "available_markets": [
+            "AR",
+            "BO",
+            "BR",
+            "CA",
+            "CL",
+            "CO",
+            "CR",
+            "EC",
+            "GT",
+            "HN",
+            "MX",
+            "NI",
+            "PA",
+            "PE",
+            "PY",
+            "SV",
+            "US",
+            "UY"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/6sq0xFq7n6ToKZjBcQvYwI"
+          },
+          "href": "https://api.spotify.com/v1/albums/6sq0xFq7n6ToKZjBcQvYwI",
+          "id": "6sq0xFq7n6ToKZjBcQvYwI",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273b36bae66deef7e133be21f40",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02b36bae66deef7e133be21f40",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851b36bae66deef7e133be21f40",
+              "width": 64
+            }
+          ],
+          "name": "Le Mystere Des Voix Bulgares",
+          "release_date": "1990",
+          "release_date_precision": "year",
+          "total_tracks": 13,
+          "type": "album",
+          "uri": "spotify:album:6sq0xFq7n6ToKZjBcQvYwI"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/5j3PVTaVrMlssk4IC0kumd"
+            },
+            "href": "https://api.spotify.com/v1/artists/5j3PVTaVrMlssk4IC0kumd",
+            "id": "5j3PVTaVrMlssk4IC0kumd",
+            "name": "Bulgarian State Television Female Choir",
+            "type": "artist",
+            "uri": "spotify:artist:5j3PVTaVrMlssk4IC0kumd"
+          }
+        ],
+        "available_markets": [
+          "AR",
+          "BO",
+          "BR",
+          "CA",
+          "CL",
+          "CO",
+          "CR",
+          "EC",
+          "GT",
+          "HN",
+          "MX",
+          "NI",
+          "PA",
+          "PE",
+          "PY",
+          "SV",
+          "US",
+          "UY"
+        ],
+        "disc_number": 1,
+        "duration_ms": 169691,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "USNO18716508"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2bGf7LJjOV9Xk5mPwfyYVS"
+        },
+        "href": "https://api.spotify.com/v1/tracks/2bGf7LJjOV9Xk5mPwfyYVS",
+        "id": "2bGf7LJjOV9Xk5mPwfyYVS",
+        "is_local": false,
+        "name": "Erghan Diado (Song of Schopsko)",
+        "popularity": 17,
+        "preview_url": "https://p.scdn.co/mp3-preview/7f77aa3ba0352bd48ed8052115173ba5ba4b7e64?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 8,
+        "type": "track",
+        "uri": "spotify:track:2bGf7LJjOV9Xk5mPwfyYVS"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/5j3PVTaVrMlssk4IC0kumd"
+              },
+              "href": "https://api.spotify.com/v1/artists/5j3PVTaVrMlssk4IC0kumd",
+              "id": "5j3PVTaVrMlssk4IC0kumd",
+              "name": "Bulgarian State Television Female Choir",
+              "type": "artist",
+              "uri": "spotify:artist:5j3PVTaVrMlssk4IC0kumd"
+            }
+          ],
+          "available_markets": [
+            "AR",
+            "BO",
+            "BR",
+            "CA",
+            "CL",
+            "CO",
+            "CR",
+            "EC",
+            "GT",
+            "HN",
+            "MX",
+            "NI",
+            "PA",
+            "PE",
+            "PY",
+            "SV",
+            "US",
+            "UY"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/6sq0xFq7n6ToKZjBcQvYwI"
+          },
+          "href": "https://api.spotify.com/v1/albums/6sq0xFq7n6ToKZjBcQvYwI",
+          "id": "6sq0xFq7n6ToKZjBcQvYwI",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273b36bae66deef7e133be21f40",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02b36bae66deef7e133be21f40",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851b36bae66deef7e133be21f40",
+              "width": 64
+            }
+          ],
+          "name": "Le Mystere Des Voix Bulgares",
+          "release_date": "1990",
+          "release_date_precision": "year",
+          "total_tracks": 13,
+          "type": "album",
+          "uri": "spotify:album:6sq0xFq7n6ToKZjBcQvYwI"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/5j3PVTaVrMlssk4IC0kumd"
+            },
+            "href": "https://api.spotify.com/v1/artists/5j3PVTaVrMlssk4IC0kumd",
+            "id": "5j3PVTaVrMlssk4IC0kumd",
+            "name": "Bulgarian State Television Female Choir",
+            "type": "artist",
+            "uri": "spotify:artist:5j3PVTaVrMlssk4IC0kumd"
+          }
+        ],
+        "available_markets": [
+          "AR",
+          "BO",
+          "BR",
+          "CA",
+          "CL",
+          "CO",
+          "CR",
+          "EC",
+          "GT",
+          "HN",
+          "MX",
+          "NI",
+          "PA",
+          "PE",
+          "PY",
+          "SV",
+          "US",
+          "UY"
+        ],
+        "disc_number": 1,
+        "duration_ms": 86749,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "USNO18716502"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3xcMsaYrlt9P8dXRFvPnKC"
+        },
+        "href": "https://api.spotify.com/v1/tracks/3xcMsaYrlt9P8dXRFvPnKC",
+        "id": "3xcMsaYrlt9P8dXRFvPnKC",
+        "is_local": false,
+        "name": "Svatba (The Wedding)",
+        "popularity": 17,
+        "preview_url": "https://p.scdn.co/mp3-preview/b5b43a4e669e35029028f9ae4a62437e9e0d1859?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 2,
+        "type": "track",
+        "uri": "spotify:track:3xcMsaYrlt9P8dXRFvPnKC"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/6OxyG688AdDLBKo5yrJXU9"
+              },
+              "href": "https://api.spotify.com/v1/artists/6OxyG688AdDLBKo5yrJXU9",
+              "id": "6OxyG688AdDLBKo5yrJXU9",
+              "name": "The Bulgarian Voices Angelite",
+              "type": "artist",
+              "uri": "spotify:artist:6OxyG688AdDLBKo5yrJXU9"
+            },
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/1bK0K2tuAcvMScEWIHt54t"
+              },
+              "href": "https://api.spotify.com/v1/artists/1bK0K2tuAcvMScEWIHt54t",
+              "id": "1bK0K2tuAcvMScEWIHt54t",
+              "name": "Huun-Huur-Tu",
+              "type": "artist",
+              "uri": "spotify:artist:1bK0K2tuAcvMScEWIHt54t"
+            }
+          ],
+          "available_markets": [
+            "AD",
+            "AE",
+            "AL",
+            "AR",
+            "AT",
+            "AU",
+            "BA",
+            "BE",
+            "BG",
+            "BH",
+            "BO",
+            "BR",
+            "BY",
+            "CA",
+            "CH",
+            "CL",
+            "CO",
+            "CR",
+            "CY",
+            "CZ",
+            "DE",
+            "DK",
+            "DO",
+            "DZ",
+            "EC",
+            "EE",
+            "EG",
+            "ES",
+            "FI",
+            "FR",
+            "GB",
+            "GR",
+            "GT",
+            "HK",
+            "HN",
+            "HR",
+            "HU",
+            "ID",
+            "IE",
+            "IL",
+            "IN",
+            "IS",
+            "IT",
+            "JO",
+            "JP",
+            "KW",
+            "KZ",
+            "LB",
+            "LI",
+            "LT",
+            "LU",
+            "LV",
+            "MA",
+            "MC",
+            "MD",
+            "ME",
+            "MK",
+            "MT",
+            "MX",
+            "MY",
+            "NI",
+            "NL",
+            "NO",
+            "NZ",
+            "OM",
+            "PA",
+            "PE",
+            "PH",
+            "PL",
+            "PS",
+            "PT",
+            "PY",
+            "QA",
+            "RO",
+            "RS",
+            "RU",
+            "SA",
+            "SE",
+            "SG",
+            "SI",
+            "SK",
+            "SV",
+            "TH",
+            "TN",
+            "TR",
+            "TW",
+            "UA",
+            "US",
+            "UY",
+            "VN",
+            "XK",
+            "ZA"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/7COTJEh61fok2wxIfBbMH0"
+          },
+          "href": "https://api.spotify.com/v1/albums/7COTJEh61fok2wxIfBbMH0",
+          "id": "7COTJEh61fok2wxIfBbMH0",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273dbbb8edffdc73d7603421267",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02dbbb8edffdc73d7603421267",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851dbbb8edffdc73d7603421267",
+              "width": 64
+            }
+          ],
+          "name": "Fly, Fly My Sadness",
+          "release_date": "1997-05-13",
+          "release_date_precision": "day",
+          "total_tracks": 5,
+          "type": "album",
+          "uri": "spotify:album:7COTJEh61fok2wxIfBbMH0"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/6OxyG688AdDLBKo5yrJXU9"
+            },
+            "href": "https://api.spotify.com/v1/artists/6OxyG688AdDLBKo5yrJXU9",
+            "id": "6OxyG688AdDLBKo5yrJXU9",
+            "name": "The Bulgarian Voices Angelite",
+            "type": "artist",
+            "uri": "spotify:artist:6OxyG688AdDLBKo5yrJXU9"
+          },
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/1bK0K2tuAcvMScEWIHt54t"
+            },
+            "href": "https://api.spotify.com/v1/artists/1bK0K2tuAcvMScEWIHt54t",
+            "id": "1bK0K2tuAcvMScEWIHt54t",
+            "name": "Huun-Huur-Tu",
+            "type": "artist",
+            "uri": "spotify:artist:1bK0K2tuAcvMScEWIHt54t"
+          }
+        ],
+        "available_markets": [
+          "AD",
+          "AE",
+          "AL",
+          "AR",
+          "AT",
+          "AU",
+          "BA",
+          "BE",
+          "BG",
+          "BH",
+          "BO",
+          "BR",
+          "BY",
+          "CA",
+          "CH",
+          "CL",
+          "CO",
+          "CR",
+          "CY",
+          "CZ",
+          "DE",
+          "DK",
+          "DO",
+          "DZ",
+          "EC",
+          "EE",
+          "EG",
+          "ES",
+          "FI",
+          "FR",
+          "GB",
+          "GR",
+          "GT",
+          "HK",
+          "HN",
+          "HR",
+          "HU",
+          "ID",
+          "IE",
+          "IL",
+          "IN",
+          "IS",
+          "IT",
+          "JO",
+          "JP",
+          "KW",
+          "KZ",
+          "LB",
+          "LI",
+          "LT",
+          "LU",
+          "LV",
+          "MA",
+          "MC",
+          "MD",
+          "ME",
+          "MK",
+          "MT",
+          "MX",
+          "MY",
+          "NI",
+          "NL",
+          "NO",
+          "NZ",
+          "OM",
+          "PA",
+          "PE",
+          "PH",
+          "PL",
+          "PS",
+          "PT",
+          "PY",
+          "QA",
+          "RO",
+          "RS",
+          "RU",
+          "SA",
+          "SE",
+          "SG",
+          "SI",
+          "SK",
+          "SV",
+          "TH",
+          "TN",
+          "TR",
+          "TW",
+          "UA",
+          "US",
+          "UY",
+          "VN",
+          "XK",
+          "ZA"
+        ],
+        "disc_number": 1,
+        "duration_ms": 466973,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "DEA719901522"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6LclkswtNbo1MD8ECoT8dJ"
+        },
+        "href": "https://api.spotify.com/v1/tracks/6LclkswtNbo1MD8ECoT8dJ",
+        "id": "6LclkswtNbo1MD8ECoT8dJ",
+        "is_local": false,
+        "name": "Fly, Fly My Sadness",
+        "popularity": 23,
+        "preview_url": "https://p.scdn.co/mp3-preview/fd50d327beb33a554b266d6d0b748f19ccb7d56c?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 1,
+        "type": "track",
+        "uri": "spotify:track:6LclkswtNbo1MD8ECoT8dJ"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/5j3PVTaVrMlssk4IC0kumd"
+              },
+              "href": "https://api.spotify.com/v1/artists/5j3PVTaVrMlssk4IC0kumd",
+              "id": "5j3PVTaVrMlssk4IC0kumd",
+              "name": "Bulgarian State Television Female Choir",
+              "type": "artist",
+              "uri": "spotify:artist:5j3PVTaVrMlssk4IC0kumd"
+            }
+          ],
+          "available_markets": [
+            "AR",
+            "BO",
+            "BR",
+            "CA",
+            "CL",
+            "CO",
+            "CR",
+            "EC",
+            "GT",
+            "HN",
+            "MX",
+            "NI",
+            "PA",
+            "PE",
+            "PY",
+            "SV",
+            "US",
+            "UY"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/6sq0xFq7n6ToKZjBcQvYwI"
+          },
+          "href": "https://api.spotify.com/v1/albums/6sq0xFq7n6ToKZjBcQvYwI",
+          "id": "6sq0xFq7n6ToKZjBcQvYwI",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273b36bae66deef7e133be21f40",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02b36bae66deef7e133be21f40",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851b36bae66deef7e133be21f40",
+              "width": 64
+            }
+          ],
+          "name": "Le Mystere Des Voix Bulgares",
+          "release_date": "1990",
+          "release_date_precision": "year",
+          "total_tracks": 13,
+          "type": "album",
+          "uri": "spotify:album:6sq0xFq7n6ToKZjBcQvYwI"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/5j3PVTaVrMlssk4IC0kumd"
+            },
+            "href": "https://api.spotify.com/v1/artists/5j3PVTaVrMlssk4IC0kumd",
+            "id": "5j3PVTaVrMlssk4IC0kumd",
+            "name": "Bulgarian State Television Female Choir",
+            "type": "artist",
+            "uri": "spotify:artist:5j3PVTaVrMlssk4IC0kumd"
+          }
+        ],
+        "available_markets": [
+          "AR",
+          "BO",
+          "BR",
+          "CA",
+          "CL",
+          "CO",
+          "CR",
+          "EC",
+          "GT",
+          "HN",
+          "MX",
+          "NI",
+          "PA",
+          "PE",
+          "PY",
+          "SV",
+          "US",
+          "UY"
+        ],
+        "disc_number": 1,
+        "duration_ms": 156130,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "USNO18716504"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/601EnwcQZ2ggBRDqJPIbDb"
+        },
+        "href": "https://api.spotify.com/v1/tracks/601EnwcQZ2ggBRDqJPIbDb",
+        "id": "601EnwcQZ2ggBRDqJPIbDb",
+        "is_local": false,
+        "name": "Strati na Angelaki Doumasche (Haiduk Song)",
+        "popularity": 15,
+        "preview_url": "https://p.scdn.co/mp3-preview/e537678f9245fd61da1fee7ea40f3ddf21d34412?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 4,
+        "type": "track",
+        "uri": "spotify:track:601EnwcQZ2ggBRDqJPIbDb"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/5j3PVTaVrMlssk4IC0kumd"
+              },
+              "href": "https://api.spotify.com/v1/artists/5j3PVTaVrMlssk4IC0kumd",
+              "id": "5j3PVTaVrMlssk4IC0kumd",
+              "name": "Bulgarian State Television Female Choir",
+              "type": "artist",
+              "uri": "spotify:artist:5j3PVTaVrMlssk4IC0kumd"
+            }
+          ],
+          "available_markets": [
+            "AR",
+            "BO",
+            "BR",
+            "CA",
+            "CL",
+            "CO",
+            "CR",
+            "EC",
+            "GT",
+            "HN",
+            "MX",
+            "NI",
+            "PA",
+            "PE",
+            "PY",
+            "SV",
+            "US",
+            "UY"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/6sq0xFq7n6ToKZjBcQvYwI"
+          },
+          "href": "https://api.spotify.com/v1/albums/6sq0xFq7n6ToKZjBcQvYwI",
+          "id": "6sq0xFq7n6ToKZjBcQvYwI",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273b36bae66deef7e133be21f40",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02b36bae66deef7e133be21f40",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851b36bae66deef7e133be21f40",
+              "width": 64
+            }
+          ],
+          "name": "Le Mystere Des Voix Bulgares",
+          "release_date": "1990",
+          "release_date_precision": "year",
+          "total_tracks": 13,
+          "type": "album",
+          "uri": "spotify:album:6sq0xFq7n6ToKZjBcQvYwI"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/5j3PVTaVrMlssk4IC0kumd"
+            },
+            "href": "https://api.spotify.com/v1/artists/5j3PVTaVrMlssk4IC0kumd",
+            "id": "5j3PVTaVrMlssk4IC0kumd",
+            "name": "Bulgarian State Television Female Choir",
+            "type": "artist",
+            "uri": "spotify:artist:5j3PVTaVrMlssk4IC0kumd"
+          }
+        ],
+        "available_markets": [
+          "AR",
+          "BO",
+          "BR",
+          "CA",
+          "CL",
+          "CO",
+          "CR",
+          "EC",
+          "GT",
+          "HN",
+          "MX",
+          "NI",
+          "PA",
+          "PE",
+          "PY",
+          "SV",
+          "US",
+          "UY"
+        ],
+        "disc_number": 1,
+        "duration_ms": 121022,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "USNO18716505"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/52DqyorqxxJEAV7FOBvYxP"
+        },
+        "href": "https://api.spotify.com/v1/tracks/52DqyorqxxJEAV7FOBvYxP",
+        "id": "52DqyorqxxJEAV7FOBvYxP",
+        "is_local": false,
+        "name": "Polegnala e Pschenitza (Harvest Song from Thrace)",
+        "popularity": 15,
+        "preview_url": "https://p.scdn.co/mp3-preview/180379a90f0bece0cded5802e8349f14f02402f8?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 5,
+        "type": "track",
+        "uri": "spotify:track:52DqyorqxxJEAV7FOBvYxP"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/5j3PVTaVrMlssk4IC0kumd"
+              },
+              "href": "https://api.spotify.com/v1/artists/5j3PVTaVrMlssk4IC0kumd",
+              "id": "5j3PVTaVrMlssk4IC0kumd",
+              "name": "Bulgarian State Television Female Choir",
+              "type": "artist",
+              "uri": "spotify:artist:5j3PVTaVrMlssk4IC0kumd"
+            }
+          ],
+          "available_markets": [
+            "AR",
+            "BO",
+            "BR",
+            "CA",
+            "CL",
+            "CO",
+            "CR",
+            "EC",
+            "GT",
+            "HN",
+            "MX",
+            "NI",
+            "PA",
+            "PE",
+            "PY",
+            "SV",
+            "US",
+            "UY"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/6sq0xFq7n6ToKZjBcQvYwI"
+          },
+          "href": "https://api.spotify.com/v1/albums/6sq0xFq7n6ToKZjBcQvYwI",
+          "id": "6sq0xFq7n6ToKZjBcQvYwI",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273b36bae66deef7e133be21f40",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02b36bae66deef7e133be21f40",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851b36bae66deef7e133be21f40",
+              "width": 64
+            }
+          ],
+          "name": "Le Mystere Des Voix Bulgares",
+          "release_date": "1990",
+          "release_date_precision": "year",
+          "total_tracks": 13,
+          "type": "album",
+          "uri": "spotify:album:6sq0xFq7n6ToKZjBcQvYwI"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/5j3PVTaVrMlssk4IC0kumd"
+            },
+            "href": "https://api.spotify.com/v1/artists/5j3PVTaVrMlssk4IC0kumd",
+            "id": "5j3PVTaVrMlssk4IC0kumd",
+            "name": "Bulgarian State Television Female Choir",
+            "type": "artist",
+            "uri": "spotify:artist:5j3PVTaVrMlssk4IC0kumd"
+          }
+        ],
+        "available_markets": [
+          "AR",
+          "BO",
+          "BR",
+          "CA",
+          "CL",
+          "CO",
+          "CR",
+          "EC",
+          "GT",
+          "HN",
+          "MX",
+          "NI",
+          "PA",
+          "PE",
+          "PY",
+          "SV",
+          "US",
+          "UY"
+        ],
+        "disc_number": 1,
+        "duration_ms": 150465,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "USNO18716506"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6CK1pSiUzo8xw2TnNhMpeO"
+        },
+        "href": "https://api.spotify.com/v1/tracks/6CK1pSiUzo8xw2TnNhMpeO",
+        "id": "6CK1pSiUzo8xw2TnNhMpeO",
+        "is_local": false,
+        "name": "Messetschinko lio Gre_livko (Love Song from the Mountains)",
+        "popularity": 15,
+        "preview_url": "https://p.scdn.co/mp3-preview/958f3794e3a2f5ece6243bae1b2679fc96df8a5d?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 6,
+        "type": "track",
+        "uri": "spotify:track:6CK1pSiUzo8xw2TnNhMpeO"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/6ESz2VXU3KpZg88iJ0OBY9"
+              },
+              "href": "https://api.spotify.com/v1/artists/6ESz2VXU3KpZg88iJ0OBY9",
+              "id": "6ESz2VXU3KpZg88iJ0OBY9",
+              "name": "Various Bulgarian Folklore Artists",
+              "type": "artist",
+              "uri": "spotify:artist:6ESz2VXU3KpZg88iJ0OBY9"
+            }
+          ],
+          "available_markets": [
+            "AD",
+            "AE",
+            "AL",
+            "AR",
+            "AT",
+            "AU",
+            "BA",
+            "BE",
+            "BG",
+            "BH",
+            "BO",
+            "BR",
+            "BY",
+            "CA",
+            "CH",
+            "CL",
+            "CO",
+            "CR",
+            "CY",
+            "CZ",
+            "DE",
+            "DK",
+            "DO",
+            "DZ",
+            "EC",
+            "EE",
+            "EG",
+            "ES",
+            "FI",
+            "FR",
+            "GB",
+            "GR",
+            "GT",
+            "HK",
+            "HN",
+            "HR",
+            "HU",
+            "ID",
+            "IE",
+            "IL",
+            "IN",
+            "IS",
+            "IT",
+            "JO",
+            "JP",
+            "KW",
+            "KZ",
+            "LB",
+            "LI",
+            "LT",
+            "LU",
+            "LV",
+            "MA",
+            "MC",
+            "MD",
+            "ME",
+            "MK",
+            "MT",
+            "MX",
+            "MY",
+            "NI",
+            "NL",
+            "NO",
+            "NZ",
+            "OM",
+            "PA",
+            "PE",
+            "PH",
+            "PL",
+            "PS",
+            "PT",
+            "PY",
+            "QA",
+            "RO",
+            "RS",
+            "RU",
+            "SA",
+            "SE",
+            "SG",
+            "SI",
+            "SK",
+            "SV",
+            "TH",
+            "TN",
+            "TR",
+            "TW",
+            "UA",
+            "US",
+            "UY",
+            "VN",
+            "XK",
+            "ZA"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/1inG6GVj8ISjORjbZPb2Gq"
+          },
+          "href": "https://api.spotify.com/v1/albums/1inG6GVj8ISjORjbZPb2Gq",
+          "id": "1inG6GVj8ISjORjbZPb2Gq",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273d5f0eb3fcfbededc5f8aa9cf",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02d5f0eb3fcfbededc5f8aa9cf",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851d5f0eb3fcfbededc5f8aa9cf",
+              "width": 64
+            }
+          ],
+          "name": "Bulgarian Folk Ensembles And Songs",
+          "release_date": "2008-01-29",
+          "release_date_precision": "day",
+          "total_tracks": 20,
+          "type": "album",
+          "uri": "spotify:album:1inG6GVj8ISjORjbZPb2Gq"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/1UoienXU98KBpm3swSgdf9"
+            },
+            "href": "https://api.spotify.com/v1/artists/1UoienXU98KBpm3swSgdf9",
+            "id": "1UoienXU98KBpm3swSgdf9",
+            "name": "Ensemble Trakia",
+            "type": "artist",
+            "uri": "spotify:artist:1UoienXU98KBpm3swSgdf9"
+          }
+        ],
+        "available_markets": [
+          "AD",
+          "AE",
+          "AL",
+          "AR",
+          "AT",
+          "AU",
+          "BA",
+          "BE",
+          "BG",
+          "BH",
+          "BO",
+          "BR",
+          "BY",
+          "CA",
+          "CH",
+          "CL",
+          "CO",
+          "CR",
+          "CY",
+          "CZ",
+          "DE",
+          "DK",
+          "DO",
+          "DZ",
+          "EC",
+          "EE",
+          "EG",
+          "ES",
+          "FI",
+          "FR",
+          "GB",
+          "GR",
+          "GT",
+          "HK",
+          "HN",
+          "HR",
+          "HU",
+          "ID",
+          "IE",
+          "IL",
+          "IN",
+          "IS",
+          "IT",
+          "JO",
+          "JP",
+          "KW",
+          "KZ",
+          "LB",
+          "LI",
+          "LT",
+          "LU",
+          "LV",
+          "MA",
+          "MC",
+          "MD",
+          "ME",
+          "MK",
+          "MT",
+          "MX",
+          "MY",
+          "NI",
+          "NL",
+          "NO",
+          "NZ",
+          "OM",
+          "PA",
+          "PE",
+          "PH",
+          "PL",
+          "PS",
+          "PT",
+          "PY",
+          "QA",
+          "RO",
+          "RS",
+          "RU",
+          "SA",
+          "SE",
+          "SG",
+          "SI",
+          "SK",
+          "SV",
+          "TH",
+          "TN",
+          "TR",
+          "TW",
+          "UA",
+          "US",
+          "UY",
+          "VN",
+          "XK",
+          "ZA"
+        ],
+        "disc_number": 1,
+        "duration_ms": 133493,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "bga260701314"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/04qFAC848dJB4dO7RFfmnS"
+        },
+        "href": "https://api.spotify.com/v1/tracks/04qFAC848dJB4dO7RFfmnS",
+        "id": "04qFAC848dJB4dO7RFfmnS",
+        "is_local": false,
+        "name": "Kaval Sviri - A Kaval Is Playing",
+        "popularity": 26,
+        "preview_url": "https://p.scdn.co/mp3-preview/4f1666af542e3d21880689bef701eb7da7522454?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 14,
+        "type": "track",
+        "uri": "spotify:track:04qFAC848dJB4dO7RFfmnS"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/5j3PVTaVrMlssk4IC0kumd"
+              },
+              "href": "https://api.spotify.com/v1/artists/5j3PVTaVrMlssk4IC0kumd",
+              "id": "5j3PVTaVrMlssk4IC0kumd",
+              "name": "Bulgarian State Television Female Choir",
+              "type": "artist",
+              "uri": "spotify:artist:5j3PVTaVrMlssk4IC0kumd"
+            }
+          ],
+          "available_markets": [
+            "AR",
+            "BO",
+            "BR",
+            "CA",
+            "CL",
+            "CO",
+            "CR",
+            "EC",
+            "GT",
+            "HN",
+            "MX",
+            "NI",
+            "PA",
+            "PE",
+            "PY",
+            "SV",
+            "US",
+            "UY"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/6sq0xFq7n6ToKZjBcQvYwI"
+          },
+          "href": "https://api.spotify.com/v1/albums/6sq0xFq7n6ToKZjBcQvYwI",
+          "id": "6sq0xFq7n6ToKZjBcQvYwI",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273b36bae66deef7e133be21f40",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02b36bae66deef7e133be21f40",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851b36bae66deef7e133be21f40",
+              "width": 64
+            }
+          ],
+          "name": "Le Mystere Des Voix Bulgares",
+          "release_date": "1990",
+          "release_date_precision": "year",
+          "total_tracks": 13,
+          "type": "album",
+          "uri": "spotify:album:6sq0xFq7n6ToKZjBcQvYwI"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/5j3PVTaVrMlssk4IC0kumd"
+            },
+            "href": "https://api.spotify.com/v1/artists/5j3PVTaVrMlssk4IC0kumd",
+            "id": "5j3PVTaVrMlssk4IC0kumd",
+            "name": "Bulgarian State Television Female Choir",
+            "type": "artist",
+            "uri": "spotify:artist:5j3PVTaVrMlssk4IC0kumd"
+          }
+        ],
+        "available_markets": [
+          "AR",
+          "BO",
+          "BR",
+          "CA",
+          "CL",
+          "CO",
+          "CR",
+          "EC",
+          "GT",
+          "HN",
+          "MX",
+          "NI",
+          "PA",
+          "PE",
+          "PY",
+          "SV",
+          "US",
+          "UY"
+        ],
+        "disc_number": 1,
+        "duration_ms": 165093,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "USNO18716510"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/05wWHy7q9ScbIvLMDZtTn8"
+        },
+        "href": "https://api.spotify.com/v1/tracks/05wWHy7q9ScbIvLMDZtTn8",
+        "id": "05wWHy7q9ScbIvLMDZtTn8",
+        "is_local": false,
+        "name": "Pr\u00eftout\u00eftze Planinata (Song from the Thracian Plain)",
+        "popularity": 14,
+        "preview_url": "https://p.scdn.co/mp3-preview/de6c0494a8fd3c89f59867aab9e533dc7f4fe6ca?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 10,
+        "type": "track",
+        "uri": "spotify:track:05wWHy7q9ScbIvLMDZtTn8"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/5j3PVTaVrMlssk4IC0kumd"
+              },
+              "href": "https://api.spotify.com/v1/artists/5j3PVTaVrMlssk4IC0kumd",
+              "id": "5j3PVTaVrMlssk4IC0kumd",
+              "name": "Bulgarian State Television Female Choir",
+              "type": "artist",
+              "uri": "spotify:artist:5j3PVTaVrMlssk4IC0kumd"
+            }
+          ],
+          "available_markets": [
+            "AR",
+            "BO",
+            "BR",
+            "CA",
+            "CL",
+            "CO",
+            "CR",
+            "EC",
+            "GT",
+            "HN",
+            "MX",
+            "NI",
+            "PA",
+            "PE",
+            "PY",
+            "SV",
+            "US",
+            "UY"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/6sq0xFq7n6ToKZjBcQvYwI"
+          },
+          "href": "https://api.spotify.com/v1/albums/6sq0xFq7n6ToKZjBcQvYwI",
+          "id": "6sq0xFq7n6ToKZjBcQvYwI",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273b36bae66deef7e133be21f40",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02b36bae66deef7e133be21f40",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851b36bae66deef7e133be21f40",
+              "width": 64
+            }
+          ],
+          "name": "Le Mystere Des Voix Bulgares",
+          "release_date": "1990",
+          "release_date_precision": "year",
+          "total_tracks": 13,
+          "type": "album",
+          "uri": "spotify:album:6sq0xFq7n6ToKZjBcQvYwI"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/5j3PVTaVrMlssk4IC0kumd"
+            },
+            "href": "https://api.spotify.com/v1/artists/5j3PVTaVrMlssk4IC0kumd",
+            "id": "5j3PVTaVrMlssk4IC0kumd",
+            "name": "Bulgarian State Television Female Choir",
+            "type": "artist",
+            "uri": "spotify:artist:5j3PVTaVrMlssk4IC0kumd"
+          }
+        ],
+        "available_markets": [
+          "AR",
+          "BO",
+          "BR",
+          "CA",
+          "CL",
+          "CO",
+          "CR",
+          "EC",
+          "GT",
+          "HN",
+          "MX",
+          "NI",
+          "PA",
+          "PE",
+          "PY",
+          "SV",
+          "US",
+          "UY"
+        ],
+        "disc_number": 1,
+        "duration_ms": 270605,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "USNO18716509"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7sr5xJT8RKs2C7Zftxe1Su"
+        },
+        "href": "https://api.spotify.com/v1/tracks/7sr5xJT8RKs2C7Zftxe1Su",
+        "id": "7sr5xJT8RKs2C7Zftxe1Su",
+        "is_local": false,
+        "name": "Sableyalo mi Agontze (The Bleating Lamb)",
+        "popularity": 14,
+        "preview_url": "https://p.scdn.co/mp3-preview/7325f76c0206e3f9cc401dc6179e0956dd29c320?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 9,
+        "type": "track",
+        "uri": "spotify:track:7sr5xJT8RKs2C7Zftxe1Su"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/5j3PVTaVrMlssk4IC0kumd"
+              },
+              "href": "https://api.spotify.com/v1/artists/5j3PVTaVrMlssk4IC0kumd",
+              "id": "5j3PVTaVrMlssk4IC0kumd",
+              "name": "Bulgarian State Television Female Choir",
+              "type": "artist",
+              "uri": "spotify:artist:5j3PVTaVrMlssk4IC0kumd"
+            }
+          ],
+          "available_markets": [
+            "AR",
+            "BO",
+            "BR",
+            "CA",
+            "CL",
+            "CO",
+            "CR",
+            "EC",
+            "GT",
+            "HN",
+            "MX",
+            "NI",
+            "PA",
+            "PE",
+            "PY",
+            "SV",
+            "US",
+            "UY"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/6sq0xFq7n6ToKZjBcQvYwI"
+          },
+          "href": "https://api.spotify.com/v1/albums/6sq0xFq7n6ToKZjBcQvYwI",
+          "id": "6sq0xFq7n6ToKZjBcQvYwI",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273b36bae66deef7e133be21f40",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02b36bae66deef7e133be21f40",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851b36bae66deef7e133be21f40",
+              "width": 64
+            }
+          ],
+          "name": "Le Mystere Des Voix Bulgares",
+          "release_date": "1990",
+          "release_date_precision": "year",
+          "total_tracks": 13,
+          "type": "album",
+          "uri": "spotify:album:6sq0xFq7n6ToKZjBcQvYwI"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/5j3PVTaVrMlssk4IC0kumd"
+            },
+            "href": "https://api.spotify.com/v1/artists/5j3PVTaVrMlssk4IC0kumd",
+            "id": "5j3PVTaVrMlssk4IC0kumd",
+            "name": "Bulgarian State Television Female Choir",
+            "type": "artist",
+            "uri": "spotify:artist:5j3PVTaVrMlssk4IC0kumd"
+          }
+        ],
+        "available_markets": [
+          "AR",
+          "BO",
+          "BR",
+          "CA",
+          "CL",
+          "CO",
+          "CR",
+          "EC",
+          "GT",
+          "HN",
+          "MX",
+          "NI",
+          "PA",
+          "PE",
+          "PY",
+          "SV",
+          "US",
+          "UY"
+        ],
+        "disc_number": 1,
+        "duration_ms": 189289,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "USNO18716511"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0m7Xuqbxe5N1hfKo9xccyB"
+        },
+        "href": "https://api.spotify.com/v1/tracks/0m7Xuqbxe5N1hfKo9xccyB",
+        "id": "0m7Xuqbxe5N1hfKo9xccyB",
+        "is_local": false,
+        "name": "Mir Stanke le (Harvest Song from Thrace)",
+        "popularity": 13,
+        "preview_url": "https://p.scdn.co/mp3-preview/28f294b4ef97c841f7cb224e529ffe02d4cb5bdc?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 11,
+        "type": "track",
+        "uri": "spotify:track:0m7Xuqbxe5N1hfKo9xccyB"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/5j3PVTaVrMlssk4IC0kumd"
+              },
+              "href": "https://api.spotify.com/v1/artists/5j3PVTaVrMlssk4IC0kumd",
+              "id": "5j3PVTaVrMlssk4IC0kumd",
+              "name": "Bulgarian State Television Female Choir",
+              "type": "artist",
+              "uri": "spotify:artist:5j3PVTaVrMlssk4IC0kumd"
+            }
+          ],
+          "available_markets": [
+            "AD",
+            "AE",
+            "AL",
+            "AR",
+            "AT",
+            "BA",
+            "BE",
+            "BG",
+            "BH",
+            "BO",
+            "BR",
+            "BY",
+            "CH",
+            "CL",
+            "CO",
+            "CR",
+            "CY",
+            "CZ",
+            "DE",
+            "DK",
+            "DO",
+            "DZ",
+            "EC",
+            "EE",
+            "EG",
+            "ES",
+            "FI",
+            "FR",
+            "GB",
+            "GR",
+            "GT",
+            "HN",
+            "HR",
+            "HU",
+            "IE",
+            "IL",
+            "IN",
+            "IS",
+            "IT",
+            "JO",
+            "KW",
+            "KZ",
+            "LB",
+            "LI",
+            "LT",
+            "LU",
+            "LV",
+            "MA",
+            "MC",
+            "MD",
+            "ME",
+            "MK",
+            "MT",
+            "MX",
+            "NI",
+            "NL",
+            "NO",
+            "OM",
+            "PA",
+            "PE",
+            "PL",
+            "PT",
+            "PY",
+            "QA",
+            "RO",
+            "RS",
+            "RU",
+            "SA",
+            "SE",
+            "SI",
+            "SK",
+            "SV",
+            "TN",
+            "TR",
+            "UA",
+            "US",
+            "UY",
+            "XK",
+            "ZA"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/0uB2dzgYzboE5JeezxagQf"
+          },
+          "href": "https://api.spotify.com/v1/albums/0uB2dzgYzboE5JeezxagQf",
+          "id": "0uB2dzgYzboE5JeezxagQf",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b2731d45b2cc7437109b8ec2567e",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e021d45b2cc7437109b8ec2567e",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d000048511d45b2cc7437109b8ec2567e",
+              "width": 64
+            }
+          ],
+          "name": "Le Mystere Des Voix Bulgares: Ritual",
+          "release_date": "1994-09-23",
+          "release_date_precision": "day",
+          "total_tracks": 18,
+          "type": "album",
+          "uri": "spotify:album:0uB2dzgYzboE5JeezxagQf"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/5j3PVTaVrMlssk4IC0kumd"
+            },
+            "href": "https://api.spotify.com/v1/artists/5j3PVTaVrMlssk4IC0kumd",
+            "id": "5j3PVTaVrMlssk4IC0kumd",
+            "name": "Bulgarian State Television Female Choir",
+            "type": "artist",
+            "uri": "spotify:artist:5j3PVTaVrMlssk4IC0kumd"
+          }
+        ],
+        "available_markets": [
+          "AD",
+          "AE",
+          "AL",
+          "AR",
+          "AT",
+          "BA",
+          "BE",
+          "BG",
+          "BH",
+          "BO",
+          "BR",
+          "BY",
+          "CH",
+          "CL",
+          "CO",
+          "CR",
+          "CY",
+          "CZ",
+          "DE",
+          "DK",
+          "DO",
+          "DZ",
+          "EC",
+          "EE",
+          "EG",
+          "ES",
+          "FI",
+          "FR",
+          "GB",
+          "GR",
+          "GT",
+          "HN",
+          "HR",
+          "HU",
+          "IE",
+          "IL",
+          "IN",
+          "IS",
+          "IT",
+          "JO",
+          "KW",
+          "KZ",
+          "LB",
+          "LI",
+          "LT",
+          "LU",
+          "LV",
+          "MA",
+          "MC",
+          "MD",
+          "ME",
+          "MK",
+          "MT",
+          "MX",
+          "NI",
+          "NL",
+          "NO",
+          "OM",
+          "PA",
+          "PE",
+          "PL",
+          "PT",
+          "PY",
+          "QA",
+          "RO",
+          "RS",
+          "RU",
+          "SA",
+          "SE",
+          "SI",
+          "SK",
+          "SV",
+          "TN",
+          "TR",
+          "UA",
+          "US",
+          "UY",
+          "XK",
+          "ZA"
+        ],
+        "disc_number": 1,
+        "duration_ms": 264733,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "USNO19434901"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/59qdZj6p1dcLCCqLpzazlA"
+        },
+        "href": "https://api.spotify.com/v1/tracks/59qdZj6p1dcLCCqLpzazlA",
+        "id": "59qdZj6p1dcLCCqLpzazlA",
+        "is_local": false,
+        "name": "Houbava Milka (Beautiful Milka)",
+        "popularity": 19,
+        "preview_url": "https://p.scdn.co/mp3-preview/edbd12f7db31d7abea42600114411e8681723151?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 1,
+        "type": "track",
+        "uri": "spotify:track:59qdZj6p1dcLCCqLpzazlA"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/1Q1rvO84cVW6LY6qP7m6zB"
+              },
+              "href": "https://api.spotify.com/v1/artists/1Q1rvO84cVW6LY6qP7m6zB",
+              "id": "1Q1rvO84cVW6LY6qP7m6zB",
+              "name": "Bisserov Sisters",
+              "type": "artist",
+              "uri": "spotify:artist:1Q1rvO84cVW6LY6qP7m6zB"
+            },
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/0ZRyM5J0sWxY528T1Fqesc"
+              },
+              "href": "https://api.spotify.com/v1/artists/0ZRyM5J0sWxY528T1Fqesc",
+              "id": "0ZRyM5J0sWxY528T1Fqesc",
+              "name": "Trio Karadzovska",
+              "type": "artist",
+              "uri": "spotify:artist:0ZRyM5J0sWxY528T1Fqesc"
+            }
+          ],
+          "available_markets": [
+            "AD",
+            "AE",
+            "AL",
+            "AR",
+            "AT",
+            "AU",
+            "BA",
+            "BE",
+            "BG",
+            "BH",
+            "BO",
+            "BR",
+            "BY",
+            "CA",
+            "CH",
+            "CL",
+            "CO",
+            "CR",
+            "CY",
+            "CZ",
+            "DE",
+            "DK",
+            "DO",
+            "DZ",
+            "EC",
+            "EE",
+            "EG",
+            "ES",
+            "FI",
+            "FR",
+            "GB",
+            "GR",
+            "GT",
+            "HK",
+            "HN",
+            "HR",
+            "HU",
+            "ID",
+            "IE",
+            "IL",
+            "IN",
+            "IS",
+            "IT",
+            "JO",
+            "KW",
+            "KZ",
+            "LB",
+            "LI",
+            "LT",
+            "LU",
+            "LV",
+            "MA",
+            "MC",
+            "MD",
+            "MK",
+            "MT",
+            "MX",
+            "MY",
+            "NI",
+            "NL",
+            "NO",
+            "NZ",
+            "OM",
+            "PA",
+            "PE",
+            "PH",
+            "PL",
+            "PS",
+            "PT",
+            "PY",
+            "QA",
+            "RO",
+            "RU",
+            "SA",
+            "SE",
+            "SG",
+            "SI",
+            "SK",
+            "SV",
+            "TH",
+            "TN",
+            "TR",
+            "TW",
+            "UA",
+            "US",
+            "UY",
+            "VN",
+            "ZA"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/4jPauGTJd7E0WrhvrVGMhG"
+          },
+          "href": "https://api.spotify.com/v1/albums/4jPauGTJd7E0WrhvrVGMhG",
+          "id": "4jPauGTJd7E0WrhvrVGMhG",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b27334ba324979dadd68262ca914",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e0234ba324979dadd68262ca914",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d0000485134ba324979dadd68262ca914",
+              "width": 64
+            }
+          ],
+          "name": "Music from the Pirin Mountains",
+          "release_date": "1990",
+          "release_date_precision": "year",
+          "total_tracks": 26,
+          "type": "album",
+          "uri": "spotify:album:4jPauGTJd7E0WrhvrVGMhG"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/1Q1rvO84cVW6LY6qP7m6zB"
+            },
+            "href": "https://api.spotify.com/v1/artists/1Q1rvO84cVW6LY6qP7m6zB",
+            "id": "1Q1rvO84cVW6LY6qP7m6zB",
+            "name": "Bisserov Sisters",
+            "type": "artist",
+            "uri": "spotify:artist:1Q1rvO84cVW6LY6qP7m6zB"
+          }
+        ],
+        "available_markets": [
+          "AD",
+          "AE",
+          "AL",
+          "AR",
+          "AT",
+          "AU",
+          "BA",
+          "BE",
+          "BG",
+          "BH",
+          "BO",
+          "BR",
+          "BY",
+          "CA",
+          "CH",
+          "CL",
+          "CO",
+          "CR",
+          "CY",
+          "CZ",
+          "DE",
+          "DK",
+          "DO",
+          "DZ",
+          "EC",
+          "EE",
+          "EG",
+          "ES",
+          "FI",
+          "FR",
+          "GB",
+          "GR",
+          "GT",
+          "HK",
+          "HN",
+          "HR",
+          "HU",
+          "ID",
+          "IE",
+          "IL",
+          "IN",
+          "IS",
+          "IT",
+          "JO",
+          "KW",
+          "KZ",
+          "LB",
+          "LI",
+          "LT",
+          "LU",
+          "LV",
+          "MA",
+          "MC",
+          "MD",
+          "MK",
+          "MT",
+          "MX",
+          "MY",
+          "NI",
+          "NL",
+          "NO",
+          "NZ",
+          "OM",
+          "PA",
+          "PE",
+          "PH",
+          "PL",
+          "PS",
+          "PT",
+          "PY",
+          "QA",
+          "RO",
+          "RU",
+          "SA",
+          "SE",
+          "SG",
+          "SI",
+          "SK",
+          "SV",
+          "TH",
+          "TN",
+          "TR",
+          "TW",
+          "UA",
+          "US",
+          "UY",
+          "VN",
+          "ZA"
+        ],
+        "disc_number": 1,
+        "duration_ms": 114440,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "NLC199000012"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7BwbarPbiIjHOpSWFhyT6u"
+        },
+        "href": "https://api.spotify.com/v1/tracks/7BwbarPbiIjHOpSWFhyT6u",
+        "id": "7BwbarPbiIjHOpSWFhyT6u",
+        "is_local": false,
+        "name": "Pirinski Horo",
+        "popularity": 15,
+        "preview_url": "https://p.scdn.co/mp3-preview/3329633fa42dd1d2a736bb7a8d288d9f06f4639d?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 10,
+        "type": "track",
+        "uri": "spotify:track:7BwbarPbiIjHOpSWFhyT6u"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/5j3PVTaVrMlssk4IC0kumd"
+              },
+              "href": "https://api.spotify.com/v1/artists/5j3PVTaVrMlssk4IC0kumd",
+              "id": "5j3PVTaVrMlssk4IC0kumd",
+              "name": "Bulgarian State Television Female Choir",
+              "type": "artist",
+              "uri": "spotify:artist:5j3PVTaVrMlssk4IC0kumd"
+            }
+          ],
+          "available_markets": [
+            "AR",
+            "BO",
+            "BR",
+            "CA",
+            "CL",
+            "CO",
+            "CR",
+            "EC",
+            "GT",
+            "HN",
+            "MX",
+            "NI",
+            "PA",
+            "PE",
+            "PY",
+            "SV",
+            "US",
+            "UY"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/6sq0xFq7n6ToKZjBcQvYwI"
+          },
+          "href": "https://api.spotify.com/v1/albums/6sq0xFq7n6ToKZjBcQvYwI",
+          "id": "6sq0xFq7n6ToKZjBcQvYwI",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273b36bae66deef7e133be21f40",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02b36bae66deef7e133be21f40",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851b36bae66deef7e133be21f40",
+              "width": 64
+            }
+          ],
+          "name": "Le Mystere Des Voix Bulgares",
+          "release_date": "1990",
+          "release_date_precision": "year",
+          "total_tracks": 13,
+          "type": "album",
+          "uri": "spotify:album:6sq0xFq7n6ToKZjBcQvYwI"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/5j3PVTaVrMlssk4IC0kumd"
+            },
+            "href": "https://api.spotify.com/v1/artists/5j3PVTaVrMlssk4IC0kumd",
+            "id": "5j3PVTaVrMlssk4IC0kumd",
+            "name": "Bulgarian State Television Female Choir",
+            "type": "artist",
+            "uri": "spotify:artist:5j3PVTaVrMlssk4IC0kumd"
+          }
+        ],
+        "available_markets": [
+          "AR",
+          "BO",
+          "BR",
+          "CA",
+          "CL",
+          "CO",
+          "CR",
+          "EC",
+          "GT",
+          "HN",
+          "MX",
+          "NI",
+          "PA",
+          "PE",
+          "PY",
+          "SV",
+          "US",
+          "UY"
+        ],
+        "disc_number": 1,
+        "duration_ms": 90511,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "USNO18716507"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0V9NiI2l0KEGiRu8g94owV"
+        },
+        "href": "https://api.spotify.com/v1/tracks/0V9NiI2l0KEGiRu8g94owV",
+        "id": "0V9NiI2l0KEGiRu8g94owV",
+        "is_local": false,
+        "name": "Bre_Yvance (Dancing Song)",
+        "popularity": 13,
+        "preview_url": "https://p.scdn.co/mp3-preview/c02c76c023d80a75f7ebfbc7a6d6cdb1e9d26d88?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 7,
+        "type": "track",
+        "uri": "spotify:track:0V9NiI2l0KEGiRu8g94owV"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/5j3PVTaVrMlssk4IC0kumd"
+              },
+              "href": "https://api.spotify.com/v1/artists/5j3PVTaVrMlssk4IC0kumd",
+              "id": "5j3PVTaVrMlssk4IC0kumd",
+              "name": "Bulgarian State Television Female Choir",
+              "type": "artist",
+              "uri": "spotify:artist:5j3PVTaVrMlssk4IC0kumd"
+            }
+          ],
+          "available_markets": [
+            "AR",
+            "BO",
+            "BR",
+            "CA",
+            "CL",
+            "CO",
+            "CR",
+            "EC",
+            "GT",
+            "HN",
+            "MX",
+            "NI",
+            "PA",
+            "PE",
+            "PY",
+            "SV",
+            "US",
+            "UY"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/6sq0xFq7n6ToKZjBcQvYwI"
+          },
+          "href": "https://api.spotify.com/v1/albums/6sq0xFq7n6ToKZjBcQvYwI",
+          "id": "6sq0xFq7n6ToKZjBcQvYwI",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273b36bae66deef7e133be21f40",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02b36bae66deef7e133be21f40",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851b36bae66deef7e133be21f40",
+              "width": 64
+            }
+          ],
+          "name": "Le Mystere Des Voix Bulgares",
+          "release_date": "1990",
+          "release_date_precision": "year",
+          "total_tracks": 13,
+          "type": "album",
+          "uri": "spotify:album:6sq0xFq7n6ToKZjBcQvYwI"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/5j3PVTaVrMlssk4IC0kumd"
+            },
+            "href": "https://api.spotify.com/v1/artists/5j3PVTaVrMlssk4IC0kumd",
+            "id": "5j3PVTaVrMlssk4IC0kumd",
+            "name": "Bulgarian State Television Female Choir",
+            "type": "artist",
+            "uri": "spotify:artist:5j3PVTaVrMlssk4IC0kumd"
+          }
+        ],
+        "available_markets": [
+          "AR",
+          "BO",
+          "BR",
+          "CA",
+          "CL",
+          "CO",
+          "CR",
+          "EC",
+          "GT",
+          "HN",
+          "MX",
+          "NI",
+          "PA",
+          "PE",
+          "PY",
+          "SV",
+          "US",
+          "UY"
+        ],
+        "disc_number": 1,
+        "duration_ms": 87121,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "USNO18716512"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/27TwgTbE6MuxFqqSa1A0ly"
+        },
+        "href": "https://api.spotify.com/v1/tracks/27TwgTbE6MuxFqqSa1A0ly",
+        "id": "27TwgTbE6MuxFqqSa1A0ly",
+        "is_local": false,
+        "name": "Schopska Pesen (Diaphonic Chant)",
+        "popularity": 13,
+        "preview_url": "https://p.scdn.co/mp3-preview/5b3e8573222f93ac862a72d50ed7be25134c6804?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 12,
+        "type": "track",
+        "uri": "spotify:track:27TwgTbE6MuxFqqSa1A0ly"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/3K7yFzdYiX3mpHePVKCRIg"
+              },
+              "href": "https://api.spotify.com/v1/artists/3K7yFzdYiX3mpHePVKCRIg",
+              "id": "3K7yFzdYiX3mpHePVKCRIg",
+              "name": "State Symphony Capella of Russia",
+              "type": "artist",
+              "uri": "spotify:artist:3K7yFzdYiX3mpHePVKCRIg"
+            }
+          ],
+          "available_markets": [
+            "AD",
+            "AE",
+            "AL",
+            "AR",
+            "AT",
+            "AU",
+            "BA",
+            "BE",
+            "BG",
+            "BH",
+            "BO",
+            "BR",
+            "BY",
+            "CA",
+            "CH",
+            "CL",
+            "CO",
+            "CR",
+            "CY",
+            "CZ",
+            "DE",
+            "DK",
+            "DO",
+            "DZ",
+            "EC",
+            "EE",
+            "EG",
+            "ES",
+            "FI",
+            "FR",
+            "GB",
+            "GR",
+            "GT",
+            "HK",
+            "HN",
+            "HR",
+            "HU",
+            "ID",
+            "IE",
+            "IL",
+            "IN",
+            "IS",
+            "IT",
+            "JO",
+            "JP",
+            "KW",
+            "KZ",
+            "LB",
+            "LI",
+            "LT",
+            "LU",
+            "LV",
+            "MA",
+            "MC",
+            "MD",
+            "ME",
+            "MK",
+            "MT",
+            "MX",
+            "MY",
+            "NI",
+            "NL",
+            "NO",
+            "NZ",
+            "OM",
+            "PA",
+            "PE",
+            "PH",
+            "PL",
+            "PS",
+            "PT",
+            "PY",
+            "QA",
+            "RO",
+            "RS",
+            "RU",
+            "SA",
+            "SE",
+            "SG",
+            "SI",
+            "SK",
+            "SV",
+            "TH",
+            "TN",
+            "TR",
+            "TW",
+            "UA",
+            "US",
+            "UY",
+            "VN",
+            "XK",
+            "ZA"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/4EFGKGJwLnYzR8UtsV7fWM"
+          },
+          "href": "https://api.spotify.com/v1/albums/4EFGKGJwLnYzR8UtsV7fWM",
+          "id": "4EFGKGJwLnYzR8UtsV7fWM",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b27340567e9e516b799233c7d92b",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e0240567e9e516b799233c7d92b",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d0000485140567e9e516b799233c7d92b",
+              "width": 64
+            }
+          ],
+          "name": "Sacred Treasures V: From a Russian Cathedral",
+          "release_date": "2007-10-09",
+          "release_date_precision": "day",
+          "total_tracks": 16,
+          "type": "album",
+          "uri": "spotify:album:4EFGKGJwLnYzR8UtsV7fWM"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/09wpqIzmtgm7WeqFTC0Cex"
+            },
+            "href": "https://api.spotify.com/v1/artists/09wpqIzmtgm7WeqFTC0Cex",
+            "id": "09wpqIzmtgm7WeqFTC0Cex",
+            "name": "Eva Quartet",
+            "type": "artist",
+            "uri": "spotify:artist:09wpqIzmtgm7WeqFTC0Cex"
+          }
+        ],
+        "available_markets": [
+          "AD",
+          "AE",
+          "AL",
+          "AR",
+          "AT",
+          "AU",
+          "BA",
+          "BE",
+          "BG",
+          "BH",
+          "BO",
+          "BR",
+          "BY",
+          "CA",
+          "CH",
+          "CL",
+          "CO",
+          "CR",
+          "CY",
+          "CZ",
+          "DE",
+          "DK",
+          "DO",
+          "DZ",
+          "EC",
+          "EE",
+          "EG",
+          "ES",
+          "FI",
+          "FR",
+          "GB",
+          "GR",
+          "GT",
+          "HK",
+          "HN",
+          "HR",
+          "HU",
+          "ID",
+          "IE",
+          "IL",
+          "IN",
+          "IS",
+          "IT",
+          "JO",
+          "JP",
+          "KW",
+          "KZ",
+          "LB",
+          "LI",
+          "LT",
+          "LU",
+          "LV",
+          "MA",
+          "MC",
+          "MD",
+          "ME",
+          "MK",
+          "MT",
+          "MX",
+          "MY",
+          "NI",
+          "NL",
+          "NO",
+          "NZ",
+          "OM",
+          "PA",
+          "PE",
+          "PH",
+          "PL",
+          "PS",
+          "PT",
+          "PY",
+          "QA",
+          "RO",
+          "RS",
+          "RU",
+          "SA",
+          "SE",
+          "SG",
+          "SI",
+          "SK",
+          "SV",
+          "TH",
+          "TN",
+          "TR",
+          "TW",
+          "UA",
+          "US",
+          "UY",
+          "VN",
+          "XK",
+          "ZA"
+        ],
+        "disc_number": 1,
+        "duration_ms": 131573,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "USAKS0700035"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1PoAsPseu3U2WjzcbKMylx"
+        },
+        "href": "https://api.spotify.com/v1/tracks/1PoAsPseu3U2WjzcbKMylx",
+        "id": "1PoAsPseu3U2WjzcbKMylx",
+        "is_local": false,
+        "name": "Our Father",
+        "popularity": 14,
+        "preview_url": "https://p.scdn.co/mp3-preview/0102bd77a8d9ddfa059cfe4bd425af5fe3f127d7?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 2,
+        "type": "track",
+        "uri": "spotify:track:1PoAsPseu3U2WjzcbKMylx"
+      }
+    ],
+    "limit": 20,
+    "next": "https://api.spotify.com/v1/search?query=genre%3A%22Bulgarian+Folk%22&type=track&offset=20&limit=20",
+    "offset": 0,
+    "previous": null,
+    "total": 2313
+  }
+}

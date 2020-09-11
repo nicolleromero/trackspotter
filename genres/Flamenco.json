@@ -1,0 +1,3530 @@
+{
+  "tracks": {
+    "href": "https://api.spotify.com/v1/search?query=genre%3A%22Flamenco%22&type=track&offset=0&limit=20",
+    "items": [
+      {
+        "album": {
+          "album_type": "compilation",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/3jc496ljiyrS3ECrD7QiqL"
+              },
+              "href": "https://api.spotify.com/v1/artists/3jc496ljiyrS3ECrD7QiqL",
+              "id": "3jc496ljiyrS3ECrD7QiqL",
+              "name": "Gipsy Kings",
+              "type": "artist",
+              "uri": "spotify:artist:3jc496ljiyrS3ECrD7QiqL"
+            }
+          ],
+          "available_markets": [
+            "US"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/1I1PxMVe6EXx9I3BlhQ3id"
+          },
+          "href": "https://api.spotify.com/v1/albums/1I1PxMVe6EXx9I3BlhQ3id",
+          "id": "1I1PxMVe6EXx9I3BlhQ3id",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273b05ca66ebcd3135cc47ce993",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02b05ca66ebcd3135cc47ce993",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851b05ca66ebcd3135cc47ce993",
+              "width": 64
+            }
+          ],
+          "name": "!Volare! The Very Best of the Gipsy Kings",
+          "release_date": "2000-09-05",
+          "release_date_precision": "day",
+          "total_tracks": 37,
+          "type": "album",
+          "uri": "spotify:album:1I1PxMVe6EXx9I3BlhQ3id"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/3jc496ljiyrS3ECrD7QiqL"
+            },
+            "href": "https://api.spotify.com/v1/artists/3jc496ljiyrS3ECrD7QiqL",
+            "id": "3jc496ljiyrS3ECrD7QiqL",
+            "name": "Gipsy Kings",
+            "type": "artist",
+            "uri": "spotify:artist:3jc496ljiyrS3ECrD7QiqL"
+          }
+        ],
+        "available_markets": [
+          "US"
+        ],
+        "disc_number": 1,
+        "duration_ms": 218466,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "USN018989207"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5oVs4alUctAl0B0QhWY0I2"
+        },
+        "href": "https://api.spotify.com/v1/tracks/5oVs4alUctAl0B0QhWY0I2",
+        "id": "5oVs4alUctAl0B0QhWY0I2",
+        "is_local": false,
+        "name": "Volare",
+        "popularity": 49,
+        "preview_url": "https://p.scdn.co/mp3-preview/81cf56cd8aa319fe5ee3a345e52157fa46bdf047?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 1,
+        "type": "track",
+        "uri": "spotify:track:5oVs4alUctAl0B0QhWY0I2"
+      },
+      {
+        "album": {
+          "album_type": "compilation",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/3jc496ljiyrS3ECrD7QiqL"
+              },
+              "href": "https://api.spotify.com/v1/artists/3jc496ljiyrS3ECrD7QiqL",
+              "id": "3jc496ljiyrS3ECrD7QiqL",
+              "name": "Gipsy Kings",
+              "type": "artist",
+              "uri": "spotify:artist:3jc496ljiyrS3ECrD7QiqL"
+            }
+          ],
+          "available_markets": [
+            "US"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/1I1PxMVe6EXx9I3BlhQ3id"
+          },
+          "href": "https://api.spotify.com/v1/albums/1I1PxMVe6EXx9I3BlhQ3id",
+          "id": "1I1PxMVe6EXx9I3BlhQ3id",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273b05ca66ebcd3135cc47ce993",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02b05ca66ebcd3135cc47ce993",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851b05ca66ebcd3135cc47ce993",
+              "width": 64
+            }
+          ],
+          "name": "!Volare! The Very Best of the Gipsy Kings",
+          "release_date": "2000-09-05",
+          "release_date_precision": "day",
+          "total_tracks": 37,
+          "type": "album",
+          "uri": "spotify:album:1I1PxMVe6EXx9I3BlhQ3id"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/3jc496ljiyrS3ECrD7QiqL"
+            },
+            "href": "https://api.spotify.com/v1/artists/3jc496ljiyrS3ECrD7QiqL",
+            "id": "3jc496ljiyrS3ECrD7QiqL",
+            "name": "Gipsy Kings",
+            "type": "artist",
+            "uri": "spotify:artist:3jc496ljiyrS3ECrD7QiqL"
+          }
+        ],
+        "available_markets": [
+          "US"
+        ],
+        "disc_number": 1,
+        "duration_ms": 203173,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "USN018884501"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4EveU9Zb50mjgi5avDNqlK"
+        },
+        "href": "https://api.spotify.com/v1/tracks/4EveU9Zb50mjgi5avDNqlK",
+        "id": "4EveU9Zb50mjgi5avDNqlK",
+        "is_local": false,
+        "name": "Bamboleo",
+        "popularity": 49,
+        "preview_url": "https://p.scdn.co/mp3-preview/0291528bfae455e128727dd0ba81ce1a645d7fe5?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 2,
+        "type": "track",
+        "uri": "spotify:track:4EveU9Zb50mjgi5avDNqlK"
+      },
+      {
+        "album": {
+          "album_type": "compilation",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/3jc496ljiyrS3ECrD7QiqL"
+              },
+              "href": "https://api.spotify.com/v1/artists/3jc496ljiyrS3ECrD7QiqL",
+              "id": "3jc496ljiyrS3ECrD7QiqL",
+              "name": "Gipsy Kings",
+              "type": "artist",
+              "uri": "spotify:artist:3jc496ljiyrS3ECrD7QiqL"
+            }
+          ],
+          "available_markets": [
+            "US"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/1I1PxMVe6EXx9I3BlhQ3id"
+          },
+          "href": "https://api.spotify.com/v1/albums/1I1PxMVe6EXx9I3BlhQ3id",
+          "id": "1I1PxMVe6EXx9I3BlhQ3id",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273b05ca66ebcd3135cc47ce993",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02b05ca66ebcd3135cc47ce993",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851b05ca66ebcd3135cc47ce993",
+              "width": 64
+            }
+          ],
+          "name": "!Volare! The Very Best of the Gipsy Kings",
+          "release_date": "2000-09-05",
+          "release_date_precision": "day",
+          "total_tracks": 37,
+          "type": "album",
+          "uri": "spotify:album:1I1PxMVe6EXx9I3BlhQ3id"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/3jc496ljiyrS3ECrD7QiqL"
+            },
+            "href": "https://api.spotify.com/v1/artists/3jc496ljiyrS3ECrD7QiqL",
+            "id": "3jc496ljiyrS3ECrD7QiqL",
+            "name": "Gipsy Kings",
+            "type": "artist",
+            "uri": "spotify:artist:3jc496ljiyrS3ECrD7QiqL"
+          }
+        ],
+        "available_markets": [
+          "US"
+        ],
+        "disc_number": 1,
+        "duration_ms": 346760,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "USNO10054104"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4Rvhe8O90hFIExTJkdrRPM"
+        },
+        "href": "https://api.spotify.com/v1/tracks/4Rvhe8O90hFIExTJkdrRPM",
+        "id": "4Rvhe8O90hFIExTJkdrRPM",
+        "is_local": false,
+        "name": "Hotel California (Spanish Mix)",
+        "popularity": 48,
+        "preview_url": "https://p.scdn.co/mp3-preview/8ba856021beba6540ee2e5c498f1e336d3d7a4a9?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 37,
+        "type": "track",
+        "uri": "spotify:track:4Rvhe8O90hFIExTJkdrRPM"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/7vX3cMVyW8gtDA4y855ynF"
+              },
+              "href": "https://api.spotify.com/v1/artists/7vX3cMVyW8gtDA4y855ynF",
+              "id": "7vX3cMVyW8gtDA4y855ynF",
+              "name": "Rodrigo y Gabriela",
+              "type": "artist",
+              "uri": "spotify:artist:7vX3cMVyW8gtDA4y855ynF"
+            }
+          ],
+          "available_markets": [
+            "MX",
+            "US"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/3iqyQHFVWrmx4rjWRJXCNg"
+          },
+          "href": "https://api.spotify.com/v1/albums/3iqyQHFVWrmx4rjWRJXCNg",
+          "id": "3iqyQHFVWrmx4rjWRJXCNg",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273803db1edc86af06ed7b3df0c",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02803db1edc86af06ed7b3df0c",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851803db1edc86af06ed7b3df0c",
+              "width": 64
+            }
+          ],
+          "name": "Rodrigo y Gabriela",
+          "release_date": "2006-10-03",
+          "release_date_precision": "day",
+          "total_tracks": 9,
+          "type": "album",
+          "uri": "spotify:album:3iqyQHFVWrmx4rjWRJXCNg"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/7vX3cMVyW8gtDA4y855ynF"
+            },
+            "href": "https://api.spotify.com/v1/artists/7vX3cMVyW8gtDA4y855ynF",
+            "id": "7vX3cMVyW8gtDA4y855ynF",
+            "name": "Rodrigo y Gabriela",
+            "type": "artist",
+            "uri": "spotify:artist:7vX3cMVyW8gtDA4y855ynF"
+          }
+        ],
+        "available_markets": [
+          "MX",
+          "US"
+        ],
+        "disc_number": 1,
+        "duration_ms": 205800,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "IEACJ0400170"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0nNwfRyw0eY323NMkBM0y8"
+        },
+        "href": "https://api.spotify.com/v1/tracks/0nNwfRyw0eY323NMkBM0y8",
+        "id": "0nNwfRyw0eY323NMkBM0y8",
+        "is_local": false,
+        "name": "Tamac\u00fan",
+        "popularity": 48,
+        "preview_url": "https://p.scdn.co/mp3-preview/08c4ced0bf0b25b56a01ca2b81e150754da14ce7?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 1,
+        "type": "track",
+        "uri": "spotify:track:0nNwfRyw0eY323NMkBM0y8"
+      },
+      {
+        "album": {
+          "album_type": "compilation",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/3jc496ljiyrS3ECrD7QiqL"
+              },
+              "href": "https://api.spotify.com/v1/artists/3jc496ljiyrS3ECrD7QiqL",
+              "id": "3jc496ljiyrS3ECrD7QiqL",
+              "name": "Gipsy Kings",
+              "type": "artist",
+              "uri": "spotify:artist:3jc496ljiyrS3ECrD7QiqL"
+            }
+          ],
+          "available_markets": [
+            "US"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/6GGrPncyfzwZwfgJEwTodp"
+          },
+          "href": "https://api.spotify.com/v1/albums/6GGrPncyfzwZwfgJEwTodp",
+          "id": "6GGrPncyfzwZwfgJEwTodp",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273adaea85b0c44448820de9b18",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02adaea85b0c44448820de9b18",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851adaea85b0c44448820de9b18",
+              "width": 64
+            }
+          ],
+          "name": "Best of Gipsy Kings",
+          "release_date": "1995-03-07",
+          "release_date_precision": "day",
+          "total_tracks": 18,
+          "type": "album",
+          "uri": "spotify:album:6GGrPncyfzwZwfgJEwTodp"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/3jc496ljiyrS3ECrD7QiqL"
+            },
+            "href": "https://api.spotify.com/v1/artists/3jc496ljiyrS3ECrD7QiqL",
+            "id": "3jc496ljiyrS3ECrD7QiqL",
+            "name": "Gipsy Kings",
+            "type": "artist",
+            "uri": "spotify:artist:3jc496ljiyrS3ECrD7QiqL"
+          },
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/7yLLhvAgtCLYy4jQjdvim8"
+            },
+            "href": "https://api.spotify.com/v1/artists/7yLLhvAgtCLYy4jQjdvim8",
+            "id": "7yLLhvAgtCLYy4jQjdvim8",
+            "name": "Jahloul Bouchikhi",
+            "type": "artist",
+            "uri": "spotify:artist:7yLLhvAgtCLYy4jQjdvim8"
+          },
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/2FmL7BOPvzROdHniBnTlVF"
+            },
+            "href": "https://api.spotify.com/v1/artists/2FmL7BOPvzROdHniBnTlVF",
+            "id": "2FmL7BOPvzROdHniBnTlVF",
+            "name": "Los Reyes",
+            "type": "artist",
+            "uri": "spotify:artist:2FmL7BOPvzROdHniBnTlVF"
+          },
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/6uZpGDWYfiRxPgQbNKfT9r"
+            },
+            "href": "https://api.spotify.com/v1/artists/6uZpGDWYfiRxPgQbNKfT9r",
+            "id": "6uZpGDWYfiRxPgQbNKfT9r",
+            "name": "N. Reyes",
+            "type": "artist",
+            "uri": "spotify:artist:6uZpGDWYfiRxPgQbNKfT9r"
+          },
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/38yoZ5HAzACzU2fNLd8CqZ"
+            },
+            "href": "https://api.spotify.com/v1/artists/38yoZ5HAzACzU2fNLd8CqZ",
+            "id": "38yoZ5HAzACzU2fNLd8CqZ",
+            "name": "T. Baliardo",
+            "type": "artist",
+            "uri": "spotify:artist:38yoZ5HAzACzU2fNLd8CqZ"
+          }
+        ],
+        "available_markets": [
+          "US"
+        ],
+        "disc_number": 1,
+        "duration_ms": 204626,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "USNO11200228"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0Cty49mOUCYrNMScodabdc"
+        },
+        "href": "https://api.spotify.com/v1/tracks/0Cty49mOUCYrNMScodabdc",
+        "id": "0Cty49mOUCYrNMScodabdc",
+        "is_local": false,
+        "name": "Djobi Djoba",
+        "popularity": 46,
+        "preview_url": "https://p.scdn.co/mp3-preview/6fe46b0bed9476c6ce38c50ad56db9bd224e5d6e?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 1,
+        "type": "track",
+        "uri": "spotify:track:0Cty49mOUCYrNMScodabdc"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/05xSLrRgGwm2nCH2SmnNMW"
+              },
+              "href": "https://api.spotify.com/v1/artists/05xSLrRgGwm2nCH2SmnNMW",
+              "id": "05xSLrRgGwm2nCH2SmnNMW",
+              "name": "Rosario",
+              "type": "artist",
+              "uri": "spotify:artist:05xSLrRgGwm2nCH2SmnNMW"
+            }
+          ],
+          "available_markets": [
+            "AD",
+            "AE",
+            "AL",
+            "AR",
+            "AT",
+            "AU",
+            "BA",
+            "BE",
+            "BG",
+            "BH",
+            "BO",
+            "BR",
+            "BY",
+            "CA",
+            "CH",
+            "CL",
+            "CO",
+            "CR",
+            "CY",
+            "CZ",
+            "DE",
+            "DK",
+            "DO",
+            "DZ",
+            "EC",
+            "EE",
+            "EG",
+            "ES",
+            "FI",
+            "FR",
+            "GB",
+            "GR",
+            "GT",
+            "HK",
+            "HN",
+            "HR",
+            "HU",
+            "ID",
+            "IE",
+            "IL",
+            "IN",
+            "IS",
+            "IT",
+            "JO",
+            "JP",
+            "KW",
+            "KZ",
+            "LB",
+            "LI",
+            "LT",
+            "LU",
+            "LV",
+            "MA",
+            "MC",
+            "MD",
+            "ME",
+            "MK",
+            "MT",
+            "MX",
+            "MY",
+            "NI",
+            "NL",
+            "NO",
+            "NZ",
+            "OM",
+            "PA",
+            "PE",
+            "PH",
+            "PL",
+            "PS",
+            "PT",
+            "PY",
+            "QA",
+            "RO",
+            "RS",
+            "RU",
+            "SA",
+            "SE",
+            "SG",
+            "SI",
+            "SK",
+            "SV",
+            "TH",
+            "TN",
+            "TR",
+            "TW",
+            "UA",
+            "US",
+            "UY",
+            "VN",
+            "XK",
+            "ZA"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/4lqmri54Jap1lOS7FthZrh"
+          },
+          "href": "https://api.spotify.com/v1/albums/4lqmri54Jap1lOS7FthZrh",
+          "id": "4lqmri54Jap1lOS7FthZrh",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b2736fa6be5f5eb1efe8c20697c8",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e026fa6be5f5eb1efe8c20697c8",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d000048516fa6be5f5eb1efe8c20697c8",
+              "width": 64
+            }
+          ],
+          "name": "Mucho Por Vivir",
+          "release_date": "1996-10-18",
+          "release_date_precision": "day",
+          "total_tracks": 12,
+          "type": "album",
+          "uri": "spotify:album:4lqmri54Jap1lOS7FthZrh"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/05xSLrRgGwm2nCH2SmnNMW"
+            },
+            "href": "https://api.spotify.com/v1/artists/05xSLrRgGwm2nCH2SmnNMW",
+            "id": "05xSLrRgGwm2nCH2SmnNMW",
+            "name": "Rosario",
+            "type": "artist",
+            "uri": "spotify:artist:05xSLrRgGwm2nCH2SmnNMW"
+          }
+        ],
+        "available_markets": [
+          "AD",
+          "AE",
+          "AL",
+          "AR",
+          "AT",
+          "AU",
+          "BA",
+          "BE",
+          "BG",
+          "BH",
+          "BO",
+          "BR",
+          "BY",
+          "CA",
+          "CH",
+          "CL",
+          "CO",
+          "CR",
+          "CY",
+          "CZ",
+          "DE",
+          "DK",
+          "DO",
+          "DZ",
+          "EC",
+          "EE",
+          "EG",
+          "ES",
+          "FI",
+          "FR",
+          "GB",
+          "GR",
+          "GT",
+          "HK",
+          "HN",
+          "HR",
+          "HU",
+          "ID",
+          "IE",
+          "IL",
+          "IN",
+          "IS",
+          "IT",
+          "JO",
+          "JP",
+          "KW",
+          "KZ",
+          "LB",
+          "LI",
+          "LT",
+          "LU",
+          "LV",
+          "MA",
+          "MC",
+          "MD",
+          "ME",
+          "MK",
+          "MT",
+          "MX",
+          "MY",
+          "NI",
+          "NL",
+          "NO",
+          "NZ",
+          "OM",
+          "PA",
+          "PE",
+          "PH",
+          "PL",
+          "PS",
+          "PT",
+          "PY",
+          "QA",
+          "RO",
+          "RS",
+          "RU",
+          "SA",
+          "SE",
+          "SG",
+          "SI",
+          "SK",
+          "SV",
+          "TH",
+          "TN",
+          "TR",
+          "TW",
+          "UA",
+          "US",
+          "UY",
+          "VN",
+          "XK",
+          "ZA"
+        ],
+        "disc_number": 1,
+        "duration_ms": 229386,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "ES5119600071"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1MO5KuLnSaY1dlkWGDjHkT"
+        },
+        "href": "https://api.spotify.com/v1/tracks/1MO5KuLnSaY1dlkWGDjHkT",
+        "id": "1MO5KuLnSaY1dlkWGDjHkT",
+        "is_local": false,
+        "name": "\u00a1Que Bonito!",
+        "popularity": 66,
+        "preview_url": "https://p.scdn.co/mp3-preview/ccb04d23465f00bf707944d853d930c737661fcf?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 5,
+        "type": "track",
+        "uri": "spotify:track:1MO5KuLnSaY1dlkWGDjHkT"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/3h8OjAdgYXVRoMZ8jFd6Uw"
+              },
+              "href": "https://api.spotify.com/v1/artists/3h8OjAdgYXVRoMZ8jFd6Uw",
+              "id": "3h8OjAdgYXVRoMZ8jFd6Uw",
+              "name": "Paco de Luc\u00eda",
+              "type": "artist",
+              "uri": "spotify:artist:3h8OjAdgYXVRoMZ8jFd6Uw"
+            }
+          ],
+          "available_markets": [
+            "CA",
+            "MX",
+            "US"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/1qJn2EkYTIIeq3wwvmbf7d"
+          },
+          "href": "https://api.spotify.com/v1/albums/1qJn2EkYTIIeq3wwvmbf7d",
+          "id": "1qJn2EkYTIIeq3wwvmbf7d",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273d4182c4a120b0cf7ec5d399c",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02d4182c4a120b0cf7ec5d399c",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851d4182c4a120b0cf7ec5d399c",
+              "width": 64
+            }
+          ],
+          "name": "Fuente Y Caudal",
+          "release_date": "1973-01-01",
+          "release_date_precision": "day",
+          "total_tracks": 8,
+          "type": "album",
+          "uri": "spotify:album:1qJn2EkYTIIeq3wwvmbf7d"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/3h8OjAdgYXVRoMZ8jFd6Uw"
+            },
+            "href": "https://api.spotify.com/v1/artists/3h8OjAdgYXVRoMZ8jFd6Uw",
+            "id": "3h8OjAdgYXVRoMZ8jFd6Uw",
+            "name": "Paco de Luc\u00eda",
+            "type": "artist",
+            "uri": "spotify:artist:3h8OjAdgYXVRoMZ8jFd6Uw"
+          }
+        ],
+        "available_markets": [
+          "CA",
+          "MX",
+          "US"
+        ],
+        "disc_number": 1,
+        "duration_ms": 361866,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "ES5009500167"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3Fgk17TfdjXWFroJy29pXH"
+        },
+        "href": "https://api.spotify.com/v1/tracks/3Fgk17TfdjXWFroJy29pXH",
+        "id": "3Fgk17TfdjXWFroJy29pXH",
+        "is_local": false,
+        "name": "Entre Dos Aguas - Instrumental",
+        "popularity": 47,
+        "preview_url": null,
+        "track_number": 1,
+        "type": "track",
+        "uri": "spotify:track:3Fgk17TfdjXWFroJy29pXH"
+      },
+      {
+        "album": {
+          "album_type": "single",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/3lY9Fxceu60W1rbon7PkuF"
+              },
+              "href": "https://api.spotify.com/v1/artists/3lY9Fxceu60W1rbon7PkuF",
+              "id": "3lY9Fxceu60W1rbon7PkuF",
+              "name": "Omar Montes",
+              "type": "artist",
+              "uri": "spotify:artist:3lY9Fxceu60W1rbon7PkuF"
+            },
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/4F4pp8NUW08JuXwnoxglpN"
+              },
+              "href": "https://api.spotify.com/v1/artists/4F4pp8NUW08JuXwnoxglpN",
+              "id": "4F4pp8NUW08JuXwnoxglpN",
+              "name": "Bad Gyal",
+              "type": "artist",
+              "uri": "spotify:artist:4F4pp8NUW08JuXwnoxglpN"
+            }
+          ],
+          "available_markets": [
+            "AD",
+            "AE",
+            "AL",
+            "AR",
+            "AT",
+            "AU",
+            "BA",
+            "BE",
+            "BG",
+            "BH",
+            "BO",
+            "BR",
+            "BY",
+            "CA",
+            "CH",
+            "CL",
+            "CO",
+            "CR",
+            "CY",
+            "CZ",
+            "DE",
+            "DK",
+            "DO",
+            "DZ",
+            "EC",
+            "EE",
+            "EG",
+            "ES",
+            "FI",
+            "FR",
+            "GB",
+            "GR",
+            "GT",
+            "HK",
+            "HN",
+            "HR",
+            "HU",
+            "ID",
+            "IE",
+            "IL",
+            "IN",
+            "IS",
+            "IT",
+            "JO",
+            "JP",
+            "KW",
+            "KZ",
+            "LB",
+            "LI",
+            "LT",
+            "LU",
+            "LV",
+            "MA",
+            "MC",
+            "MD",
+            "ME",
+            "MK",
+            "MT",
+            "MX",
+            "MY",
+            "NI",
+            "NL",
+            "NO",
+            "NZ",
+            "OM",
+            "PA",
+            "PE",
+            "PH",
+            "PL",
+            "PS",
+            "PT",
+            "PY",
+            "QA",
+            "RO",
+            "RS",
+            "RU",
+            "SA",
+            "SE",
+            "SG",
+            "SI",
+            "SK",
+            "SV",
+            "TH",
+            "TN",
+            "TR",
+            "TW",
+            "UA",
+            "US",
+            "UY",
+            "VN",
+            "XK",
+            "ZA"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/6pEhppkTzrKKGkQw4fNqOD"
+          },
+          "href": "https://api.spotify.com/v1/albums/6pEhppkTzrKKGkQw4fNqOD",
+          "id": "6pEhppkTzrKKGkQw4fNqOD",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b2732b0e055ac084cde302372d3b",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e022b0e055ac084cde302372d3b",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d000048512b0e055ac084cde302372d3b",
+              "width": 64
+            }
+          ],
+          "name": "Alocao (With Bad Gyal)",
+          "release_date": "2019-10-24",
+          "release_date_precision": "day",
+          "total_tracks": 1,
+          "type": "album",
+          "uri": "spotify:album:6pEhppkTzrKKGkQw4fNqOD"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/3lY9Fxceu60W1rbon7PkuF"
+            },
+            "href": "https://api.spotify.com/v1/artists/3lY9Fxceu60W1rbon7PkuF",
+            "id": "3lY9Fxceu60W1rbon7PkuF",
+            "name": "Omar Montes",
+            "type": "artist",
+            "uri": "spotify:artist:3lY9Fxceu60W1rbon7PkuF"
+          },
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/4F4pp8NUW08JuXwnoxglpN"
+            },
+            "href": "https://api.spotify.com/v1/artists/4F4pp8NUW08JuXwnoxglpN",
+            "id": "4F4pp8NUW08JuXwnoxglpN",
+            "name": "Bad Gyal",
+            "type": "artist",
+            "uri": "spotify:artist:4F4pp8NUW08JuXwnoxglpN"
+          }
+        ],
+        "available_markets": [
+          "AD",
+          "AE",
+          "AL",
+          "AR",
+          "AT",
+          "AU",
+          "BA",
+          "BE",
+          "BG",
+          "BH",
+          "BO",
+          "BR",
+          "BY",
+          "CA",
+          "CH",
+          "CL",
+          "CO",
+          "CR",
+          "CY",
+          "CZ",
+          "DE",
+          "DK",
+          "DO",
+          "DZ",
+          "EC",
+          "EE",
+          "EG",
+          "ES",
+          "FI",
+          "FR",
+          "GB",
+          "GR",
+          "GT",
+          "HK",
+          "HN",
+          "HR",
+          "HU",
+          "ID",
+          "IE",
+          "IL",
+          "IN",
+          "IS",
+          "IT",
+          "JO",
+          "JP",
+          "KW",
+          "KZ",
+          "LB",
+          "LI",
+          "LT",
+          "LU",
+          "LV",
+          "MA",
+          "MC",
+          "MD",
+          "ME",
+          "MK",
+          "MT",
+          "MX",
+          "MY",
+          "NI",
+          "NL",
+          "NO",
+          "NZ",
+          "OM",
+          "PA",
+          "PE",
+          "PH",
+          "PL",
+          "PS",
+          "PT",
+          "PY",
+          "QA",
+          "RO",
+          "RS",
+          "RU",
+          "SA",
+          "SE",
+          "SG",
+          "SI",
+          "SK",
+          "SV",
+          "TH",
+          "TN",
+          "TR",
+          "TW",
+          "UA",
+          "US",
+          "UY",
+          "VN",
+          "XK",
+          "ZA"
+        ],
+        "disc_number": 1,
+        "duration_ms": 209320,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "USUM71920639"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6RyuoOJXNzlVWpfC5xQyeI"
+        },
+        "href": "https://api.spotify.com/v1/tracks/6RyuoOJXNzlVWpfC5xQyeI",
+        "id": "6RyuoOJXNzlVWpfC5xQyeI",
+        "is_local": false,
+        "name": "Alocao (With Bad Gyal)",
+        "popularity": 72,
+        "preview_url": null,
+        "track_number": 1,
+        "type": "track",
+        "uri": "spotify:track:6RyuoOJXNzlVWpfC5xQyeI"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/0LyfQWJT6nXafLPZqxe9Of"
+              },
+              "href": "https://api.spotify.com/v1/artists/0LyfQWJT6nXafLPZqxe9Of",
+              "id": "0LyfQWJT6nXafLPZqxe9Of",
+              "name": "Various Artists",
+              "type": "artist",
+              "uri": "spotify:artist:0LyfQWJT6nXafLPZqxe9Of"
+            }
+          ],
+          "available_markets": [
+            "AE",
+            "AL",
+            "AR",
+            "AT",
+            "AU",
+            "BA",
+            "BE",
+            "BG",
+            "BH",
+            "BO",
+            "BR",
+            "BY",
+            "CA",
+            "CH",
+            "CL",
+            "CO",
+            "CR",
+            "CY",
+            "CZ",
+            "DE",
+            "DK",
+            "DO",
+            "DZ",
+            "EC",
+            "EE",
+            "EG",
+            "ES",
+            "FI",
+            "FR",
+            "GB",
+            "GR",
+            "GT",
+            "HK",
+            "HN",
+            "HR",
+            "HU",
+            "ID",
+            "IE",
+            "IL",
+            "IN",
+            "IS",
+            "IT",
+            "JP",
+            "KW",
+            "LB",
+            "LT",
+            "LU",
+            "LV",
+            "MA",
+            "ME",
+            "MK",
+            "MT",
+            "MX",
+            "MY",
+            "NI",
+            "NL",
+            "NO",
+            "NZ",
+            "OM",
+            "PA",
+            "PE",
+            "PH",
+            "PL",
+            "PT",
+            "PY",
+            "QA",
+            "RO",
+            "RS",
+            "RU",
+            "SA",
+            "SE",
+            "SG",
+            "SI",
+            "SK",
+            "SV",
+            "TH",
+            "TN",
+            "TR",
+            "TW",
+            "UA",
+            "US",
+            "UY",
+            "VN",
+            "XK",
+            "ZA"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/1N2VPNOvkoHPnW6yA04RHG"
+          },
+          "href": "https://api.spotify.com/v1/albums/1N2VPNOvkoHPnW6yA04RHG",
+          "id": "1N2VPNOvkoHPnW6yA04RHG",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273c89b90b22f0acb494e590f7d",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02c89b90b22f0acb494e590f7d",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851c89b90b22f0acb494e590f7d",
+              "width": 64
+            }
+          ],
+          "name": "Me Encantan los Cl\u00e1sicos",
+          "release_date": "2020-07-31",
+          "release_date_precision": "day",
+          "total_tracks": 89,
+          "type": "album",
+          "uri": "spotify:album:1N2VPNOvkoHPnW6yA04RHG"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/05xSLrRgGwm2nCH2SmnNMW"
+            },
+            "href": "https://api.spotify.com/v1/artists/05xSLrRgGwm2nCH2SmnNMW",
+            "id": "05xSLrRgGwm2nCH2SmnNMW",
+            "name": "Rosario",
+            "type": "artist",
+            "uri": "spotify:artist:05xSLrRgGwm2nCH2SmnNMW"
+          }
+        ],
+        "available_markets": [
+          "AE",
+          "AL",
+          "AR",
+          "AT",
+          "AU",
+          "BA",
+          "BE",
+          "BG",
+          "BH",
+          "BO",
+          "BR",
+          "BY",
+          "CA",
+          "CH",
+          "CL",
+          "CO",
+          "CR",
+          "CY",
+          "CZ",
+          "DE",
+          "DK",
+          "DO",
+          "DZ",
+          "EC",
+          "EE",
+          "EG",
+          "ES",
+          "FI",
+          "FR",
+          "GB",
+          "GR",
+          "GT",
+          "HK",
+          "HN",
+          "HR",
+          "HU",
+          "ID",
+          "IE",
+          "IL",
+          "IN",
+          "IS",
+          "IT",
+          "JP",
+          "KW",
+          "LB",
+          "LT",
+          "LU",
+          "LV",
+          "MA",
+          "ME",
+          "MK",
+          "MT",
+          "MX",
+          "MY",
+          "NI",
+          "NL",
+          "NO",
+          "NZ",
+          "OM",
+          "PA",
+          "PE",
+          "PH",
+          "PL",
+          "PT",
+          "PY",
+          "QA",
+          "RO",
+          "RS",
+          "RU",
+          "SA",
+          "SE",
+          "SG",
+          "SI",
+          "SK",
+          "SV",
+          "TH",
+          "TN",
+          "TR",
+          "TW",
+          "UA",
+          "US",
+          "UY",
+          "VN",
+          "XK",
+          "ZA"
+        ],
+        "disc_number": 1,
+        "duration_ms": 224000,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "ES5700800729"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6bSJxAo5pjZqJmHAwGsV98"
+        },
+        "href": "https://api.spotify.com/v1/tracks/6bSJxAo5pjZqJmHAwGsV98",
+        "id": "6bSJxAo5pjZqJmHAwGsV98",
+        "is_local": false,
+        "name": "No Dudar\u00eda",
+        "popularity": 13,
+        "preview_url": null,
+        "track_number": 14,
+        "type": "track",
+        "uri": "spotify:track:6bSJxAo5pjZqJmHAwGsV98"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/0LyfQWJT6nXafLPZqxe9Of"
+              },
+              "href": "https://api.spotify.com/v1/artists/0LyfQWJT6nXafLPZqxe9Of",
+              "id": "0LyfQWJT6nXafLPZqxe9Of",
+              "name": "Various Artists",
+              "type": "artist",
+              "uri": "spotify:artist:0LyfQWJT6nXafLPZqxe9Of"
+            }
+          ],
+          "available_markets": [
+            "AE",
+            "AL",
+            "AR",
+            "AT",
+            "AU",
+            "BA",
+            "BE",
+            "BG",
+            "BH",
+            "BO",
+            "BR",
+            "BY",
+            "CA",
+            "CH",
+            "CL",
+            "CO",
+            "CR",
+            "CY",
+            "CZ",
+            "DE",
+            "DK",
+            "DO",
+            "DZ",
+            "EC",
+            "EE",
+            "EG",
+            "ES",
+            "FI",
+            "FR",
+            "GB",
+            "GR",
+            "GT",
+            "HK",
+            "HN",
+            "HR",
+            "HU",
+            "ID",
+            "IE",
+            "IL",
+            "IN",
+            "IS",
+            "IT",
+            "JP",
+            "KW",
+            "LB",
+            "LT",
+            "LU",
+            "LV",
+            "MA",
+            "ME",
+            "MK",
+            "MT",
+            "MX",
+            "MY",
+            "NI",
+            "NL",
+            "NO",
+            "NZ",
+            "OM",
+            "PA",
+            "PE",
+            "PH",
+            "PL",
+            "PT",
+            "PY",
+            "QA",
+            "RO",
+            "RS",
+            "RU",
+            "SA",
+            "SE",
+            "SG",
+            "SI",
+            "SK",
+            "SV",
+            "TH",
+            "TN",
+            "TR",
+            "TW",
+            "UA",
+            "US",
+            "UY",
+            "VN",
+            "XK",
+            "ZA"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/1N2VPNOvkoHPnW6yA04RHG"
+          },
+          "href": "https://api.spotify.com/v1/albums/1N2VPNOvkoHPnW6yA04RHG",
+          "id": "1N2VPNOvkoHPnW6yA04RHG",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273c89b90b22f0acb494e590f7d",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02c89b90b22f0acb494e590f7d",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851c89b90b22f0acb494e590f7d",
+              "width": 64
+            }
+          ],
+          "name": "Me Encantan los Cl\u00e1sicos",
+          "release_date": "2020-07-31",
+          "release_date_precision": "day",
+          "total_tracks": 89,
+          "type": "album",
+          "uri": "spotify:album:1N2VPNOvkoHPnW6yA04RHG"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/05xSLrRgGwm2nCH2SmnNMW"
+            },
+            "href": "https://api.spotify.com/v1/artists/05xSLrRgGwm2nCH2SmnNMW",
+            "id": "05xSLrRgGwm2nCH2SmnNMW",
+            "name": "Rosario",
+            "type": "artist",
+            "uri": "spotify:artist:05xSLrRgGwm2nCH2SmnNMW"
+          },
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/1vM1i2OSCvdrAp4mmoTIER"
+            },
+            "href": "https://api.spotify.com/v1/artists/1vM1i2OSCvdrAp4mmoTIER",
+            "id": "1vM1i2OSCvdrAp4mmoTIER",
+            "name": "Adrian",
+            "type": "artist",
+            "uri": "spotify:artist:1vM1i2OSCvdrAp4mmoTIER"
+          }
+        ],
+        "available_markets": [
+          "AE",
+          "AL",
+          "AR",
+          "AT",
+          "AU",
+          "BA",
+          "BE",
+          "BG",
+          "BH",
+          "BO",
+          "BR",
+          "BY",
+          "CA",
+          "CH",
+          "CL",
+          "CO",
+          "CR",
+          "CY",
+          "CZ",
+          "DE",
+          "DK",
+          "DO",
+          "DZ",
+          "EC",
+          "EE",
+          "EG",
+          "ES",
+          "FI",
+          "FR",
+          "GB",
+          "GR",
+          "GT",
+          "HK",
+          "HN",
+          "HR",
+          "HU",
+          "ID",
+          "IE",
+          "IL",
+          "IN",
+          "IS",
+          "IT",
+          "JP",
+          "KW",
+          "LB",
+          "LT",
+          "LU",
+          "LV",
+          "MA",
+          "ME",
+          "MK",
+          "MT",
+          "MX",
+          "MY",
+          "NI",
+          "NL",
+          "NO",
+          "NZ",
+          "OM",
+          "PA",
+          "PE",
+          "PH",
+          "PL",
+          "PT",
+          "PY",
+          "QA",
+          "RO",
+          "RS",
+          "RU",
+          "SA",
+          "SE",
+          "SG",
+          "SI",
+          "SK",
+          "SV",
+          "TH",
+          "TN",
+          "TR",
+          "TW",
+          "UA",
+          "US",
+          "UY",
+          "VN",
+          "XK",
+          "ZA"
+        ],
+        "disc_number": 1,
+        "duration_ms": 272659,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "ES5701700788"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4bUkPnIqtencpClGoNo0vB"
+        },
+        "href": "https://api.spotify.com/v1/tracks/4bUkPnIqtencpClGoNo0vB",
+        "id": "4bUkPnIqtencpClGoNo0vB",
+        "is_local": false,
+        "name": "Pa' Querer - En Directo En El Teatro Real / 2017",
+        "popularity": 0,
+        "preview_url": null,
+        "track_number": 35,
+        "type": "track",
+        "uri": "spotify:track:4bUkPnIqtencpClGoNo0vB"
+      },
+      {
+        "album": {
+          "album_type": "compilation",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/3jc496ljiyrS3ECrD7QiqL"
+              },
+              "href": "https://api.spotify.com/v1/artists/3jc496ljiyrS3ECrD7QiqL",
+              "id": "3jc496ljiyrS3ECrD7QiqL",
+              "name": "Gipsy Kings",
+              "type": "artist",
+              "uri": "spotify:artist:3jc496ljiyrS3ECrD7QiqL"
+            }
+          ],
+          "available_markets": [
+            "US"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/1I1PxMVe6EXx9I3BlhQ3id"
+          },
+          "href": "https://api.spotify.com/v1/albums/1I1PxMVe6EXx9I3BlhQ3id",
+          "id": "1I1PxMVe6EXx9I3BlhQ3id",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273b05ca66ebcd3135cc47ce993",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02b05ca66ebcd3135cc47ce993",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851b05ca66ebcd3135cc47ce993",
+              "width": 64
+            }
+          ],
+          "name": "!Volare! The Very Best of the Gipsy Kings",
+          "release_date": "2000-09-05",
+          "release_date_precision": "day",
+          "total_tracks": 37,
+          "type": "album",
+          "uri": "spotify:album:1I1PxMVe6EXx9I3BlhQ3id"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/3jc496ljiyrS3ECrD7QiqL"
+            },
+            "href": "https://api.spotify.com/v1/artists/3jc496ljiyrS3ECrD7QiqL",
+            "id": "3jc496ljiyrS3ECrD7QiqL",
+            "name": "Gipsy Kings",
+            "type": "artist",
+            "uri": "spotify:artist:3jc496ljiyrS3ECrD7QiqL"
+          }
+        ],
+        "available_markets": [
+          "US"
+        ],
+        "disc_number": 1,
+        "duration_ms": 183760,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "USN018884504"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3dvHSqDw3ZFBpNeCpYYc5W"
+        },
+        "href": "https://api.spotify.com/v1/tracks/3dvHSqDw3ZFBpNeCpYYc5W",
+        "id": "3dvHSqDw3ZFBpNeCpYYc5W",
+        "is_local": false,
+        "name": "Bem, Bem, Maria",
+        "popularity": 41,
+        "preview_url": "https://p.scdn.co/mp3-preview/a9706e6bf8cf8fa450b80a26797708fb4443c7b3?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 4,
+        "type": "track",
+        "uri": "spotify:track:3dvHSqDw3ZFBpNeCpYYc5W"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/3jc496ljiyrS3ECrD7QiqL"
+              },
+              "href": "https://api.spotify.com/v1/artists/3jc496ljiyrS3ECrD7QiqL",
+              "id": "3jc496ljiyrS3ECrD7QiqL",
+              "name": "Gipsy Kings",
+              "type": "artist",
+              "uri": "spotify:artist:3jc496ljiyrS3ECrD7QiqL"
+            }
+          ],
+          "available_markets": [
+            "US"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/2QhTsdMvOXkvVBzGRKMh5y"
+          },
+          "href": "https://api.spotify.com/v1/albums/2QhTsdMvOXkvVBzGRKMh5y",
+          "id": "2QhTsdMvOXkvVBzGRKMh5y",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b2738ecd02effc75124294561b49",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e028ecd02effc75124294561b49",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d000048518ecd02effc75124294561b49",
+              "width": 64
+            }
+          ],
+          "name": "Este Mundo",
+          "release_date": "1991-06-28",
+          "release_date_precision": "day",
+          "total_tracks": 12,
+          "type": "album",
+          "uri": "spotify:album:2QhTsdMvOXkvVBzGRKMh5y"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/3jc496ljiyrS3ECrD7QiqL"
+            },
+            "href": "https://api.spotify.com/v1/artists/3jc496ljiyrS3ECrD7QiqL",
+            "id": "3jc496ljiyrS3ECrD7QiqL",
+            "name": "Gipsy Kings",
+            "type": "artist",
+            "uri": "spotify:artist:3jc496ljiyrS3ECrD7QiqL"
+          }
+        ],
+        "available_markets": [
+          "US"
+        ],
+        "disc_number": 1,
+        "duration_ms": 224066,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "USN019117901"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4JWaICMdxnkw9LC578K0Bp"
+        },
+        "href": "https://api.spotify.com/v1/tracks/4JWaICMdxnkw9LC578K0Bp",
+        "id": "4JWaICMdxnkw9LC578K0Bp",
+        "is_local": false,
+        "name": "Baila Me",
+        "popularity": 41,
+        "preview_url": "https://p.scdn.co/mp3-preview/15ab05c380058bf2ae83ed2d364c6192bfa885d2?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 1,
+        "type": "track",
+        "uri": "spotify:track:4JWaICMdxnkw9LC578K0Bp"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/3bO8GsqYe5H4xTkcP5ZUZm"
+              },
+              "href": "https://api.spotify.com/v1/artists/3bO8GsqYe5H4xTkcP5ZUZm",
+              "id": "3bO8GsqYe5H4xTkcP5ZUZm",
+              "name": "Johannes Linstead",
+              "type": "artist",
+              "uri": "spotify:artist:3bO8GsqYe5H4xTkcP5ZUZm"
+            }
+          ],
+          "available_markets": [
+            "AD",
+            "AE",
+            "AL",
+            "AR",
+            "AT",
+            "AU",
+            "BA",
+            "BE",
+            "BG",
+            "BH",
+            "BO",
+            "BR",
+            "BY",
+            "CA",
+            "CH",
+            "CL",
+            "CO",
+            "CR",
+            "CY",
+            "CZ",
+            "DE",
+            "DK",
+            "DO",
+            "DZ",
+            "EC",
+            "EE",
+            "EG",
+            "ES",
+            "FI",
+            "FR",
+            "GB",
+            "GR",
+            "GT",
+            "HK",
+            "HN",
+            "HR",
+            "HU",
+            "ID",
+            "IE",
+            "IL",
+            "IN",
+            "IS",
+            "IT",
+            "JO",
+            "JP",
+            "KW",
+            "KZ",
+            "LB",
+            "LI",
+            "LT",
+            "LU",
+            "LV",
+            "MA",
+            "MC",
+            "MD",
+            "ME",
+            "MK",
+            "MT",
+            "MX",
+            "MY",
+            "NI",
+            "NL",
+            "NO",
+            "NZ",
+            "OM",
+            "PA",
+            "PE",
+            "PH",
+            "PL",
+            "PS",
+            "PT",
+            "PY",
+            "QA",
+            "RO",
+            "RS",
+            "RU",
+            "SA",
+            "SE",
+            "SG",
+            "SI",
+            "SK",
+            "SV",
+            "TH",
+            "TN",
+            "TR",
+            "TW",
+            "UA",
+            "US",
+            "UY",
+            "VN",
+            "XK",
+            "ZA"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/0AkGAyCe6uqilxSFb0LLbd"
+          },
+          "href": "https://api.spotify.com/v1/albums/0AkGAyCe6uqilxSFb0LLbd",
+          "id": "0AkGAyCe6uqilxSFb0LLbd",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273685df3e75d2370dd3aae28ab",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02685df3e75d2370dd3aae28ab",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851685df3e75d2370dd3aae28ab",
+              "width": 64
+            }
+          ],
+          "name": "Sol Luna Tierra",
+          "release_date": "1999-02-23",
+          "release_date_precision": "day",
+          "total_tracks": 11,
+          "type": "album",
+          "uri": "spotify:album:0AkGAyCe6uqilxSFb0LLbd"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/3bO8GsqYe5H4xTkcP5ZUZm"
+            },
+            "href": "https://api.spotify.com/v1/artists/3bO8GsqYe5H4xTkcP5ZUZm",
+            "id": "3bO8GsqYe5H4xTkcP5ZUZm",
+            "name": "Johannes Linstead",
+            "type": "artist",
+            "uri": "spotify:artist:3bO8GsqYe5H4xTkcP5ZUZm"
+          }
+        ],
+        "available_markets": [
+          "AD",
+          "AE",
+          "AL",
+          "AR",
+          "AT",
+          "AU",
+          "BA",
+          "BE",
+          "BG",
+          "BH",
+          "BO",
+          "BR",
+          "BY",
+          "CA",
+          "CH",
+          "CL",
+          "CO",
+          "CR",
+          "CY",
+          "CZ",
+          "DE",
+          "DK",
+          "DO",
+          "DZ",
+          "EC",
+          "EE",
+          "EG",
+          "ES",
+          "FI",
+          "FR",
+          "GB",
+          "GR",
+          "GT",
+          "HK",
+          "HN",
+          "HR",
+          "HU",
+          "ID",
+          "IE",
+          "IL",
+          "IN",
+          "IS",
+          "IT",
+          "JO",
+          "JP",
+          "KW",
+          "KZ",
+          "LB",
+          "LI",
+          "LT",
+          "LU",
+          "LV",
+          "MA",
+          "MC",
+          "MD",
+          "ME",
+          "MK",
+          "MT",
+          "MX",
+          "MY",
+          "NI",
+          "NL",
+          "NO",
+          "NZ",
+          "OM",
+          "PA",
+          "PE",
+          "PH",
+          "PL",
+          "PS",
+          "PT",
+          "PY",
+          "QA",
+          "RO",
+          "RS",
+          "RU",
+          "SA",
+          "SE",
+          "SG",
+          "SI",
+          "SK",
+          "SV",
+          "TH",
+          "TN",
+          "TR",
+          "TW",
+          "UA",
+          "US",
+          "UY",
+          "VN",
+          "XK",
+          "ZA"
+        ],
+        "disc_number": 1,
+        "duration_ms": 320920,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "USR2M9900040"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/20Cza13QvCTbsOYD5jTSuy"
+        },
+        "href": "https://api.spotify.com/v1/tracks/20Cza13QvCTbsOYD5jTSuy",
+        "id": "20Cza13QvCTbsOYD5jTSuy",
+        "is_local": false,
+        "name": "Between Tears",
+        "popularity": 47,
+        "preview_url": "https://p.scdn.co/mp3-preview/68f4ff15404a1cf28f4b8f2475f46bcde5b46009?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 8,
+        "type": "track",
+        "uri": "spotify:track:20Cza13QvCTbsOYD5jTSuy"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/72RlKNzcCZkmb20K5dDwOB"
+              },
+              "href": "https://api.spotify.com/v1/artists/72RlKNzcCZkmb20K5dDwOB",
+              "id": "72RlKNzcCZkmb20K5dDwOB",
+              "name": "Govi",
+              "type": "artist",
+              "uri": "spotify:artist:72RlKNzcCZkmb20K5dDwOB"
+            }
+          ],
+          "available_markets": [
+            "AD",
+            "AE",
+            "AL",
+            "AR",
+            "AT",
+            "AU",
+            "BA",
+            "BE",
+            "BG",
+            "BH",
+            "BO",
+            "BR",
+            "BY",
+            "CA",
+            "CH",
+            "CL",
+            "CO",
+            "CR",
+            "CY",
+            "CZ",
+            "DE",
+            "DK",
+            "DO",
+            "DZ",
+            "EC",
+            "EE",
+            "EG",
+            "ES",
+            "FI",
+            "FR",
+            "GB",
+            "GR",
+            "GT",
+            "HK",
+            "HN",
+            "HR",
+            "HU",
+            "ID",
+            "IE",
+            "IL",
+            "IN",
+            "IS",
+            "IT",
+            "JO",
+            "KW",
+            "KZ",
+            "LB",
+            "LI",
+            "LT",
+            "LU",
+            "LV",
+            "MA",
+            "MC",
+            "MD",
+            "MK",
+            "MT",
+            "MX",
+            "MY",
+            "NI",
+            "NL",
+            "NO",
+            "NZ",
+            "OM",
+            "PA",
+            "PE",
+            "PH",
+            "PL",
+            "PS",
+            "PT",
+            "PY",
+            "QA",
+            "RO",
+            "RU",
+            "SA",
+            "SE",
+            "SG",
+            "SI",
+            "SK",
+            "SV",
+            "TH",
+            "TN",
+            "TR",
+            "TW",
+            "UA",
+            "US",
+            "UY",
+            "VN",
+            "ZA"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/4XQqZ6RlggE7qKlJ3fCOhZ"
+          },
+          "href": "https://api.spotify.com/v1/albums/4XQqZ6RlggE7qKlJ3fCOhZ",
+          "id": "4XQqZ6RlggE7qKlJ3fCOhZ",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b27361ec910b1c08043a871641c7",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e0261ec910b1c08043a871641c7",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d0000485161ec910b1c08043a871641c7",
+              "width": 64
+            }
+          ],
+          "name": "Touch of Light",
+          "release_date": "2008-09-16",
+          "release_date_precision": "day",
+          "total_tracks": 10,
+          "type": "album",
+          "uri": "spotify:album:4XQqZ6RlggE7qKlJ3fCOhZ"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/72RlKNzcCZkmb20K5dDwOB"
+            },
+            "href": "https://api.spotify.com/v1/artists/72RlKNzcCZkmb20K5dDwOB",
+            "id": "72RlKNzcCZkmb20K5dDwOB",
+            "name": "Govi",
+            "type": "artist",
+            "uri": "spotify:artist:72RlKNzcCZkmb20K5dDwOB"
+          }
+        ],
+        "available_markets": [
+          "AD",
+          "AE",
+          "AL",
+          "AR",
+          "AT",
+          "AU",
+          "BA",
+          "BE",
+          "BG",
+          "BH",
+          "BO",
+          "BR",
+          "BY",
+          "CA",
+          "CH",
+          "CL",
+          "CO",
+          "CR",
+          "CY",
+          "CZ",
+          "DE",
+          "DK",
+          "DO",
+          "DZ",
+          "EC",
+          "EE",
+          "EG",
+          "ES",
+          "FI",
+          "FR",
+          "GB",
+          "GR",
+          "GT",
+          "HK",
+          "HN",
+          "HR",
+          "HU",
+          "ID",
+          "IE",
+          "IL",
+          "IN",
+          "IS",
+          "IT",
+          "JO",
+          "KW",
+          "KZ",
+          "LB",
+          "LI",
+          "LT",
+          "LU",
+          "LV",
+          "MA",
+          "MC",
+          "MD",
+          "MK",
+          "MT",
+          "MX",
+          "MY",
+          "NI",
+          "NL",
+          "NO",
+          "NZ",
+          "OM",
+          "PA",
+          "PE",
+          "PH",
+          "PL",
+          "PS",
+          "PT",
+          "PY",
+          "QA",
+          "RO",
+          "RU",
+          "SA",
+          "SE",
+          "SG",
+          "SI",
+          "SK",
+          "SV",
+          "TH",
+          "TN",
+          "TR",
+          "TW",
+          "UA",
+          "US",
+          "UY",
+          "VN",
+          "ZA"
+        ],
+        "disc_number": 1,
+        "duration_ms": 312920,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "USGM30800001"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1HJuOAgxY6V5fzS4eoOq4E"
+        },
+        "href": "https://api.spotify.com/v1/tracks/1HJuOAgxY6V5fzS4eoOq4E",
+        "id": "1HJuOAgxY6V5fzS4eoOq4E",
+        "is_local": false,
+        "name": "Espresso",
+        "popularity": 47,
+        "preview_url": "https://p.scdn.co/mp3-preview/f7b6672e0a718e9c5f74812d67d73056a9fcb30c?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 1,
+        "type": "track",
+        "uri": "spotify:track:1HJuOAgxY6V5fzS4eoOq4E"
+      },
+      {
+        "album": {
+          "album_type": "compilation",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/1AhYnfs5mzb3ennyLFXlYD"
+              },
+              "href": "https://api.spotify.com/v1/artists/1AhYnfs5mzb3ennyLFXlYD",
+              "id": "1AhYnfs5mzb3ennyLFXlYD",
+              "name": "Ottmar Liebert",
+              "type": "artist",
+              "uri": "spotify:artist:1AhYnfs5mzb3ennyLFXlYD"
+            }
+          ],
+          "available_markets": [
+            "AD",
+            "AE",
+            "AL",
+            "AR",
+            "AT",
+            "AU",
+            "BA",
+            "BE",
+            "BG",
+            "BH",
+            "BO",
+            "BR",
+            "BY",
+            "CH",
+            "CL",
+            "CO",
+            "CR",
+            "CY",
+            "CZ",
+            "DE",
+            "DK",
+            "DO",
+            "DZ",
+            "EC",
+            "EE",
+            "EG",
+            "ES",
+            "FI",
+            "FR",
+            "GB",
+            "GR",
+            "GT",
+            "HK",
+            "HN",
+            "HR",
+            "HU",
+            "ID",
+            "IE",
+            "IL",
+            "IN",
+            "IS",
+            "IT",
+            "JO",
+            "JP",
+            "KW",
+            "KZ",
+            "LB",
+            "LI",
+            "LT",
+            "LU",
+            "LV",
+            "MA",
+            "MC",
+            "MD",
+            "ME",
+            "MK",
+            "MT",
+            "MX",
+            "MY",
+            "NI",
+            "NL",
+            "NO",
+            "NZ",
+            "OM",
+            "PA",
+            "PE",
+            "PH",
+            "PL",
+            "PS",
+            "PT",
+            "PY",
+            "QA",
+            "RO",
+            "RS",
+            "RU",
+            "SA",
+            "SE",
+            "SG",
+            "SI",
+            "SK",
+            "SV",
+            "TH",
+            "TN",
+            "TR",
+            "TW",
+            "UA",
+            "US",
+            "UY",
+            "VN",
+            "XK",
+            "ZA"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/0o91xvgRJz0ZLb5cCPzFo8"
+          },
+          "href": "https://api.spotify.com/v1/albums/0o91xvgRJz0ZLb5cCPzFo8",
+          "id": "0o91xvgRJz0ZLb5cCPzFo8",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b2730389abf5bbaa068b3feeb8f1",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e020389abf5bbaa068b3feeb8f1",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d000048510389abf5bbaa068b3feeb8f1",
+              "width": 64
+            }
+          ],
+          "name": "Barcelona Nights: The Best Of Ottmar Liebert Volume One",
+          "release_date": "2001-01-01",
+          "release_date_precision": "day",
+          "total_tracks": 14,
+          "type": "album",
+          "uri": "spotify:album:0o91xvgRJz0ZLb5cCPzFo8"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/1AhYnfs5mzb3ennyLFXlYD"
+            },
+            "href": "https://api.spotify.com/v1/artists/1AhYnfs5mzb3ennyLFXlYD",
+            "id": "1AhYnfs5mzb3ennyLFXlYD",
+            "name": "Ottmar Liebert",
+            "type": "artist",
+            "uri": "spotify:artist:1AhYnfs5mzb3ennyLFXlYD"
+          }
+        ],
+        "available_markets": [
+          "AD",
+          "AE",
+          "AL",
+          "AR",
+          "AT",
+          "AU",
+          "BA",
+          "BE",
+          "BG",
+          "BH",
+          "BO",
+          "BR",
+          "BY",
+          "CH",
+          "CL",
+          "CO",
+          "CR",
+          "CY",
+          "CZ",
+          "DE",
+          "DK",
+          "DO",
+          "DZ",
+          "EC",
+          "EE",
+          "EG",
+          "ES",
+          "FI",
+          "FR",
+          "GB",
+          "GR",
+          "GT",
+          "HK",
+          "HN",
+          "HR",
+          "HU",
+          "ID",
+          "IE",
+          "IL",
+          "IN",
+          "IS",
+          "IT",
+          "JO",
+          "JP",
+          "KW",
+          "KZ",
+          "LB",
+          "LI",
+          "LT",
+          "LU",
+          "LV",
+          "MA",
+          "MC",
+          "MD",
+          "ME",
+          "MK",
+          "MT",
+          "MX",
+          "MY",
+          "NI",
+          "NL",
+          "NO",
+          "NZ",
+          "OM",
+          "PA",
+          "PE",
+          "PH",
+          "PL",
+          "PS",
+          "PT",
+          "PY",
+          "QA",
+          "RO",
+          "RS",
+          "RU",
+          "SA",
+          "SE",
+          "SG",
+          "SI",
+          "SK",
+          "SV",
+          "TH",
+          "TN",
+          "TR",
+          "TW",
+          "UA",
+          "US",
+          "UY",
+          "VN",
+          "XK",
+          "ZA"
+        ],
+        "disc_number": 1,
+        "duration_ms": 246693,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "USHOM9000003"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2rJY1HlLcOXsQYMPUnhQxa"
+        },
+        "href": "https://api.spotify.com/v1/tracks/2rJY1HlLcOXsQYMPUnhQxa",
+        "id": "2rJY1HlLcOXsQYMPUnhQxa",
+        "is_local": false,
+        "name": "Barcelona Nights",
+        "popularity": 47,
+        "preview_url": null,
+        "track_number": 1,
+        "type": "track",
+        "uri": "spotify:track:2rJY1HlLcOXsQYMPUnhQxa"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/2byU53ebtTxcAnIRE814Ts"
+              },
+              "href": "https://api.spotify.com/v1/artists/2byU53ebtTxcAnIRE814Ts",
+              "id": "2byU53ebtTxcAnIRE814Ts",
+              "name": "Bebe",
+              "type": "artist",
+              "uri": "spotify:artist:2byU53ebtTxcAnIRE814Ts"
+            }
+          ],
+          "available_markets": [
+            "AD",
+            "AE",
+            "AL",
+            "AR",
+            "AT",
+            "AU",
+            "BA",
+            "BE",
+            "BG",
+            "BH",
+            "BO",
+            "BR",
+            "BY",
+            "CA",
+            "CH",
+            "CL",
+            "CO",
+            "CR",
+            "CY",
+            "CZ",
+            "DE",
+            "DK",
+            "DO",
+            "DZ",
+            "EC",
+            "EE",
+            "EG",
+            "ES",
+            "FI",
+            "FR",
+            "GB",
+            "GR",
+            "GT",
+            "HK",
+            "HN",
+            "HR",
+            "HU",
+            "ID",
+            "IE",
+            "IL",
+            "IN",
+            "IS",
+            "IT",
+            "JO",
+            "JP",
+            "KW",
+            "KZ",
+            "LB",
+            "LI",
+            "LT",
+            "LU",
+            "LV",
+            "MA",
+            "MC",
+            "MD",
+            "ME",
+            "MK",
+            "MT",
+            "MX",
+            "MY",
+            "NI",
+            "NL",
+            "NO",
+            "NZ",
+            "OM",
+            "PA",
+            "PE",
+            "PH",
+            "PL",
+            "PS",
+            "PT",
+            "PY",
+            "QA",
+            "RO",
+            "RS",
+            "RU",
+            "SA",
+            "SE",
+            "SG",
+            "SI",
+            "SK",
+            "SV",
+            "TH",
+            "TN",
+            "TR",
+            "TW",
+            "UA",
+            "US",
+            "UY",
+            "VN",
+            "XK",
+            "ZA"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/3B8sRsQWEcVVeo3msMowPB"
+          },
+          "href": "https://api.spotify.com/v1/albums/3B8sRsQWEcVVeo3msMowPB",
+          "id": "3B8sRsQWEcVVeo3msMowPB",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b27358d2f48ada20d0e7ce64b209",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e0258d2f48ada20d0e7ce64b209",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d0000485158d2f48ada20d0e7ce64b209",
+              "width": 64
+            }
+          ],
+          "name": "Pafuera Telara\u00f1as",
+          "release_date": "2004",
+          "release_date_precision": "year",
+          "total_tracks": 15,
+          "type": "album",
+          "uri": "spotify:album:3B8sRsQWEcVVeo3msMowPB"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/2byU53ebtTxcAnIRE814Ts"
+            },
+            "href": "https://api.spotify.com/v1/artists/2byU53ebtTxcAnIRE814Ts",
+            "id": "2byU53ebtTxcAnIRE814Ts",
+            "name": "Bebe",
+            "type": "artist",
+            "uri": "spotify:artist:2byU53ebtTxcAnIRE814Ts"
+          }
+        ],
+        "available_markets": [
+          "AD",
+          "AE",
+          "AL",
+          "AR",
+          "AT",
+          "AU",
+          "BA",
+          "BE",
+          "BG",
+          "BH",
+          "BO",
+          "BR",
+          "BY",
+          "CA",
+          "CH",
+          "CL",
+          "CO",
+          "CR",
+          "CY",
+          "CZ",
+          "DE",
+          "DK",
+          "DO",
+          "DZ",
+          "EC",
+          "EE",
+          "EG",
+          "ES",
+          "FI",
+          "FR",
+          "GB",
+          "GR",
+          "GT",
+          "HK",
+          "HN",
+          "HR",
+          "HU",
+          "ID",
+          "IE",
+          "IL",
+          "IN",
+          "IS",
+          "IT",
+          "JO",
+          "JP",
+          "KW",
+          "KZ",
+          "LB",
+          "LI",
+          "LT",
+          "LU",
+          "LV",
+          "MA",
+          "MC",
+          "MD",
+          "ME",
+          "MK",
+          "MT",
+          "MX",
+          "MY",
+          "NI",
+          "NL",
+          "NO",
+          "NZ",
+          "OM",
+          "PA",
+          "PE",
+          "PH",
+          "PL",
+          "PS",
+          "PT",
+          "PY",
+          "QA",
+          "RO",
+          "RS",
+          "RU",
+          "SA",
+          "SE",
+          "SG",
+          "SI",
+          "SK",
+          "SV",
+          "TH",
+          "TN",
+          "TR",
+          "TW",
+          "UA",
+          "US",
+          "UY",
+          "VN",
+          "XK",
+          "ZA"
+        ],
+        "disc_number": 1,
+        "duration_ms": 229373,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "ES5030400004"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3iHJm7dUroZYvbqrhobLZs"
+        },
+        "href": "https://api.spotify.com/v1/tracks/3iHJm7dUroZYvbqrhobLZs",
+        "id": "3iHJm7dUroZYvbqrhobLZs",
+        "is_local": false,
+        "name": "Siempre me quedar\u00e1",
+        "popularity": 61,
+        "preview_url": "https://p.scdn.co/mp3-preview/c797e8a03d0265af376ea2fed98da8d3745a5bab?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 4,
+        "type": "track",
+        "uri": "spotify:track:3iHJm7dUroZYvbqrhobLZs"
+      },
+      {
+        "album": {
+          "album_type": "compilation",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/3jc496ljiyrS3ECrD7QiqL"
+              },
+              "href": "https://api.spotify.com/v1/artists/3jc496ljiyrS3ECrD7QiqL",
+              "id": "3jc496ljiyrS3ECrD7QiqL",
+              "name": "Gipsy Kings",
+              "type": "artist",
+              "uri": "spotify:artist:3jc496ljiyrS3ECrD7QiqL"
+            }
+          ],
+          "available_markets": [
+            "US"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/6GGrPncyfzwZwfgJEwTodp"
+          },
+          "href": "https://api.spotify.com/v1/albums/6GGrPncyfzwZwfgJEwTodp",
+          "id": "6GGrPncyfzwZwfgJEwTodp",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273adaea85b0c44448820de9b18",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02adaea85b0c44448820de9b18",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851adaea85b0c44448820de9b18",
+              "width": 64
+            }
+          ],
+          "name": "Best of Gipsy Kings",
+          "release_date": "1995-03-07",
+          "release_date_precision": "day",
+          "total_tracks": 18,
+          "type": "album",
+          "uri": "spotify:album:6GGrPncyfzwZwfgJEwTodp"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/3jc496ljiyrS3ECrD7QiqL"
+            },
+            "href": "https://api.spotify.com/v1/artists/3jc496ljiyrS3ECrD7QiqL",
+            "id": "3jc496ljiyrS3ECrD7QiqL",
+            "name": "Gipsy Kings",
+            "type": "artist",
+            "uri": "spotify:artist:3jc496ljiyrS3ECrD7QiqL"
+          },
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/7yLLhvAgtCLYy4jQjdvim8"
+            },
+            "href": "https://api.spotify.com/v1/artists/7yLLhvAgtCLYy4jQjdvim8",
+            "id": "7yLLhvAgtCLYy4jQjdvim8",
+            "name": "Jahloul Bouchikhi",
+            "type": "artist",
+            "uri": "spotify:artist:7yLLhvAgtCLYy4jQjdvim8"
+          },
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/6uZpGDWYfiRxPgQbNKfT9r"
+            },
+            "href": "https://api.spotify.com/v1/artists/6uZpGDWYfiRxPgQbNKfT9r",
+            "id": "6uZpGDWYfiRxPgQbNKfT9r",
+            "name": "N. Reyes",
+            "type": "artist",
+            "uri": "spotify:artist:6uZpGDWYfiRxPgQbNKfT9r"
+          },
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/38yoZ5HAzACzU2fNLd8CqZ"
+            },
+            "href": "https://api.spotify.com/v1/artists/38yoZ5HAzACzU2fNLd8CqZ",
+            "id": "38yoZ5HAzACzU2fNLd8CqZ",
+            "name": "T. Baliardo",
+            "type": "artist",
+            "uri": "spotify:artist:38yoZ5HAzACzU2fNLd8CqZ"
+          }
+        ],
+        "available_markets": [
+          "US"
+        ],
+        "disc_number": 1,
+        "duration_ms": 241800,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "USNO11200226"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3oBCAT1xk6J8xlyPZWtzff"
+        },
+        "href": "https://api.spotify.com/v1/tracks/3oBCAT1xk6J8xlyPZWtzff",
+        "id": "3oBCAT1xk6J8xlyPZWtzff",
+        "is_local": false,
+        "name": "Moorea",
+        "popularity": 40,
+        "preview_url": "https://p.scdn.co/mp3-preview/f3497aefb7a286554c95d029065b68f2ab66eca9?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 5,
+        "type": "track",
+        "uri": "spotify:track:3oBCAT1xk6J8xlyPZWtzff"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/6UelqIK8qwhWFc2f6nSEh8"
+              },
+              "href": "https://api.spotify.com/v1/artists/6UelqIK8qwhWFc2f6nSEh8",
+              "id": "6UelqIK8qwhWFc2f6nSEh8",
+              "name": "Ni\u00f1a Pastori",
+              "type": "artist",
+              "uri": "spotify:artist:6UelqIK8qwhWFc2f6nSEh8"
+            }
+          ],
+          "available_markets": [
+            "AD",
+            "AE",
+            "AL",
+            "AR",
+            "AT",
+            "AU",
+            "BA",
+            "BE",
+            "BG",
+            "BH",
+            "BO",
+            "BR",
+            "BY",
+            "CA",
+            "CH",
+            "CL",
+            "CO",
+            "CR",
+            "CY",
+            "CZ",
+            "DE",
+            "DK",
+            "DO",
+            "DZ",
+            "EC",
+            "EE",
+            "EG",
+            "ES",
+            "FI",
+            "FR",
+            "GB",
+            "GR",
+            "GT",
+            "HK",
+            "HN",
+            "HR",
+            "HU",
+            "ID",
+            "IE",
+            "IL",
+            "IN",
+            "IS",
+            "IT",
+            "JO",
+            "JP",
+            "KW",
+            "KZ",
+            "LB",
+            "LI",
+            "LT",
+            "LU",
+            "LV",
+            "MA",
+            "MC",
+            "MD",
+            "ME",
+            "MK",
+            "MT",
+            "MX",
+            "MY",
+            "NI",
+            "NL",
+            "NO",
+            "NZ",
+            "OM",
+            "PA",
+            "PE",
+            "PH",
+            "PL",
+            "PS",
+            "PT",
+            "PY",
+            "QA",
+            "RO",
+            "RS",
+            "RU",
+            "SA",
+            "SE",
+            "SG",
+            "SI",
+            "SK",
+            "SV",
+            "TH",
+            "TN",
+            "TR",
+            "TW",
+            "UA",
+            "US",
+            "UY",
+            "VN",
+            "XK",
+            "ZA"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/2bDuvWjr206gvj5GkC5iKr"
+          },
+          "href": "https://api.spotify.com/v1/albums/2bDuvWjr206gvj5GkC5iKr",
+          "id": "2bDuvWjr206gvj5GkC5iKr",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273b15455a58385ff2b7ffe87e0",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02b15455a58385ff2b7ffe87e0",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851b15455a58385ff2b7ffe87e0",
+              "width": 64
+            }
+          ],
+          "name": "Amame Como Soy (Nuevas Joyas)",
+          "release_date": "2015-11-06",
+          "release_date_precision": "day",
+          "total_tracks": 12,
+          "type": "album",
+          "uri": "spotify:album:2bDuvWjr206gvj5GkC5iKr"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/6UelqIK8qwhWFc2f6nSEh8"
+            },
+            "href": "https://api.spotify.com/v1/artists/6UelqIK8qwhWFc2f6nSEh8",
+            "id": "6UelqIK8qwhWFc2f6nSEh8",
+            "name": "Ni\u00f1a Pastori",
+            "type": "artist",
+            "uri": "spotify:artist:6UelqIK8qwhWFc2f6nSEh8"
+          },
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/3nlpTZci9O5W8RsNoNH559"
+            },
+            "href": "https://api.spotify.com/v1/artists/3nlpTZci9O5W8RsNoNH559",
+            "id": "3nlpTZci9O5W8RsNoNH559",
+            "name": "Juan Luis Guerra 4.40",
+            "type": "artist",
+            "uri": "spotify:artist:3nlpTZci9O5W8RsNoNH559"
+          }
+        ],
+        "available_markets": [
+          "AD",
+          "AE",
+          "AL",
+          "AR",
+          "AT",
+          "AU",
+          "BA",
+          "BE",
+          "BG",
+          "BH",
+          "BO",
+          "BR",
+          "BY",
+          "CA",
+          "CH",
+          "CL",
+          "CO",
+          "CR",
+          "CY",
+          "CZ",
+          "DE",
+          "DK",
+          "DO",
+          "DZ",
+          "EC",
+          "EE",
+          "EG",
+          "ES",
+          "FI",
+          "FR",
+          "GB",
+          "GR",
+          "GT",
+          "HK",
+          "HN",
+          "HR",
+          "HU",
+          "ID",
+          "IE",
+          "IL",
+          "IN",
+          "IS",
+          "IT",
+          "JO",
+          "JP",
+          "KW",
+          "KZ",
+          "LB",
+          "LI",
+          "LT",
+          "LU",
+          "LV",
+          "MA",
+          "MC",
+          "MD",
+          "ME",
+          "MK",
+          "MT",
+          "MX",
+          "MY",
+          "NI",
+          "NL",
+          "NO",
+          "NZ",
+          "OM",
+          "PA",
+          "PE",
+          "PH",
+          "PL",
+          "PS",
+          "PT",
+          "PY",
+          "QA",
+          "RO",
+          "RS",
+          "RU",
+          "SA",
+          "SE",
+          "SG",
+          "SI",
+          "SK",
+          "SV",
+          "TH",
+          "TN",
+          "TR",
+          "TW",
+          "UA",
+          "US",
+          "UY",
+          "VN",
+          "XK",
+          "ZA"
+        ],
+        "disc_number": 1,
+        "duration_ms": 249400,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "ES5021500832"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3N5ahKxKC7pBtcpeYLSrIR"
+        },
+        "href": "https://api.spotify.com/v1/tracks/3N5ahKxKC7pBtcpeYLSrIR",
+        "id": "3N5ahKxKC7pBtcpeYLSrIR",
+        "is_local": false,
+        "name": "Si Tu No Bailas Conmigo (with Juan Luis Guerra)",
+        "popularity": 53,
+        "preview_url": "https://p.scdn.co/mp3-preview/2fc263d80e06cd0f5394cc937ae749774b2440e8?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 11,
+        "type": "track",
+        "uri": "spotify:track:3N5ahKxKC7pBtcpeYLSrIR"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/3jc496ljiyrS3ECrD7QiqL"
+              },
+              "href": "https://api.spotify.com/v1/artists/3jc496ljiyrS3ECrD7QiqL",
+              "id": "3jc496ljiyrS3ECrD7QiqL",
+              "name": "Gipsy Kings",
+              "type": "artist",
+              "uri": "spotify:artist:3jc496ljiyrS3ECrD7QiqL"
+            }
+          ],
+          "available_markets": [
+            "US"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/3S8zXUmljdw0ejqjLC8Kuf"
+          },
+          "href": "https://api.spotify.com/v1/albums/3S8zXUmljdw0ejqjLC8Kuf",
+          "id": "3S8zXUmljdw0ejqjLC8Kuf",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b2737f150c7abf7674103f20d556",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e027f150c7abf7674103f20d556",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d000048517f150c7abf7674103f20d556",
+              "width": 64
+            }
+          ],
+          "name": "Cantos de Amor / Love Songs",
+          "release_date": "1998-08-04",
+          "release_date_precision": "day",
+          "total_tracks": 15,
+          "type": "album",
+          "uri": "spotify:album:3S8zXUmljdw0ejqjLC8Kuf"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/3jc496ljiyrS3ECrD7QiqL"
+            },
+            "href": "https://api.spotify.com/v1/artists/3jc496ljiyrS3ECrD7QiqL",
+            "id": "3jc496ljiyrS3ECrD7QiqL",
+            "name": "Gipsy Kings",
+            "type": "artist",
+            "uri": "spotify:artist:3jc496ljiyrS3ECrD7QiqL"
+          }
+        ],
+        "available_markets": [
+          "US"
+        ],
+        "disc_number": 1,
+        "duration_ms": 218066,
+        "explicit": true,
+        "external_ids": {
+          "isrc": "USNO11200233"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/59oAZ05jBSXMP7cSdzUC0z"
+        },
+        "href": "https://api.spotify.com/v1/tracks/59oAZ05jBSXMP7cSdzUC0z",
+        "id": "59oAZ05jBSXMP7cSdzUC0z",
+        "is_local": false,
+        "name": "Un Amor",
+        "popularity": 40,
+        "preview_url": "https://p.scdn.co/mp3-preview/b38b2ed6a2f8a9732dc4aef06b12733619009782?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 1,
+        "type": "track",
+        "uri": "spotify:track:59oAZ05jBSXMP7cSdzUC0z"
+      },
+      {
+        "album": {
+          "album_type": "single",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/2CCgb0KApjfQDuTppovpf8"
+              },
+              "href": "https://api.spotify.com/v1/artists/2CCgb0KApjfQDuTppovpf8",
+              "id": "2CCgb0KApjfQDuTppovpf8",
+              "name": "Rvfv",
+              "type": "artist",
+              "uri": "spotify:artist:2CCgb0KApjfQDuTppovpf8"
+            }
+          ],
+          "available_markets": [
+            "AD",
+            "AE",
+            "AL",
+            "AR",
+            "AT",
+            "AU",
+            "BA",
+            "BE",
+            "BG",
+            "BH",
+            "BO",
+            "BR",
+            "BY",
+            "CA",
+            "CH",
+            "CL",
+            "CO",
+            "CR",
+            "CY",
+            "CZ",
+            "DE",
+            "DK",
+            "DO",
+            "DZ",
+            "EC",
+            "EE",
+            "EG",
+            "ES",
+            "FI",
+            "FR",
+            "GB",
+            "GR",
+            "GT",
+            "HK",
+            "HN",
+            "HR",
+            "HU",
+            "ID",
+            "IE",
+            "IL",
+            "IN",
+            "IS",
+            "IT",
+            "JO",
+            "JP",
+            "KW",
+            "KZ",
+            "LB",
+            "LI",
+            "LT",
+            "LU",
+            "LV",
+            "MA",
+            "MC",
+            "MD",
+            "ME",
+            "MK",
+            "MT",
+            "MX",
+            "MY",
+            "NI",
+            "NL",
+            "NO",
+            "NZ",
+            "OM",
+            "PA",
+            "PE",
+            "PH",
+            "PL",
+            "PS",
+            "PT",
+            "PY",
+            "QA",
+            "RO",
+            "RS",
+            "RU",
+            "SA",
+            "SE",
+            "SG",
+            "SI",
+            "SK",
+            "SV",
+            "TH",
+            "TN",
+            "TR",
+            "TW",
+            "UA",
+            "US",
+            "UY",
+            "VN",
+            "XK",
+            "ZA"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/7xnKqGbHSMxldHS5AcCn08"
+          },
+          "href": "https://api.spotify.com/v1/albums/7xnKqGbHSMxldHS5AcCn08",
+          "id": "7xnKqGbHSMxldHS5AcCn08",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273d5ce008cae4a5e5d9fdb8390",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02d5ce008cae4a5e5d9fdb8390",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851d5ce008cae4a5e5d9fdb8390",
+              "width": 64
+            }
+          ],
+          "name": "Mir\u00e1ndote",
+          "release_date": "2019-06-18",
+          "release_date_precision": "day",
+          "total_tracks": 1,
+          "type": "album",
+          "uri": "spotify:album:7xnKqGbHSMxldHS5AcCn08"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/2CCgb0KApjfQDuTppovpf8"
+            },
+            "href": "https://api.spotify.com/v1/artists/2CCgb0KApjfQDuTppovpf8",
+            "id": "2CCgb0KApjfQDuTppovpf8",
+            "name": "Rvfv",
+            "type": "artist",
+            "uri": "spotify:artist:2CCgb0KApjfQDuTppovpf8"
+          }
+        ],
+        "available_markets": [
+          "AD",
+          "AE",
+          "AL",
+          "AR",
+          "AT",
+          "AU",
+          "BA",
+          "BE",
+          "BG",
+          "BH",
+          "BO",
+          "BR",
+          "BY",
+          "CA",
+          "CH",
+          "CL",
+          "CO",
+          "CR",
+          "CY",
+          "CZ",
+          "DE",
+          "DK",
+          "DO",
+          "DZ",
+          "EC",
+          "EE",
+          "EG",
+          "ES",
+          "FI",
+          "FR",
+          "GB",
+          "GR",
+          "GT",
+          "HK",
+          "HN",
+          "HR",
+          "HU",
+          "ID",
+          "IE",
+          "IL",
+          "IN",
+          "IS",
+          "IT",
+          "JO",
+          "JP",
+          "KW",
+          "KZ",
+          "LB",
+          "LI",
+          "LT",
+          "LU",
+          "LV",
+          "MA",
+          "MC",
+          "MD",
+          "ME",
+          "MK",
+          "MT",
+          "MX",
+          "MY",
+          "NI",
+          "NL",
+          "NO",
+          "NZ",
+          "OM",
+          "PA",
+          "PE",
+          "PH",
+          "PL",
+          "PS",
+          "PT",
+          "PY",
+          "QA",
+          "RO",
+          "RS",
+          "RU",
+          "SA",
+          "SE",
+          "SG",
+          "SI",
+          "SK",
+          "SV",
+          "TH",
+          "TN",
+          "TR",
+          "TW",
+          "UA",
+          "US",
+          "UY",
+          "VN",
+          "XK",
+          "ZA"
+        ],
+        "disc_number": 1,
+        "duration_ms": 135914,
+        "explicit": true,
+        "external_ids": {
+          "isrc": "QZFYY1967147"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6wywJ7RutAY0JL7cMP7uFN"
+        },
+        "href": "https://api.spotify.com/v1/tracks/6wywJ7RutAY0JL7cMP7uFN",
+        "id": "6wywJ7RutAY0JL7cMP7uFN",
+        "is_local": false,
+        "name": "Mir\u00e1ndote",
+        "popularity": 65,
+        "preview_url": "https://p.scdn.co/mp3-preview/22d2e91399daa77d1e602fcc7b816887da5602f9?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 1,
+        "type": "track",
+        "uri": "spotify:track:6wywJ7RutAY0JL7cMP7uFN"
+      }
+    ],
+    "limit": 20,
+    "next": "https://api.spotify.com/v1/search?query=genre%3A%22Flamenco%22&type=track&offset=20&limit=20",
+    "offset": 0,
+    "previous": null,
+    "total": 72730
+  }
+}

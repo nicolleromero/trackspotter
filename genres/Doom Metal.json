@@ -1,0 +1,1886 @@
+{
+  "tracks": {
+    "href": "https://api.spotify.com/v1/search?query=genre%3A%22Doom+Metal%22&type=track&offset=0&limit=20",
+    "items": [
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/5M52tdBnJaKSvOpJGz8mfZ"
+              },
+              "href": "https://api.spotify.com/v1/artists/5M52tdBnJaKSvOpJGz8mfZ",
+              "id": "5M52tdBnJaKSvOpJGz8mfZ",
+              "name": "Black Sabbath",
+              "type": "artist",
+              "uri": "spotify:artist:5M52tdBnJaKSvOpJGz8mfZ"
+            }
+          ],
+          "available_markets": [
+            "CA",
+            "US"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/6r7LZXAVueS5DqdrvXJJK7"
+          },
+          "href": "https://api.spotify.com/v1/albums/6r7LZXAVueS5DqdrvXJJK7",
+          "id": "6r7LZXAVueS5DqdrvXJJK7",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b27382fd952c052899397f8c9917",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e0282fd952c052899397f8c9917",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d0000485182fd952c052899397f8c9917",
+              "width": 64
+            }
+          ],
+          "name": "Paranoid (2014 Remaster)",
+          "release_date": "1970-09-18",
+          "release_date_precision": "day",
+          "total_tracks": 8,
+          "type": "album",
+          "uri": "spotify:album:6r7LZXAVueS5DqdrvXJJK7"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/5M52tdBnJaKSvOpJGz8mfZ"
+            },
+            "href": "https://api.spotify.com/v1/artists/5M52tdBnJaKSvOpJGz8mfZ",
+            "id": "5M52tdBnJaKSvOpJGz8mfZ",
+            "name": "Black Sabbath",
+            "type": "artist",
+            "uri": "spotify:artist:5M52tdBnJaKSvOpJGz8mfZ"
+          }
+        ],
+        "available_markets": [
+          "CA",
+          "US"
+        ],
+        "disc_number": 1,
+        "duration_ms": 168405,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "USWB11304628"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1Y373MqadDRtclJNdnUXVc"
+        },
+        "href": "https://api.spotify.com/v1/tracks/1Y373MqadDRtclJNdnUXVc",
+        "id": "1Y373MqadDRtclJNdnUXVc",
+        "is_local": false,
+        "name": "Paranoid - 2016 Remaster",
+        "popularity": 69,
+        "preview_url": "https://p.scdn.co/mp3-preview/08232f9feba37a3acbb31062bc9e99dac9c7e262?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 2,
+        "type": "track",
+        "uri": "spotify:track:1Y373MqadDRtclJNdnUXVc"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/5M52tdBnJaKSvOpJGz8mfZ"
+              },
+              "href": "https://api.spotify.com/v1/artists/5M52tdBnJaKSvOpJGz8mfZ",
+              "id": "5M52tdBnJaKSvOpJGz8mfZ",
+              "name": "Black Sabbath",
+              "type": "artist",
+              "uri": "spotify:artist:5M52tdBnJaKSvOpJGz8mfZ"
+            }
+          ],
+          "available_markets": [
+            "CA",
+            "US"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/6r7LZXAVueS5DqdrvXJJK7"
+          },
+          "href": "https://api.spotify.com/v1/albums/6r7LZXAVueS5DqdrvXJJK7",
+          "id": "6r7LZXAVueS5DqdrvXJJK7",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b27382fd952c052899397f8c9917",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e0282fd952c052899397f8c9917",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d0000485182fd952c052899397f8c9917",
+              "width": 64
+            }
+          ],
+          "name": "Paranoid (2014 Remaster)",
+          "release_date": "1970-09-18",
+          "release_date_precision": "day",
+          "total_tracks": 8,
+          "type": "album",
+          "uri": "spotify:album:6r7LZXAVueS5DqdrvXJJK7"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/5M52tdBnJaKSvOpJGz8mfZ"
+            },
+            "href": "https://api.spotify.com/v1/artists/5M52tdBnJaKSvOpJGz8mfZ",
+            "id": "5M52tdBnJaKSvOpJGz8mfZ",
+            "name": "Black Sabbath",
+            "type": "artist",
+            "uri": "spotify:artist:5M52tdBnJaKSvOpJGz8mfZ"
+          }
+        ],
+        "available_markets": [
+          "CA",
+          "US"
+        ],
+        "disc_number": 1,
+        "duration_ms": 355303,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "USWB11304630"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3IOQZRcEkplCXg6LofKqE9"
+        },
+        "href": "https://api.spotify.com/v1/tracks/3IOQZRcEkplCXg6LofKqE9",
+        "id": "3IOQZRcEkplCXg6LofKqE9",
+        "is_local": false,
+        "name": "Iron Man - 2014 Remaster",
+        "popularity": 66,
+        "preview_url": "https://p.scdn.co/mp3-preview/83facf894aaa71be09e596b7e727609fc9bd4eb7?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 4,
+        "type": "track",
+        "uri": "spotify:track:3IOQZRcEkplCXg6LofKqE9"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/5M52tdBnJaKSvOpJGz8mfZ"
+              },
+              "href": "https://api.spotify.com/v1/artists/5M52tdBnJaKSvOpJGz8mfZ",
+              "id": "5M52tdBnJaKSvOpJGz8mfZ",
+              "name": "Black Sabbath",
+              "type": "artist",
+              "uri": "spotify:artist:5M52tdBnJaKSvOpJGz8mfZ"
+            }
+          ],
+          "available_markets": [
+            "CA",
+            "US"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/6r7LZXAVueS5DqdrvXJJK7"
+          },
+          "href": "https://api.spotify.com/v1/albums/6r7LZXAVueS5DqdrvXJJK7",
+          "id": "6r7LZXAVueS5DqdrvXJJK7",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b27382fd952c052899397f8c9917",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e0282fd952c052899397f8c9917",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d0000485182fd952c052899397f8c9917",
+              "width": 64
+            }
+          ],
+          "name": "Paranoid (2014 Remaster)",
+          "release_date": "1970-09-18",
+          "release_date_precision": "day",
+          "total_tracks": 8,
+          "type": "album",
+          "uri": "spotify:album:6r7LZXAVueS5DqdrvXJJK7"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/5M52tdBnJaKSvOpJGz8mfZ"
+            },
+            "href": "https://api.spotify.com/v1/artists/5M52tdBnJaKSvOpJGz8mfZ",
+            "id": "5M52tdBnJaKSvOpJGz8mfZ",
+            "name": "Black Sabbath",
+            "type": "artist",
+            "uri": "spotify:artist:5M52tdBnJaKSvOpJGz8mfZ"
+          }
+        ],
+        "available_markets": [
+          "CA",
+          "US"
+        ],
+        "disc_number": 1,
+        "duration_ms": 474359,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "USWB11304627"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2rd9ETlulTbz6BYZcdvIE1"
+        },
+        "href": "https://api.spotify.com/v1/tracks/2rd9ETlulTbz6BYZcdvIE1",
+        "id": "2rd9ETlulTbz6BYZcdvIE1",
+        "is_local": false,
+        "name": "War Pigs / Luke's Wall - 2014 Remaster",
+        "popularity": 65,
+        "preview_url": "https://p.scdn.co/mp3-preview/545e74b86c811096a7a5868101f8f427b6d47596?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 1,
+        "type": "track",
+        "uri": "spotify:track:2rd9ETlulTbz6BYZcdvIE1"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/5M52tdBnJaKSvOpJGz8mfZ"
+              },
+              "href": "https://api.spotify.com/v1/artists/5M52tdBnJaKSvOpJGz8mfZ",
+              "id": "5M52tdBnJaKSvOpJGz8mfZ",
+              "name": "Black Sabbath",
+              "type": "artist",
+              "uri": "spotify:artist:5M52tdBnJaKSvOpJGz8mfZ"
+            }
+          ],
+          "available_markets": [
+            "CA",
+            "US"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/7pGb2cOGVz6vLyaZaKOQ7D"
+          },
+          "href": "https://api.spotify.com/v1/albums/7pGb2cOGVz6vLyaZaKOQ7D",
+          "id": "7pGb2cOGVz6vLyaZaKOQ7D",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273c199494ba9ea2b73e9208f91",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02c199494ba9ea2b73e9208f91",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851c199494ba9ea2b73e9208f91",
+              "width": 64
+            }
+          ],
+          "name": "Master of Reality (2014 Remaster)",
+          "release_date": "1971-07-21",
+          "release_date_precision": "day",
+          "total_tracks": 8,
+          "type": "album",
+          "uri": "spotify:album:7pGb2cOGVz6vLyaZaKOQ7D"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/5M52tdBnJaKSvOpJGz8mfZ"
+            },
+            "href": "https://api.spotify.com/v1/artists/5M52tdBnJaKSvOpJGz8mfZ",
+            "id": "5M52tdBnJaKSvOpJGz8mfZ",
+            "name": "Black Sabbath",
+            "type": "artist",
+            "uri": "spotify:artist:5M52tdBnJaKSvOpJGz8mfZ"
+          }
+        ],
+        "available_markets": [
+          "CA",
+          "US"
+        ],
+        "disc_number": 1,
+        "duration_ms": 317206,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "USWB11304545"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5clz8BOBulxx7q2yHxqOCk"
+        },
+        "href": "https://api.spotify.com/v1/tracks/5clz8BOBulxx7q2yHxqOCk",
+        "id": "5clz8BOBulxx7q2yHxqOCk",
+        "is_local": false,
+        "name": "Children of the Grave - 2014 Remaster",
+        "popularity": 59,
+        "preview_url": "https://p.scdn.co/mp3-preview/38b3038c58d87b214fb21cfa3ad71876fe0a3720?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 4,
+        "type": "track",
+        "uri": "spotify:track:5clz8BOBulxx7q2yHxqOCk"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/5M52tdBnJaKSvOpJGz8mfZ"
+              },
+              "href": "https://api.spotify.com/v1/artists/5M52tdBnJaKSvOpJGz8mfZ",
+              "id": "5M52tdBnJaKSvOpJGz8mfZ",
+              "name": "Black Sabbath",
+              "type": "artist",
+              "uri": "spotify:artist:5M52tdBnJaKSvOpJGz8mfZ"
+            }
+          ],
+          "available_markets": [
+            "CA",
+            "US"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/1Wk2g7TV0adbUZ53ruvIdL"
+          },
+          "href": "https://api.spotify.com/v1/albums/1Wk2g7TV0adbUZ53ruvIdL",
+          "id": "1Wk2g7TV0adbUZ53ruvIdL",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273eab13a1a01fb57d6e9e8ddaf",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02eab13a1a01fb57d6e9e8ddaf",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851eab13a1a01fb57d6e9e8ddaf",
+              "width": 64
+            }
+          ],
+          "name": "Heaven and Hell (2008 Remaster)",
+          "release_date": "1980",
+          "release_date_precision": "year",
+          "total_tracks": 8,
+          "type": "album",
+          "uri": "spotify:album:1Wk2g7TV0adbUZ53ruvIdL"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/5M52tdBnJaKSvOpJGz8mfZ"
+            },
+            "href": "https://api.spotify.com/v1/artists/5M52tdBnJaKSvOpJGz8mfZ",
+            "id": "5M52tdBnJaKSvOpJGz8mfZ",
+            "name": "Black Sabbath",
+            "type": "artist",
+            "uri": "spotify:artist:5M52tdBnJaKSvOpJGz8mfZ"
+          }
+        ],
+        "available_markets": [
+          "CA",
+          "US"
+        ],
+        "disc_number": 1,
+        "duration_ms": 419933,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "USWB10800513"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3Jl5GohfNwozDmpzmQBLDI"
+        },
+        "href": "https://api.spotify.com/v1/tracks/3Jl5GohfNwozDmpzmQBLDI",
+        "id": "3Jl5GohfNwozDmpzmQBLDI",
+        "is_local": false,
+        "name": "Heaven and Hell - 2008 Remaster",
+        "popularity": 58,
+        "preview_url": "https://p.scdn.co/mp3-preview/1b9d17b76a0e509fefc7f892ed272922ded183c7?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 4,
+        "type": "track",
+        "uri": "spotify:track:3Jl5GohfNwozDmpzmQBLDI"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/5M52tdBnJaKSvOpJGz8mfZ"
+              },
+              "href": "https://api.spotify.com/v1/artists/5M52tdBnJaKSvOpJGz8mfZ",
+              "id": "5M52tdBnJaKSvOpJGz8mfZ",
+              "name": "Black Sabbath",
+              "type": "artist",
+              "uri": "spotify:artist:5M52tdBnJaKSvOpJGz8mfZ"
+            }
+          ],
+          "available_markets": [
+            "CA",
+            "US"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/7pGb2cOGVz6vLyaZaKOQ7D"
+          },
+          "href": "https://api.spotify.com/v1/albums/7pGb2cOGVz6vLyaZaKOQ7D",
+          "id": "7pGb2cOGVz6vLyaZaKOQ7D",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273c199494ba9ea2b73e9208f91",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02c199494ba9ea2b73e9208f91",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851c199494ba9ea2b73e9208f91",
+              "width": 64
+            }
+          ],
+          "name": "Master of Reality (2014 Remaster)",
+          "release_date": "1971-07-21",
+          "release_date_precision": "day",
+          "total_tracks": 8,
+          "type": "album",
+          "uri": "spotify:album:7pGb2cOGVz6vLyaZaKOQ7D"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/5M52tdBnJaKSvOpJGz8mfZ"
+            },
+            "href": "https://api.spotify.com/v1/artists/5M52tdBnJaKSvOpJGz8mfZ",
+            "id": "5M52tdBnJaKSvOpJGz8mfZ",
+            "name": "Black Sabbath",
+            "type": "artist",
+            "uri": "spotify:artist:5M52tdBnJaKSvOpJGz8mfZ"
+          }
+        ],
+        "available_markets": [
+          "CA",
+          "US"
+        ],
+        "disc_number": 1,
+        "duration_ms": 304787,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "USWB11304542"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2FZ0yrA5aPClG5ZPBlV7n4"
+        },
+        "href": "https://api.spotify.com/v1/tracks/2FZ0yrA5aPClG5ZPBlV7n4",
+        "id": "2FZ0yrA5aPClG5ZPBlV7n4",
+        "is_local": false,
+        "name": "Sweet Leaf - 2014 Remaster",
+        "popularity": 56,
+        "preview_url": "https://p.scdn.co/mp3-preview/f49abdf91c2e080a57dbce561f100c67ba64c83e?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 1,
+        "type": "track",
+        "uri": "spotify:track:2FZ0yrA5aPClG5ZPBlV7n4"
+      },
+      {
+        "album": {
+          "album_type": "compilation",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/5M52tdBnJaKSvOpJGz8mfZ"
+              },
+              "href": "https://api.spotify.com/v1/artists/5M52tdBnJaKSvOpJGz8mfZ",
+              "id": "5M52tdBnJaKSvOpJGz8mfZ",
+              "name": "Black Sabbath",
+              "type": "artist",
+              "uri": "spotify:artist:5M52tdBnJaKSvOpJGz8mfZ"
+            }
+          ],
+          "available_markets": [
+            "CA",
+            "US"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/6TcPqftScGmR0aEgIb43Vv"
+          },
+          "href": "https://api.spotify.com/v1/albums/6TcPqftScGmR0aEgIb43Vv",
+          "id": "6TcPqftScGmR0aEgIb43Vv",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b27343f594be3179178ce058786f",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e0243f594be3179178ce058786f",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d0000485143f594be3179178ce058786f",
+              "width": 64
+            }
+          ],
+          "name": "The Ultimate Collection",
+          "release_date": "2017-02-03",
+          "release_date_precision": "day",
+          "total_tracks": 31,
+          "type": "album",
+          "uri": "spotify:album:6TcPqftScGmR0aEgIb43Vv"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/5M52tdBnJaKSvOpJGz8mfZ"
+            },
+            "href": "https://api.spotify.com/v1/artists/5M52tdBnJaKSvOpJGz8mfZ",
+            "id": "5M52tdBnJaKSvOpJGz8mfZ",
+            "name": "Black Sabbath",
+            "type": "artist",
+            "uri": "spotify:artist:5M52tdBnJaKSvOpJGz8mfZ"
+          }
+        ],
+        "available_markets": [
+          "CA",
+          "US"
+        ],
+        "disc_number": 2,
+        "duration_ms": 364493,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "GBAJE7000079"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2GnVuaoKSkB6Xa07l1BBg8"
+        },
+        "href": "https://api.spotify.com/v1/tracks/2GnVuaoKSkB6Xa07l1BBg8",
+        "id": "2GnVuaoKSkB6Xa07l1BBg8",
+        "is_local": false,
+        "name": "N.I.B.",
+        "popularity": 56,
+        "preview_url": "https://p.scdn.co/mp3-preview/82ab9db4cbf7987f7bb3dd912d3e4f7b4f020961?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 10,
+        "type": "track",
+        "uri": "spotify:track:2GnVuaoKSkB6Xa07l1BBg8"
+      },
+      {
+        "album": {
+          "album_type": "compilation",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/5M52tdBnJaKSvOpJGz8mfZ"
+              },
+              "href": "https://api.spotify.com/v1/artists/5M52tdBnJaKSvOpJGz8mfZ",
+              "id": "5M52tdBnJaKSvOpJGz8mfZ",
+              "name": "Black Sabbath",
+              "type": "artist",
+              "uri": "spotify:artist:5M52tdBnJaKSvOpJGz8mfZ"
+            }
+          ],
+          "available_markets": [
+            "CA",
+            "US"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/6TcPqftScGmR0aEgIb43Vv"
+          },
+          "href": "https://api.spotify.com/v1/albums/6TcPqftScGmR0aEgIb43Vv",
+          "id": "6TcPqftScGmR0aEgIb43Vv",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b27343f594be3179178ce058786f",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e0243f594be3179178ce058786f",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d0000485143f594be3179178ce058786f",
+              "width": 64
+            }
+          ],
+          "name": "The Ultimate Collection",
+          "release_date": "2017-02-03",
+          "release_date_precision": "day",
+          "total_tracks": 31,
+          "type": "album",
+          "uri": "spotify:album:6TcPqftScGmR0aEgIb43Vv"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/5M52tdBnJaKSvOpJGz8mfZ"
+            },
+            "href": "https://api.spotify.com/v1/artists/5M52tdBnJaKSvOpJGz8mfZ",
+            "id": "5M52tdBnJaKSvOpJGz8mfZ",
+            "name": "Black Sabbath",
+            "type": "artist",
+            "uri": "spotify:artist:5M52tdBnJaKSvOpJGz8mfZ"
+          }
+        ],
+        "available_markets": [
+          "CA",
+          "US"
+        ],
+        "disc_number": 1,
+        "duration_ms": 474400,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "GBAJE7000063"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0HVQuuXGAcQ2P5mBN521ae"
+        },
+        "href": "https://api.spotify.com/v1/tracks/0HVQuuXGAcQ2P5mBN521ae",
+        "id": "0HVQuuXGAcQ2P5mBN521ae",
+        "is_local": false,
+        "name": "War Pigs",
+        "popularity": 53,
+        "preview_url": "https://p.scdn.co/mp3-preview/7b0420fab47dfbf060312207b3f67d8bea8f04ba?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 10,
+        "type": "track",
+        "uri": "spotify:track:0HVQuuXGAcQ2P5mBN521ae"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/5M52tdBnJaKSvOpJGz8mfZ"
+              },
+              "href": "https://api.spotify.com/v1/artists/5M52tdBnJaKSvOpJGz8mfZ",
+              "id": "5M52tdBnJaKSvOpJGz8mfZ",
+              "name": "Black Sabbath",
+              "type": "artist",
+              "uri": "spotify:artist:5M52tdBnJaKSvOpJGz8mfZ"
+            }
+          ],
+          "available_markets": [
+            "CA",
+            "US"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/1qQ2ig3pvig30zVyXLzij8"
+          },
+          "href": "https://api.spotify.com/v1/albums/1qQ2ig3pvig30zVyXLzij8",
+          "id": "1qQ2ig3pvig30zVyXLzij8",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b27347e9e769c9f540dd0464ba32",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e0247e9e769c9f540dd0464ba32",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d0000485147e9e769c9f540dd0464ba32",
+              "width": 64
+            }
+          ],
+          "name": "Sabbath Bloody Sabbath (2014 Remaster)",
+          "release_date": "1973-12-01",
+          "release_date_precision": "day",
+          "total_tracks": 8,
+          "type": "album",
+          "uri": "spotify:album:1qQ2ig3pvig30zVyXLzij8"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/5M52tdBnJaKSvOpJGz8mfZ"
+            },
+            "href": "https://api.spotify.com/v1/artists/5M52tdBnJaKSvOpJGz8mfZ",
+            "id": "5M52tdBnJaKSvOpJGz8mfZ",
+            "name": "Black Sabbath",
+            "type": "artist",
+            "uri": "spotify:artist:5M52tdBnJaKSvOpJGz8mfZ"
+          }
+        ],
+        "available_markets": [
+          "CA",
+          "US"
+        ],
+        "disc_number": 1,
+        "duration_ms": 346637,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "USWB11304635"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2bku1YWarHpKlxVC2FB9dH"
+        },
+        "href": "https://api.spotify.com/v1/tracks/2bku1YWarHpKlxVC2FB9dH",
+        "id": "2bku1YWarHpKlxVC2FB9dH",
+        "is_local": false,
+        "name": "Sabbath Bloody Sabbath - 2014 Remaster",
+        "popularity": 52,
+        "preview_url": "https://p.scdn.co/mp3-preview/f168744d0d9dfc8cd0bd705c34f14cf3989cbefd?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 1,
+        "type": "track",
+        "uri": "spotify:track:2bku1YWarHpKlxVC2FB9dH"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/5M52tdBnJaKSvOpJGz8mfZ"
+              },
+              "href": "https://api.spotify.com/v1/artists/5M52tdBnJaKSvOpJGz8mfZ",
+              "id": "5M52tdBnJaKSvOpJGz8mfZ",
+              "name": "Black Sabbath",
+              "type": "artist",
+              "uri": "spotify:artist:5M52tdBnJaKSvOpJGz8mfZ"
+            }
+          ],
+          "available_markets": [
+            "CA",
+            "US"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/7pGb2cOGVz6vLyaZaKOQ7D"
+          },
+          "href": "https://api.spotify.com/v1/albums/7pGb2cOGVz6vLyaZaKOQ7D",
+          "id": "7pGb2cOGVz6vLyaZaKOQ7D",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273c199494ba9ea2b73e9208f91",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02c199494ba9ea2b73e9208f91",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851c199494ba9ea2b73e9208f91",
+              "width": 64
+            }
+          ],
+          "name": "Master of Reality (2014 Remaster)",
+          "release_date": "1971-07-21",
+          "release_date_precision": "day",
+          "total_tracks": 8,
+          "type": "album",
+          "uri": "spotify:album:7pGb2cOGVz6vLyaZaKOQ7D"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/5M52tdBnJaKSvOpJGz8mfZ"
+            },
+            "href": "https://api.spotify.com/v1/artists/5M52tdBnJaKSvOpJGz8mfZ",
+            "id": "5M52tdBnJaKSvOpJGz8mfZ",
+            "name": "Black Sabbath",
+            "type": "artist",
+            "uri": "spotify:artist:5M52tdBnJaKSvOpJGz8mfZ"
+          }
+        ],
+        "available_markets": [
+          "CA",
+          "US"
+        ],
+        "disc_number": 1,
+        "duration_ms": 370312,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "USWB11304549"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3ex9yveBIpssnR6sVvhwiR"
+        },
+        "href": "https://api.spotify.com/v1/tracks/3ex9yveBIpssnR6sVvhwiR",
+        "id": "3ex9yveBIpssnR6sVvhwiR",
+        "is_local": false,
+        "name": "Into the Void - 2014 Remaster",
+        "popularity": 52,
+        "preview_url": "https://p.scdn.co/mp3-preview/33756eb1d6168a89d80c6d3f48a7148b793e65aa?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 8,
+        "type": "track",
+        "uri": "spotify:track:3ex9yveBIpssnR6sVvhwiR"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/5M52tdBnJaKSvOpJGz8mfZ"
+              },
+              "href": "https://api.spotify.com/v1/artists/5M52tdBnJaKSvOpJGz8mfZ",
+              "id": "5M52tdBnJaKSvOpJGz8mfZ",
+              "name": "Black Sabbath",
+              "type": "artist",
+              "uri": "spotify:artist:5M52tdBnJaKSvOpJGz8mfZ"
+            }
+          ],
+          "available_markets": [
+            "CA",
+            "US"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/4ZLy3U2q17Yjw7jkjXPJQj"
+          },
+          "href": "https://api.spotify.com/v1/albums/4ZLy3U2q17Yjw7jkjXPJQj",
+          "id": "4ZLy3U2q17Yjw7jkjXPJQj",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273975ae67d8fb422586b8e2f83",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02975ae67d8fb422586b8e2f83",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851975ae67d8fb422586b8e2f83",
+              "width": 64
+            }
+          ],
+          "name": "Black Sabbath (2014 Remaster)",
+          "release_date": "1970-02-13",
+          "release_date_precision": "day",
+          "total_tracks": 5,
+          "type": "album",
+          "uri": "spotify:album:4ZLy3U2q17Yjw7jkjXPJQj"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/5M52tdBnJaKSvOpJGz8mfZ"
+            },
+            "href": "https://api.spotify.com/v1/artists/5M52tdBnJaKSvOpJGz8mfZ",
+            "id": "5M52tdBnJaKSvOpJGz8mfZ",
+            "name": "Black Sabbath",
+            "type": "artist",
+            "uri": "spotify:artist:5M52tdBnJaKSvOpJGz8mfZ"
+          }
+        ],
+        "available_markets": [
+          "CA",
+          "US"
+        ],
+        "disc_number": 1,
+        "duration_ms": 262746,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "USWB11304613"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6sjTzevtstOxOMsFsypsEm"
+        },
+        "href": "https://api.spotify.com/v1/tracks/6sjTzevtstOxOMsFsypsEm",
+        "id": "6sjTzevtstOxOMsFsypsEm",
+        "is_local": false,
+        "name": "The Wizard - 2014 Remaster",
+        "popularity": 51,
+        "preview_url": "https://p.scdn.co/mp3-preview/95c017737f85581bd8f84a88d43d7102da36090b?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 2,
+        "type": "track",
+        "uri": "spotify:track:6sjTzevtstOxOMsFsypsEm"
+      },
+      {
+        "album": {
+          "album_type": "compilation",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/5M52tdBnJaKSvOpJGz8mfZ"
+              },
+              "href": "https://api.spotify.com/v1/artists/5M52tdBnJaKSvOpJGz8mfZ",
+              "id": "5M52tdBnJaKSvOpJGz8mfZ",
+              "name": "Black Sabbath",
+              "type": "artist",
+              "uri": "spotify:artist:5M52tdBnJaKSvOpJGz8mfZ"
+            }
+          ],
+          "available_markets": [
+            "CA",
+            "US"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/6TcPqftScGmR0aEgIb43Vv"
+          },
+          "href": "https://api.spotify.com/v1/albums/6TcPqftScGmR0aEgIb43Vv",
+          "id": "6TcPqftScGmR0aEgIb43Vv",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b27343f594be3179178ce058786f",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e0243f594be3179178ce058786f",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d0000485143f594be3179178ce058786f",
+              "width": 64
+            }
+          ],
+          "name": "The Ultimate Collection",
+          "release_date": "2017-02-03",
+          "release_date_precision": "day",
+          "total_tracks": 31,
+          "type": "album",
+          "uri": "spotify:album:6TcPqftScGmR0aEgIb43Vv"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/5M52tdBnJaKSvOpJGz8mfZ"
+            },
+            "href": "https://api.spotify.com/v1/artists/5M52tdBnJaKSvOpJGz8mfZ",
+            "id": "5M52tdBnJaKSvOpJGz8mfZ",
+            "name": "Black Sabbath",
+            "type": "artist",
+            "uri": "spotify:artist:5M52tdBnJaKSvOpJGz8mfZ"
+          }
+        ],
+        "available_markets": [
+          "CA",
+          "US"
+        ],
+        "disc_number": 1,
+        "duration_ms": 354773,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "GBAJE7000085"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4svkPL62HbvyFgf0nHFXAF"
+        },
+        "href": "https://api.spotify.com/v1/tracks/4svkPL62HbvyFgf0nHFXAF",
+        "id": "4svkPL62HbvyFgf0nHFXAF",
+        "is_local": false,
+        "name": "Iron Man",
+        "popularity": 50,
+        "preview_url": "https://p.scdn.co/mp3-preview/b5afd236ad1f6a6df6ba6994c665f648c4d0fda4?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 3,
+        "type": "track",
+        "uri": "spotify:track:4svkPL62HbvyFgf0nHFXAF"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/5M52tdBnJaKSvOpJGz8mfZ"
+              },
+              "href": "https://api.spotify.com/v1/artists/5M52tdBnJaKSvOpJGz8mfZ",
+              "id": "5M52tdBnJaKSvOpJGz8mfZ",
+              "name": "Black Sabbath",
+              "type": "artist",
+              "uri": "spotify:artist:5M52tdBnJaKSvOpJGz8mfZ"
+            }
+          ],
+          "available_markets": [
+            "CA",
+            "US"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/6r7LZXAVueS5DqdrvXJJK7"
+          },
+          "href": "https://api.spotify.com/v1/albums/6r7LZXAVueS5DqdrvXJJK7",
+          "id": "6r7LZXAVueS5DqdrvXJJK7",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b27382fd952c052899397f8c9917",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e0282fd952c052899397f8c9917",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d0000485182fd952c052899397f8c9917",
+              "width": 64
+            }
+          ],
+          "name": "Paranoid (2014 Remaster)",
+          "release_date": "1970-09-18",
+          "release_date_precision": "day",
+          "total_tracks": 8,
+          "type": "album",
+          "uri": "spotify:album:6r7LZXAVueS5DqdrvXJJK7"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/5M52tdBnJaKSvOpJGz8mfZ"
+            },
+            "href": "https://api.spotify.com/v1/artists/5M52tdBnJaKSvOpJGz8mfZ",
+            "id": "5M52tdBnJaKSvOpJGz8mfZ",
+            "name": "Black Sabbath",
+            "type": "artist",
+            "uri": "spotify:artist:5M52tdBnJaKSvOpJGz8mfZ"
+          }
+        ],
+        "available_markets": [
+          "CA",
+          "US"
+        ],
+        "disc_number": 1,
+        "duration_ms": 289803,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "USWB11304631"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7As8h8LJTMIritB8QwSmqr"
+        },
+        "href": "https://api.spotify.com/v1/tracks/7As8h8LJTMIritB8QwSmqr",
+        "id": "7As8h8LJTMIritB8QwSmqr",
+        "is_local": false,
+        "name": "Electric Funeral - 2013 Remaster",
+        "popularity": 50,
+        "preview_url": "https://p.scdn.co/mp3-preview/e720d5791f8cebc6c9bfc8be173468ca20c681db?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 5,
+        "type": "track",
+        "uri": "spotify:track:7As8h8LJTMIritB8QwSmqr"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/4Mt6w4tDGiPgV5q6JWPlrI"
+              },
+              "href": "https://api.spotify.com/v1/artists/4Mt6w4tDGiPgV5q6JWPlrI",
+              "id": "4Mt6w4tDGiPgV5q6JWPlrI",
+              "name": "Sleep",
+              "type": "artist",
+              "uri": "spotify:artist:4Mt6w4tDGiPgV5q6JWPlrI"
+            }
+          ],
+          "available_markets": [
+            "AD",
+            "AE",
+            "AL",
+            "AR",
+            "AT",
+            "AU",
+            "BA",
+            "BE",
+            "BG",
+            "BH",
+            "BO",
+            "BR",
+            "BY",
+            "CA",
+            "CH",
+            "CL",
+            "CO",
+            "CR",
+            "CY",
+            "CZ",
+            "DE",
+            "DK",
+            "DO",
+            "DZ",
+            "EC",
+            "EE",
+            "EG",
+            "ES",
+            "FI",
+            "FR",
+            "GB",
+            "GR",
+            "GT",
+            "HK",
+            "HN",
+            "HR",
+            "HU",
+            "ID",
+            "IE",
+            "IL",
+            "IN",
+            "IS",
+            "IT",
+            "JO",
+            "JP",
+            "KW",
+            "KZ",
+            "LB",
+            "LI",
+            "LT",
+            "LU",
+            "LV",
+            "MA",
+            "MC",
+            "MD",
+            "ME",
+            "MK",
+            "MT",
+            "MX",
+            "MY",
+            "NI",
+            "NL",
+            "NO",
+            "NZ",
+            "OM",
+            "PA",
+            "PE",
+            "PH",
+            "PL",
+            "PS",
+            "PT",
+            "PY",
+            "QA",
+            "RO",
+            "RS",
+            "RU",
+            "SA",
+            "SE",
+            "SG",
+            "SI",
+            "SK",
+            "SV",
+            "TH",
+            "TN",
+            "TR",
+            "TW",
+            "UA",
+            "US",
+            "UY",
+            "VN",
+            "XK",
+            "ZA"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/6L7ENQZtfSKVAq1CIRZSxs"
+          },
+          "href": "https://api.spotify.com/v1/albums/6L7ENQZtfSKVAq1CIRZSxs",
+          "id": "6L7ENQZtfSKVAq1CIRZSxs",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273135e343afe7262d1a1e407f3",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02135e343afe7262d1a1e407f3",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851135e343afe7262d1a1e407f3",
+              "width": 64
+            }
+          ],
+          "name": "Sleep's Holy Mountain",
+          "release_date": "1993",
+          "release_date_precision": "year",
+          "total_tracks": 9,
+          "type": "album",
+          "uri": "spotify:album:6L7ENQZtfSKVAq1CIRZSxs"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/4Mt6w4tDGiPgV5q6JWPlrI"
+            },
+            "href": "https://api.spotify.com/v1/artists/4Mt6w4tDGiPgV5q6JWPlrI",
+            "id": "4Mt6w4tDGiPgV5q6JWPlrI",
+            "name": "Sleep",
+            "type": "artist",
+            "uri": "spotify:artist:4Mt6w4tDGiPgV5q6JWPlrI"
+          }
+        ],
+        "available_markets": [
+          "AD",
+          "AE",
+          "AL",
+          "AR",
+          "AT",
+          "AU",
+          "BA",
+          "BE",
+          "BG",
+          "BH",
+          "BO",
+          "BR",
+          "BY",
+          "CA",
+          "CH",
+          "CL",
+          "CO",
+          "CR",
+          "CY",
+          "CZ",
+          "DE",
+          "DK",
+          "DO",
+          "DZ",
+          "EC",
+          "EE",
+          "EG",
+          "ES",
+          "FI",
+          "FR",
+          "GB",
+          "GR",
+          "GT",
+          "HK",
+          "HN",
+          "HR",
+          "HU",
+          "ID",
+          "IE",
+          "IL",
+          "IN",
+          "IS",
+          "IT",
+          "JO",
+          "JP",
+          "KW",
+          "KZ",
+          "LB",
+          "LI",
+          "LT",
+          "LU",
+          "LV",
+          "MA",
+          "MC",
+          "MD",
+          "ME",
+          "MK",
+          "MT",
+          "MX",
+          "MY",
+          "NI",
+          "NL",
+          "NO",
+          "NZ",
+          "OM",
+          "PA",
+          "PE",
+          "PH",
+          "PL",
+          "PS",
+          "PT",
+          "PY",
+          "QA",
+          "RO",
+          "RS",
+          "RU",
+          "SA",
+          "SE",
+          "SG",
+          "SI",
+          "SK",
+          "SV",
+          "TH",
+          "TN",
+          "TR",
+          "TW",
+          "UA",
+          "US",
+          "UY",
+          "VN",
+          "XK",
+          "ZA"
+        ],
+        "disc_number": 1,
+        "duration_ms": 343160,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "GBBPB0400650"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6qLgGLeawKyhMFJ848XtYD"
+        },
+        "href": "https://api.spotify.com/v1/tracks/6qLgGLeawKyhMFJ848XtYD",
+        "id": "6qLgGLeawKyhMFJ848XtYD",
+        "is_local": false,
+        "name": "Dragonaut",
+        "popularity": 53,
+        "preview_url": "https://p.scdn.co/mp3-preview/43d29a65ea12e4a65efe7cc736d556608449ffde?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 1,
+        "type": "track",
+        "uri": "spotify:track:6qLgGLeawKyhMFJ848XtYD"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/5M52tdBnJaKSvOpJGz8mfZ"
+              },
+              "href": "https://api.spotify.com/v1/artists/5M52tdBnJaKSvOpJGz8mfZ",
+              "id": "5M52tdBnJaKSvOpJGz8mfZ",
+              "name": "Black Sabbath",
+              "type": "artist",
+              "uri": "spotify:artist:5M52tdBnJaKSvOpJGz8mfZ"
+            }
+          ],
+          "available_markets": [
+            "CA",
+            "US"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/4ZLy3U2q17Yjw7jkjXPJQj"
+          },
+          "href": "https://api.spotify.com/v1/albums/4ZLy3U2q17Yjw7jkjXPJQj",
+          "id": "4ZLy3U2q17Yjw7jkjXPJQj",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273975ae67d8fb422586b8e2f83",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02975ae67d8fb422586b8e2f83",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851975ae67d8fb422586b8e2f83",
+              "width": 64
+            }
+          ],
+          "name": "Black Sabbath (2014 Remaster)",
+          "release_date": "1970-02-13",
+          "release_date_precision": "day",
+          "total_tracks": 5,
+          "type": "album",
+          "uri": "spotify:album:4ZLy3U2q17Yjw7jkjXPJQj"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/5M52tdBnJaKSvOpJGz8mfZ"
+            },
+            "href": "https://api.spotify.com/v1/artists/5M52tdBnJaKSvOpJGz8mfZ",
+            "id": "5M52tdBnJaKSvOpJGz8mfZ",
+            "name": "Black Sabbath",
+            "type": "artist",
+            "uri": "spotify:artist:5M52tdBnJaKSvOpJGz8mfZ"
+          }
+        ],
+        "available_markets": [
+          "CA",
+          "US"
+        ],
+        "disc_number": 1,
+        "duration_ms": 378226,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "USWB11304612"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0xIZPPBfLqQEAj1BLmGrNc"
+        },
+        "href": "https://api.spotify.com/v1/tracks/0xIZPPBfLqQEAj1BLmGrNc",
+        "id": "0xIZPPBfLqQEAj1BLmGrNc",
+        "is_local": false,
+        "name": "Black Sabbath - 2014 Remaster",
+        "popularity": 50,
+        "preview_url": "https://p.scdn.co/mp3-preview/4b3fa791de3bce2100caf93155ea7b5f39f7dc97?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 1,
+        "type": "track",
+        "uri": "spotify:track:0xIZPPBfLqQEAj1BLmGrNc"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/5M52tdBnJaKSvOpJGz8mfZ"
+              },
+              "href": "https://api.spotify.com/v1/artists/5M52tdBnJaKSvOpJGz8mfZ",
+              "id": "5M52tdBnJaKSvOpJGz8mfZ",
+              "name": "Black Sabbath",
+              "type": "artist",
+              "uri": "spotify:artist:5M52tdBnJaKSvOpJGz8mfZ"
+            }
+          ],
+          "available_markets": [
+            "CA",
+            "US"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/6r7LZXAVueS5DqdrvXJJK7"
+          },
+          "href": "https://api.spotify.com/v1/albums/6r7LZXAVueS5DqdrvXJJK7",
+          "id": "6r7LZXAVueS5DqdrvXJJK7",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b27382fd952c052899397f8c9917",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e0282fd952c052899397f8c9917",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d0000485182fd952c052899397f8c9917",
+              "width": 64
+            }
+          ],
+          "name": "Paranoid (2014 Remaster)",
+          "release_date": "1970-09-18",
+          "release_date_precision": "day",
+          "total_tracks": 8,
+          "type": "album",
+          "uri": "spotify:album:6r7LZXAVueS5DqdrvXJJK7"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/5M52tdBnJaKSvOpJGz8mfZ"
+            },
+            "href": "https://api.spotify.com/v1/artists/5M52tdBnJaKSvOpJGz8mfZ",
+            "id": "5M52tdBnJaKSvOpJGz8mfZ",
+            "name": "Black Sabbath",
+            "type": "artist",
+            "uri": "spotify:artist:5M52tdBnJaKSvOpJGz8mfZ"
+          }
+        ],
+        "available_markets": [
+          "CA",
+          "US"
+        ],
+        "disc_number": 1,
+        "duration_ms": 372145,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "USWB11304634"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6EKrBVHDk20hwjYWGPQQlF"
+        },
+        "href": "https://api.spotify.com/v1/tracks/6EKrBVHDk20hwjYWGPQQlF",
+        "id": "6EKrBVHDk20hwjYWGPQQlF",
+        "is_local": false,
+        "name": "Jack the Stripper / Fairies Wear Boots - 2013 Remaster",
+        "popularity": 50,
+        "preview_url": "https://p.scdn.co/mp3-preview/7230618dd0f482b7989cabcbfaf8f95a37fb0ce7?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 8,
+        "type": "track",
+        "uri": "spotify:track:6EKrBVHDk20hwjYWGPQQlF"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/5M52tdBnJaKSvOpJGz8mfZ"
+              },
+              "href": "https://api.spotify.com/v1/artists/5M52tdBnJaKSvOpJGz8mfZ",
+              "id": "5M52tdBnJaKSvOpJGz8mfZ",
+              "name": "Black Sabbath",
+              "type": "artist",
+              "uri": "spotify:artist:5M52tdBnJaKSvOpJGz8mfZ"
+            }
+          ],
+          "available_markets": [
+            "CA",
+            "US"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/3zNcigR9hAceoTJphnxg6f"
+          },
+          "href": "https://api.spotify.com/v1/albums/3zNcigR9hAceoTJphnxg6f",
+          "id": "3zNcigR9hAceoTJphnxg6f",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b27336ecc104d9cf43bc75ef6d3d",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e0236ecc104d9cf43bc75ef6d3d",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d0000485136ecc104d9cf43bc75ef6d3d",
+              "width": 64
+            }
+          ],
+          "name": "Vol. 4 (2014 Remaster)",
+          "release_date": "1972-09-25",
+          "release_date_precision": "day",
+          "total_tracks": 10,
+          "type": "album",
+          "uri": "spotify:album:3zNcigR9hAceoTJphnxg6f"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/5M52tdBnJaKSvOpJGz8mfZ"
+            },
+            "href": "https://api.spotify.com/v1/artists/5M52tdBnJaKSvOpJGz8mfZ",
+            "id": "5M52tdBnJaKSvOpJGz8mfZ",
+            "name": "Black Sabbath",
+            "type": "artist",
+            "uri": "spotify:artist:5M52tdBnJaKSvOpJGz8mfZ"
+          }
+        ],
+        "available_markets": [
+          "CA",
+          "US"
+        ],
+        "disc_number": 1,
+        "duration_ms": 282497,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "USWB11304619"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3b7wNR330iKhql9dEdbNci"
+        },
+        "href": "https://api.spotify.com/v1/tracks/3b7wNR330iKhql9dEdbNci",
+        "id": "3b7wNR330iKhql9dEdbNci",
+        "is_local": false,
+        "name": "Changes - 2013 Remaster",
+        "popularity": 50,
+        "preview_url": "https://p.scdn.co/mp3-preview/3169f045b574b1e0b4f732c302f8ecafd15a1206?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 3,
+        "type": "track",
+        "uri": "spotify:track:3b7wNR330iKhql9dEdbNci"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/5M52tdBnJaKSvOpJGz8mfZ"
+              },
+              "href": "https://api.spotify.com/v1/artists/5M52tdBnJaKSvOpJGz8mfZ",
+              "id": "5M52tdBnJaKSvOpJGz8mfZ",
+              "name": "Black Sabbath",
+              "type": "artist",
+              "uri": "spotify:artist:5M52tdBnJaKSvOpJGz8mfZ"
+            }
+          ],
+          "available_markets": [
+            "CA",
+            "US"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/3zNcigR9hAceoTJphnxg6f"
+          },
+          "href": "https://api.spotify.com/v1/albums/3zNcigR9hAceoTJphnxg6f",
+          "id": "3zNcigR9hAceoTJphnxg6f",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b27336ecc104d9cf43bc75ef6d3d",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e0236ecc104d9cf43bc75ef6d3d",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d0000485136ecc104d9cf43bc75ef6d3d",
+              "width": 64
+            }
+          ],
+          "name": "Vol. 4 (2014 Remaster)",
+          "release_date": "1972-09-25",
+          "release_date_precision": "day",
+          "total_tracks": 10,
+          "type": "album",
+          "uri": "spotify:album:3zNcigR9hAceoTJphnxg6f"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/5M52tdBnJaKSvOpJGz8mfZ"
+            },
+            "href": "https://api.spotify.com/v1/artists/5M52tdBnJaKSvOpJGz8mfZ",
+            "id": "5M52tdBnJaKSvOpJGz8mfZ",
+            "name": "Black Sabbath",
+            "type": "artist",
+            "uri": "spotify:artist:5M52tdBnJaKSvOpJGz8mfZ"
+          }
+        ],
+        "available_markets": [
+          "CA",
+          "US"
+        ],
+        "disc_number": 1,
+        "duration_ms": 326328,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "USWB11304622"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5w091st8zPd8c01LFzTY8B"
+        },
+        "href": "https://api.spotify.com/v1/tracks/5w091st8zPd8c01LFzTY8B",
+        "id": "5w091st8zPd8c01LFzTY8B",
+        "is_local": false,
+        "name": "Snowblind - 2014 Remaster",
+        "popularity": 49,
+        "preview_url": "https://p.scdn.co/mp3-preview/8edfb217d198d54899ee5f8cedc743b1547dc20e?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 6,
+        "type": "track",
+        "uri": "spotify:track:5w091st8zPd8c01LFzTY8B"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/4htjQW3lgIwL6fEJlTOez4"
+              },
+              "href": "https://api.spotify.com/v1/artists/4htjQW3lgIwL6fEJlTOez4",
+              "id": "4htjQW3lgIwL6fEJlTOez4",
+              "name": "Electric Wizard",
+              "type": "artist",
+              "uri": "spotify:artist:4htjQW3lgIwL6fEJlTOez4"
+            }
+          ],
+          "available_markets": [
+            "AR",
+            "BO",
+            "BR",
+            "CA",
+            "CL",
+            "CO",
+            "CR",
+            "DO",
+            "EC",
+            "GT",
+            "HN",
+            "MX",
+            "NI",
+            "PA",
+            "PE",
+            "PY",
+            "SV",
+            "US",
+            "UY"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/1AxwLCMtx8rnIxkFQKU2LO"
+          },
+          "href": "https://api.spotify.com/v1/albums/1AxwLCMtx8rnIxkFQKU2LO",
+          "id": "1AxwLCMtx8rnIxkFQKU2LO",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273d11797b2bfbfefe908e0ad92",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02d11797b2bfbfefe908e0ad92",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851d11797b2bfbfefe908e0ad92",
+              "width": 64
+            }
+          ],
+          "name": "Dopethrone",
+          "release_date": "2006",
+          "release_date_precision": "year",
+          "total_tracks": 9,
+          "type": "album",
+          "uri": "spotify:album:1AxwLCMtx8rnIxkFQKU2LO"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/4htjQW3lgIwL6fEJlTOez4"
+            },
+            "href": "https://api.spotify.com/v1/artists/4htjQW3lgIwL6fEJlTOez4",
+            "id": "4htjQW3lgIwL6fEJlTOez4",
+            "name": "Electric Wizard",
+            "type": "artist",
+            "uri": "spotify:artist:4htjQW3lgIwL6fEJlTOez4"
+          }
+        ],
+        "available_markets": [
+          "AR",
+          "BO",
+          "BR",
+          "CA",
+          "CL",
+          "CO",
+          "CR",
+          "DO",
+          "EC",
+          "GT",
+          "HN",
+          "MX",
+          "NI",
+          "PA",
+          "PE",
+          "PY",
+          "SV",
+          "US",
+          "UY"
+        ],
+        "disc_number": 1,
+        "duration_ms": 523333,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "USMBR9900154"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6DU1WKdUnR7OZkw7BZl9P0"
+        },
+        "href": "https://api.spotify.com/v1/tracks/6DU1WKdUnR7OZkw7BZl9P0",
+        "id": "6DU1WKdUnR7OZkw7BZl9P0",
+        "is_local": false,
+        "name": "Funeralopolis",
+        "popularity": 46,
+        "preview_url": "https://p.scdn.co/mp3-preview/1f518f97f250d234cd29b6a03388867654eb8b43?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 2,
+        "type": "track",
+        "uri": "spotify:track:6DU1WKdUnR7OZkw7BZl9P0"
+      },
+      {
+        "album": {
+          "album_type": "album",
+          "artists": [
+            {
+              "external_urls": {
+                "spotify": "https://open.spotify.com/artist/5M52tdBnJaKSvOpJGz8mfZ"
+              },
+              "href": "https://api.spotify.com/v1/artists/5M52tdBnJaKSvOpJGz8mfZ",
+              "id": "5M52tdBnJaKSvOpJGz8mfZ",
+              "name": "Black Sabbath",
+              "type": "artist",
+              "uri": "spotify:artist:5M52tdBnJaKSvOpJGz8mfZ"
+            }
+          ],
+          "available_markets": [
+            "CA",
+            "US"
+          ],
+          "external_urls": {
+            "spotify": "https://open.spotify.com/album/7pGb2cOGVz6vLyaZaKOQ7D"
+          },
+          "href": "https://api.spotify.com/v1/albums/7pGb2cOGVz6vLyaZaKOQ7D",
+          "id": "7pGb2cOGVz6vLyaZaKOQ7D",
+          "images": [
+            {
+              "height": 640,
+              "url": "https://i.scdn.co/image/ab67616d0000b273c199494ba9ea2b73e9208f91",
+              "width": 640
+            },
+            {
+              "height": 300,
+              "url": "https://i.scdn.co/image/ab67616d00001e02c199494ba9ea2b73e9208f91",
+              "width": 300
+            },
+            {
+              "height": 64,
+              "url": "https://i.scdn.co/image/ab67616d00004851c199494ba9ea2b73e9208f91",
+              "width": 64
+            }
+          ],
+          "name": "Master of Reality (2014 Remaster)",
+          "release_date": "1971-07-21",
+          "release_date_precision": "day",
+          "total_tracks": 8,
+          "type": "album",
+          "uri": "spotify:album:7pGb2cOGVz6vLyaZaKOQ7D"
+        },
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/5M52tdBnJaKSvOpJGz8mfZ"
+            },
+            "href": "https://api.spotify.com/v1/artists/5M52tdBnJaKSvOpJGz8mfZ",
+            "id": "5M52tdBnJaKSvOpJGz8mfZ",
+            "name": "Black Sabbath",
+            "type": "artist",
+            "uri": "spotify:artist:5M52tdBnJaKSvOpJGz8mfZ"
+          }
+        ],
+        "available_markets": [
+          "CA",
+          "US"
+        ],
+        "disc_number": 1,
+        "duration_ms": 325028,
+        "explicit": false,
+        "external_ids": {
+          "isrc": "USWB11304547"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3EUJS9hmoZPYCFuUctnfCz"
+        },
+        "href": "https://api.spotify.com/v1/tracks/3EUJS9hmoZPYCFuUctnfCz",
+        "id": "3EUJS9hmoZPYCFuUctnfCz",
+        "is_local": false,
+        "name": "Lord of This World - 2014 Remaster",
+        "popularity": 47,
+        "preview_url": "https://p.scdn.co/mp3-preview/98152398f72ec4693139c2cb61edd5d4a8a02cf1?cid=774b29d4f13844c495f206cafdad9c86",
+        "track_number": 6,
+        "type": "track",
+        "uri": "spotify:track:3EUJS9hmoZPYCFuUctnfCz"
+      }
+    ],
+    "limit": 20,
+    "next": "https://api.spotify.com/v1/search?query=genre%3A%22Doom+Metal%22&type=track&offset=20&limit=20",
+    "offset": 0,
+    "previous": null,
+    "total": 28642
+  }
+}
