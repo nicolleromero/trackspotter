@@ -26,11 +26,12 @@ function PlaylistRow(props) {
       })}</h5></td>
       <td>{props.title}</td>
       <td>
-        {props.likes < 5 && (
-          <p>{'★'.repeat(props.likes)}{'☆'.repeat(5 - props.likes)}</p>
+        {props.likes < 1 && (
+          // <p>{'★'.repeat(props.likes)}{'☆'.repeat(5 - props.likes)}</p>
+          <p></p>
         )}
-        {props.likes > 4 && (
-          <p>{'★'.repeat(5)}</p>
+        {props.likes > 0 && (
+          <p>{'★'.repeat(props.likes)}</p>
         )}
       </td>
       <td>

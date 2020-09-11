@@ -26,7 +26,7 @@ function PlaylistHeader(props) {
         <tr align="center">
           <th>SEARCH TERMS</th>
           <th>PLAYLIST TITLE</th>
-          <th>RATING</th>
+          <th>☆'s</th>
           <th>PLAY</th>
         </tr>
       </thead>
