@@ -33,11 +33,11 @@ function Track(props) {
           </span>
         )}
       </td>
-      <td>{order}</td>
+      <td className="d-none d-sm-table-cell">{order}</td>
       <td>{props.track.title}</td>
       <td>{props.track.artist}</td>
-      <td>{props.track.album}</td>
-      <td>{millisToTime(props.track.playtime)}</td>
+      <td className="d-none d-sm-table-cell">{props.track.album}</td>
+      <td className="d-none d-sm-table-cell">{millisToTime(props.track.playtime)}</td>
       {/* <td>
           <img src={props.track.album_art}></img>
         </td> */}

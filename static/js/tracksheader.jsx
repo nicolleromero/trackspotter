@@ -17,11 +17,11 @@ function TracksHeader(props) {
     <thead id="playlist-thead">
       <tr align="center">
         <th>   </th>
-        <th>TRACK</th>
+        <th className="d-none d-sm-table-cell">TRACK</th>
         <th>TITLE</th>
         <th>ARTIST</th>
-        <th>ALBUM</th>
-        <th>PLAYTIME</th>
+        <th className="d-none d-sm-table-cell">ALBUM</th>
+        <th className="d-none d-sm-table-cell">PLAYTIME</th>
         <th>PLAY</th><th>
           {props.editable && (
             <span><i className="fa fa-trash-o"></i></span>
