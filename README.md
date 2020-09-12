@@ -49,4 +49,5 @@ https://trackspotter.app/
 * Add support for collaborative playlists.
 
 ## <a name="license"></a>License
-MIT © Nicolle Romero 2020
+* MIT © Nicolle Romero 2020
+* Homepage Photo by Anthony DELANOIX on Unsplash
