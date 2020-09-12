@@ -1,25 +1,24 @@
 const { Component } = React;
 const { render } = ReactDOM;
-const { Badge, Button, Col, Container, Form, FormControl, ListGroup, Navbar, Row, Table } = ReactBootstrap;
+const { Badge, Button, Col, Container, Form, FormControl, ListGroup, Nav, Navbar, Row, Table } = ReactBootstrap;
 
 
 function Topbar(props) {
   return (
-    <Navbar id="topbar">
-      <Col className="justify-content-start mr-auto">
-        <Navbar.Text>
-          <h3>trackspotter</h3>
-        </Navbar.Text>
-      </Col>
-      <Col xs lg="6" className="justify-content-center">
-        <Login
-          user={props.user}
-          onLogin={props.onLogin} />
-      </Col>
-      <Col className="mr-auto">
-        <Navbar.Collapse className="justify-content-end">
+    <Navbar id="topbar" expand="lg">
+      <Navbar.Text>
+        <h3>trackspotter</h3>
+      </Navbar.Text>
+      <Navbar.Toggle aria-controls="basic-navbar-nav" />
+      <Navbar.Collapse id="basic-navbar-nav">
+        <Col className="mr-auto">
+          <NavLinks
+            user={props.user}
+            onLogin={props.onLogin} />
+        </Col>
+        <Navbar.Brand className="justify-content-end right-nav">
           {props.user && (
-            <div>
+            <React.Fragment>
               {props.user.spotify_image_url && (
                 <Navbar.Text>
                   <img src={props.user.spotify_image_url} className="avatar" />
@@ -28,9 +27,8 @@ function Topbar(props) {
               <Button href="/logout" variant="outline-secondary inline" id="btn-login" className="btn-spotify space"
               >
                 Log Out
-          </Button>
-
-            </div>
+              </Button>
+            </React.Fragment>
           )}
           {!props.user && (
             <Button
@@ -47,13 +45,13 @@ function Topbar(props) {
               </img>
             </Button>
           )}
-        </Navbar.Collapse>
-      </Col>
+        </Navbar.Brand>
+      </Navbar.Collapse>
     </Navbar>
   );
 }
 
-function Login(props) {
+function NavLinks(props) {
   // Allows for assigning a seeded user during dev; remove for prod
   const [userId, setUserId] = React.useState('');
 

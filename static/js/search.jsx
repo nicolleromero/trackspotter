@@ -100,12 +100,12 @@ function StructuredSearch(props) {
               />
             </Col>
           )}
-          <Col xs="auto" className="inline search-top">
+          {/* <Col xs="auto" className="inline search-top">
             <NumSongs
               numSongs={props.numSongs}
               onChange={props.onChangeNumSongs}
             />
-          </Col>
+          </Col> */}
           <Col xs="auto" className="inline search-top">
             <Button
               variant="outline-secondary inline"

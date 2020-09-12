@@ -184,7 +184,7 @@ function AdvSearch() {
         <Row className="d-flex float-right padding"
         >
         </Row>
-        <Row className="d-flex justify-content-between hyper offset-2">
+        <Row className="d-none d-lg-block justify-content-between hyper offset-2">
           <h1 className="h1">Easily find <br />the tracks you <br />love </h1>
         </Row>
       </Navbar>
@@ -223,7 +223,7 @@ function AdvSearch() {
             </div>
           )}
           {tracks.length > 0 && USER == null && (
-            <div>
+            <div className="d-none d-lg-block">
               <Row className="offset-2">
                 <Col >
                   <img
@@ -265,7 +265,7 @@ function AdvSearch() {
         </Row>
       </Container>
       {!loading && tracks.length === 0 && USER == null && (
-        <Container>
+        <Container className="d-none d-lg-block">
           <Row className="offset-2">
             <Col >
               <img
