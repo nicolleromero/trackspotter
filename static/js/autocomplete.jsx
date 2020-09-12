@@ -36,7 +36,7 @@ function Autosuggest(props) {
       renderItem={(item, highlighted) =>
         <div
           key={item.id}
-          style={{ backgroundColor: highlighted ? '#eee' : 'transparent' }}
+          className={'genre-dropdown-item' + (highlighted ? ' highlighted' : '')}
         >
           {item.label}
         </div>

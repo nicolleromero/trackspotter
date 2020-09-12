@@ -89,7 +89,7 @@ function StructuredSearch(props) {
               /></Col>
           )}
           {props.prefix === "genre:" && (
-            <Col xs="auto" className="inline search-top fixed-width">
+            <Col xs="auto" className="inline search-top fixed-width genre-input">
               <Autosuggest
                 type="text"
                 value={props.param}
@@ -106,7 +106,7 @@ function StructuredSearch(props) {
               onChange={props.onChangeNumSongs}
             />
           </Col> */}
-          <Col xs="auto" className="inline search-top">
+          <Col xs="auto" className="inline search-button">
             <Button
               variant="outline-secondary inline"
               type="submit"

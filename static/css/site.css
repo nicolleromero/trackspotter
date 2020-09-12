@@ -69,12 +69,33 @@ h5 {
 
 .search {
   margin-top: auto;
-  margin-bottom: auto;
+  margin-bottom: 5px;
 }
 
 .search-top {
-  margin-top: 10px;
+  margin-top: 0px;
   margin-bottom: auto;
+}
+
+@media only screen and (max-device-width : 480px) {
+  .search-button {
+    margin-top: 15px;
+    margin-bottom: auto;
+  }
+}
+
+@media only screen and (max-device-width : 480px) {
+  .mobile-btn {
+    margin-left: 12px;
+  }
+}
+
+@media only screen and (max-device-width : 480px) {
+  .truncate {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }
 
 .fixed-width {
@@ -89,6 +110,19 @@ h5 {
 
 .control {
   width: 240px !important;
+}
+
+.genre-input {
+  position: relative;
+  z-index: 1;
+}
+
+.genre-dropdown-item {
+  background-color: transparent;
+}
+
+.genre-dropdown-item.highlighted {
+  background-color: #eee;
 }
 
 .hyper-search {
@@ -223,8 +257,29 @@ td {
   border-top: none;
 }
 
-.navbar-nav {
-	flex-direction: row;
+@media only screen and (min-device-width : 480px) {
+  .navbar-nav {
+    flex-direction: row;
+  }
+}
+
+@media only screen and (min-device-width : 480px) {
+  .center-nav {
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-device-width : 480px) {
+  .center-nav {
+    justify-content: left;
+  }
+}
+
+@media only screen and (max-device-width : 480px) {
+  .navbar-nav {
+    justify-content: left;
+    float: left;
+  }
 }
 
 .btn-dark {
@@ -269,9 +324,9 @@ span {
 
 #tracks-header {
 	padding: 20 px !important;
-	margin-left: 20px !important;
+	margin-left: 0px !important;
 	margin-right: 20px !important;
-	margin-top: 80px !important;
+	margin-top: 20px !important;
 	margin-bottom: 10px !important;
 }
 
@@ -281,7 +336,7 @@ span {
 
 .title {
   color:  #393B44;
-  margin-top: 50px;
+  margin-top: 0px;
 }
 
 a {

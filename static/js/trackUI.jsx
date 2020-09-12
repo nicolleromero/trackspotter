@@ -41,7 +41,7 @@ function TrackslistUI(props) {
           <Col xs="auto">
             {props.editable && (
               <Button
-                variant="outline-secondary inline search"
+                variant="outline-secondary inline search mobile-btn"
                 onClick={props.handleDeletePlaylist}
               > Delete Playlist
               </Button>
