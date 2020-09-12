@@ -25,7 +25,7 @@ function PlaylistRow(props) {
         }
       })}</h5></td>
       <td>{props.title}</td>
-      <td>
+      <td className="d-none d-sm-table-cell">
         {props.likes < 1 && (
           // <p>{'★'.repeat(props.likes)}{'☆'.repeat(5 - props.likes)}</p>
           <p></p>

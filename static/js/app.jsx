@@ -384,11 +384,11 @@ function TopPlaylists(props) {
 
   return (
     <React.Fragment>
-      <Navbar id="banner-image">
-        <Row className="d-flex float-right padding"
+      <Navbar className="d-none d-lg-flex" id="banner-image">
+        <Row className="d-none d-lg-flex float-right padding"
         >
         </Row>
-        <Row className="d-flex justify-content-between hyper offset-2">
+        <Row className="d-none d-lg-flex justify-content-between hyper offset-2">
           <h1 className="h1 banner">Popular <br />Playlists</h1>
         </Row>
       </Navbar>
@@ -453,11 +453,11 @@ function UserPlaylists(props) {
 
   return (
     <React.Fragment>
-      <Navbar id="banner-image">
-        <Row className="d-flex float-right padding"
+      <Navbar className="d-none d-lg-flex" id="banner-image">
+        <Row className="d-none d-lg-flex float-right padding"
         >
         </Row>
-        <Row className="d-flex justify-content-between hyper offset-2">
+        <Row className="d-none d-lg-flex justify-content-between hyper offset-2">
           <h1 className="h1 banner">Saved <br />Playlists</h1>
         </Row>
       </Navbar>
