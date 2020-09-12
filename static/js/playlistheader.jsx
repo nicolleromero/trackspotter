@@ -24,7 +24,7 @@ function PlaylistHeader(props) {
       </thead> */}
       <thead id="playlist-thead">
         <tr align="center">
-          <th>SEARCH TERMS</th>
+          <th className="col-mobile-badge">SEARCH TERMS</th>
           <th>PLAYLIST TITLE</th>
           <th className="d-none d-sm-table-cell">☆'s</th>
           <th>PLAY</th>

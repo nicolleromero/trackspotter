@@ -203,7 +203,7 @@ function AdvSearch() {
         />
         <Row className="d-flex justify-content-between">
           {tracks.length > 0 && (
-            <div xs="auto" className="align-content-left">
+            <div xs="auto" className="align-content-left badge-mobile">
               <h5>
                 {queries.map((element) => {
                   return (
@@ -244,7 +244,7 @@ function AdvSearch() {
               onSubmit={handleSavePlaylist}
             >
               {tracks.length > 0 && USER != null && (
-                <Form.Row inline className="float-right inline save top-space">
+                <Form.Row inline className="float-right inline save top-space pad-mobile">
                   <FormControl
                     type="text"
                     value={playlistTitle}
@@ -255,8 +255,9 @@ function AdvSearch() {
                   <Button
                     variant="outline-secondary"
                     type="submit"
+                    className="inline wider-btn"
                   >
-                    Set Playlist</Button>
+                    Save</Button>
                   <br />
                 </Form.Row>
               )}

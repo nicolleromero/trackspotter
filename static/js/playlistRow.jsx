@@ -17,10 +17,10 @@ function PlaylistRow(props) {
 
   return (
     <tr align="center" scope="row" key={props.title}>
-      <td><h5>{queries.map((query) => {
+      <td className="col-mobile-badge"><h5>{queries.map((query) => {
         if (query) {
           return (
-            <Badge pill className="btn-dark badge" key={query}>{query.replace(/"/g, ' ')}</Badge>
+            <Badge pill className="btn-dark badge-playlist truncate" key={query}>{query.replace(/"/g, ' ')}</Badge>
           )
         }
       })}</h5></td>

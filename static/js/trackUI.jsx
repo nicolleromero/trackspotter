@@ -32,7 +32,7 @@ function TrackslistUI(props) {
               value={props.playlistTitle}
               placeholder="Playlist Title"
               onChange={(e) => props.setPlaylistTitle(e.target.value)}
-              id="title-form"
+              className="title-form truncate"
               readOnly={!props.editable}
             />
           </Col>

@@ -20,7 +20,7 @@ function Track(props) {
 
   return (
     <React.Fragment>
-      <td>
+      <td className="col-mobile">
         {props.editable && (
           <span className="material-icons">
             <img
@@ -34,14 +34,14 @@ function Track(props) {
         )}
       </td>
       <td className="d-none d-sm-table-cell">{order}</td>
-      <td>{props.track.title}</td>
+      <td className="col-mobile-badge">{props.track.title}</td>
       <td>{props.track.artist}</td>
       <td className="d-none d-sm-table-cell">{props.track.album}</td>
       <td className="d-none d-sm-table-cell">{millisToTime(props.track.playtime)}</td>
       {/* <td>
           <img src={props.track.album_art}></img>
         </td> */}
-      <td>
+      <td className="col-mobile">
         <iframe
           src={toPlay}
           width="80"
@@ -52,7 +52,7 @@ function Track(props) {
         >
         </iframe>
       </td>
-      <td>
+      <td className="col-mobile">
         {props.editable && (
           <button
             className="btn btn-sm delete-button"
