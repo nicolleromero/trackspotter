@@ -104,7 +104,7 @@ h5 {
 }
 
 #cover-image {
-  background-image:url('/static/img/banner.png') !important;
+  background-image:url('/static/img/banner-min.png') !important;
   background-size: 100%;
   background-repeat: no-repeat;
   background-position-y: bottom;
@@ -116,7 +116,7 @@ h5 {
 }
 
 #banner-image {
-  background-image:url('/static/img/long_banner.png') !important;
+  background-image:url('/static/img/long_banner-min.png') !important;
   background-size: 100%;
   max-height: 180px;
   background-repeat: no-repeat;
