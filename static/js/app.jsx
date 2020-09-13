@@ -202,26 +202,24 @@ function AdvSearch() {
           wildcard={wildcard}
         />
         <Row className="d-flex justify-content-between">
-          {tracks.length > 0 && (
-            <div xs="auto" className="align-content-left badge-mobile">
-              <h5>
-                {queries.map((element) => {
-                  return (
-                    <Badge
-                      pill
-                      className="btn-dark badge badge-lower"
-                      href="#"
-                      variant="dark"
-                      key={element}
-                      onClick={() => handleDeleteParam(element)}
-                    >
-                      × {element.replace(/"/g, '')}
-                    </Badge>
-                  )
-                })}
-              </h5>
-            </div>
-          )}
+          <div xs="auto" className="align-content-left badge-mobile">
+            <h5>
+              {queries.map((element) => {
+                return (
+                  <Badge
+                    pill
+                    className="btn-dark badge badge-lower"
+                    href="#"
+                    variant="dark"
+                    key={element}
+                    onClick={() => handleDeleteParam(element)}
+                  >
+                    × {element.replace(/"/g, '')}
+                  </Badge>
+                )
+              })}
+            </h5>
+          </div>
           {tracks.length > 0 && USER == null && (
             <div className="d-none d-lg-block">
               <Row className="offset-2">
@@ -265,7 +263,7 @@ function AdvSearch() {
           )}
         </Row>
       </Container>
-      {!loading && tracks.length === 0 && USER == null && (
+      {!loading && queries.length === 0 && USER == null && (
         <Container className="d-none d-lg-block">
           <Row className="offset-2">
             <Col >
