@@ -190,8 +190,8 @@ h5 {
 }
 
 #cover-image {
-  background-image:url('/static/img/banner-min.png') !important;
-  background-size: 100%;
+  background-image:url('/static/img/banner-min.jpg') !important;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position-y: bottom;
   padding-bottom: 100px;
@@ -202,11 +202,11 @@ h5 {
 }
 
 #banner-image {
-  background-image:url('/static/img/long_banner-min.png') !important;
-  background-size: 100%;
+  background-image:url('/static/img/banner-min.jpg') !important;
+  background-size: cover;
   max-height: 180px;
   background-repeat: no-repeat;
-  background-position-y: bottom;
+  background-position-y: 75%;
   padding-bottom: 150px;
   padding-left: 0 !important;
   padding-right: 0 !important;
