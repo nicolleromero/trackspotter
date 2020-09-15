@@ -225,6 +225,10 @@ h5 {
   margin-right: 50px;
 }
 
+.form-control:disabled, .form-control[readonly] {
+  background-color: #fff;
+}
+
 .h1 {
   font-weight: 400;
   line-height: 90%;
