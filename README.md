@@ -31,7 +31,7 @@ https://trackspotter.app/
 ## <a name="app-features"></a>App Features
 
 
-![alt text](https://github.com/nicolleromero/trackspotter/blob/master/static/img/search.gif "trackspotter search")
+![alt text](https://github.com/nicolleromero/trackspotter/blob/master/static/img/search4.gif "trackspotter search")
 
 
 
