@@ -42,7 +42,7 @@ https://trackspotter.app/
 
 
 
-<!-- ![alt text](https://github.com/nicolleromero/trackspotter/blob/master/static/img/save.gif "trackspotter save") -->
+![alt text](https://github.com/nicolleromero/trackspotter/blob/master/static/img/search-screenshot.jpg "trackspotter search")
 
 
 
