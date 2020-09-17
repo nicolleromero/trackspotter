@@ -204,7 +204,7 @@ def save_playlist():
     user_id = session.get('user_id')
     data = request.get_json()
     query = data["query"]
-    search_tracks = data["playlist_tracks"]
+    search_track_ids = data["playlist_tracks"]
     playlist_title = data["playlist_title"]
 
     # tracks = pass in from client
@@ -221,7 +221,7 @@ def save_playlist():
 
     # create tracks, playlist_tracks and save to db
     tracks = crud.create_tracks_and_playlist_tracks_for_playlist(
-        search_tracks, playlist.playlist_id)
+        search_track_ids, playlist.playlist_id)
 
     # return tracks as list of dicts to render on playlist tracks screen
     return jsonify({
@@ -239,41 +239,46 @@ def save_edited_playlist():
         raise 'TODO Unautborized Exception'
 
     data = request.get_json()
-    playlist_tracks = data["playlist_tracks"]
+    playlist_track_ids = data["playlist_tracks"]
     playlist_title = data["playlist_title"]
     playlist_id = data["playlist_id"]
+    save_to_spotify = data["save_to_spotify"]
 
-    token = tk.refresh_user_token(client_id, client_secret, user.refresh_token)
-
-    uris = []
-    for track in playlist_tracks:
-        uris.append("spotify:track:" + track['uid'])
-
-    name = data["playlist_title"]
     playlist = crud.get_playlist_by_id(playlist_id)
-
-    # TODO Check to see if spotify_playlist_id exists in db or prompt to log in to Spotify
     spotify_playlist_id = playlist.spotify_playlist_id
 
-    if spotify_playlist_id != None:
+    if save_to_spotify == True:
 
-        with spotify.token_as(token):
-            spotify.playlist_replace(
-                playlist_id=spotify_playlist_id, uris=uris)
-            spotify.playlist_change_details(
-                playlist_id=spotify_playlist_id, name=name, public=False, collaborative=None, description=None)
-    else:
-        with spotify.token_as(token):
-            playlist_spot = spotify.playlist_create(user.spotify_id, name=name, public=False,
-                                                    description=None)
+        token = tk.refresh_user_token(
+            client_id, client_secret, user.refresh_token)
 
-            response = spotify.playlist_add(
-                playlist_id=playlist_spot.id, uris=uris, position=None)
+        uris = []
+        # TODO: tracks = crud.get_tracks_by_ids(playlist_track_ids)
+        for track_id in playlist_track_ids:
+            track = crud.get_track_by_track_id(track_id)
+            uris.append("spotify:track:" + track.uid)
 
-            spotify_playlist_id = playlist_spot.id
+        name = data["playlist_title"]
+
+        if spotify_playlist_id != None:
+
+            with spotify.token_as(token):
+                spotify.playlist_replace(
+                    playlist_id=spotify_playlist_id, uris=uris)
+                spotify.playlist_change_details(
+                    playlist_id=spotify_playlist_id, name=name, public=False, collaborative=None, description=None)
+        else:
+            with spotify.token_as(token):
+                playlist_spot = spotify.playlist_create(user.spotify_id, name=name, public=False,
+                                                        description=None)
+
+                response = spotify.playlist_add(
+                    playlist_id=playlist_spot.id, uris=uris, position=None)
+
+                spotify_playlist_id = playlist_spot.id
 
     playlist = crud.update_edited_playlist(
-        playlist_id=playlist_id, playlist_tracks=playlist_tracks, playlist_title=playlist_title, spotify_playlist_id=spotify_playlist_id)
+        playlist_id=playlist_id, playlist_track_ids=playlist_track_ids, playlist_title=playlist_title, spotify_playlist_id=spotify_playlist_id)
 
     return jsonify({"playlist_id": playlist_id})
 
@@ -284,10 +289,10 @@ def copy_playlist():
     user_id = session.get('user_id')
     data = request.get_json()
     original_playlist_id = data["playlist_id"]
-    playlist_tracks = data["playlist_tracks"]
+    playlist_track_ids = data["playlist_tracks"]
 
     playlist = crud.copy_playlist(
-        user_id, original_playlist_id, playlist_tracks)
+        user_id, original_playlist_id, playlist_track_ids)
 
     return jsonify({
         'playlist_id': playlist.playlist_id,

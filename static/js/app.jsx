@@ -134,7 +134,7 @@ function AdvSearch() {
 
     const targetPlaylist = {
       "playlist_title": playlistTitle,
-      "playlist_tracks": tracks,
+      "playlist_tracks": tracks.map((track) => track.track_id),
       "query": query,
     }
     fetch('/api/save-playlist', {
@@ -185,7 +185,7 @@ function AdvSearch() {
         >
         </Row>
         <Row className="d-none d-lg-block justify-content-between hyper offset-2">
-          <h1 className="h1">Easily find <br />the tracks you <br />love </h1>
+          <h1 className="h1">Easily find the <br />tracks you love </h1>
         </Row>
       </Navbar>
       <Container className="padding">
@@ -388,7 +388,7 @@ function TopPlaylists(props) {
         >
         </Row>
         <Row className="d-none d-lg-flex justify-content-between hyper offset-2">
-          <h1 className="h1 banner">Popular <br />Playlists</h1>
+          <h1 className="h1 banner">Popular Playlists</h1>
         </Row>
       </Navbar>
       <Container>
@@ -457,7 +457,7 @@ function UserPlaylists(props) {
         >
         </Row>
         <Row className="d-none d-lg-flex justify-content-between hyper offset-2">
-          <h1 className="h1 banner">Saved <br />Playlists</h1>
+          <h1 className="h1 banner">Saved Playlists</h1>
         </Row>
       </Navbar>
       <Container>
@@ -498,6 +498,7 @@ function PlaylistTracks(props) {
   let history = useHistory();
   const [message, setMessage] = React.useState('');
   const [snackbar, setSnackbar] = React.useState(false);
+  const [edited, setEdited] = React.useState(false);
 
   React.useEffect(() => {
     fetch(`/api/playlists/${playlist_id}`)
@@ -562,10 +563,25 @@ function PlaylistTracks(props) {
   const handleSaveEditedPlaylist = (event) => {
     event.preventDefault();
 
+    savePlaylist(true);
+  }
+
+  React.useEffect(() => {
+    if (edited) {
+      const timer = setTimeout(() => savePlaylist(false), 500);
+
+      return () => clearTimeout(timer);
+    } else if (playlistTitle && tracks.length) {
+      setEdited(true);
+    }
+  }, [playlistTitle, tracks]);
+
+  const savePlaylist = (saveToSpotify) => {
     const targetPlaylist = {
       "playlist_id": playlist_id,
       "playlist_title": playlistTitle,
-      "playlist_tracks": tracks,
+      "playlist_tracks": tracks.map((track) => track.track_id),
+      "save_to_spotify": saveToSpotify,
     }
     fetch('/api/update-playlist', {
       method: 'POST',
@@ -578,7 +594,9 @@ function PlaylistTracks(props) {
       .then(data => {
         setPlaylistId(data["playlist_id"])
       });
-    openSnackbar("Playlist saved to Spotify.")
+    if (saveToSpotify) {
+      openSnackbar("Playlist saved to Spotify.")
+    }
   }
 
   const handleCopyPlaylist = (event) => {
@@ -587,7 +605,7 @@ function PlaylistTracks(props) {
     const targetPlaylist = {
       "playlist_id": playlist_id,
       "playlist_title": playlistTitle,
-      "playlist_tracks": tracks,
+      "playlist_tracks": tracks.map((track) => track.track_id),
     }
     fetch('/api/copy-playlist', {
       method: 'POST',

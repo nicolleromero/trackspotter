@@ -106,6 +106,14 @@ def get_track_by_track_uid(uid):
     return Track.query.filter(Track.uid == uid).first()
 
 
+def get_track_id_by_track_uid(uid):
+    """Return track id with that track uid """
+
+    track = Track.query.filter(Track.uid == uid).first()
+
+    return track.track_id
+
+
 def create_playlist(user_id, search_id, created_at, last_updated_at, playlist_title, spotify_playlist_id=None):
     """Create a new playlist"""
 
@@ -267,16 +275,14 @@ def tracks_in_playlist_ordered(target_playlist_id):
     return [track.as_dict() for track in tracks]
 
 
-def create_tracks_and_playlist_tracks_for_playlist(tracks_in_playlist, playlist_id):
+def create_tracks_and_playlist_tracks_for_playlist(tracks_in_playlist_by_id, playlist_id):
     """On clicking Save Playlist  """
 
-    tracks = tracks_in_playlist
+    tracks = tracks_in_playlist_by_id
     created_tracks = []
 
-    for track in tracks:
-        # track.id from client == track.uid in db
-        uid = track['uid']
-        db_track = get_track_by_track_uid(uid)
+    for track_id in tracks:
+        db_track = get_track_by_track_id(track_id)
         print("***************", db_track is not None)
 
         # not db.session.query(db.session.query(Track).filter_by(uid=uid).exists()).scalar():
@@ -357,7 +363,7 @@ def create_tracks_from_search(tracks_in_search):
     return [track.as_dict() for track in created_tracks]
 
 
-def update_edited_playlist(playlist_id, playlist_title, playlist_tracks, spotify_playlist_id=None):
+def update_edited_playlist(playlist_id, playlist_title, playlist_track_ids, spotify_playlist_id=None):
 
     playlist = get_playlist_by_id(playlist_id)
 
@@ -371,16 +377,17 @@ def update_edited_playlist(playlist_id, playlist_title, playlist_tracks, spotify
         PlaylistTrack.playlist_id == playlist_id).delete()
 
     # remake the playlist_track associations
-    for track_order, track in enumerate(playlist_tracks, start=1):
+    for track_order, track_id in enumerate(playlist_track_ids, start=1):
+
         create_playlist_track(
-            track_id=track['track_id'], playlist_id=playlist_id, track_order=track_order)
+            track_id=track_id, playlist_id=playlist_id, track_order=track_order)
 
     db.session.commit()
 
     return playlist
 
 
-def copy_playlist(user_id, original_playlist_id, playlist_tracks, spotify_playlist_id=None):
+def copy_playlist(user_id, original_playlist_id, playlist_track_ids, spotify_playlist_id=None):
 
     original_playlist = get_playlist_by_id(original_playlist_id)
 
@@ -392,9 +399,10 @@ def copy_playlist(user_id, original_playlist_id, playlist_tracks, spotify_playli
         user_id, original_playlist.search_id, created_at, last_updated_at, playlist_title, spotify_playlist_id=None)
 
     # make new playlist_track associations
-    for track_order, track in enumerate(playlist_tracks, start=1):
+    for track_order, track_id in enumerate(playlist_track_ids, start=1):
+
         create_playlist_track(
-            track_id=track['track_id'], playlist_id=new_playlist.playlist_id, track_order=track_order)
+            track_id=track_id, playlist_id=new_playlist.playlist_id, track_order=track_order)
 
     db.session.commit()
 
