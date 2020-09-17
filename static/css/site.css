@@ -190,11 +190,13 @@ h5 {
 }
 
 #cover-image {
-  background-image:url('/static/img/banner-min.jpg') !important;
+  background-image:url('/static/img/banner.jpg') !important;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position-y: bottom;
+  background-position-y: 50%;
+  /* background-position: center; */
   padding-bottom: 100px;
+  max-height:20%;
   padding-left: 0 !important;
   padding-right: 0 !important;
   margin-left: 20 !important;
@@ -202,7 +204,7 @@ h5 {
 }
 
 #banner-image {
-  background-image:url('/static/img/banner-min.jpg') !important;
+  background-image:url('/static/img/banner.jpg') !important;
   background-size: cover;
   max-height: 180px;
   background-repeat: no-repeat;
@@ -215,14 +217,15 @@ h5 {
 }
 
 .banner {
-  margin-top: 60px;
-  padding-left: 30px;
+  margin-top: 220px!important;
+  margin-left: 80px !important;
+  margin-bottom: 0px !important;
 }
 
 .cactus {
   /* margin-top: 30px; */
   margin-bottom: 10px;
-  margin-right: 50px;
+  margin-right: 20px;
 }
 
 .form-control:disabled, .form-control[readonly] {
@@ -233,8 +236,9 @@ h5 {
   font-weight: 400;
   line-height: 90%;
   letter-spacing: 0px;
-  color: cornsilk;
-  margin-left: 160px;
+  color: rgb(73, 72, 72);
+  margin-bottom: 60px;
+  margin-left: 100px;
   /* font-family: 'Montserrat', sans-serif; */
 }
 

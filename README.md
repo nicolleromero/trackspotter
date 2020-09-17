@@ -14,6 +14,8 @@ https://trackspotter.app/
 * [License](#license)
 
 ## <a name="tech-stack"></a>Technologies
+* React
+* React-Router
 * Python
 * Flask
 * Nginx
@@ -22,16 +24,12 @@ https://trackspotter.app/
 * HTML
 * CSS
 * React-Bootstrap
-* React
-* React-Router
-* HTML
-* CSS
 * Spotify API
 
 ## <a name="app-features"></a>App Features
 
 
-![alt text](https://github.com/nicolleromero/trackspotter/blob/master/static/img/search4.gif "trackspotter search")
+<!-- ![alt text](https://github.com/nicolleromero/trackspotter/blob/master/static/img/search4.gif "trackspotter search") -->
 
 
 
@@ -44,7 +42,7 @@ https://trackspotter.app/
 
 
 
-![alt text](https://github.com/nicolleromero/trackspotter/blob/master/static/img/save.gif "trackspotter save")
+<!-- ![alt text](https://github.com/nicolleromero/trackspotter/blob/master/static/img/save.gif "trackspotter save") -->
 
 
 
@@ -63,4 +61,4 @@ https://trackspotter.app/
 
 ## <a name="license"></a>License
 * MIT © Nicolle Romero 2020
-* Homepage Photo by Anthony DELANOIX on Unsplash
+* Homepage Photo by Alphacolor on Unsplash
