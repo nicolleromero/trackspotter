@@ -28,10 +28,11 @@ https://trackspotter.app/
 
 ## <a name="app-features"></a>App Features
 
+<p>&nbsp;</p>
 
 ![alt text](https://github.com/nicolleromero/trackspotter/blob/master/static/img/search4.gif "trackspotter search")
 
-
+<p>&nbsp;</p>
 
 * Users search by artist, album, keyword, release date (or year span), and genre where an autocomplete component provides targeted suggestions for Spotify’s 500 genres.
 * Submitted parameters and operators are aggregated and wildcards are applied to represent the query.
@@ -40,9 +41,11 @@ https://trackspotter.app/
 * Spotify widgets (iframes) support playback of tracks. Logged in users can play full songs, and non-logged in users can play a 30-second long preview.
 * A user can continue to refine their search query, tracks can be reordered through the drag-and-drop UI built with [react-beautiful-dnd](https://github.com/atlassian/react-beautiful-dnd) or removed from the set, and the final track list can be saved as a playlist to their Spotify account.
 
+<p>&nbsp;</p>
 
 ![alt text](https://github.com/nicolleromero/trackspotter/blob/master/static/img/save.gif "trackspotter save")
 
+<p>&nbsp;</p>
 
 * Playlists include query badges that capture the search parameters used to build the playlist.
 * Users can continue to customize their playlists after assembling tracks from their search and updates are saved to their Spotify accounts.
