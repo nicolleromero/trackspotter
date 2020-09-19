@@ -29,7 +29,7 @@ https://trackspotter.app/
 ## <a name="app-features"></a>App Features
 
 
-<!-- ![alt text](https://github.com/nicolleromero/trackspotter/blob/master/static/img/search4.gif "trackspotter search") -->
+![alt text](https://github.com/nicolleromero/trackspotter/blob/master/static/img/search4.gif.jpg "trackspotter search")
 
 
 
@@ -41,9 +41,7 @@ https://trackspotter.app/
 * A user can continue to refine their search query, tracks can be reordered through the drag-and-drop UI built with [react-beautiful-dnd](https://github.com/atlassian/react-beautiful-dnd) or removed from the set, and the final track list can be saved as a playlist to their Spotify account.
 
 
-
-![alt text](https://github.com/nicolleromero/trackspotter/blob/master/static/img/search-screenshot.jpg "trackspotter search")
-
+![alt text](https://github.com/nicolleromero/trackspotter/blob/master/static/img/save.gif.jpg "trackspotter save")
 
 
 * Playlists include query badges that capture the search parameters used to build the playlist.
