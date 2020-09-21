@@ -30,7 +30,7 @@ https://trackspotter.app/
 
 <p>&nbsp;</p>
 
-![alt text](https://github.com/nicolleromero/trackspotter/blob/master/static/img/search4.gif "trackspotter search")
+![alt text](https://github.com/nicolleromero/trackspotter/blob/master/static/img/search6.gif "trackspotter search")
 
 <p>&nbsp;</p>
 
@@ -43,7 +43,7 @@ https://trackspotter.app/
 
 <p>&nbsp;</p>
 
-![alt text](https://github.com/nicolleromero/trackspotter/blob/master/static/img/save.gif "trackspotter save")
+![alt text](https://github.com/nicolleromero/trackspotter/blob/master/static/img/save2.gif "trackspotter save")
 
 <p>&nbsp;</p>
 
