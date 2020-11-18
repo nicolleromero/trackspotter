@@ -1,11 +1,8 @@
-const { Autocomplete, Component, PropTypes, useState, useCallback } = React;
-const { render } = ReactDOM;
-const { Provider, useSelector, useDispatch } = ReactRedux;
-const { Badge, Button, Col, Container, Dropdown, DropdownButton, Form, FormControl, InputGroup, ListGroup, Navbar, Row, Table } = ReactBootstrap;
+import React, { useState } from 'react';
+import ReactAutocomplete from 'react-autocomplete';
 
-
-function Autosuggest(props) {
-  let [labelValue, setLabelValue] = React.useState('');
+export function Autocomplete(props) {
+  let [labelValue, setLabelValue] = useState('');
 
 
   const GENRES = [

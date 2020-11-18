@@ -1,15 +1,7 @@
-const { Component, useEffect, useRef, useState, useCallback, useMemo } = React;
-const { render } = ReactDOM;
-const { Badge, Button, Col, Container, Dropdown, DropdownButton, Form, FormControl, FormGroup, InputGroup, ListGroup, Navbar, OverlayTrigger, Row, Table, Tooltip } = ReactBootstrap;
+import React from 'react';
+import { Button, Col, Form, FormControl, Row } from 'react-bootstrap';
 
-const { DragDropContext, Droppable, Draggable } = ReactBeautifulDnd;
-const Router = ReactRouterDOM.BrowserRouter;
-const Route = ReactRouterDOM.Route;
-const Link = ReactRouterDOM.Link;
-const Prompt = ReactRouterDOM.Prompt;
-const Switch = ReactRouterDOM.Switch;
-const Redirect = ReactRouterDOM.Redirect;
-const useHistory = ReactRouterDOM.useHistory;
+import { Autocomplete } from './Autocomplete';
 
 const PREFIXES = {
   '': 'keyword',
@@ -26,8 +18,7 @@ const OPERATORS = {
   'ends with': 'ends with',
 };
 
-function StructuredSearch(props) {
-
+export function StructuredSearch(props) {
   return (
     <Row className="d-flex justify-content-center inline align-items-center start">
       <Form onSubmit={props.handleSearch}>
@@ -90,7 +81,7 @@ function StructuredSearch(props) {
           )}
           {props.prefix === "genre:" && (
             <Col xs="auto" className="inline search-top fixed-width genre-input">
-              <Autosuggest
+              <Autocomplete
                 type="text"
                 value={props.param}
                 setParam={props.setParam}

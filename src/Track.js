@@ -1,19 +1,14 @@
-const { Component, useState, useCallback } = React;
-const { render } = ReactDOM;
-const { Badge, Button, Col, Container, Dropdown, DropdownButton, Form, FormControl, InputGroup, ListGroup, Navbar, Row, Table } = ReactBootstrap;
+import React from 'react';
 
+function millisToTime(milliseconds) {
+  let minutes = Math.floor(milliseconds / 60000);
+  let seconds = ((milliseconds % 60000) / 1000).toFixed(0);
+  return minutes + ":" + (seconds < 10 ? '0' : '') + seconds;
+}
 
-function Track(props) {
-
-  function millisToTime(milliseconds) {
-    let minutes = Math.floor(milliseconds / 60000);
-    let seconds = ((milliseconds % 60000) / 1000).toFixed(0);
-    return minutes + ":" + (seconds < 10 ? '0' : '') + seconds;
-  }
-
+export function Track(props) {
   // Order for search results should come from map func index
   let order = props.index + 1;
-
 
   // Handles the player
   let toPlay = "https://open.spotify.com/embed/track/" + props.track.uid;

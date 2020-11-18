@@ -1,13 +1,17 @@
-const { Component, PureComponent, useEffect, useState, useCallback, useMemo } = React;
-const { render } = ReactDOM;
-const { Badge, Button, Col, Container, Dropdown, DropdownButton, Form, FormControl, FormGroup, InputGroup, ListGroup, Navbar, Row, Spinner, Table } = ReactBootstrap;
+import React from 'react';
+import { Badge, Button, Col, Container, Form, FormControl, Navbar, Row, Spinner, Table } from 'react-bootstrap';
+import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
+import { BrowserRouter, Route, Switch, useHistory } from 'react-router-dom';
 
-const { DragDropContext, Droppable, Draggable } = ReactBeautifulDnd;
-const Router = ReactRouterDOM.BrowserRouter;
-const Route = ReactRouterDOM.Route;
-const Link = ReactRouterDOM.Link;
-const Switch = ReactRouterDOM.Switch;
-const useHistory = ReactRouterDOM.useHistory;
+import { PlaylistHeader } from './PlaylistHeader';
+import { PlaylistRow } from './PlaylistRow';
+import { Snackbar } from './Snackbar';
+import { StructuredSearch } from './StructuredSearch';
+import { Topbar } from './Topbar';
+import { Track } from './Track';
+import { TracksHeader } from './TracksHeader';
+import { TracksList } from './TracksList';
+import { TrackRow } from './TrackRow';
 
 function setSessionStorage(key, value) {
   window.sessionStorage.setItem(key, JSON.stringify(value));
@@ -16,12 +20,6 @@ function setSessionStorage(key, value) {
 function getSessionStorage(key) {
   const value = window.sessionStorage.getItem(key);
   return value ? JSON.parse(value) : undefined;
-}
-
-function millisToTime(milliseconds) {
-  let minutes = Math.floor(milliseconds / 60000);
-  let seconds = ((milliseconds % 60000) / 1000).toFixed(0);
-  return minutes + ":" + (seconds < 10 ? '0' : '') + seconds;
 }
 
 function buildQuery(queries) {
@@ -176,7 +174,7 @@ function AdvSearch() {
     setPlaylistTitle('');
   }
 
-  let editable = (USER != null);
+  let editable = (global.USER != null);
 
   return (
     <React.Fragment>
@@ -220,7 +218,7 @@ function AdvSearch() {
               })}
             </h5>
           </div>
-          {tracks.length > 0 && USER == null && (
+          {tracks.length > 0 && global.USER == null && (
             <div className="d-none d-lg-block">
               <Row className="offset-2">
                 <Col >
@@ -235,13 +233,13 @@ function AdvSearch() {
               </Row>
             </div>
           )}
-          {tracks.length > 0 && USER != null && (
+          {tracks.length > 0 && global.USER != null && (
             <Form
               inline
               className="float-right inline"
               onSubmit={handleSavePlaylist}
             >
-              {tracks.length > 0 && USER != null && (
+              {tracks.length > 0 && global.USER != null && (
                 <Form.Row inline className="float-right inline save top-space pad-mobile">
                   <FormControl
                     type="text"
@@ -263,7 +261,7 @@ function AdvSearch() {
           )}
         </Row>
       </Container>
-      {!loading && queries.length === 0 && USER == null && (
+      {!loading && queries.length === 0 && global.USER == null && (
         <Container className="d-none d-lg-block">
           <Row className="offset-2">
             <Col >
@@ -296,7 +294,7 @@ function AdvSearch() {
                         <Draggable
                           key={track.uid}
                           draggableId={track.uid}
-                          index={index} isDragDisabled={(USER == null)}
+                          index={index} isDragDisabled={(global.USER == null)}
                         >
                           {(provided, snapshot) => (
                             <TrackRow
@@ -633,11 +631,11 @@ function PlaylistTracks(props) {
     setTracks(newTracks);
   };
 
-  let editable = (USER != null && playlistUser === USER.user_id);
+  let editable = (global.USER != null && playlistUser === global.USER.user_id);
 
   return (
     <Container>
-      <TrackslistUI
+      <TracksList
         playlistTitle={playlistTitle}
         handleSaveEditedPlaylist={handleSaveEditedPlaylist}
         setPlaylistTitle={setPlaylistTitle}
@@ -665,7 +663,7 @@ function PlaylistTracks(props) {
                     <Draggable
                       key={track.uid}
                       draggableId={track.uid}
-                      index={index} isDragDisabled={(USER == null || playlistUser !== USER.user_id)}
+                      index={index} isDragDisabled={(global.USER == null || playlistUser !== global.USER.user_id)}
                     >
                       {(provided, snapshot) => (
                         <TrackRow
@@ -700,15 +698,15 @@ function PlaylistTracks(props) {
   );
 }
 
-function App(props) {
-  const [user, setUser] = React.useState(USER);
+export function App(props) {
+  const [user, setUser] = React.useState(global.USER);
 
   function handleLogin(user) {
     setUser(user)
   }
 
   return (
-    <Router>
+    <BrowserRouter>
       <Topbar
         user={user}
         onLogin={handleLogin} />
@@ -720,8 +718,6 @@ function App(props) {
           <Route exact path="/playlist/:playlist_id" component={PlaylistTracks} />
         </Switch>
       </div>
-    </Router>
+    </BrowserRouter>
   );
 }
-
-ReactDOM.render(<App />, document.querySelector('#root'));

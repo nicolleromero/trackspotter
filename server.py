@@ -29,8 +29,9 @@ spotify = tk.Spotify()
 users = {}
 
 
-@app.route("/")
-def show_homepage():
+@app.route('/', defaults={'path': ''})
+@app.route('/<path:path>')
+def show_homepage(path):
     """Show the homepage."""
 
     if 'user_id' in session:
@@ -39,21 +40,13 @@ def show_homepage():
     else:
         user_dict = None
 
-    return render_template("homepage.html", user_json=json.dumps(user_dict))
+    domain = request.host.split(':')[0]
 
-
-@app.route('/', defaults={'path': ''})
-@app.route('/<path:path>')
-def catch_all(path):
-    """Catchall for all misdirects"""
-
-    if 'user_id' in session:
-        user_id = session.get('user_id')
-        user_dict = crud.get_user_by_id(user_id)
-    else:
-        user_dict = None
-
-    return render_template("homepage.html", user_json=json.dumps(user_dict))
+    return render_template(
+        "homepage.html",
+        user_json=json.dumps(user_dict),
+        webpack_host=f"http://{domain}:3000",
+    )
 
 
 @app.route('/login', methods=['GET'])

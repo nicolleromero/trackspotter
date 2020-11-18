@@ -1,4 +1,4 @@
-const GENRES = [
+export const GENRES = [
   '2-Step/British Garage',
   'Aboriginal Folk',
   'Aboriginal Rock',
@@ -842,7 +842,7 @@ const GENRES = [
   'Straight - Edge',
   'Stride',
   'String Bands',
-  'Structured Improvisation', ,
+  'Structured Improvisation',
   'Sunshine Pop',
   'Surf',
   'Surf Revival',
@@ -942,4 +942,5 @@ const GENRES = [
   'World Fusion',
   'Yodeling',
   'Zouk',
-  'Zydeco']
+  'Zydeco',
+];

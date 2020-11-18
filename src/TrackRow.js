@@ -1,7 +1,7 @@
-const { Component, useState, useCallback } = React;
-const { findDOMNode } = ReactDOM;
+import React from 'react';
+import { findDOMNode } from 'react-dom';
 
-class TrackRow extends Component {
+export class TrackRow extends React.Component {
   getSnapshotBeforeUpdate(prevProps) {
     const isDragStarting = this.props.isDragging && !prevProps.isDragging;
     if (!isDragStarting) {

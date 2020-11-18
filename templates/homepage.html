@@ -13,19 +13,6 @@
   <meta property="og:site_name" content="trackspotter">
   <meta name="twitter:image:alt" content="trackspotter search GUI">
 
-  <script src="https://unpkg.com/proptypes@1.1.0/index.js"></script>
-  <script>window.propTypes = window.PropTypes;</script>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.js" crossorigin></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/redux/4.0.5/redux.js"></script>
-  <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
-  <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/react-redux/7.2.1/react-redux.js"></script>
-  <script src='https://unpkg.com/react-router@5.2.0/umd/react-router.min.js'></script>
-  <script src='https://unpkg.com/react-router-dom@5.2.0/umd/react-router-dom.min.js'></script>
-  <script src="https://unpkg.com/react-beautiful-dnd@13.0.0/dist/react-beautiful-dnd.js"></script>
-  <script src="https://unpkg.com/react-autocomplete@1.8.1/dist/react-autocomplete.js"></script>
-  <script src="https://unpkg.com/@material-ui/core@latest/umd/material-ui.development.js"></script>
   <script>const USER = {{ user_json | safe }};</script>
 
   <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
@@ -42,36 +29,22 @@
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="/static/css/site.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link href="/static/css/site.css" rel="stylesheet">
+
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
 </head>
 
 <body>
   <div id="root"></div>
 
-  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
-    crossorigin="anonymous">
-    </script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-    </script>
-  <script src="https://unpkg.com/react-bootstrap@1.3.0/dist/react-bootstrap.js" crossorigin>
-  </script>
-  <script>var Alert = ReactBootstrap.Alert;</script>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-  <script src="/static/js/test_data.js"></script>
-  <script src="/static/js/snackbar.jsx" type="text/jsx"></script>
-  <script src="/static/js/navbar.jsx" type="text/jsx"></script>
-  <script src="/static/js/playlistRow.jsx" type="text/jsx"></script>
-  <script src="/static/js/track.jsx" type="text/jsx"></script>
-  <script src="/static/js/trackUI.jsx" type="text/jsx"></script>
-  <script src="/static/js/tracksheader.jsx" type="text/jsx"></script>
-  <script src="/static/js/playlistheader.jsx" type="text/jsx"></script>
-  <script src="/static/js/search.jsx" type="text/jsx"></script>
-  <script src="/static/js/autocomplete.jsx" type="text/jsx"></script>
-  <script src="/static/js/numsongs.jsx" type="text/jsx"></script>
-  <script src="/static/js/trackrow.jsx" type="text/jsx"></script>
-  <script src="/static/js/app.jsx" type="text/jsx"></script>
+  {% if webpack_host %}
+  <script src="{{ webpack_host }}/static/js/bundle.js"></script>
+  <script src="{{ webpack_host }}/static/js/0.chunk.js"></script>
+  <script src="{{ webpack_host }}/static/js/main.chunk.js"></script>
+  {% endif %}
 </body>
 
 </html>

@@ -1,24 +1,7 @@
-const { Component, useEffect, useRef, useState, useCallback, useMemo } = React;
-const { render } = ReactDOM;
-const { Badge, Button, Col, Container, Dropdown, DropdownButton, Form, FormControl, FormGroup, InputGroup, ListGroup, Navbar, Row, Table } = ReactBootstrap;
+import React from 'react';
+import { Button, Col, Form, FormControl, Row } from 'react-bootstrap';
 
-const { DragDropContext, Droppable, Draggable } = ReactBeautifulDnd;
-const Router = ReactRouterDOM.BrowserRouter;
-const Route = ReactRouterDOM.Route;
-const Link = ReactRouterDOM.Link;
-const Prompt = ReactRouterDOM.Prompt;
-const Switch = ReactRouterDOM.Switch;
-const Redirect = ReactRouterDOM.Redirect;
-const useHistory = ReactRouterDOM.useHistory;
-
-
-function TrackslistUI(props) {
-
-  // function handleCopyURLtoClipboard() {
-  //   let shareURL = "http://localhost:5000/playlist/" + props.PlaylistId
-  //   return shareURL
-  // }
-
+export function TracksList(props) {
   return (
     <Row id="tracks-header">
       <Form
@@ -63,7 +46,7 @@ function TrackslistUI(props) {
               <Button
                 variant="outline-secondary inline search"
                 onClick={props.handleCopyPlaylist}
-                disabled={!USER}
+                disabled={!global.USER}
               > Copy Playlist
               </Button>
             )}
