@@ -11,6 +11,7 @@ static/js/sandbox.jsx
 .env.development.local
 .env.test.local
 .env.production.local
+*.orig
 
 npm-debug.log*
 yarn-debug.log*

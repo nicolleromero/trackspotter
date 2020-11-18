@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Switch, useHistory } from 'react-router-dom';
 
 import { PlaylistHeader } from './PlaylistHeader';
 import { PlaylistRow } from './PlaylistRow';
+import { RouterHistory } from './RouterHistory';
 import { Snackbar } from './Snackbar';
 import { StructuredSearch } from './StructuredSearch';
 import { Topbar } from './Topbar';
@@ -718,6 +719,7 @@ export function App(props) {
           <Route exact path="/playlist/:playlist_id" component={PlaylistTracks} />
         </Switch>
       </div>
+      <RouterHistory />
     </BrowserRouter>
   );
 }
