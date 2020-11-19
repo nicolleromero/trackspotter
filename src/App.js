@@ -400,6 +400,7 @@ function TopPlaylists(props) {
               {topPlaylists.map((playlist) => {
                 return (
                   <PlaylistRow
+                    key={playlist.playlist_id}
                     playlist_id={playlist.playlist_id}
                     title={playlist.playlist_title}
                     likes={playlist.count}
