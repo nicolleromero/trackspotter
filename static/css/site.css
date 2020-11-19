@@ -14,32 +14,39 @@
   background-color: #fff;
   padding: 15px;
   width: auto;
+  max-height: 300px;
   opacity: 1;
   text-align: center;
 }
 
-.border {
-  border: 1px solid #999;
-}
 
 .debugger-title {
   text-align: left;
 }
 
+
 .tableFixHead {
-  overflow-y: auto;
-  height:200px;
+  overflow-y: scroll;
+  margin: 5px;
 }
+
 
 .tableFixHead > thead, th {
   top: 0;
+  height: 45px;
 }
 
-.debugger-table > td, th {
+.gray-border {
   border: 1px solid #999;
-  padding: 0.7rem;
-  text-align: center !important;
 }
+
+
+.debugger-table td {
+  padding: 5px;
+  text-align: center !important;
+  column-width: 120px;
+}
+
 
 .sticky {
   position: sticky;
@@ -50,6 +57,17 @@ tfoot {
     background-color: #333;
     color: #fff;
     text-align: center;
+}
+
+.debugger-btn {
+  border-style: none;
+  background-color: #FFF;
+  color: rgb(26, 115, 187);
+}
+
+.debugger-btn:hover {
+  color: #FFF !important;
+  background-color: #6c757d !important;
 }
 
 .btn-spotify:hover {
@@ -338,6 +356,10 @@ td {
 	min-width: 50 px;;
 }
 
+.align-center {
+  text-align: center !important;
+}
+
 #log-in {
   padding-top: 20px !important;
 	max-width: 50px;
@@ -346,6 +368,7 @@ td {
 #playlist_table {
   margin-top: 10px;
   border: none !important;
+  text-align: center !important;
 }
 
 #playlist-thead {
