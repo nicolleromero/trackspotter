@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
+
+const INITIAL_TIME = getTimestamp(); // Time upon load
 
 function getTimestamp() {
   const timeElapsed = Date.now();
@@ -13,7 +15,7 @@ export function RouterHistory() {
   const [historyStack, setHistoryStack] = useState([history.location]);
   const [actionStack, setActionStack] = useState([]);
 
-  React.useEffect(() => {
+  useEffect(() => {
     return history.listen((location, action) => {
       console.log("on route change:", action, location);
 
@@ -22,7 +24,7 @@ export function RouterHistory() {
         setActionStack((stack) => [...stack, { action: 'POP', location: location, timestamp: getTimestamp() }])
       }
       if (action === 'PUSH') {
-        setHistoryStack((stack) => [...stack, location]);
+        setHistoryStack((stack) => [...stack, { location: location, timestamp: getTimestamp() }]);
         setActionStack((stack) => [...stack, { action: 'PUSH', location: location, timestamp: getTimestamp() }])
       }
       if (action === 'REPLACE') {
@@ -52,28 +54,40 @@ export function RouterHistory() {
   // block(prompt) - (function) Prevents navigation
 
   return (
-    <div className="debugger border fixed-bottom">
-      <div className="debugger tableFixHead" collapseOnSelect expand="lg" bg="dark" variant="dark">
-        <table className="debugger-table">
-          <thead className="sticky">
-            <tr>
-              <th>Pathname</th>
-              <th>Action</th>
-              <th>Timestamp</th>
-            </tr>
-          </thead>
-          <tbody>
-            {actionStack.map((item) => {
-              return (
+    <div className="row debugger border fixed-bottom">
+      <div className="column">
+        <div className="debugger tableFixHead" expand="lg" bg="dark" variant="dark">
+          <table className="debugger-table gray-border">
+            <thead className="sticky">
+              <tr>
+                <th>Pathname</th>
+                <th>Action</th>
+                <th>Timestamp</th>
+              </tr>
+            </thead>
+            {historyStack.length > 0 && (
+              <tbody>
                 <tr>
-                  <td>{item.location.pathname}</td>
-                  <td>{item.action}</td>
-                  <td>{item.timestamp}</td>
+                  <td>{historyStack[0].pathname}</td>
+                  <td>INITIAL</td>
+                  <td>{INITIAL_TIME}</td>
                 </tr>
-              )
-            })}
-          </tbody>
-        </table>
+                {actionStack.map((item) => {
+                  return (
+                    <tr>
+                      <td><button className="debugger-btn">{item.location.pathname}</button></td>
+                      <td>{item.action}</td>
+                      <td>{item.timestamp}</td>
+                    </tr>
+                  )
+                })}
+              </tbody>
+            )}
+          </table>
+        </div>
+      </div>
+      <div className="column">
+        <h4>Placeholder for Stack</h4>
       </div>
     </div>
   )
