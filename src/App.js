@@ -721,6 +721,7 @@ export function App(props) {
         </Switch>
       </div>
       <RouterHistory />
+      <div className="row"></div>
     </BrowserRouter>
   );
 }
