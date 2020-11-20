@@ -24,7 +24,7 @@ export function StructuredSearch(props) {
       <Form onSubmit={props.handleSearch}>
         <Form.Row className="inline">
           <Col xs="auto" className="inline search-top">
-            <Form.Group id="fixeds" controlId="exampleForm.SelectCustom">
+            <Form.Group id="fixeds">
               <Form.Control
                 as="select"
                 custom
@@ -42,7 +42,7 @@ export function StructuredSearch(props) {
             </Form.Group>
           </Col>
           <Col xs="auto" className="inline search-top">
-            <Form.Group controlId="exampleForm.SelectCustom2">
+            <Form.Group>
               <Form.Control
                 as="select"
                 custom

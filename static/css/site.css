@@ -43,8 +43,8 @@
 
 .debugger-table td {
   padding: 5px;
-  text-align: center !important;
-  column-width: 120px;
+  text-align: center;
+  /* column-width: 120px; */
 }
 
 
@@ -68,6 +68,22 @@ tfoot {
 .debugger-btn:hover {
   color: #FFF !important;
   background-color: #6c757d !important;
+}
+
+.stack {
+  width: 800px;
+  column-width: 800px;
+  font-size: 1rem;
+  text-align: left !important;
+  /* border: 1px solid #999;
+  padding: 20px;
+  margin: 20px; */
+}
+
+.stack > th {
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
 }
 
 .btn-spotify:hover {
