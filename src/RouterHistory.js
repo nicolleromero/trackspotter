@@ -11,66 +11,36 @@ function getTimestamp() {
   return today.toUTCString();
 }
 
-// function gpsTrace() {
-//   var stackframe = new StackFrame({ fileName: 'http://localhost:3000/file.min.js', lineNumber: 1, columnNumber: 3284 });
-//   var callback = function myCallback(foundFunctionName) { console.log(foundFunctionName); };
-
-//   // Such meta. Wow
-//   var errback = function myErrback(error) { console.log(StackTrace.fromError(error)); };
-
-//   var gps = new StackTraceGPS();
-
-//   // Pinpoint actual function name and source-mapped location
-//   return gps.pinpoint(stackframe).then(callback, errback);
-// }
-
-// console.log("gps trace", gpsTrace());
-
-let stackRoute = [];
-
-var callback = function (stackframes) {
-  stackRoute = stackframes;
-  console.log("stackRoute", stackRoute)
-  // var stringifiedStack = stackframes.map(function (sf) {
-  //   return sf.toString();
-  // }).join('\n');
-};
-
-var errback = function (err) { console.log("err meesage", err.message); };
-
-// StackTrace.instrument(getTimestamp, callback, errback);
-
 export function RouterHistory() {
   const history = useHistory();
   const [historyStack, setHistoryStack] = useState([history.location]);
-  const [actionStack, setActionStack] = useState([{ action: 'PUSH', location: history.location, timestamp: getTimestamp(), stackFrame: stackRoute }]);
-  const [selectedIndex, setSelectedIndex] = useState(0);
+  const [actionStack, setActionStack] = useState([]);
+  const [selectedIndex, setSelectedIndex] = useState(-1);
+  const [userUrl, setUserUrl] = useState('');
 
-  stackRoute = StackTrace.get().then(callback).catch(errback);
+  function handleSubmitURL(event) {
+    event.preventDefault();
+
+    if (userUrl === history.location.pathname) { // Make action a dropdown
+      history.replace(userUrl);
+    } else {
+      history.push(userUrl);
+    }
+
+    console.log("history", history);
+    setUserUrl('');
+  }
 
   useEffect(() => {
 
     return history.listen((location, action) => {
-      console.log("on route change:", action, location);
-
-      if (action === 'POP') {
-        stackRoute = StackTrace.get()
-          .then(callback)
-          .catch(errback)
-          .finally(
-            setActionStack((stack) => [...stack, { action: 'POP', location: location, timestamp: getTimestamp(), stackFrame: stackRoute }]))
-      }
-      if (action === 'PUSH') {
-        setHistoryStack((stack) => [...stack, { location: location, timestamp: getTimestamp() }]);
-        setActionStack((stack) => [...stack, { action: 'PUSH', location: location, timestamp: getTimestamp(), stackFrame: stackRoute }])
-      }
-      if (action === 'REPLACE') {
-        setActionStack((stack) => [...stack, { action: 'REPLACE', location: location, timestamp: getTimestamp(), stackFrame: stackRoute }])
-      }
-      // var gps = new StackTraceGPS();
-    });
-  }, [history, actionStack]);
-
+      StackTrace.get()
+        .then((trace) => {
+          setActionStack((stack) => [...stack, { action: action, location: location, timestamp: getTimestamp(), stackTrace: trace }])
+        })
+        .catch((err) => console.log("err meesage", err.message))
+    })
+  }, [history]);
 
   console.log("actionStack", actionStack);
   console.log("selectedIndex", selectedIndex);
@@ -135,7 +105,25 @@ export function RouterHistory() {
       </div>
       <div className="column">
         <div className="debugger tableFixHead" expand="lg" bg="dark" variant="dark">
-          {selectedIndex > 0 && (
+          <div>
+            <form
+              onSubmit={handleSubmitURL}
+            >
+              <input
+                type="text"
+                value={userUrl}
+                placeholder="Enter URL"
+                onChange={(e) => setUserUrl(e.target.value.trim())}
+              />
+              <button
+                type="submit"
+                disabled={!userUrl}
+              >
+                Go
+                    </button>
+            </form>
+          </div>
+          {selectedIndex >= 0 && (
             <table className="debugger-table stack gray-border">
               <thead className="sticky">
                 <tr className="stack">
@@ -146,7 +134,7 @@ export function RouterHistory() {
                 </tr>
               </thead>
               <tbody>
-                {actionStack[selectedIndex].stackFrame.map((frame) => {
+                {actionStack[selectedIndex].stackTrace.map((frame) => {
                   return (
                     <tr>
                       <td>{frame.columnNumber}</td>
@@ -155,7 +143,9 @@ export function RouterHistory() {
                       <td>{frame.fileName}</td>
                     </tr>
                   )
-                })}
+                })
+                }
+                <tr></tr>
               </tbody>
             </table>
           )}
