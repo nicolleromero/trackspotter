@@ -11,10 +11,30 @@ function getTimestamp() {
   return today.toUTCString();
 }
 
+function useHistoryActionStack() {
+  const history = useHistory();
+  const [actionStack, setActionStack] = useState(() => [{
+    action: 'INITIAL',
+    location: history.location,
+    timestamp: INITIAL_TIME,
+  }]);
+
+  useEffect(() => {
+    return history.listen((location, action) => {
+      StackTrace.get()
+        .then((stackTrace) => {
+          setActionStack((stack) => [...stack, { action, location, timestamp: getTimestamp(), stackTrace }])
+        })
+        .catch((err) => console.error(err))
+    })
+  }, [history]);
+
+  return actionStack;
+}
+
 export function RouterHistory() {
   const history = useHistory();
-  const [historyStack, setHistoryStack] = useState([history.location]);
-  const [actionStack, setActionStack] = useState([]);
+  const actionStack = useHistoryActionStack();
   const [selectedIndex, setSelectedIndex] = useState(-1);
   const [userUrl, setUserUrl] = useState('');
 
@@ -30,17 +50,6 @@ export function RouterHistory() {
     console.log("history", history);
     setUserUrl('');
   }
-
-  useEffect(() => {
-
-    return history.listen((location, action) => {
-      StackTrace.get()
-        .then((trace) => {
-          setActionStack((stack) => [...stack, { action: action, location: location, timestamp: getTimestamp(), stackTrace: trace }])
-        })
-        .catch((err) => console.log("err meesage", err.message))
-    })
-  }, [history]);
 
   console.log("actionStack", actionStack);
   console.log("selectedIndex", selectedIndex);
@@ -74,32 +83,25 @@ export function RouterHistory() {
                 <th>Timestamp</th>
               </tr>
             </thead>
-            {historyStack.length > 0 && (
-              <tbody>
-                <tr>
-                  <td>{historyStack[0].pathname}</td>
-                  <td>INITIAL</td>
-                  <td>{INITIAL_TIME}</td>
-                </tr>
-                {actionStack.map((item, index) => {
-                  return (
-                    <tr>
-                      <td>
-                        <button
-                          value={index}
-                          className="debugger-btn"
-                          onClick={() => setSelectedIndex(index)}
-                        >
-                          {item.location.pathname}
-                        </button>
-                      </td>
-                      <td>{item.action}</td>
-                      <td>{item.timestamp}</td>
-                    </tr>
-                  )
-                })}
-              </tbody>
-            )}
+            <tbody>
+              {actionStack.map((item, index) => {
+                return (
+                  <tr>
+                    <td>
+                      <button
+                        value={index}
+                        className="debugger-btn"
+                        onClick={() => setSelectedIndex(index)}
+                      >
+                        {item.location.pathname}
+                      </button>
+                    </td>
+                    <td>{item.action}</td>
+                    <td>{item.timestamp}</td>
+                  </tr>
+                )
+              })}
+            </tbody>
           </table>
         </div>
       </div>
