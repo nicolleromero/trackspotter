@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link as ReactRouterLink } from 'react-router-dom';
-// import {notifyLinkClicked} from ...
+import { recordLinkClicked } from './useHistoryActionStack';
 
 export class Link extends React.Component {
   render() {
@@ -11,6 +11,7 @@ export class Link extends React.Component {
         {...props}
         onClick={(event) => {
           console.log('Link clicked:', this);
+          recordLinkClicked(this);
 
           if (onClick) {
             onClick(event);

@@ -1,6 +1,8 @@
 import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom'; // Removed Link import from here
 import { createLocation } from 'history';
+
+import { Link } from './RouterDebugger/Link';
 
 const resolveToLocation = (to, currentLocation) =>
   typeof to === "function" ? to(currentLocation) : to;

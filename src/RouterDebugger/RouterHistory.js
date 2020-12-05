@@ -1,36 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
-import StackTrace from 'stacktrace-js';
 
-const INITIAL_TIME = getTimestamp(); // Time upon load
-
-function getTimestamp() {
-  const timeElapsed = Date.now();
-  const today = new Date(timeElapsed);
-
-  return today.toUTCString();
-}
-
-function useHistoryActionStack() {
-  const history = useHistory();
-  const [actionStack, setActionStack] = useState(() => [{
-    action: 'INITIAL',
-    location: history.location,
-    timestamp: INITIAL_TIME,
-  }]);
-
-  useEffect(() => {
-    return history.listen((location, action) => {
-      StackTrace.get()
-        .then((stackTrace) => {
-          setActionStack((stack) => [...stack, { action, location, timestamp: getTimestamp(), stackTrace }])
-        })
-        .catch((err) => console.error(err))
-    })
-  }, [history]);
-
-  return actionStack;
-}
+import { useHistoryActionStack } from './useHistoryActionStack';
 
 export function RouterHistory() {
   const history = useHistory();
@@ -80,6 +51,7 @@ export function RouterHistory() {
               <tr>
                 <th>Pathname</th>
                 <th>Action</th>
+                <th>Source</th>
                 <th>Timestamp</th>
               </tr>
             </thead>
@@ -97,6 +69,7 @@ export function RouterHistory() {
                       </button>
                     </td>
                     <td>{item.action}</td>
+                    <td>{item.source !== null ? item.source.constructor.displayName || item.source.constructor.name : ""}</td>
                     <td>{item.timestamp}</td>
                   </tr>
                 )
