@@ -12,7 +12,7 @@ httpx==0.13.3
 hyperframe==5.2.0
 idna==2.8
 itsdangerous==1.1.0
-Jinja2==2.11.2
+Jinja2==2.11.3
 MarkupSafe==1.1.1
 psycopg2-binary==2.8.4
 requests==2.22.0
