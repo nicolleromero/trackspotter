@@ -1,9 +1,6 @@
 # <img src="https://github.com/nicolleromero/trackspotter/blob/master/static/img/logo.png" width="60%" alt="Trackspotter">
 Trackspotter is a single-page web app built in React that provides a streamlined GUI allowing users to perform powerful, targeted searches of Spotify's 50 million track music library. The app supports a set of advanced search syntax, building and editing playlists from the search results, and saving playlists to a user's Spotify account.
 
-## About Me
-Prior to joining Hackbright, I was a Senior Content Strategist at an ed tech aggregator where I was responsible for driving product strategy and initiatives, including launching new online products. During my 15+ year career in ed tech, I was the Science Assessment Development Manager for the nonprofit WestEd; served as the first Content Architect at an early stage startup building apps (Inkling); and developed online products and HTML prototypes for clients such as the College Board, the Bill & Melinda Gates Foundation, and a 15-state consortium (SAIC). I hold B.S. and M.S. degrees in Biology from UC San Diego, and thrive in team environments where I can help tackle complex problems and continue to grow as a programmer.
-
 ## Deployment
 https://trackspotter.app/
 
