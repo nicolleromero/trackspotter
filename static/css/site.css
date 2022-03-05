@@ -6,6 +6,86 @@
 	padding-bottom: 50px;
 }
 
+.history-text {
+  color: #FFF !important;
+}
+
+.debugger {
+  background-color: #fff;
+  padding: 15px;
+  width: auto;
+  max-height: 300px;
+  opacity: 1;
+  text-align: center;
+}
+
+
+.debugger-title {
+  text-align: left;
+}
+
+
+.tableFixHead {
+  overflow-y: scroll;
+  margin: 5px;
+}
+
+
+.tableFixHead > thead, th {
+  top: 0;
+  height: 45px;
+}
+
+.gray-border {
+  border: 1px solid #999;
+}
+
+
+.debugger-table td {
+  padding: 5px;
+  text-align: center;
+  /* column-width: 120px; */
+}
+
+
+.sticky {
+  position: sticky;
+}
+
+.debugger-table > thead,
+tfoot {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
+
+.debugger-btn {
+  border-style: none;
+  background-color: #FFF;
+  color: rgb(26, 115, 187);
+}
+
+.debugger-btn:hover {
+  color: #FFF !important;
+  background-color: #6c757d !important;
+}
+
+.stack {
+  width: 800px;
+  column-width: 800px;
+  font-size: 1rem;
+  text-align: left !important;
+  /* border: 1px solid #999;
+  padding: 20px;
+  margin: 20px; */
+}
+
+.stack > th {
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+}
+
 .btn-spotify:hover {
   color: #FFF !important;
   background-color: #6c757d !important;
@@ -222,12 +302,6 @@ h5 {
   margin-bottom: 0px !important;
 }
 
-.cactus {
-  /* margin-top: 30px; */
-  margin-bottom: 10px;
-  margin-right: 20px;
-}
-
 .form-control:disabled, .form-control[readonly] {
   background-color: #fff;
 }
@@ -298,6 +372,10 @@ td {
 	min-width: 50 px;;
 }
 
+.align-center {
+  text-align: center !important;
+}
+
 #log-in {
   padding-top: 20px !important;
 	max-width: 50px;
@@ -306,6 +384,7 @@ td {
 #playlist_table {
   margin-top: 10px;
   border: none !important;
+  text-align: center !important;
 }
 
 #playlist-thead {

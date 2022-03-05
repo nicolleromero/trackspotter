@@ -4,7 +4,7 @@ export function PlaylistHeader(props) {
   return (
     <React.Fragment>
       <thead id="playlist-thead">
-        <tr align="center">
+        <tr className="align-center">
           <th className="col-mobile-badge">SEARCH TERMS</th>
           <th>PLAYLIST TITLE</th>
           <th className="d-none d-sm-table-cell">☆'s</th>

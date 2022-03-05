@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+
+import { NavLink } from './NavLink';
 
 export function NavLinks(props) {
   return (
@@ -23,27 +24,27 @@ export function NavLinks(props) {
       <nav className="navbar center-nav mr-auto" onClick={props.onClick}>
         <ul className="nav navbar-nav">
           <li className="inline link">
-            <Link
+            <NavLink
               to="/"
             >
               Home
-              </Link>
+              </NavLink>
           </li>
           {props.user && (
             <li className="inline link">
-              <Link
+              <NavLink
                 to="/user-playlists"
               >
                 Saved Playlists
-              </Link>
+              </NavLink>
             </li>
           )}
           <li className="inline link">
-            <Link
+            <NavLink
               to="/top-playlists"
             >
               Explore Playlists
-              </Link>
+              </NavLink>
           </li>
         </ul>
       </nav>

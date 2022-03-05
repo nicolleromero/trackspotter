@@ -65,7 +65,7 @@ def get_searches():
 
 
 def get_search_by_id(search_id):
-    """Return details for a specific movie"""
+    """Return details for a specific query"""
 
     return Search.query.get(search_id)
 

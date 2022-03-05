@@ -1,7 +1,7 @@
 import React from 'react';
 import { Badge, Button, Col, Container, Form, FormControl, Navbar, Row, Spinner, Table } from 'react-bootstrap';
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
-import { BrowserRouter, Route, Switch, useHistory } from 'react-router-dom';
+import { BrowserRouter, Switch, useHistory } from 'react-router-dom'; // Deleted Route import from here
 
 import { PlaylistHeader } from './PlaylistHeader';
 import { PlaylistRow } from './PlaylistRow';
@@ -12,6 +12,9 @@ import { Track } from './Track';
 import { TracksHeader } from './TracksHeader';
 import { TracksList } from './TracksList';
 import { TrackRow } from './TrackRow';
+
+import { Route } from './RouterDebugger/Route';
+import { RouterHistory } from './RouterDebugger/RouterHistory';
 
 function setSessionStorage(key, value) {
   window.sessionStorage.setItem(key, JSON.stringify(value));
@@ -399,6 +402,7 @@ function TopPlaylists(props) {
               {topPlaylists.map((playlist) => {
                 return (
                   <PlaylistRow
+                    key={playlist.playlist_id}
                     playlist_id={playlist.playlist_id}
                     title={playlist.playlist_title}
                     likes={playlist.count}
@@ -487,13 +491,13 @@ function UserPlaylists(props) {
 }
 
 function PlaylistTracks(props) {
-  let { playlist_id } = props.match.params;
-  let [tracks, setTracks] = React.useState([]);
-  let [playlistTitle, setPlaylistTitle] = React.useState('');
-  let [playlistLike, setPlaylistLike] = React.useState(false);
-  let [playlistUser, setPlaylistUser] = React.useState('');
-  let [playlistId, setPlaylistId] = React.useState('');
-  let history = useHistory();
+  const { playlist_id } = props.match.params;
+  const [tracks, setTracks] = React.useState([]);
+  const [playlistTitle, setPlaylistTitle] = React.useState('');
+  const [playlistLike, setPlaylistLike] = React.useState(false);
+  const [playlistUser, setPlaylistUser] = React.useState('');
+  const setPlaylistId = React.useState('');
+  const history = useHistory();
   const [message, setMessage] = React.useState('');
   const [snackbar, setSnackbar] = React.useState(false);
   const [edited, setEdited] = React.useState(false);
@@ -709,7 +713,8 @@ export function App(props) {
     <BrowserRouter>
       <Topbar
         user={user}
-        onLogin={handleLogin} />
+        onLogin={handleLogin}
+      />
       <div>
         <Switch>
           <Route exact path="/" component={AdvSearch} />
@@ -718,6 +723,8 @@ export function App(props) {
           <Route exact path="/playlist/:playlist_id" component={PlaylistTracks} />
         </Switch>
       </div>
+      <RouterHistory />
+      <div className="row"></div>
     </BrowserRouter>
   );
 }
